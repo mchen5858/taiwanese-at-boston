@@ -194,7 +194,7 @@ export default function TaiwanFanNightWebsite() {
               <div className="mt-8 flex flex-col gap-3 sm:flex-row">
                 <Button onClick={() => scrollToSection("tickets")}>查看組隊優惠</Button>
                 <Button onClick={() => window.open(officialLineGroup, "_blank")}>加入官方 LINE 群</Button>
-                <Button onClick={() => window.open(googleFormLink, "_blank")} variant="outline">填寫 Google Form</Button>
+                <Button onClick={() => window.open(googleFormLink, "_blank")} variant="outline">沒有 LINE？用 Google Form 加入</Button>
               </div>
 
               <div className="mt-10 grid grid-cols-2 gap-3 md:grid-cols-4">
@@ -239,13 +239,6 @@ export default function TaiwanFanNightWebsite() {
                     <div>
                       <p className="font-bold">地點</p>
                       <p className="text-sm text-slate-600">Fenway Park｜Bleacher 42</p>
-                    </div>
-                  </div>
-                  <div className="flex gap-4">
-                    <span className="text-xl">👥</span>
-                    <div>
-                      <p className="font-bold">主軸</p>
-                      <p className="text-sm text-slate-600">3 人以上即可成立 Team Taiwan 小隊</p>
                     </div>
                   </div>
                 </div>
@@ -298,9 +291,9 @@ export default function TaiwanFanNightWebsite() {
                     <p className="text-sm font-bold text-emerald-700">5/31 前完成付款</p>
                     <h3 className="mt-1 text-3xl font-black text-slate-950">組隊優惠票</h3>
                   </div>
-                  <div className="rounded-3xl bg-emerald-700 px-5 py-4 text-center text-white">
-                    <p className="text-4xl font-black">$47</p>
-                    <p className="text-xs">per ticket</p>
+                  <div className="rounded-[2rem] bg-emerald-700 px-8 py-6 text-center text-white shadow-lg ring-4 ring-emerald-100">
+                    <p className="text-6xl font-black leading-none md:text-7xl">$47</p>
+                    <p className="mt-2 text-sm font-semibold uppercase tracking-wide">per ticket</p>
                   </div>
                 </div>
                 <ul className="space-y-4 text-slate-700">
@@ -392,9 +385,6 @@ export default function TaiwanFanNightWebsite() {
                   <p className="mt-4 leading-7 text-slate-700">
                     隊長、隊員、個人報名皆使用同一份 Google Form。3 人以上即可成立隊伍。隊長請先填表建立隊伍，再將同一份表單連結傳給隊員。隊員填表時請選擇「我是隊員」，並填寫隊伍名稱。
                   </p>
-                  <p className="mt-3 leading-7 text-slate-700">
-                    建議表單第一題設定為：<strong>請問你是？</strong> 選項包含 <strong>我是隊長：我要建立隊伍</strong>、<strong>我是隊員：我要加入已成立隊伍</strong>、<strong>我是個人：我還沒有隊伍，但想參加</strong>。
-                  </p>
                   <p className="mt-3 text-sm leading-7 text-slate-600">
                     請使用下方組隊報名表連結。隊長、隊員、個人報名皆使用同一份表單。
                   </p>
@@ -480,7 +470,7 @@ export default function TaiwanFanNightWebsite() {
                       加入官方 LINE 群
                     </a>
                     <a href={googleFormLink} target="_blank" rel="noreferrer" className="rounded-full border border-emerald-300 bg-white px-6 py-3 text-center font-bold text-emerald-800 transition hover:bg-emerald-50">
-                      沒有 LINE？填 Google Form
+                      沒有 LINE？用 Google Form 加入
                     </a>
                   </div>
                 </div>
@@ -553,7 +543,7 @@ export default function TaiwanFanNightWebsite() {
                     加入官方 LINE 群
                   </a>
                   <a href={googleFormLink} target="_blank" rel="noreferrer" className="rounded-full border border-emerald-200 bg-white px-5 py-3 text-center text-sm font-bold text-emerald-800 transition hover:bg-emerald-50">
-                    沒有 LINE？填 Google Form
+                    沒有 LINE？用 Google Form 加入
                   </a>
                 </div>
                 <div className="mt-6 space-y-3 text-slate-700">
@@ -607,7 +597,7 @@ export default function TaiwanFanNightWebsite() {
                         加入官方 LINE 群
                       </a>
                       <a href={googleFormLink} target="_blank" rel="noreferrer" className="rounded-full border border-emerald-200 bg-white px-5 py-3 text-center text-sm font-bold text-emerald-800 transition hover:bg-emerald-50">
-                        填寫 Google Form
+                        沒有 LINE？用 Google Form 加入
                       </a>
                     </div>
                   </div>
