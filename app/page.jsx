@@ -5,7 +5,7 @@ import React, { useMemo, useState } from "react";
 const hostLogo = "/btcc-btcf-logo.jpg";
 const officialLineGroup = "https://line.me/ti/g/uyAcZJRn75";
 const googleFormLink = "https://forms.gle/27V7wtAEBxRbboL79";
-const teamRegistrationFormLink = "#team-form-coming-soon";
+const teamRegistrationFormLink = "https://forms.gle/6y2vnFoiwLj8aRgL9";
 const organizerLine = "https://line.me/ti/p/xbvkW3pO20";
 const volunteerFormLink = "https://forms.gle/1KrTH1ETd9quXNMJ6";
 
@@ -62,6 +62,10 @@ const faqs = [
   {
     q: "Red Sox × Bruins Jersey 可以選尺寸嗎？",
     a: "此為 Red Sox 當天現場限量贈品，於 Fenway Park 領取，先到先領，尺寸發完為止。主辦單位無法保證指定尺寸。",
+  },
+  {
+    q: "隊伍取名有規定嗎？",
+    a: "隊名請使用適當、尊重、友善的名稱，避免不雅、歧視、政治攻擊、商標侵權或容易造成誤解的內容。主辦單位保留隊名審核與調整之權利。",
   },
 ];
 
@@ -188,7 +192,7 @@ export default function TaiwanFanNightWebsite() {
               </p>
 
               <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-                <Button onClick={() => scrollToSection("tickets")}>查看組隊優惠 →</Button>
+                <Button onClick={() => scrollToSection("tickets")}>查看組隊優惠</Button>
                 <Button onClick={() => window.open(officialLineGroup, "_blank")}>加入官方 LINE 群</Button>
                 <Button onClick={() => window.open(googleFormLink, "_blank")} variant="outline">填寫 Google Form</Button>
               </div>
@@ -366,14 +370,14 @@ export default function TaiwanFanNightWebsite() {
             <SectionTitle
               eyebrow="Teams"
               title="Team Taiwan 組隊方式"
-              description="隊長與隊員使用同一份 Google Form。表單第一題會請大家選擇身分：隊長建立隊伍，或隊員加入已成立隊伍。"
+              description="隊長、隊員、個人報名皆使用同一份 Google Form。3 人以上即可成立隊伍。隊長請先填表建立隊伍，再將同一份表單連結傳給隊員。隊員填表時請選擇「我是隊員」，並填寫隊伍名稱。"
             />
             <div className="grid gap-6 md:grid-cols-3">
               <InfoCard icon="👥" title="1. 隊長先建立隊伍">
                 隊長請填寫同一份 Google Form，第一題選擇 <strong>「我是隊長：我要建立隊伍」</strong>，並填寫隊名、隊長聯絡方式與預計人數。
               </InfoCard>
               <InfoCard icon="📝" title="2. 隊員再加入隊伍">
-                隊員也填寫同一份 Google Form，第一題選擇 <strong>「我是隊員：我要加入已成立隊伍」</strong>，並填寫與隊長登記完全相同的隊名。
+                隊員也填寫同一份 Google Form，第一題選擇 <strong>「我是隊員：我要加入已成立隊伍」</strong>，並填寫隊伍名稱。隊伍名稱請與隊長登記的名稱完全相同。
               </InfoCard>
               <InfoCard icon="🎟️" title="3. 隊長統一付款">
                 隊長確認人數後，請於 5/31 前完成整隊付款。主辦單位會在 6/1 前依付款完成順序安排座位。
@@ -386,17 +390,17 @@ export default function TaiwanFanNightWebsite() {
                   <p className="text-sm font-semibold uppercase tracking-[0.25em] text-emerald-700">One Form Only</p>
                   <h3 className="mt-2 text-2xl font-black text-slate-950">隊長與隊員使用同一份 Google Form</h3>
                   <p className="mt-4 leading-7 text-slate-700">
-                    為了避免大家搞混，組隊報名會使用同一份 Google Form。隊長先填表建立隊伍，送出後把同一個表單連結傳給隊員；隊員進入表單後選擇「我是隊員」，再填寫自己的資料。
+                    隊長、隊員、個人報名皆使用同一份 Google Form。3 人以上即可成立隊伍。隊長請先填表建立隊伍，再將同一份表單連結傳給隊員。隊員填表時請選擇「我是隊員」，並填寫隊伍名稱。
                   </p>
                   <p className="mt-3 leading-7 text-slate-700">
                     建議表單第一題設定為：<strong>請問你是？</strong> 選項包含 <strong>我是隊長：我要建立隊伍</strong>、<strong>我是隊員：我要加入已成立隊伍</strong>、<strong>我是個人：我還沒有隊伍，但想參加</strong>。
                   </p>
                   <p className="mt-3 text-sm leading-7 text-slate-600">
-                    組隊報名 Google Form 連結即將公布。若你已經有表單連結，請提供給主辦單位更新到此網站。
+                    請使用下方組隊報名表連結。隊長、隊員、個人報名皆使用同一份表單。
                   </p>
                 </div>
                 <a href={teamRegistrationFormLink} className="rounded-full bg-emerald-700 px-6 py-3 text-center font-bold text-white transition hover:bg-emerald-800">
-                  組隊報名表即將公布
+                  填寫組隊報名表
                 </a>
               </div>
             </Card>
@@ -407,7 +411,7 @@ export default function TaiwanFanNightWebsite() {
                   <p className="text-sm font-semibold uppercase tracking-[0.25em] text-white/75">Team Name Ideas</p>
                   <h3 className="mt-3 text-3xl font-black">3 人以上就可以成立自己的小隊</h3>
                   <p className="mt-4 text-sm leading-7 text-white/85">
-                    每隊都可以自取隊名，並列入 Team Taiwan 集結名單，也可以參加最佳創意隊名獎。
+                    每隊都可以自取隊名，並列入 Team Taiwan 集結名單，也可以參加最佳創意隊名獎。隊名請使用適當、尊重、友善的名稱，避免不雅、歧視、政治攻擊、商標侵權或容易造成誤解的內容。主辦單位保留隊名審核與調整之權利。
                   </p>
                 </div>
                 <div className="flex flex-wrap gap-3">
@@ -469,7 +473,7 @@ export default function TaiwanFanNightWebsite() {
                 <div className="mt-8 rounded-3xl border border-emerald-200 bg-emerald-50 p-6 text-center">
                   <h4 className="text-2xl font-black text-slate-950">你的隊伍也可以上榜！</h4>
                   <p className="mx-auto mt-3 max-w-2xl leading-7 text-slate-600">
-                    3 人以上就可以組隊，自取隊名並加入 Team Taiwan 集結名單。5/31 前完成隊伍登記與整隊付款，就能鎖定組隊優惠。
+                    3 人以上就可以組隊，自取隊名並加入 Team Taiwan 集結名單。5/31 前完成隊伍登記與整隊付款，就能鎖定組隊優惠。隊名請使用適當、尊重、友善的名稱；主辦單位保留隊名審核與調整之權利。
                   </p>
                   <div className="mt-6 flex flex-col gap-3 sm:flex-row sm:justify-center">
                     <a href={officialLineGroup} target="_blank" rel="noreferrer" className="rounded-full bg-emerald-700 px-6 py-3 text-center font-bold text-white transition hover:bg-emerald-800">
