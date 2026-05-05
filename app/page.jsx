@@ -313,7 +313,9 @@ export default function TaiwanFanNightWebsite() {
               </div>
               <h1 className="max-w-4xl text-4xl font-black leading-[1.15] tracking-tight text-slate-950 md:text-6xl md:leading-[1.18] lg:text-7xl">
                 <span className="block">912 Taiwan Fan Night at Fenway</span>
-                <span className="mt-4 block text-emerald-700 md:mt-5">912 台灣集結</span>
+                <span className="mt-4 flex items-center gap-4 text-emerald-700 md:mt-5">
+                  912 台灣集結 <span className="text-5xl md:text-6xl lg:text-7xl">⚾</span>
+                </span>
               </h1>
               <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-600 md:text-xl">
                 9/12，我們要一起走進 Fenway Park，讓 Red Sox 看見波士頓台灣人的凝聚力，為 2027 Red Sox Taiwan Day 鋪路，也用行動支持波士頓在地公益。
@@ -322,9 +324,10 @@ export default function TaiwanFanNightWebsite() {
                 On September 12, we will come together at Fenway Park to show the strength and unity of the Taiwanese community in Boston. Together, we are paving the way for Red Sox Taiwan Day 2027 while supporting local charities in Boston through our collective action.
               </p>
 
-              <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+              <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
                 <Button onClick={() => scrollToSection("tickets")}>查看組隊優惠</Button>
                 <Button onClick={() => window.open(officialLineGroup, "_blank")}>加入官方 LINE 群</Button>
+                <Button onClick={() => window.open(zeffyPaymentLink, "_blank")}>立即前往購票</Button>
                 <Button onClick={() => window.open(googleFormLink, "_blank")} variant="outline">
                   沒有 LINE？用 Google Form 加入
                 </Button>
@@ -424,6 +427,12 @@ export default function TaiwanFanNightWebsite() {
               <p className="mt-4 text-base leading-7 text-slate-600 md:text-lg">
                 無論是否組隊，只要在 5/31 前透過 Zeffy 購票付款，每張票都是 $47。3 人以上可自行組隊並使用相同 Team Name 參加創意隊名比賽。
               </p>
+              <div className="mt-6 rounded-3xl border border-emerald-200 bg-emerald-50 p-5 text-center shadow-sm">
+                <p className="text-xl font-black text-emerald-900">不到 3 人也可以直接購買！</p>
+                <p className="mt-2 text-sm leading-7 text-emerald-800">
+                  個人、兩人同行，或還沒有隊伍的朋友，一樣可以直接透過 Zeffy 購票，5/31 前同樣享有每張票 $47 的優惠價格。
+                </p>
+              </div>
             </div>
 
             <div className="grid gap-6 lg:grid-cols-2">
