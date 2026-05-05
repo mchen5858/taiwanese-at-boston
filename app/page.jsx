@@ -189,6 +189,7 @@ function Button({ children, onClick, variant = "solid" }) {
     variant === "outline"
       ? "border border-emerald-200 bg-white text-emerald-800 hover:bg-emerald-50"
       : "bg-emerald-700 text-white hover:bg-emerald-800";
+
   return (
     <button onClick={onClick} className={`${base} ${styles}`}>
       {children}
@@ -213,11 +214,24 @@ function SectionTitle({ eyebrow, title, description }) {
 function InfoCard({ icon, title, children }) {
   return (
     <Card className="h-full p-6 transition hover:-translate-y-1 hover:shadow-lg">
-      <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-2xl bg-emerald-50 text-2xl text-emerald-700">
-        {icon}
-      </div>
+      <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-2xl bg-emerald-50 text-2xl text-emerald-700">{icon}</div>
       <h3 className="mb-2 text-xl font-bold text-slate-950">{title}</h3>
       <div className="text-sm leading-7 text-slate-600">{children}</div>
+    </Card>
+  );
+}
+
+function DonateCard({ type, icon, title, children }) {
+  const cardStyle =
+    type === "primary"
+      ? "border-emerald-300 bg-gradient-to-br from-emerald-700 to-sky-700 text-white shadow-xl ring-4 ring-emerald-100"
+      : "border-slate-200 bg-white text-slate-950 shadow-lg";
+
+  return (
+    <Card className={`relative overflow-hidden p-7 ${cardStyle}`}>
+      <div className="mb-5 flex h-14 w-14 items-center justify-center rounded-2xl bg-white/20 text-3xl shadow-sm">{icon}</div>
+      <h3 className="text-3xl font-black">{title}</h3>
+      <div className="mt-5 text-sm leading-7">{children}</div>
     </Card>
   );
 }
@@ -228,7 +242,7 @@ export default function TaiwanFanNightWebsite() {
   }, []);
 
   const [openMenu, setOpenMenu] = useState(false);
-  const [openFaq, setOpenFaq] = useState(0);
+  const [openFaq, setOpenFaq] = useState("0-0");
 
   const stats = useMemo(
     () => [
@@ -296,7 +310,7 @@ export default function TaiwanFanNightWebsite() {
               <div className="mb-5 inline-flex items-center rounded-full border border-emerald-200 bg-white px-6 py-3 text-base font-bold text-emerald-800 shadow-sm md:text-lg">
                 票價公布｜TEAM TAIWAN 組隊正式開始
               </div>
-              <h1 className="max-w-4xl text-4xl font-black tracking-tight text-slate-950 md:text-6xl lg:text-7xl leading-[1.15] md:leading-[1.18]">
+              <h1 className="max-w-4xl text-4xl font-black leading-[1.15] tracking-tight text-slate-950 md:text-6xl md:leading-[1.18] lg:text-7xl">
                 <span className="block">912 Taiwan Fan Night at Fenway</span>
                 <span className="mt-4 block text-emerald-700 md:mt-5">912 台灣集結</span>
               </h1>
@@ -310,7 +324,9 @@ export default function TaiwanFanNightWebsite() {
               <div className="mt-8 flex flex-col gap-3 sm:flex-row">
                 <Button onClick={() => scrollToSection("tickets")}>查看組隊優惠</Button>
                 <Button onClick={() => window.open(officialLineGroup, "_blank")}>加入官方 LINE 群</Button>
-                <Button onClick={() => window.open(googleFormLink, "_blank")} variant="outline">沒有 LINE？用 Google Form 加入</Button>
+                <Button onClick={() => window.open(googleFormLink, "_blank")} variant="outline">
+                  沒有 LINE？用 Google Form 加入
+                </Button>
               </div>
 
               <div className="mt-10 grid grid-cols-2 gap-3 md:grid-cols-4">
@@ -343,7 +359,7 @@ export default function TaiwanFanNightWebsite() {
                   <p className="text-sm font-semibold opacity-90">活動目的</p>
                   <h3 className="mt-2 text-3xl font-black">讓 Fenway 看見台灣</h3>
                   <p className="mt-4 text-sm leading-7 text-white/90">
-                    本活動由波克萊台灣商會基金會（BTCF）主辦。每售出一張票，BTCF 將捐出 $3 給 Boys & Girls Clubs of Boston；BTCF 不從門票中獲利。
+                    本活動由波克萊台灣商會基金會（BTCF）主辦。每售出一張票，BTCF 將代表參與本次活動的台灣社群，額外捐出 $3 給 Boys & Girls Clubs of Boston。$3 捐款並非從大家購買球票的費用中扣除；大家所付的票價，將全數用於支付給 Red Sox 的團體票費用，BTCF 不從本活動中營利。
                   </p>
                 </div>
                 <div className="grid gap-4">
@@ -386,10 +402,10 @@ export default function TaiwanFanNightWebsite() {
             />
             <div className="grid gap-6 lg:grid-cols-3">
               <InfoCard icon="🏛️" title="BTCF 主辦">
-                本活動由 <strong>波克萊台灣商會基金會（BTCF）</strong> 主辦。BTCF 不從門票中獲利。
+                本活動由 <strong>波克萊台灣商會基金會（BTCF）</strong> 主辦。大家所付的票價將全數用於支付給 Red Sox 的團體票費用，BTCF 不從本活動中營利。
               </InfoCard>
               <InfoCard icon="❤️" title="每張票捐 $3">
-                每售出一張票，BTCF 將捐出 <strong>$3</strong> 給 <strong>Boys & Girls Clubs of Boston</strong>，支持波士頓在地青少年與社區。
+                每售出一張票，BTCF 將代表參與本次活動的台灣社群，額外捐出 <strong>$3</strong> 給 <strong>Boys & Girls Clubs of Boston</strong>。這 $3 並不是從購票費用中扣除，而是由 BTCF 另外捐出，支持波士頓在地青少年與社區。
               </InfoCard>
               <InfoCard icon="👕" title="台灣主題紀念 T-shirt">
                 所有參與者將獲得一件台灣主題紀念 T-shirt，將公開徵稿及公開票選，由 BTCF 與贊助單位提供。
@@ -425,7 +441,7 @@ export default function TaiwanFanNightWebsite() {
                   {[
                     "完全無任何其他費用或手續費",
                     "可獲得限量 Red Sox × Bruins co-branding Baseball Jersey 一件",
-                    "每張票 BTCF 將捐出 $3 給 Boys & Girls Clubs of Boston",
+                    "每張票 BTCF 將另外捐出 $3 給 Boys & Girls Clubs of Boston",
                     "每人一件台灣主題 T-shirt",
                     "同隊的人將會坐在一起",
                     "可參加最佳創意隊名比賽",
@@ -440,7 +456,7 @@ export default function TaiwanFanNightWebsite() {
                   想享有 5/31 前 $47 優惠，請每位參加者於 5/31 前自行完成 Zeffy 購票付款。沒有要組隊、或未滿 3 人也可以直接購票，同樣享有每張票 $47 的價格。若要組隊，請填寫相同 Team Name。
                 </div>
                 <div className="mt-4 rounded-2xl bg-slate-50 p-4 text-sm leading-7 text-slate-700">
-                  依據紅襪官網，目前 Fenway Park 912 當天 Bleacher 42 區票價約為 <strong>$64 ~ $88</strong> 一張，而且每張票還需要再加上 <strong>$8.75 per-ticket fee</strong>。相較之下，無論是 <strong>$47 組隊優惠</strong> 或是 <strong>$41 專屬團體購票</strong>，都是主辦單位幫我們 TEAM TAIWAN 與紅襪爭取到的很好優惠！
+                  依據紅襪官網，目前 Fenway Park 912 當天 Bleacher 42 區票價約為 <strong>$64 ~ $88</strong> 一張，而且每張票還需要再加上 <strong>$8.75 per-ticket fee</strong>。相較之下，無論是 <strong>$47 組隊優惠</strong> 或是 <strong>$41 專屬團體購票</strong>，都是主辦單位幫我們 TEAM TAIWAN 與紅襪爭取到的很好優惠！大家所付的票價將全數用於支付給 Red Sox 的團體票費用，BTCF 不從本活動中營利。
                 </div>
                 <div className="mt-4 grid gap-3 md:grid-cols-2">
                   <div className="rounded-2xl border border-emerald-200 bg-emerald-50 p-5 text-sm leading-7 text-emerald-900">
@@ -472,7 +488,7 @@ export default function TaiwanFanNightWebsite() {
                   無論是 6/1 前或是 6/1 後購票者，我們全都會坐在 Bleacher 42 同一區、得到主辦單位發的台灣主題 T-shirt，並參加 912 台灣集結活動大抽獎！
                 </p>
                 <p className="mt-4 rounded-2xl bg-slate-50 p-4 text-sm leading-7 text-slate-700">
-                  依據紅襪官網，目前 Fenway Park 912 當天 Bleacher 42 區票價約為 <strong>$64 ~ $88</strong> 一張，而且每張票還需要再加上 <strong>$8.75 per-ticket fee</strong>。相較之下，無論是 <strong>$47 組隊優惠</strong> 或是 <strong>$41 專屬團體購票</strong>，都是主辦單位幫我們 TEAM TAIWAN 與紅襪爭取到的很好優惠！
+                  依據紅襪官網，目前 Fenway Park 912 當天 Bleacher 42 區票價約為 <strong>$64 ~ $88</strong> 一張，而且每張票還需要再加上 <strong>$8.75 per-ticket fee</strong>。相較之下，無論是 <strong>$47 組隊優惠</strong> 或是 <strong>$41 專屬團體購票</strong>，都是主辦單位幫我們 TEAM TAIWAN 與紅襪爭取到的很好優惠！大家所付的票價將全數用於支付給 Red Sox 的團體票費用，BTCF 不從本活動中營利。
                 </p>
               </Card>
             </div>
@@ -527,10 +543,6 @@ export default function TaiwanFanNightWebsite() {
                   <p className="mt-3 leading-7 text-slate-700">
                     僑團、公司、學校社團或組織可以直接使用單位名稱作為隊名，例如 <strong>波士頓台灣人生技協會 BTBA</strong>。這樣大家在 TEAM TAIWAN 集氣榜上，也可以清楚看到各僑團、單位與組織的集結力量。
                   </p>
-                  <div className="mt-4 rounded-2xl bg-white p-4 text-sm leading-7 text-slate-700">
-                    <p><strong>✅ 正確：</strong>Boston Taiwan Power</p>
-                    <p><strong>❌ 不建議：</strong>Boston Taiwan / Taiwan Power / boston taiwan power</p>
-                  </div>
                   <p className="mt-3 text-sm leading-7 text-slate-600">
                     沒有要組隊，或未滿 3 人的朋友，也可以直接透過 Zeffy 購票，同樣享有 5/31 前每張票 $47 的價格。未滿 3 人仍可填寫隊名，但不列入創意隊名比賽資格。
                   </p>
@@ -703,7 +715,7 @@ export default function TaiwanFanNightWebsite() {
                       const faqIndex = `${groupIndex}-${itemIndex}`;
                       return (
                         <Card key={item.q}>
-                          <button onClick={() => setOpenFaq(openFaq === faqIndex ? -1 : faqIndex)} className="flex w-full items-center justify-between gap-4 p-5 text-left">
+                          <button onClick={() => setOpenFaq(openFaq === faqIndex ? "" : faqIndex)} className="flex w-full items-center justify-between gap-4 p-5 text-left">
                             <span className="font-bold text-slate-950">Q{itemIndex + 1}：{item.q}</span>
                             <span className={`text-slate-400 transition ${openFaq === faqIndex ? "rotate-90" : ""}`}>›</span>
                           </button>
@@ -763,42 +775,33 @@ export default function TaiwanFanNightWebsite() {
           <div className="mx-auto max-w-7xl">
             <SectionTitle eyebrow="Support BTCF" title="支持波克萊台灣商會基金會" description="如果您支持我們推廣台灣、服務社區與舉辦更多公益活動，歡迎以以下方式捐款支持 BTCF。" />
             <div className="grid gap-6 lg:grid-cols-3">
-              <Card className="relative overflow-hidden border-emerald-300 bg-gradient-to-br from-emerald-700 to-sky-700 p-7 text-white shadow-xl ring-4 ring-emerald-100">
-                <div className="mb-5 flex h-14 w-14 items-center justify-center rounded-2xl bg-white/15 text-3xl shadow-sm">💳</div>
-                <p className="text-sm font-semibold uppercase tracking-[0.25em] text-white/75">Zelle</p>
-                <h3 className="mt-2 text-3xl font-black">Zelle 捐款</h3>
-                <div className="mt-5 rounded-3xl bg-white p-5 text-emerald-900 shadow-sm">
-                  <p className="text-sm font-bold text-emerald-700">Zelle</p>
-                  <p className="mt-1 break-all text-3xl font-black">btcf-boston</p>
+              <DonateCard type="primary" icon="💳" title="Zelle 捐款">
+                <p className="text-sm font-bold text-white/80">Zelle</p>
+                <div className="mt-2 rounded-3xl bg-white p-5 text-emerald-900 shadow-sm">
+                  <p className="break-all text-3xl font-black">btcf-boston</p>
                 </div>
-                <p className="mt-4 text-sm leading-7 text-white/90">備註可寫：Donation / BTCF Support</p>
-              </Card>
-              <Card className="relative overflow-hidden border-sky-200 bg-white p-7 shadow-lg">
-                <div className="mb-5 flex h-14 w-14 items-center justify-center rounded-2xl bg-sky-50 text-3xl text-sky-700 shadow-sm">🏦</div>
-                <p className="text-sm font-semibold uppercase tracking-[0.25em] text-sky-700">Bank Transfer</p>
-                <h3 className="mt-2 text-3xl font-black text-slate-950">銀行轉帳</h3>
-                <div className="mt-5 grid gap-3">
-                  <div className="rounded-2xl bg-slate-50 p-4">
-                    <p className="text-xs font-bold uppercase tracking-wide text-slate-500">Account number</p>
-                    <p className="mt-1 break-all text-2xl font-black text-slate-950">466026497066</p>
-                  </div>
-                  <div className="rounded-2xl bg-slate-50 p-4">
-                    <p className="text-xs font-bold uppercase tracking-wide text-slate-500">Routing number</p>
-                    <p className="mt-1 text-2xl font-black text-slate-950">011000138</p>
-                  </div>
+                <p className="mt-4 text-white/90">備註可寫：Donation / BTCF Support</p>
+              </DonateCard>
+
+              <DonateCard icon="🏦" title="銀行轉帳">
+                <div className="rounded-2xl bg-slate-50 p-4">
+                  <p className="text-xs font-bold uppercase tracking-wide text-slate-500">Account number</p>
+                  <p className="mt-1 break-all text-2xl font-black text-slate-950">466026497066</p>
                 </div>
-              </Card>
-              <Card className="relative overflow-hidden border-amber-200 bg-white p-7 shadow-lg">
-                <div className="mb-5 flex h-14 w-14 items-center justify-center rounded-2xl bg-amber-50 text-3xl text-amber-700 shadow-sm">🧾</div>
-                <p className="text-sm font-semibold uppercase tracking-[0.25em] text-amber-700">Check</p>
-                <h3 className="mt-2 text-3xl font-black text-slate-950">支票捐款</h3>
-                <div className="mt-5 rounded-3xl bg-amber-50 p-5 text-amber-950">
+                <div className="mt-3 rounded-2xl bg-slate-50 p-4">
+                  <p className="text-xs font-bold uppercase tracking-wide text-slate-500">Routing number</p>
+                  <p className="mt-1 text-2xl font-black text-slate-950">011000138</p>
+                </div>
+              </DonateCard>
+
+              <DonateCard icon="🧾" title="支票捐款">
+                <div className="rounded-3xl bg-amber-50 p-5 text-amber-950">
                   <p className="text-sm font-bold">支票抬頭請寫</p>
                   <p className="mt-2 text-lg font-black leading-7">Brookline Taiwanese Chamber Foundation</p>
                   <p className="mt-5 text-sm font-bold">支票請寄至</p>
                   <p className="mt-2 text-lg font-black leading-7">7 Bow St., Suite 1<br />North Reading, MA 01864</p>
                 </div>
-              </Card>
+              </DonateCard>
             </div>
           </div>
         </section>
