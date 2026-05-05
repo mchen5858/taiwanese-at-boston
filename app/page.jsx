@@ -1,10 +1,6 @@
-export const metadata = {
-  title: "912台灣集結",
-};
-
 "use client";
 
-import React, { useMemo, useState } from "react";
+import React, { useEffect, useMemo, useState } from "react";
 
 const hostLogo = "/btcc-btcf-logo.jpg";
 const officialLineGroup = "https://line.me/ti/g/uyAcZJRn75";
@@ -118,6 +114,10 @@ function InfoCard({ icon, title, children }) {
 }
 
 export default function TaiwanFanNightWebsite() {
+  useEffect(() => {
+    document.title = "912台灣集結";
+  }, []);
+
   const [openMenu, setOpenMenu] = useState(false);
   const [openFaq, setOpenFaq] = useState(0);
 
