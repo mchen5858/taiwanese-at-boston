@@ -1,3 +1,7 @@
+export const metadata = {
+  title: "912台灣集結",
+};
+
 "use client";
 
 import React, { useMemo, useState } from "react";
@@ -15,7 +19,7 @@ const navItems = [
   { id: "home", label: "首頁" },
   { id: "tickets", label: "票價優惠" },
   { id: "teams", label: "組隊方式" },
-  { id: "leaderboard", label: "組隊排行榜" },
+  { id: "leaderboard", label: "集氣榜" },
   { id: "payment", label: "付款方式" },
   { id: "raffle", label: "抽獎活動" },
   { id: "shirt-design", label: "衣服設計" },
@@ -224,7 +228,10 @@ export default function TaiwanFanNightWebsite() {
                     <span className="text-xl">🏛️</span>
                     <div>
                       <p className="font-bold">主辦單位</p>
-                      <p className="text-sm text-slate-600">波克萊台灣商會基金會（BTCF）主辦｜波克萊台灣商會（BTCC）協辦</p>
+                      <p className="text-sm text-slate-600 leading-relaxed">
+                        波克萊台灣商會基金會（BTCF） 主辦<br />
+                        波克萊台灣商會（BTCC） 協辦
+                      </p>
                     </div>
                   </div>
                   <div className="flex gap-4">
@@ -420,8 +427,8 @@ export default function TaiwanFanNightWebsite() {
           <div className="mx-auto max-w-7xl">
             <SectionTitle
               eyebrow="Leaderboard"
-              title="Team Taiwan 組隊排行榜"
-              description="感謝各隊熱情響應！排行榜將依照各隊目前認票／報名票數持續更新。"
+              title="Team Taiwan 集氣榜"
+              description="感謝各隊熱情響應！集氣榜將依照各隊目前認票／報名票數持續更新。"
             />
 
             <Card className="overflow-hidden border-emerald-200 bg-white shadow-lg">
@@ -429,39 +436,41 @@ export default function TaiwanFanNightWebsite() {
                 <p className="text-sm font-semibold uppercase tracking-[0.25em] text-white/75">Current Teams</p>
                 <h3 className="mt-3 text-3xl font-black">讓 Red Sox 看見 Team Taiwan 的力量</h3>
                 <p className="mt-4 max-w-3xl leading-7 text-white/90">
-                  認領越多、集結越多，越能讓 Fenway 看見台灣社群的凝聚力。歡迎更多家庭、朋友、公司、校友會、社團與商家一起加入！
+                  每一隊的加入，都是為 912 台灣集結與 2027 Red Sox Taiwan Day 集氣。歡迎更多家庭、朋友、公司、校友會、社團與商家一起加入！
                 </p>
               </div>
 
               <div className="p-6 md:p-8">
-                <div className="space-y-4">
-                  {teamLeaderboard.map((team, index) => {
-                    const widths = ["w-full", "w-[72%]", "w-[58%]"];
-                    const badges = ["🥇", "🥈", "🥉"];
-                    return (
-                      <div key={team.name} className="rounded-3xl border border-slate-200 bg-slate-50 p-5">
-                        <div className="mb-3 flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
-                          <div className="flex items-center gap-3">
-                            <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-white text-2xl shadow-sm">{badges[index]}</div>
-                            <div>
-                              <p className="text-lg font-black text-slate-950">{team.name}</p>
-                              <p className="text-sm text-slate-500">{team.note}</p>
-                            </div>
-                          </div>
-                          <div className="rounded-full bg-emerald-700 px-5 py-2 text-center font-black text-white">
-                            {team.tickets} 張票
-                          </div>
+                <div className="rounded-[2rem] border border-emerald-100 bg-gradient-to-br from-emerald-50 via-white to-sky-50 p-6 md:p-10">
+                  <div className="relative mx-auto min-h-[560px] max-w-5xl md:min-h-[520px]">
+                    {teamLeaderboard.map((team, index) => {
+                      const bubbleStyles = [
+                        "left-1/2 top-4 h-72 w-72 -translate-x-1/2 bg-emerald-700 text-white ring-8 ring-emerald-100 md:h-80 md:w-80",
+                        "left-4 bottom-8 h-56 w-56 bg-sky-600 text-white ring-8 ring-sky-100 md:left-16 md:h-64 md:w-64",
+                        "right-4 bottom-20 h-48 w-48 bg-emerald-500 text-white ring-8 ring-emerald-100 md:right-20 md:h-56 md:w-56",
+                      ];
+                      const textStyles = [
+                        "text-3xl md:text-4xl",
+                        "text-2xl md:text-3xl",
+                        "text-xl md:text-2xl",
+                      ];
+                      return (
+                        <div
+                          key={team.name}
+                          className={`absolute flex shrink-0 flex-col items-center justify-center rounded-full p-6 text-center shadow-xl transition hover:-translate-y-1 hover:shadow-2xl ${bubbleStyles[index]}`}
+                          title={`${team.name}｜${team.tickets} 張票`}
+                        >
+                          <div className={`font-black leading-tight ${textStyles[index]}`}>{team.name}</div>
+                          <div className="mt-3 rounded-full bg-white/20 px-4 py-2 text-lg font-black md:text-xl">{team.tickets} 張票</div>
+                          <div className="mt-2 text-xs font-semibold opacity-90 md:text-sm">{team.note}</div>
                         </div>
-                        <div className="h-4 overflow-hidden rounded-full bg-white">
-                          <div className={`${widths[index]} h-full rounded-full bg-emerald-600`} />
-                        </div>
-                      </div>
-                    );
-                  })}
+                      );
+                    })}
+                  </div>
                 </div>
 
                 <div className="mt-8 rounded-3xl border border-emerald-200 bg-emerald-50 p-6 text-center">
-                  <h4 className="text-2xl font-black text-slate-950">你的隊伍也可以上榜！</h4>
+                  <h4 className="text-2xl font-black text-slate-950">你的隊伍也可以一起集氣！</h4>
                   <p className="mx-auto mt-3 max-w-2xl leading-7 text-slate-600">
                     3 人以上就可以組隊，自取隊名並加入 Team Taiwan 集結名單。5/31 前完成隊伍登記與整隊付款，就能鎖定組隊優惠。隊名請使用適當、尊重、友善的名稱；主辦單位保留隊名審核與調整之權利。
                   </p>
@@ -657,7 +666,7 @@ export default function TaiwanFanNightWebsite() {
               <InfoCard icon="🏛️" title="主辦單位">
                 波克萊台灣商會基金會（BTCF）主辦<br />
                 波克萊台灣商會（BTCC）協辦<br />
-                <span className="text-xs text-slate-500">BTCF 不從門票中獲利</span>
+                
               </InfoCard>
               <InfoCard icon="✉️" title="主辦單位 Email">
                 <a className="font-bold text-emerald-700 underline" href="mailto:medianchen@gmail.com">medianchen@gmail.com</a><br />
