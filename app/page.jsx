@@ -202,12 +202,12 @@ export default function TaiwanFanNightWebsite() {
           <div className="absolute left-1/2 top-8 h-80 w-80 -translate-x-1/2 rounded-full bg-emerald-200/40 blur-3xl" />
           <div className="relative mx-auto grid max-w-7xl items-center gap-10 lg:grid-cols-[1.1fr_0.9fr]">
             <div className="animate-[fadeIn_0.6s_ease-out]">
-              <div className="mb-5 inline-flex items-center rounded-full border border-emerald-200 bg-white px-4 py-2 text-sm font-semibold text-emerald-800 shadow-sm">
+              <div className="mb-5 inline-flex items-center rounded-full border border-emerald-200 bg-white px-6 py-3 text-base md:text-lg font-bold text-emerald-800 shadow-sm">
                 票價公布｜Team Taiwan 組隊正式開始
               </div>
-              <h1 className="max-w-4xl text-4xl font-black tracking-tight text-slate-950 md:text-6xl lg:text-7xl">
-                912 Taiwan Fan Night at Fenway
-                <span className="block text-emerald-700">912 台灣集結</span>
+              <h1 className="max-w-4xl text-4xl font-black tracking-tight text-slate-950 md:text-6xl lg:text-7xl leading-[1.15] md:leading-[1.18] lg:leading-[1.18]">
+                <span className="block">912 Taiwan Fan Night at Fenway</span>
+                <span className="mt-4 block text-emerald-700 md:mt-5">912 台灣集結</span>
               </h1>
               <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-600 md:text-xl">
                 9/12，我們要一起走進 Fenway Park，讓 Red Sox 看見波士頓台灣人的凝聚力，為 2027 Red Sox Taiwan Day 鋪路，也用行動支持波士頓在地公益。
@@ -304,11 +304,12 @@ export default function TaiwanFanNightWebsite() {
 
         <section id="tickets" className="px-4 py-16 md:px-8 md:py-24">
           <div className="mx-auto max-w-7xl">
-            <SectionTitle
-              eyebrow="Tickets"
-              title="5/31 前組隊優惠"
-              description="只要 3 人以上組隊，並由隊長在 5/31 前完成整隊報名與付款，即可鎖定組隊優惠。"
-            />
+            <div className="mx-auto mb-10 max-w-3xl text-center">
+              <p className="mb-3 text-sm font-semibold uppercase tracking-[0.25em] text-emerald-700">Tickets</p>
+              <div className="text-6xl font-black tracking-tight text-emerald-700 md:text-8xl lg:text-9xl">TEAM TAIWAN</div>
+              <h2 className="mt-3 text-3xl font-bold tracking-tight text-slate-950 md:text-5xl">5/31 前組隊優惠</h2>
+              <p className="mt-4 text-base leading-7 text-slate-600 md:text-lg">只要 3 人以上組隊，並由隊長在 5/31 前完成整隊報名與付款，即可鎖定組隊優惠。</p>
+            </div>
             <div className="grid gap-6 lg:grid-cols-2">
               <Card className="border-emerald-200 p-8 shadow-lg">
                 <div className="mb-6 flex items-center justify-between gap-4">
@@ -323,12 +324,12 @@ export default function TaiwanFanNightWebsite() {
                 </div>
                 <ul className="space-y-4 text-slate-700">
                   {[
-                    "無額外手續費",
-                    "每張票 BTCF 捐出 $3 給 Boys & Girls Clubs of Boston",
+                    "完全無任何其他費用或手續費",
+                    "可獲得限量 Red Sox × Bruins co-branding Baseball Jersey 一件",
+                    "每張票 BTCF 將捐出 $3 給 Boys & Girls Clubs of Boston",
                     "每人一件台灣主題 T-shirt",
-                    "Red Sox × Bruins co-branding Baseball Jersey 現場限量贈品",
-                    "同隊盡量安排坐在一起",
-                    "可參加最佳創意隊名獎",
+                    "同隊的人將會坐在一起",
+                    "可參加最佳創意隊名比賽",
                   ].map((item) => (
                     <li key={item} className="flex gap-3">
                       <span className="mt-1 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-emerald-100 text-xs font-bold text-emerald-800">✓</span>
@@ -346,16 +347,16 @@ export default function TaiwanFanNightWebsite() {
 
               <Card className="p-8">
                 <p className="text-sm font-bold text-slate-500">6/1 後正式開賣</p>
-                <h3 className="mt-1 text-3xl font-black text-slate-950">一般購票連結</h3>
+                <h3 className="mt-1 text-3xl font-black text-slate-950">專屬團體購票連結</h3>
                 <p className="mt-5 text-lg leading-8 text-slate-600">
-                  6/1 之後，大家也可以透過 Red Sox 提供的 Taiwan Fans Night 購票連結自行購票。
+                  6/1 之後，大家可以透過 Red Sox 提供給波克萊基金會專屬的 Taiwan Fans Night 優惠購票連結購票。
                 </p>
                 <div className="mt-6 rounded-3xl bg-slate-50 p-6">
                   <p className="text-sm font-semibold text-slate-500">票價</p>
                   <p className="mt-1 text-4xl font-black text-slate-950">$41 + 約 8–9% 手續費</p>
                 </div>
                 <p className="mt-6 text-sm leading-7 text-slate-600">
-                  6/1 後購票者仍可坐在 Bleacher 42 同一區、拿台灣主題 T-shirt、參加活動抽獎，並成為 Team Taiwan 的一份子。
+                  無論是 6/1 前或是 6/1 後購票者，我們全都會坐在 Bleacher 42 同一區、得到主辦單位發的台灣主題 T-shirt，並參加 912 台灣集結活動大抽獎！
                 </p>
                 <p className="mt-4 rounded-2xl bg-slate-50 p-4 text-sm leading-7 text-slate-700">
                   目前 Fenway Park 當天 Bleacher 42 區票價約為 <strong>$64–$88</strong> 一張，而且一般購票還需要再加上每張 <strong>$8.75 per-ticket fee</strong>。相較之下，無論是 <strong>$47 組隊優惠</strong> 或是 <strong>$41 + 手續費</strong> 的正式購票連結，都是很大的優惠。
@@ -386,8 +387,8 @@ export default function TaiwanFanNightWebsite() {
         <section id="teams" className="bg-white px-4 py-16 md:px-8 md:py-24">
           <div className="mx-auto max-w-7xl">
             <SectionTitle
-              eyebrow="Teams"
-              title="Team Taiwan 組隊方式"
+              eyebrow="TEAM TAIWAN"
+              title="TEAM TAIWAN 組隊方式"
               description="隊長、隊員、個人報名皆使用同一份 Google Form。3 人以上即可成立隊伍。隊長請先填表建立隊伍，再將同一份表單連結傳給隊員。隊員填表時請選擇「我是隊員」，並填寫隊伍名稱。"
             />
             <div className="grid gap-6 md:grid-cols-3">
@@ -445,7 +446,7 @@ export default function TaiwanFanNightWebsite() {
           <div className="mx-auto max-w-7xl">
             <SectionTitle
               eyebrow="Leaderboard"
-              title="Team Taiwan 集氣榜"
+              title="TEAM TAIWAN 集氣榜"
               description="感謝各隊熱情響應！集氣榜將依照各隊目前認票／報名票數持續更新。"
             />
 
@@ -493,11 +494,8 @@ export default function TaiwanFanNightWebsite() {
                     3 人以上就可以組隊，自取隊名並加入 Team Taiwan 集結名單。5/31 前完成隊伍登記與整隊付款，就能鎖定組隊優惠。隊名請使用適當、尊重、友善的名稱；主辦單位保留隊名審核與調整之權利。
                   </p>
                   <div className="mt-6 flex flex-col gap-3 sm:flex-row sm:justify-center">
-                    <a href={officialLineGroup} target="_blank" rel="noreferrer" className="rounded-full bg-emerald-700 px-6 py-3 text-center font-bold text-white transition hover:bg-emerald-800">
-                      加入官方 LINE 群
-                    </a>
-                    <a href={googleFormLink} target="_blank" rel="noreferrer" className="rounded-full border border-emerald-300 bg-white px-6 py-3 text-center font-bold text-emerald-800 transition hover:bg-emerald-50">
-                      沒有 LINE？用 Google Form 加入
+                    <a href={teamRegistrationFormLink} target="_blank" rel="noreferrer" className="rounded-full bg-emerald-700 px-6 py-3 text-center font-bold text-white transition hover:bg-emerald-800">
+                      立即組隊
                     </a>
                   </div>
                 </div>
@@ -556,12 +554,14 @@ export default function TaiwanFanNightWebsite() {
             <SectionTitle
               eyebrow="Raffle"
               title="抽獎活動"
-              description="抽獎分成 5/31 前早鳥宣傳抽獎，以及所有購票參加者都可參加的活動抽獎。"
+              description="抽獎分成兩個活動：
+1️⃣ 5/2–5/31 加入「912台灣集結」官方 LINE 群抽獎活動
+2️⃣ 912 台灣集結活動大抽獎（所有購票參加者皆可參加）"
             />
             <div className="grid gap-6 lg:grid-cols-2">
               <Card className="border-emerald-200 bg-emerald-50/70 p-8">
                 <div className="mb-5 flex h-14 w-14 items-center justify-center rounded-2xl bg-white text-3xl shadow-sm">🎁</div>
-                <h3 className="text-2xl font-black text-slate-950">5/31 前｜早鳥宣傳抽獎</h3>
+                <h3 className="text-2xl font-black text-slate-950">5/2–5/31｜加入官方 LINE 群抽獎活動</h3>
                 <p className="mt-4 leading-7 text-slate-700">
                   只要在 5/31 前加入 912 台灣集結官方 LINE 群，或填寫 912 台灣集結 Google Form，就有機會參加早鳥抽獎，並收到最新活動資訊。
                 </p>
@@ -581,7 +581,7 @@ export default function TaiwanFanNightWebsite() {
 
               <Card className="p-8">
                 <div className="mb-5 flex h-14 w-14 items-center justify-center rounded-2xl bg-slate-50 text-3xl shadow-sm">🏆</div>
-                <h3 className="text-2xl font-black text-slate-950">912 活動參加者抽獎</h3>
+                <h3 className="text-2xl font-black text-slate-950">912 台灣集結活動大抽獎</h3>
                 <p className="mt-4 leading-7 text-slate-700">
                   所有購票參加 912 Taiwan Fan Night at Fenway 的朋友，都可以參加活動抽獎。
                 </p>
