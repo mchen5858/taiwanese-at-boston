@@ -322,7 +322,7 @@ export default function TaiwanFanNightWebsite() {
                   想享有組隊優惠，隊長必須在 5/31 前完成「隊伍登記 + 整隊付款」。
                 </div>
                 <div className="mt-4 rounded-2xl bg-slate-50 p-4 text-sm leading-7 text-slate-700">
-                  目前 Fenway Park 當天 Bleacher 42 區票價約為 <strong>$64–$88</strong> 一張，而且一般購票還需要再加上每張 <strong>$8.75 per-ticket fee</strong>。
+                  目前 Fenway Park 當天 Bleacher 42 區票價約為 <strong>$64–$88</strong> 一張，而且一般購票還需要再加上每張 <strong>$8.75 per-ticket fee</strong>。相較之下，無論是 <strong>$47 組隊優惠</strong> 或是 <strong>$41 + 手續費</strong> 的正式購票連結，都是很大的優惠。
                 </div>
               </Card>
 
@@ -340,7 +340,7 @@ export default function TaiwanFanNightWebsite() {
                   6/1 後購票者仍可坐在 Bleacher 42 同一區、拿台灣主題 T-shirt、參加活動抽獎，並成為 Team Taiwan 的一份子。
                 </p>
                 <p className="mt-4 rounded-2xl bg-slate-50 p-4 text-sm leading-7 text-slate-700">
-                  目前 Fenway Park 當天 Bleacher 42 區票價約為 <strong>$64–$88</strong> 一張，而且一般購票還需要再加上每張 <strong>$8.75 per-ticket fee</strong>。
+                  目前 Fenway Park 當天 Bleacher 42 區票價約為 <strong>$64–$88</strong> 一張，而且一般購票還需要再加上每張 <strong>$8.75 per-ticket fee</strong>。相較之下，無論是 <strong>$47 組隊優惠</strong> 或是 <strong>$41 + 手續費</strong> 的正式購票連結，都是很大的優惠。
                 </p>
               </Card>
             </div>
