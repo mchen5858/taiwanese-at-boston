@@ -44,7 +44,7 @@ const teamExamples = [
 
 const teamLeaderboard = [
   { rank: 1, name: "波克萊台灣商會", tickets: "130", note: "目前領先" },
-  { rank: 2, name: "媽媽會", tickets: "30+", note: "持續增加中" },
+  { rank: 2, name: "波士頓台灣媽媽親子會", tickets: "30+", note: "持續增加中" },
   { rank: 3, name: "波士頓台灣人生技協會 BTBA", tickets: "20+", note: "持續增加中" },
 ];
 
@@ -129,9 +129,8 @@ export default function TaiwanFanNightWebsite() {
 
   const stats = useMemo(
     () => [
-      { label: "組隊票價", value: "$47" },
-      { label: "付款截止", value: "5/31" },
       { label: "比賽時間", value: "4:15 PM" },
+      { label: "對戰組合", value: "Royals vs Red Sox" },
       { label: "座位區域", value: "Bleacher 42" },
     ],
     []
@@ -500,19 +499,56 @@ export default function TaiwanFanNightWebsite() {
               description="為了方便對帳，請採用「隊員付給隊長 → 隊長統一付款給主辦單位」。Zelle 帳號與銀行轉帳資料請向主辦單位聯絡人索取。"
             />
             <div className="grid gap-6 lg:grid-cols-3">
-              <InfoCard icon="💳" title="Zelle">
-                建議優先使用 Zelle。請使用主辦單位提供的 Zelle 帳號付款，並在付款備註寫：<br />
-                <strong>912 + 隊名 + 隊長姓名 + 人數</strong>
-              </InfoCard>
-              <InfoCard icon="🏦" title="銀行轉帳 / ACH">
-                適合公司隊、商家隊、社團隊或大型隊伍。請先向主辦單位索取銀行轉帳資料，並在轉帳備註寫：<br />
-                <strong>912 + 隊名 + 隊長姓名 + 人數</strong>
-              </InfoCard>
-              <InfoCard icon="🧾" title="支票 Check">
-                支票請寄至：<br />
-                <strong>7 Bow St., Suite 1<br />North Reading, MA 01864</strong><br />
-                請確認支票可於 5/31 前完成付款確認。
-              </InfoCard>
+              <Card className="relative overflow-hidden border-emerald-300 bg-gradient-to-br from-emerald-700 to-sky-700 p-7 text-white shadow-xl ring-4 ring-emerald-100 transition hover:-translate-y-1 hover:shadow-2xl">
+                <div className="absolute -right-8 -top-8 h-28 w-28 rounded-full bg-white/10" />
+                <div className="mb-5 flex h-14 w-14 items-center justify-center rounded-2xl bg-white/15 text-3xl shadow-sm">💳</div>
+                <p className="text-sm font-semibold uppercase tracking-[0.25em] text-white/75">Recommended</p>
+                <h3 className="mt-2 text-3xl font-black">Zelle</h3>
+                <div className="mt-5 rounded-3xl bg-white p-5 text-emerald-900 shadow-sm">
+                  <p className="text-sm font-bold text-emerald-700">Zelle 帳號</p>
+                  <p className="mt-1 break-all text-3xl font-black">btcf-boston</p>
+                </div>
+                <div className="mt-5 rounded-2xl bg-white/15 p-4 text-sm leading-7 text-white/95">
+                  付款備註請寫：<br />
+                  <strong>912 + 隊名 + 隊長姓名 + 人數</strong>
+                </div>
+              </Card>
+
+              <Card className="relative overflow-hidden border-sky-200 bg-white p-7 shadow-lg transition hover:-translate-y-1 hover:shadow-xl">
+                <div className="mb-5 flex h-14 w-14 items-center justify-center rounded-2xl bg-sky-50 text-3xl text-sky-700 shadow-sm">🏦</div>
+                <p className="text-sm font-semibold uppercase tracking-[0.25em] text-sky-700">ACH / Bank Transfer</p>
+                <h3 className="mt-2 text-3xl font-black text-slate-950">銀行轉帳</h3>
+                <div className="mt-5 grid gap-3">
+                  <div className="rounded-2xl bg-slate-50 p-4">
+                    <p className="text-xs font-bold uppercase tracking-wide text-slate-500">Account number</p>
+                    <p className="mt-1 break-all text-2xl font-black text-slate-950">466026497066</p>
+                  </div>
+                  <div className="rounded-2xl bg-slate-50 p-4">
+                    <p className="text-xs font-bold uppercase tracking-wide text-slate-500">Routing number</p>
+                    <p className="mt-1 text-2xl font-black text-slate-950">011000138</p>
+                  </div>
+                </div>
+                <div className="mt-5 rounded-2xl bg-sky-50 p-4 text-sm leading-7 text-sky-900">
+                  轉帳備註請寫：<br />
+                  <strong>912 + 隊名 + 隊長姓名 + 人數</strong>
+                </div>
+              </Card>
+
+              <Card className="relative overflow-hidden border-amber-200 bg-white p-7 shadow-lg transition hover:-translate-y-1 hover:shadow-xl">
+                <div className="mb-5 flex h-14 w-14 items-center justify-center rounded-2xl bg-amber-50 text-3xl text-amber-700 shadow-sm">🧾</div>
+                <p className="text-sm font-semibold uppercase tracking-[0.25em] text-amber-700">Check</p>
+                <h3 className="mt-2 text-3xl font-black text-slate-950">支票付款</h3>
+                <div className="mt-5 rounded-3xl bg-amber-50 p-5 text-amber-950">
+                  <p className="text-sm font-bold">支票請寄至</p>
+                  <p className="mt-2 text-lg font-black leading-7">
+                    7 Bow St., Suite 1<br />
+                    North Reading, MA 01864
+                  </p>
+                </div>
+                <div className="mt-5 rounded-2xl bg-slate-50 p-4 text-sm leading-7 text-slate-700">
+                  請確認支票可於 <strong>5/31 前</strong> 完成付款確認。
+                </div>
+              </Card>
             </div>
 
             <Card className="mt-8 p-8">
