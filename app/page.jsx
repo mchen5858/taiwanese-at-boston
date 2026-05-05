@@ -3,9 +3,11 @@
 import React, { useEffect, useMemo, useState } from "react";
 
 const hostLogo = "/btcc-btcf-logo.jpg";
+const eventLogo = "/912-fenway-logo.png";
 const officialLineGroup = "https://line.me/ti/g/uyAcZJRn75";
 const googleFormLink = "https://forms.gle/27V7wtAEBxRbboL79";
-const teamRegistrationFormLink = "https://forms.gle/6y2vnFoiwLj8aRgL9";
+const teamRegistrationFormLink = "https://www.zeffy.com/en-US/ticketing/912-taiwan-fan-night-at-fenway--912";
+const zeffyPaymentLink = "https://www.zeffy.com/en-US/ticketing/912-taiwan-fan-night-at-fenway--912";
 const organizerLine = "https://line.me/ti/p/xbvkW3pO20";
 const volunteerFormLink = "https://forms.gle/1KrTH1ETd9quXNMJ6";
 
@@ -58,8 +60,8 @@ const faqs = [
     a: "主辦單位會在 6/1 前依付款完成順序安排座位，並盡量讓同隊坐在一起。若人數較多，可能安排在前後排或相鄰座位。",
   },
   {
-    q: "隊員資料可以之後補嗎？",
-    a: "可以。5/31 前最重要的是隊長完成隊伍登記與整隊付款。隊員姓名、Email、手機與 T-shirt size 可於主辦單位指定日期前補齊。",
+    q: "電子票會寄到哪裡？",
+    a: "電子票將於活動前發送，並以購票者在 Zeffy 上填寫的 Email 為主要發送依據。請購票時務必確認 Email 填寫正確。",
   },
   {
     q: "付款後可以退款嗎？",
@@ -129,6 +131,7 @@ export default function TaiwanFanNightWebsite() {
 
   const stats = useMemo(
     () => [
+      { label: "比賽日期", value: "9/12 Sat" },
       { label: "比賽時間", value: "4:15 PM" },
       { label: "對戰組合", value: "Royals vs Red Sox" },
       { label: "座位區域", value: "Bleacher 42" },
@@ -158,7 +161,7 @@ export default function TaiwanFanNightWebsite() {
           </nav>
 
           <div className="hidden md:block">
-            <Button onClick={() => scrollToSection("teams")}>立即組隊</Button>
+            <Button onClick={() => window.open(zeffyPaymentLink, "_blank")}>立即組隊</Button>
           </div>
 
           <button className="text-2xl md:hidden" onClick={() => setOpenMenu(!openMenu)} aria-label="Open menu">
@@ -198,6 +201,8 @@ export default function TaiwanFanNightWebsite() {
               </h1>
               <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-600 md:text-xl">
                 9/12，我們要一起走進 Fenway Park，讓 Red Sox 看見波士頓台灣人的凝聚力，為 2027 Red Sox Taiwan Day 鋪路，也用行動支持波士頓在地公益。
+                <br /><br />
+                On September 12, we will come together at Fenway Park to show the strength and unity of the Taiwanese community in Boston. Together, we are paving the way for Red Sox Taiwan Day 2027 while supporting local charities in Boston through our collective action.
               </p>
 
               <div className="mt-8 flex flex-col gap-3 sm:flex-row">
@@ -207,19 +212,30 @@ export default function TaiwanFanNightWebsite() {
               </div>
 
               <div className="mt-10 grid grid-cols-2 gap-3 md:grid-cols-4">
-                {stats.map((s) => (
-                  <div key={s.label} className="rounded-2xl border border-slate-200 bg-white/90 p-4 shadow-sm">
+                {stats.map((s, i) => {
+                const bgStyles = [
+                  "bg-gradient-to-br from-emerald-100 to-white border-emerald-200",
+                  "bg-gradient-to-br from-sky-100 to-white border-sky-200",
+                  "bg-gradient-to-br from-amber-100 to-white border-amber-200",
+                  "bg-gradient-to-br from-rose-100 to-white border-rose-200",
+                ];
+                return (
+                  <div key={s.label} className={`rounded-2xl p-4 shadow-sm border ${bgStyles[i % bgStyles.length]}`}>
                     <p className="text-2xl font-black text-slate-950">{s.value}</p>
                     <p className="mt-1 text-xs font-medium text-slate-500">{s.label}</p>
                   </div>
-                ))}
+                );
+              })}
               </div>
             </div>
 
             <div>
               <Card className="border-emerald-100 bg-white/95 p-7 shadow-xl md:p-8">
-                <div className="mb-6 flex justify-center rounded-3xl border border-slate-200 bg-white p-4 shadow-sm">
-                  <img src={hostLogo} alt="BTCC & BTCF Logo" className="h-auto w-full max-w-[300px] object-contain" />
+                <div className="mb-6 flex justify-center rounded-3xl border border-emerald-100 bg-gradient-to-br from-white to-emerald-50 p-4 shadow-sm">
+                  <img src={eventLogo} alt="912 Fenway 台灣集結 Logo" className="h-auto w-full max-w-[360px] object-contain" />
+                </div>
+                <div className="mb-6 flex justify-center rounded-2xl border border-slate-200 bg-white p-3 shadow-sm">
+                  <img src={hostLogo} alt="BTCC & BTCF Logo" className="h-auto w-full max-w-[220px] object-contain" />
                 </div>
                 <div className="mb-6 rounded-3xl bg-gradient-to-br from-emerald-700 to-sky-700 p-7 text-white">
                   <p className="text-sm font-semibold opacity-90">活動目的</p>
@@ -295,13 +311,13 @@ export default function TaiwanFanNightWebsite() {
               <p className="mb-3 text-sm font-semibold uppercase tracking-[0.25em] text-emerald-700">Tickets</p>
               <div className="text-6xl font-black tracking-tight text-emerald-700 md:text-8xl lg:text-9xl">TEAM TAIWAN</div>
               <h2 className="mt-3 text-3xl font-bold tracking-tight text-slate-950 md:text-5xl">5/31 前組隊優惠</h2>
-              <p className="mt-4 text-base leading-7 text-slate-600 md:text-lg">只要 3 人以上組隊，並由隊長在 5/31 前完成整隊報名與付款，即可鎖定組隊優惠。</p>
+              <p className="mt-4 text-base leading-7 text-slate-600 md:text-lg">無論是否組隊，只要在 5/31 前透過 Zeffy 購票付款，每張票都是 $47。3 人以上可自行組隊並使用相同 Team Name 參加創意隊名比賽。</p>
             </div>
             <div className="grid gap-6 lg:grid-cols-2">
               <Card className="border-emerald-200 p-8 shadow-lg">
                 <div className="mb-6 flex items-center justify-between gap-4">
                   <div>
-                    <p className="text-sm font-bold text-emerald-700">5/31 前完成付款</p>
+                    <p className="text-sm font-bold text-emerald-700">5/31 前完成 Zeffy 購票</p>
                     <h3 className="mt-1 text-3xl font-black text-slate-950">組隊優惠票</h3>
                   </div>
                   <div className="rounded-[2rem] bg-emerald-700 px-8 py-6 text-center text-white shadow-lg ring-4 ring-emerald-100">
@@ -325,10 +341,24 @@ export default function TaiwanFanNightWebsite() {
                   ))}
                 </ul>
                 <div className="mt-7 rounded-2xl bg-amber-50 p-4 text-sm leading-7 text-amber-900">
-                  想享有組隊優惠，隊長必須在 5/31 前完成「隊伍登記 + 整隊付款」。
+                  想享有 5/31 前 $47 優惠，請每位參加者於 5/31 前自行完成 Zeffy 購票付款。沒有要組隊、或未滿 3 人也可以直接購票，同樣享有每張票 $47 的價格。若要組隊，請填寫相同 Team Name。
                 </div>
                 <div className="mt-4 rounded-2xl bg-slate-50 p-4 text-sm leading-7 text-slate-700">
                   依據紅襪官網，目前 Fenway Park 912 當天 Bleacher 42 區票價約為 <strong>$64 ~ $88</strong> 一張，而且每張票還需要再加上 <strong>$8.75 per-ticket fee</strong>。相較之下，無論是 <strong>$47 組隊優惠</strong> 或是 <strong>$41 專屬團體購票</strong>，都是主辦單位幫我們 TEAM TAIWAN 與紅襪爭取到的很好優惠！
+                </div>
+                <div className="mt-4 grid gap-3 md:grid-cols-2">
+                  <div className="rounded-2xl border border-emerald-200 bg-emerald-50 p-5 text-sm leading-7 text-emerald-900">
+                    <div className="mb-3 flex h-11 w-11 items-center justify-center rounded-2xl bg-white text-2xl shadow-sm">📍</div>
+                    <p className="text-base font-black text-emerald-950">座位安排 Seating</p>
+                    <p className="mt-2">Seats will be arranged by group/team when possible.</p>
+                    <p className="mt-2">座位將盡量依隊伍或同行者安排。</p>
+                  </div>
+                  <div className="rounded-2xl border border-sky-200 bg-sky-50 p-5 text-sm leading-7 text-sky-900">
+                    <div className="mb-3 flex h-11 w-11 items-center justify-center rounded-2xl bg-white text-2xl shadow-sm">🎟️</div>
+                    <p className="text-base font-black text-sky-950">電子票 E-Tickets</p>
+                    <p className="mt-2">Tickets will be distributed electronically closer to the event, based on the email address entered by each purchaser on Zeffy.</p>
+                    <p className="mt-2">電子票將於活動前發送，並以購票者在 Zeffy 上填寫的 Email 為主要發送依據。</p>
+                  </div>
                 </div>
               </Card>
 
@@ -357,7 +387,7 @@ export default function TaiwanFanNightWebsite() {
                   <p className="text-sm font-semibold uppercase tracking-[0.25em] text-white/75">Red Sox Giveaway</p>
                   <h3 className="mt-3 text-3xl font-black">當天紅襪現場贈品</h3>
                   <p className="mt-4 leading-7 text-white/90">
-                    5/31 前完成組隊付款者，可獲得 Red Sox 提供的限量 Red Sox × Bruins co-branding Baseball Jersey。此為 9/12 當天在 Fenway Park 現場領取的贈品。
+                    5/31 前完成組隊購票者，可獲得 Red Sox 提供的限量 Red Sox × Bruins co-branding Baseball Jersey。此為 9/12 當天在 Fenway Park 現場領取的贈品。
                   </p>
                   <p className="mt-4 rounded-2xl bg-white/15 p-4 text-sm leading-7 text-white/90">
                     先到先領，尺寸發完為止；數量與尺寸依 Red Sox 現場提供為準。
@@ -376,34 +406,41 @@ export default function TaiwanFanNightWebsite() {
             <SectionTitle
               eyebrow="TEAM TAIWAN"
               title="TEAM TAIWAN 組隊方式"
-              description="隊長、隊員、個人報名皆使用同一份 Google Form。3 人以上即可成立隊伍。隊長請先填表建立隊伍，再將同一份表單連結傳給隊員。隊員填表時請選擇「我是隊員」，並填寫隊伍名稱。"
+              description="不管是否組隊，每位參加者都可以自行至 Zeffy 購票付款，5/31 前每張票都是 $47。3 人以上即可自行組隊並命名；隊長只需要取隊名、邀請朋友，並提醒隊員填寫完全相同的 Team Name。"
             />
             <div className="grid gap-6 md:grid-cols-3">
-              <InfoCard icon="👥" title="1. 隊長先建立隊伍">
-                隊長請填寫同一份 Google Form，第一題選擇 <strong>「我是隊長：我要建立隊伍」</strong>，並填寫隊名、隊長聯絡方式與預計人數。
+              <InfoCard icon="👥" title="1. 隊長先決定隊伍名稱">
+                3 人以上即可成立隊伍。隊名可以自由創意命名，中英文皆可。僑團、公司、學校社團或組織，也可以直接使用單位名稱作為隊名。
               </InfoCard>
-              <InfoCard icon="📝" title="2. 隊員再加入隊伍">
-                隊員也填寫同一份 Google Form，第一題選擇 <strong>「我是隊員：我要加入已成立隊伍」</strong>，並填寫隊伍名稱。隊伍名稱請與隊長登記的名稱完全相同。
+              <InfoCard icon="📣" title="2. 分享隊名給隊員">
+                隊長把隊伍名稱分享給隊員。請所有隊員購票時填寫 <strong>完全相同的隊名</strong>，以利後續統計、座位安排與比賽資格確認。
               </InfoCard>
-              <InfoCard icon="🎟️" title="3. 隊長統一付款">
-                隊長確認人數後，請於 5/31 前完成整隊付款。主辦單位會在 6/1 前依付款完成順序安排座位。
+              <InfoCard icon="🎟️" title="3. 每位參加者自行購票付款">
+                每位參加者自行至 Zeffy 購票付款。隊長不需要代收款，也不需要幫大家統一購票。沒有要組隊或未滿 3 人也可以直接購票，同樣享有 5/31 前每張票 $47 的價格。
               </InfoCard>
             </div>
 
             <Card id="team-form-coming-soon" className="mt-8 border-emerald-200 bg-emerald-50 p-6 md:p-8">
               <div className="grid gap-6 lg:grid-cols-[1fr_auto] lg:items-center">
                 <div>
-                  <p className="text-sm font-semibold uppercase tracking-[0.25em] text-emerald-700">One Form Only</p>
-                  <h3 className="mt-2 text-2xl font-black text-slate-950">隊長與隊員使用同一份 Google Form</h3>
+                  <p className="text-sm font-semibold uppercase tracking-[0.25em] text-emerald-700">Zeffy Team Name</p>
+                  <h3 className="mt-2 text-2xl font-black text-slate-950">購票時請填寫 Team Name</h3>
                   <p className="mt-4 leading-7 text-slate-700">
-                    隊長、隊員、個人報名皆使用同一份 Google Form。3 人以上即可成立隊伍。隊長請先填表建立隊伍，再將同一份表單連結傳給隊員。隊員填表時請選擇「我是隊員」，並填寫隊伍名稱。
+                    每位參加者在 Zeffy 表單中的 <strong>Team Name</strong> 欄位，填上相同隊名。隊名必須完全一致，才方便主辦單位統計人數、安排座位與確認創意隊名比賽資格。
                   </p>
+                  <p className="mt-3 leading-7 text-slate-700">
+                    僑團、公司、學校社團或組織可以直接使用單位名稱作為隊名，例如 <strong>波士頓台灣人生技協會 BTBA</strong>。這樣大家在 TEAM TAIWAN 集氣榜上，也可以清楚看到各僑團、單位與組織的集結力量。
+                  </p>
+                  <div className="mt-4 rounded-2xl bg-white p-4 text-sm leading-7 text-slate-700">
+                    <p><strong>✅ 正確：</strong>Boston Taiwan Power</p>
+                    <p><strong>❌ 不建議：</strong>Boston Taiwan / Taiwan Power / boston taiwan power</p>
+                  </div>
                   <p className="mt-3 text-sm leading-7 text-slate-600">
-                    請使用下方組隊報名表連結。隊長、隊員、個人報名皆使用同一份表單。
+                    沒有要組隊，或未滿 3 人的朋友，也可以直接透過 Zeffy 購票，同樣享有 5/31 前每張票 $47 的價格。未滿 3 人仍可填寫隊名，但不列入創意隊名比賽資格。
                   </p>
                 </div>
-                <a href={teamRegistrationFormLink} className="rounded-full bg-emerald-700 px-6 py-3 text-center font-bold text-white transition hover:bg-emerald-800">
-                  填寫組隊報名表
+                <a href={zeffyPaymentLink} className="rounded-full bg-emerald-700 px-6 py-3 text-center font-bold text-white transition hover:bg-emerald-800">
+                  立即前往 Zeffy 購票
                 </a>
               </div>
             </Card>
@@ -412,9 +449,12 @@ export default function TaiwanFanNightWebsite() {
               <div className="grid gap-8 lg:grid-cols-[0.8fr_1.2fr] lg:items-center">
                 <div>
                   <p className="text-sm font-semibold uppercase tracking-[0.25em] text-white/75">Team Name Ideas</p>
-                  <h3 className="mt-3 text-3xl font-black">3 人以上就可以成立自己的小隊</h3>
+                  <h3 className="mt-3 text-3xl font-black">可個人購票，也可以 3 人以上組隊</h3>
                   <p className="mt-4 text-sm leading-7 text-white/85">
-                    每隊都可以自取隊名，並列入 Team Taiwan 集結名單，也可以參加最佳創意隊名獎。隊名請使用適當、尊重、友善的名稱，避免不雅、歧視、政治攻擊、商標侵權或容易造成誤解的內容。主辦單位保留隊名審核與調整之權利。
+                    歡迎大家發揮創意，邀請親友一起加入 9/12 Fenway 台灣集結！沒有要組隊的人，也可以直接購票參加。3 人以上的隊伍將自動參加「最佳創意隊名獎」評選。主辦單位將依照隊名創意、活動精神與整體趣味性進行評選，並保有最終決定權。
+                  </p>
+                  <p className="mt-3 text-sm leading-7 text-white/85">
+                    隊名請使用適當、尊重、友善的名稱，避免不雅、歧視、政治攻擊、商標侵權或容易造成誤解的內容。
                   </p>
                 </div>
                 <div className="flex flex-wrap gap-3">
@@ -436,16 +476,14 @@ export default function TaiwanFanNightWebsite() {
               title="TEAM TAIWAN 集氣榜"
               description="感謝各隊熱情響應！集氣榜將依照各隊目前認票／報名票數持續更新。"
             />
-
             <Card className="overflow-hidden border-emerald-200 bg-white shadow-lg">
               <div className="bg-gradient-to-br from-emerald-700 to-sky-700 p-8 text-white md:p-10">
                 <p className="text-sm font-semibold uppercase tracking-[0.25em] text-white/75">Current Teams</p>
                 <h3 className="mt-3 text-3xl font-black">讓 Red Sox 看見 Team Taiwan 的力量</h3>
                 <p className="mt-4 max-w-3xl leading-7 text-white/90">
-                  每一隊的加入，都是為 912 台灣集結與 2027 Red Sox Taiwan Day 集氣。歡迎更多家庭、朋友、公司、校友會、社團與商家一起加入！
+                  每一隊的加入，都是為 912 台灣集結與 2027 Red Sox Taiwan Day 集氣。歡迎更多家庭、朋友、僑團、公司、組織、校友會、社團與商家一起加入！各單位也可以直接使用單位名稱作為隊名，讓大家在集氣榜上看見你們的力量。
                 </p>
               </div>
-
               <div className="p-6 md:p-8">
                 <div className="rounded-[2rem] border border-emerald-100 bg-gradient-to-br from-emerald-50 via-white to-sky-50 p-6 md:p-10">
                   <div className="mx-auto flex max-w-5xl flex-col items-center gap-6 md:relative md:min-h-[520px] md:block">
@@ -455,15 +493,11 @@ export default function TaiwanFanNightWebsite() {
                         "h-56 w-56 bg-sky-600 text-white ring-8 ring-sky-100 md:absolute md:left-16 md:bottom-8 md:h-64 md:w-64",
                         "h-48 w-48 bg-emerald-500 text-white ring-8 ring-emerald-100 md:absolute md:right-20 md:bottom-20 md:h-56 md:w-56",
                       ];
-                      const textStyles = [
-                        "text-3xl md:text-4xl",
-                        "text-2xl md:text-3xl",
-                        "text-xl md:text-2xl",
-                      ];
+                      const textStyles = ["text-3xl md:text-4xl", "text-2xl md:text-3xl", "text-xl md:text-2xl"];
                       return (
                         <div
                           key={team.name}
-                          className={`absolute flex shrink-0 flex-col items-center justify-center rounded-full p-6 text-center shadow-xl transition hover:-translate-y-1 hover:shadow-2xl ${bubbleStyles[index]}`}
+                          className={`flex shrink-0 flex-col items-center justify-center rounded-full p-6 text-center shadow-xl transition hover:-translate-y-1 hover:shadow-2xl ${bubbleStyles[index]}`}
                           title={`${team.name}｜${team.tickets} 張票`}
                         >
                           <div className={`font-black leading-tight ${textStyles[index]}`}>{team.name}</div>
@@ -474,14 +508,13 @@ export default function TaiwanFanNightWebsite() {
                     })}
                   </div>
                 </div>
-
                 <div className="mt-8 rounded-3xl border border-emerald-200 bg-emerald-50 p-6 text-center">
                   <h4 className="text-2xl font-black text-slate-950">你的隊伍也可以一起集氣！</h4>
                   <p className="mx-auto mt-3 max-w-2xl leading-7 text-slate-600">
-                    3 人以上就可以組隊，自取隊名並加入 Team Taiwan 集結名單。5/31 前完成隊伍登記與整隊付款，就能鎖定組隊優惠。隊名請使用適當、尊重、友善的名稱；主辦單位保留隊名審核與調整之權利。
+                    3 人以上就可以組隊，自取隊名並加入 TEAM TAIWAN 集氣榜。5/31 前透過 Zeffy 購票，每張票都是 $47。隊名請使用適當、尊重、友善的名稱；主辦單位保留隊名審核與調整之權利。
                   </p>
                   <div className="mt-6 flex flex-col gap-3 sm:flex-row sm:justify-center">
-                    <a href={teamRegistrationFormLink} target="_blank" rel="noreferrer" className="rounded-full bg-emerald-700 px-6 py-3 text-center font-bold text-white transition hover:bg-emerald-800">
+                    <a href={zeffyPaymentLink} target="_blank" rel="noreferrer" className="rounded-full bg-emerald-700 px-6 py-3 text-center font-bold text-white transition hover:bg-emerald-800">
                       立即組隊
                     </a>
                   </div>
@@ -496,78 +529,54 @@ export default function TaiwanFanNightWebsite() {
             <SectionTitle
               eyebrow="Payment"
               title="付款方式"
-              description="為了方便對帳，請採用「隊員付給隊長 → 隊長統一付款給主辦單位」。Zelle 帳號與銀行轉帳資料請向主辦單位聯絡人索取。"
+              description="新付款方式：每位參加者自行至 Zeffy 購票付款。隊長不需要代收款，也不需要幫大家統一購票。沒有要組隊或未滿 3 人也可以直接購票，5/31 前同樣享有每張票 $47。"
             />
             <div className="grid gap-6 lg:grid-cols-3">
-              <Card className="relative overflow-hidden border-emerald-300 bg-gradient-to-br from-emerald-700 to-sky-700 p-7 text-white shadow-xl ring-4 ring-emerald-100 transition hover:-translate-y-1 hover:shadow-2xl">
+              <Card className="relative overflow-hidden border-emerald-300 bg-gradient-to-br from-emerald-700 to-sky-700 p-7 text-white shadow-xl ring-4 ring-emerald-100 transition hover:-translate-y-1 hover:shadow-2xl lg:col-span-2">
                 <div className="absolute -right-8 -top-8 h-28 w-28 rounded-full bg-white/10" />
-                <div className="mb-5 flex h-14 w-14 items-center justify-center rounded-2xl bg-white/15 text-3xl shadow-sm">💳</div>
-                <p className="text-sm font-semibold uppercase tracking-[0.25em] text-white/75">Recommended</p>
-                <h3 className="mt-2 text-3xl font-black">Zelle</h3>
+                <div className="mb-5 flex h-14 w-14 items-center justify-center rounded-2xl bg-white/15 text-3xl shadow-sm">🎟️</div>
+                <p className="text-sm font-semibold uppercase tracking-[0.25em] text-white/75">Main Payment Method</p>
+                <h3 className="mt-2 text-3xl font-black">Zeffy 購票付款</h3>
+                <p className="mt-4 leading-7 text-white/95">
+                  每位參加者自行透過 Zeffy 購票付款。沒有要組隊或未滿 3 人也可以直接購票，5/31 前同樣享有每張票 $47。若有組隊，購票時請務必填寫 <strong>Team Name</strong>，同一隊請填寫完全相同的隊名。
+                </p>
                 <div className="mt-5 rounded-3xl bg-white p-5 text-emerald-900 shadow-sm">
-                  <p className="text-sm font-bold text-emerald-700">Zelle 帳號</p>
-                  <p className="mt-1 break-all text-3xl font-black">btcf-boston</p>
+                  <p className="text-sm font-bold text-emerald-700">填寫格式提醒</p>
+                  <p className="mt-1 text-lg font-black">有組隊：請填完全相同隊名</p>
+                  <p className="mt-2 text-sm leading-6 text-emerald-800">沒有組隊：Team Name 可填 Individual 或留空（依 Zeffy 表單設定）</p>
                 </div>
-                <div className="mt-5 rounded-2xl bg-white/15 p-4 text-sm leading-7 text-white/95">
-                  付款備註請寫：<br />
-                  <strong>912 + 隊名 + 隊長姓名 + 人數</strong>
-                </div>
-              </Card>
-
-              <Card className="relative overflow-hidden border-sky-200 bg-white p-7 shadow-lg transition hover:-translate-y-1 hover:shadow-xl">
-                <div className="mb-5 flex h-14 w-14 items-center justify-center rounded-2xl bg-sky-50 text-3xl text-sky-700 shadow-sm">🏦</div>
-                <p className="text-sm font-semibold uppercase tracking-[0.25em] text-sky-700">ACH / Bank Transfer</p>
-                <h3 className="mt-2 text-3xl font-black text-slate-950">銀行轉帳</h3>
-                <div className="mt-5 grid gap-3">
-                  <div className="rounded-2xl bg-slate-50 p-4">
-                    <p className="text-xs font-bold uppercase tracking-wide text-slate-500">Account number</p>
-                    <p className="mt-1 break-all text-2xl font-black text-slate-950">466026497066</p>
-                  </div>
-                  <div className="rounded-2xl bg-slate-50 p-4">
-                    <p className="text-xs font-bold uppercase tracking-wide text-slate-500">Routing number</p>
-                    <p className="mt-1 text-2xl font-black text-slate-950">011000138</p>
-                  </div>
-                </div>
-                <div className="mt-5 rounded-2xl bg-sky-50 p-4 text-sm leading-7 text-sky-900">
-                  轉帳備註請寫：<br />
-                  <strong>912 + 隊名 + 隊長姓名 + 人數</strong>
-                </div>
+                <a href={zeffyPaymentLink} className="mt-6 inline-flex rounded-full bg-white px-6 py-3 font-bold text-emerald-800 transition hover:bg-emerald-50">
+                  立即前往 Zeffy 購票
+                </a>
               </Card>
 
               <Card className="relative overflow-hidden border-amber-200 bg-white p-7 shadow-lg transition hover:-translate-y-1 hover:shadow-xl">
-                <div className="mb-5 flex h-14 w-14 items-center justify-center rounded-2xl bg-amber-50 text-3xl text-amber-700 shadow-sm">🧾</div>
-                <p className="text-sm font-semibold uppercase tracking-[0.25em] text-amber-700">Check</p>
-                <h3 className="mt-2 text-3xl font-black text-slate-950">支票付款</h3>
+                <div className="mb-5 flex h-14 w-14 items-center justify-center rounded-2xl bg-amber-50 text-3xl text-amber-700 shadow-sm">⚠️</div>
+                <p className="text-sm font-semibold uppercase tracking-[0.25em] text-amber-700">Reminder</p>
+                <h3 className="mt-2 text-3xl font-black text-slate-950">隊長不用代收款</h3>
                 <div className="mt-5 rounded-3xl bg-amber-50 p-5 text-amber-950">
-                  <p className="text-sm font-bold">支票請寄至</p>
-                  <p className="mt-2 text-lg font-black leading-7">
-                    7 Bow St., Suite 1<br />
-                    North Reading, MA 01864
-                  </p>
-                </div>
-                <div className="mt-5 rounded-2xl bg-slate-50 p-4 text-sm leading-7 text-slate-700">
-                  請確認支票可於 <strong>5/31 前</strong> 完成付款確認。
+                  <p className="font-bold">隊長任務很簡單：</p>
+                  <p className="mt-2 leading-7">取隊名、邀請朋友、提醒隊員自行購票，並在 Zeffy 填寫相同 Team Name。</p>
                 </div>
               </Card>
             </div>
 
             <Card className="mt-8 p-8">
-              <h3 className="text-2xl font-black text-slate-950">付款金額範例</h3>
+              <h3 className="text-2xl font-black text-slate-950">組隊與付款提醒</h3>
               <div className="mt-6 grid gap-4 md:grid-cols-3">
                 {[
-                  ["5 人隊伍", "$47 × 5", "$235"],
-                  ["10 人隊伍", "$47 × 10", "$470"],
-                  ["20 人隊伍", "$47 × 20", "$940"],
-                ].map(([label, formula, total]) => (
+                  ["隊長", "取隊名、邀請朋友、提醒隊員填相同 Team Name"],
+                  ["隊員", "自行至 Zeffy 購票付款；若有組隊，請填寫相同隊名"],
+                  ["主辦單位", "依照 Zeffy 表單資料統計人數、安排座位、確認比賽資格"],
+                ].map(([label, text]) => (
                   <div key={label} className="rounded-2xl bg-slate-50 p-5">
-                    <p className="text-sm font-bold text-slate-500">{label}</p>
-                    <p className="mt-2 text-sm text-slate-600">{formula}</p>
-                    <p className="mt-2 text-3xl font-black text-emerald-700">{total}</p>
+                    <p className="text-lg font-black text-slate-950">{label}</p>
+                    <p className="mt-2 text-sm leading-7 text-slate-600">{text}</p>
                   </div>
                 ))}
               </div>
               <div className="mt-6 rounded-2xl bg-emerald-50 p-5 text-sm leading-7 text-emerald-900">
-                隊長完成付款後，請將付款截圖、轉帳紀錄或支票寄出紀錄傳給主辦單位，並註明隊名、隊長姓名、付款金額、隊伍人數與付款方式。Zelle 帳號與銀行轉帳資料請向主辦單位聯絡人索取：medianchen@gmail.com。
+                若有組隊，請務必填寫完全一致的隊名，以利後續統計、座位安排與創意隊名比賽資格確認。沒有要組隊或未滿 3 人，也可以直接透過 Zeffy 購票。
               </div>
             </Card>
           </div>
@@ -578,9 +587,7 @@ export default function TaiwanFanNightWebsite() {
             <SectionTitle
               eyebrow="Raffle"
               title="抽獎活動"
-              description="抽獎分成兩個活動：
-1️⃣ 5/2–5/31 加入「912台灣集結」官方 LINE 群抽獎活動
-2️⃣ 912 台灣集結活動大抽獎（所有購票參加者皆可參加）"
+              description="抽獎分成兩個活動：5/2–5/31 加入「912台灣集結」官方 LINE 群抽獎活動，以及 912 台灣集結活動大抽獎（所有購票參加者皆可參加）。"
             />
             <div className="grid gap-6 lg:grid-cols-2">
               <Card className="border-emerald-200 bg-emerald-50/70 p-8">
@@ -731,9 +738,9 @@ export default function TaiwanFanNightWebsite() {
             <div className="grid gap-8 lg:grid-cols-[1fr_auto] lg:items-center">
               <div>
                 <p className="text-sm font-semibold uppercase tracking-[0.25em] text-emerald-300">Join Team Taiwan</p>
-                <h2 className="mt-3 text-3xl font-black md:text-5xl">3 人以上就可以組隊，現在開始揪團！</h2>
+                <h2 className="mt-3 text-3xl font-black md:text-5xl">可個人購票，也可以 3 人以上組隊！</h2>
                 <p className="mt-4 max-w-2xl leading-7 text-slate-300">
-                  5/31 前完成隊伍登記與整隊付款，就能鎖定組隊優惠。讓我們一起穿上台灣、支持台灣，也用行動回饋波士頓社區。
+                  5/31 前透過 Zeffy 購票，每張票都是 $47。若要組隊，請隊員在 Zeffy 填寫相同 Team Name。讓我們一起穿上台灣、支持台灣，也用行動回饋波士頓社區。
                 </p>
                 <p className="mt-3 max-w-2xl leading-7 text-slate-300">
                   🙌 我們也歡迎您一起加入波克萊志工團隊。
@@ -742,23 +749,4 @@ export default function TaiwanFanNightWebsite() {
                   加入志工團隊
                 </a>
               </div>
-              <Button onClick={() => scrollToSection("teams")}>查看報名流程</Button>
-            </div>
-          </div>
-        </section>
-      </main>
-
-      <footer className="border-t border-slate-200 bg-white px-4 py-8 md:px-8">
-        <div className="mx-auto max-w-7xl">
-          <div className="mb-5 flex justify-center md:justify-start">
-            <img src={hostLogo} alt="BTCC & BTCF Logo" className="h-auto w-full max-w-[220px] object-contain" />
-          </div>
-          <div className="flex flex-col gap-3 text-sm text-slate-500 md:flex-row md:items-center md:justify-between">
-            <p>© 2026 912 Taiwan Fan Night at Fenway｜912 台灣集結</p>
-            <p>Hosted by 波克萊台灣商會基金會（BTCF） & 波克萊台灣商會（BTCC）｜Contact: medianchen@gmail.com｜LINE: line.me/ti/p/xbvkW3pO20</p>
-          </div>
-        </div>
-      </footer>
-    </div>
-  );
-}
+              <Button onClick={() => window.open(zeffyPaym
