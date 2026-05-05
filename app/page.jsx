@@ -34,6 +34,24 @@ const teamExamples = [
   "志工隊",
   "僑團隊",
   "創意隊名隊",
+
+  // 有趣版本
+  "台灣No.1隊",
+  "Fenway佔領隊",
+  "台灣應援最強隊",
+  "珍奶續命隊",
+  "鹽酥雞補給隊",
+  "時差還沒調整隊",
+  "先買票再說隊",
+  "看到台灣就嗨隊",
+  "紅襪看我隊",
+  "今天也要喊台灣隊",
+  "Team Taiwan GO隊",
+  "波士頓台味隊",
+  "夜市搬來隊",
+  "小籠包補血隊",
+  "珍珠加爆隊",
+  "我只是來看台灣隊",
 ];
 
 const teamLeaderboard = [
@@ -136,8 +154,8 @@ export default function TaiwanFanNightWebsite() {
       <header className="sticky top-0 z-50 border-b border-slate-200 bg-white/85 backdrop-blur-xl">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 md:px-8">
           <button onClick={() => scrollToSection("home")} className="text-left">
-            <p className="text-sm font-bold tracking-wide text-emerald-700">🇹🇼⚾ 912 台灣集結</p>
-            <p className="text-xs text-slate-500">Taiwan Fan Night at Fenway</p>
+            <p className="text-lg font-black tracking-wide text-emerald-700 md:text-xl">🇹🇼⚾ 912 台灣集結</p>
+            <p className="text-sm text-slate-500">Taiwan Fan Night at Fenway</p>
           </button>
 
           <nav className="hidden items-center gap-1 md:flex">
@@ -299,7 +317,7 @@ export default function TaiwanFanNightWebsite() {
                     <h3 className="mt-1 text-3xl font-black text-slate-950">組隊優惠票</h3>
                   </div>
                   <div className="rounded-[2rem] bg-emerald-700 px-8 py-6 text-center text-white shadow-lg ring-4 ring-emerald-100">
-                    <p className="text-6xl font-black leading-none md:text-7xl">$47</p>
+                    <p className="text-7xl font-black leading-none md:text-8xl">$47</p>
                     <p className="mt-2 text-sm font-semibold uppercase tracking-wide">per ticket</p>
                   </div>
                 </div>
