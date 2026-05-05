@@ -5,6 +5,7 @@ import React, { useMemo, useState } from "react";
 const hostLogo = "/btcc-btcf-logo.jpg";
 const officialLineGroup = "https://line.me/ti/g/uyAcZJRn75";
 const googleFormLink = "https://forms.gle/27V7wtAEBxRbboL79";
+const teamRegistrationFormLink = "#team-form-coming-soon";
 const organizerLine = "https://line.me/ti/p/xbvkW3pO20";
 const volunteerFormLink = "https://forms.gle/1KrTH1ETd9quXNMJ6";
 
@@ -316,6 +317,9 @@ export default function TaiwanFanNightWebsite() {
                 <div className="mt-7 rounded-2xl bg-amber-50 p-4 text-sm leading-7 text-amber-900">
                   想享有組隊優惠，隊長必須在 5/31 前完成「隊伍登記 + 整隊付款」。
                 </div>
+                <div className="mt-4 rounded-2xl bg-slate-50 p-4 text-sm leading-7 text-slate-700">
+                  目前 Fenway Park 當天 Bleacher 42 區票價約為 <strong>$64–$88</strong> 一張，而且一般購票還需要再加上每張 <strong>$8.75 per-ticket fee</strong>。
+                </div>
               </Card>
 
               <Card className="p-8">
@@ -330,6 +334,9 @@ export default function TaiwanFanNightWebsite() {
                 </div>
                 <p className="mt-6 text-sm leading-7 text-slate-600">
                   6/1 後購票者仍可坐在 Bleacher 42 同一區、拿台灣主題 T-shirt、參加活動抽獎，並成為 Team Taiwan 的一份子。
+                </p>
+                <p className="mt-4 rounded-2xl bg-slate-50 p-4 text-sm leading-7 text-slate-700">
+                  目前 Fenway Park 當天 Bleacher 42 區票價約為 <strong>$64–$88</strong> 一張，而且一般購票還需要再加上每張 <strong>$8.75 per-ticket fee</strong>。
                 </p>
               </Card>
             </div>
@@ -359,19 +366,40 @@ export default function TaiwanFanNightWebsite() {
             <SectionTitle
               eyebrow="Teams"
               title="Team Taiwan 組隊方式"
-              description="採用隊長制：隊長開隊、確認人數、收錢、統一付款；隊員填自己的資料。"
+              description="隊長與隊員使用同一份 Google Form。表單第一題會請大家選擇身分：隊長建立隊伍，或隊員加入已成立隊伍。"
             />
             <div className="grid gap-6 md:grid-cols-3">
-              <InfoCard icon="👥" title="1. 隊長建立隊伍">
-                隊長填寫報名表，建立隊名、隊長聯絡方式與預計人數。隊長送出後，請把表單連結傳給隊員。
+              <InfoCard icon="👥" title="1. 隊長先建立隊伍">
+                隊長請填寫同一份 Google Form，第一題選擇 <strong>「我是隊長：我要建立隊伍」</strong>，並填寫隊名、隊長聯絡方式與預計人數。
               </InfoCard>
-              <InfoCard icon="📝" title="2. 隊員加入隊伍">
-                隊員填同一份表單，選擇加入已成立隊伍，並填寫隊名、姓名、Email、手機與 T-shirt size。
+              <InfoCard icon="📝" title="2. 隊員再加入隊伍">
+                隊員也填寫同一份 Google Form，第一題選擇 <strong>「我是隊員：我要加入已成立隊伍」</strong>，並填寫與隊長登記完全相同的隊名。
               </InfoCard>
-              <InfoCard icon="🎟️" title="3. 主辦安排座位">
-                隊長在 5/31 前完成整隊付款後，主辦單位會在 6/1 前依付款順序安排座位。
+              <InfoCard icon="🎟️" title="3. 隊長統一付款">
+                隊長確認人數後，請於 5/31 前完成整隊付款。主辦單位會在 6/1 前依付款完成順序安排座位。
               </InfoCard>
             </div>
+
+            <Card id="team-form-coming-soon" className="mt-8 border-emerald-200 bg-emerald-50 p-6 md:p-8">
+              <div className="grid gap-6 lg:grid-cols-[1fr_auto] lg:items-center">
+                <div>
+                  <p className="text-sm font-semibold uppercase tracking-[0.25em] text-emerald-700">One Form Only</p>
+                  <h3 className="mt-2 text-2xl font-black text-slate-950">隊長與隊員使用同一份 Google Form</h3>
+                  <p className="mt-4 leading-7 text-slate-700">
+                    為了避免大家搞混，組隊報名會使用同一份 Google Form。隊長先填表建立隊伍，送出後把同一個表單連結傳給隊員；隊員進入表單後選擇「我是隊員」，再填寫自己的資料。
+                  </p>
+                  <p className="mt-3 leading-7 text-slate-700">
+                    建議表單第一題設定為：<strong>請問你是？</strong> 選項包含 <strong>我是隊長：我要建立隊伍</strong>、<strong>我是隊員：我要加入已成立隊伍</strong>、<strong>我是個人：我還沒有隊伍，但想參加</strong>。
+                  </p>
+                  <p className="mt-3 text-sm leading-7 text-slate-600">
+                    組隊報名 Google Form 連結即將公布。若你已經有表單連結，請提供給主辦單位更新到此網站。
+                  </p>
+                </div>
+                <a href={teamRegistrationFormLink} className="rounded-full bg-emerald-700 px-6 py-3 text-center font-bold text-white transition hover:bg-emerald-800">
+                  組隊報名表即將公布
+                </a>
+              </div>
+            </Card>
 
             <div className="mt-10 rounded-[2rem] bg-gradient-to-br from-emerald-700 to-sky-700 p-8 text-white shadow-lg">
               <div className="grid gap-8 lg:grid-cols-[0.8fr_1.2fr] lg:items-center">
