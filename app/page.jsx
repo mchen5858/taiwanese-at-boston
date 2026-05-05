@@ -3,6 +3,7 @@
 import React, { useEffect, useMemo, useState } from "react";
 
 const hostLogo = "/btcc-btcf-logo.jpg";
+const eventLogo = "/912-fenway-logo.png";
 const officialLineGroup = "https://line.me/ti/g/uyAcZJRn75";
 const googleFormLink = "https://forms.gle/27V7wtAEBxRbboL79";
 const teamRegistrationFormLink = "https://www.zeffy.com/en-US/ticketing/912-taiwan-fan-night-at-fenway--912";
@@ -230,8 +231,11 @@ export default function TaiwanFanNightWebsite() {
 
             <div>
               <Card className="border-emerald-100 bg-white/95 p-7 shadow-xl md:p-8">
-                <div className="mb-6 flex justify-center rounded-3xl border border-slate-200 bg-white p-4 shadow-sm">
-                  <img src={hostLogo} alt="BTCC & BTCF Logo" className="h-auto w-full max-w-[300px] object-contain" />
+                <div className="mb-6 flex justify-center rounded-3xl border border-emerald-100 bg-gradient-to-br from-white to-emerald-50 p-4 shadow-sm">
+                  <img src={eventLogo} alt="912 Fenway 台灣集結 Logo" className="h-auto w-full max-w-[360px] object-contain" />
+                </div>
+                <div className="mb-6 flex justify-center rounded-2xl border border-slate-200 bg-white p-3 shadow-sm">
+                  <img src={hostLogo} alt="BTCC & BTCF Logo" className="h-auto w-full max-w-[220px] object-contain" />
                 </div>
                 <div className="mb-6 rounded-3xl bg-gradient-to-br from-emerald-700 to-sky-700 p-7 text-white">
                   <p className="text-sm font-semibold opacity-90">活動目的</p>
@@ -752,15 +756,15 @@ export default function TaiwanFanNightWebsite() {
       </main>
 
       <footer className="border-t border-slate-200 bg-white px-4 py-8 md:px-8">
-  <div className="mx-auto max-w-7xl">
-    <div className="mb-5 flex justify-center md:justify-start">
-      <img src={hostLogo} alt="BTCC & BTCF Logo" className="h-auto w-full max-w-[200px] object-contain" />
-    </div>
-    <p className="text-sm text-slate-500 text-center md:text-left">
-      © 2026 912 Taiwan Fan Night at Fenway｜波克萊台灣商會基金會（BTCF）
-    </p>
-  </div>
-</footer>
+        <div className="mx-auto max-w-7xl">
+          <div className="mb-5 flex justify-center md:justify-start">
+            <img src={hostLogo} alt="BTCC & BTCF Logo" className="h-auto w-full max-w-[200px] object-contain" />
+          </div>
+          <p className="text-center text-sm text-slate-500 md:text-left">
+            © 2026 912 Taiwan Fan Night at Fenway｜波克萊台灣商會基金會（BTCF）
+          </p>
+        </div>
+      </footer>
     </div>
   );
 }
