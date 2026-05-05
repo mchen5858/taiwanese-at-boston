@@ -5,6 +5,7 @@ import React, { useEffect, useMemo, useState } from "react";
 const hostLogo = "/btcc-btcf-logo.jpg";
 const eventLogo = "/912-fenway-logo.png";
 const jerseyImage = "/red-sox-bruins-jersey.jpg";
+const zeffyQrCode = "/zeffy-qr-code.png";
 
 const officialLineGroup = "https://line.me/ti/g/uyAcZJRn75";
 const googleFormLink = "https://forms.gle/27V7wtAEBxRbboL79";
@@ -635,9 +636,17 @@ export default function TaiwanFanNightWebsite() {
                 <p className="mt-4 leading-7 text-white/95">
                   每位參加者自行透過 Zeffy 購票付款。沒有要組隊或未滿 3 人也可以直接購票，5/31 前同樣享有每張票 $47。若有組隊，購票時請務必填寫 <strong>Team Name</strong>，同一隊請填寫完全相同的隊名。
                 </p>
-                <a href={zeffyPaymentLink} target="_blank" rel="noreferrer" className="mt-6 inline-flex rounded-full bg-white px-6 py-3 font-bold text-emerald-800 transition hover:bg-emerald-50">
-                  立即前往 Zeffy 購票
-                </a>
+                <div className="mt-6 grid gap-5 md:grid-cols-[auto_1fr] md:items-center">
+                  <div className="rounded-3xl bg-white p-4 shadow-sm">
+                    <img src={zeffyQrCode} alt="Zeffy 購票 QR Code" className="h-36 w-36 object-contain" />
+                  </div>
+                  <div>
+                    <p className="mb-3 text-sm leading-6 text-white/90">掃描 QR Code 或點擊下方按鈕完成 Zeffy 購票。</p>
+                    <a href={zeffyPaymentLink} target="_blank" rel="noreferrer" className="inline-flex rounded-full bg-white px-6 py-3 font-bold text-emerald-800 transition hover:bg-emerald-50">
+                      立即前往 Zeffy 購票
+                    </a>
+                  </div>
+                </div>
               </Card>
               <Card className="relative overflow-hidden border-amber-200 bg-white p-7 shadow-lg transition hover:-translate-y-1 hover:shadow-xl">
                 <div className="mb-5 flex h-14 w-14 items-center justify-center rounded-2xl bg-amber-50 text-3xl text-amber-700 shadow-sm">⚠️</div>
@@ -773,7 +782,11 @@ export default function TaiwanFanNightWebsite() {
 
         <section id="donate" className="bg-white px-4 py-16 md:px-8 md:py-20">
           <div className="mx-auto max-w-7xl">
-            <SectionTitle eyebrow="Support BTCF" title="支持波克萊台灣商會基金會" description="如果您支持我們推廣台灣、服務社區與舉辦更多公益活動，歡迎以以下方式捐款支持 BTCF。" />
+            <SectionTitle
+              eyebrow="Support BTCF"
+              title="支持波克萊台灣商會基金會"
+              description="如果您支持我們推廣台灣、服務社區與舉辦更多公益活動，歡迎以以下方式捐款支持 BTCF。"
+            />
             <div className="grid gap-6 lg:grid-cols-3">
               <DonateCard type="primary" icon="💳" title="Zelle 捐款">
                 <p className="text-sm font-bold text-white/80">Zelle</p>
@@ -799,7 +812,10 @@ export default function TaiwanFanNightWebsite() {
                   <p className="text-sm font-bold">支票抬頭請寫</p>
                   <p className="mt-2 text-lg font-black leading-7">Brookline Taiwanese Chamber Foundation</p>
                   <p className="mt-5 text-sm font-bold">支票請寄至</p>
-                  <p className="mt-2 text-lg font-black leading-7">7 Bow St., Suite 1<br />North Reading, MA 01864</p>
+                  <p className="mt-2 text-lg font-black leading-7">
+                    7 Bow St., Suite 1<br />
+                    North Reading, MA 01864
+                  </p>
                 </div>
               </DonateCard>
             </div>
@@ -812,7 +828,9 @@ export default function TaiwanFanNightWebsite() {
           <div className="mb-5 flex justify-center md:justify-start">
             <img src={hostLogo} alt="BTCC & BTCF Logo" className="h-auto w-full max-w-[200px] object-contain" />
           </div>
-          <p className="text-center text-sm text-slate-500 md:text-left">© 2026 912 Taiwan Fan Night at Fenway｜波克萊台灣商會基金會（BTCF）</p>
+          <p className="text-center text-sm text-slate-500 md:text-left">
+            © 2026 912 Taiwan Fan Night at Fenway｜波克萊台灣商會基金會（BTCF）
+          </p>
         </div>
       </footer>
     </div>
