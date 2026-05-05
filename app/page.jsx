@@ -457,6 +457,202 @@ export default function TaiwanFanNightWebsite() {
           </div>
         </section>
 
+        <section id="payment" className="px-4 py-16 md:px-8 md:py-24">
+          <div className="mx-auto max-w-7xl">
+            <SectionTitle
+              eyebrow="Payment"
+              title="付款方式"
+              description="為了方便對帳，請採用「隊員付給隊長 → 隊長統一付款給主辦單位」。Zelle 帳號與銀行轉帳資料請向主辦單位聯絡人索取。"
+            />
+            <div className="grid gap-6 lg:grid-cols-3">
+              <InfoCard icon="💳" title="Zelle">
+                建議優先使用 Zelle。請使用主辦單位提供的 Zelle 帳號付款，並在付款備註寫：<br />
+                <strong>912 + 隊名 + 隊長姓名 + 人數</strong>
+              </InfoCard>
+              <InfoCard icon="🏦" title="銀行轉帳 / ACH">
+                適合公司隊、商家隊、社團隊或大型隊伍。請先向主辦單位索取銀行轉帳資料，並在轉帳備註寫：<br />
+                <strong>912 + 隊名 + 隊長姓名 + 人數</strong>
+              </InfoCard>
+              <InfoCard icon="🧾" title="支票 Check">
+                支票請寄至：<br />
+                <strong>7 Bow St., Suite 1<br />North Reading, MA 01864</strong><br />
+                請確認支票可於 5/31 前完成付款確認。
+              </InfoCard>
+            </div>
+
+            <Card className="mt-8 p-8">
+              <h3 className="text-2xl font-black text-slate-950">付款金額範例</h3>
+              <div className="mt-6 grid gap-4 md:grid-cols-3">
+                {[
+                  ["5 人隊伍", "$47 × 5", "$235"],
+                  ["10 人隊伍", "$47 × 10", "$470"],
+                  ["20 人隊伍", "$47 × 20", "$940"],
+                ].map(([label, formula, total]) => (
+                  <div key={label} className="rounded-2xl bg-slate-50 p-5">
+                    <p className="text-sm font-bold text-slate-500">{label}</p>
+                    <p className="mt-2 text-sm text-slate-600">{formula}</p>
+                    <p className="mt-2 text-3xl font-black text-emerald-700">{total}</p>
+                  </div>
+                ))}
+              </div>
+              <div className="mt-6 rounded-2xl bg-emerald-50 p-5 text-sm leading-7 text-emerald-900">
+                隊長完成付款後，請將付款截圖、轉帳紀錄或支票寄出紀錄傳給主辦單位，並註明隊名、隊長姓名、付款金額、隊伍人數與付款方式。Zelle 帳號與銀行轉帳資料請向主辦單位聯絡人索取：medianchen@gmail.com。
+              </div>
+            </Card>
+          </div>
+        </section>
+
+        <section id="raffle" className="bg-white px-4 py-16 md:px-8 md:py-24">
+          <div className="mx-auto max-w-7xl">
+            <SectionTitle
+              eyebrow="Raffle"
+              title="抽獎活動"
+              description="抽獎分成 5/31 前早鳥宣傳抽獎，以及所有購票參加者都可參加的活動抽獎。"
+            />
+            <div className="grid gap-6 lg:grid-cols-2">
+              <Card className="border-emerald-200 bg-emerald-50/70 p-8">
+                <div className="mb-5 flex h-14 w-14 items-center justify-center rounded-2xl bg-white text-3xl shadow-sm">🎁</div>
+                <h3 className="text-2xl font-black text-slate-950">5/31 前｜早鳥宣傳抽獎</h3>
+                <p className="mt-4 leading-7 text-slate-700">
+                  只要在 5/31 前加入 912 台灣集結官方 LINE 群，或填寫 912 台灣集結 Google Form，就有機會參加早鳥抽獎，並收到最新活動資訊。
+                </p>
+                <div className="mt-6 flex flex-col gap-3 sm:flex-row">
+                  <a href={officialLineGroup} target="_blank" rel="noreferrer" className="rounded-full bg-emerald-700 px-5 py-3 text-center text-sm font-bold text-white transition hover:bg-emerald-800">
+                    加入官方 LINE 群
+                  </a>
+                  <a href={googleFormLink} target="_blank" rel="noreferrer" className="rounded-full border border-emerald-200 bg-white px-5 py-3 text-center text-sm font-bold text-emerald-800 transition hover:bg-emerald-50">
+                    沒有 LINE？填 Google Form
+                  </a>
+                </div>
+                <div className="mt-6 space-y-3 text-slate-700">
+                  <p className="rounded-2xl bg-white p-4 font-semibold">🎟 912 球票多張</p>
+                  <p className="rounded-2xl bg-white p-4 font-semibold">👕 鄭宗哲簽名台灣主題 T-shirt 多件</p>
+                </div>
+              </Card>
+
+              <Card className="p-8">
+                <div className="mb-5 flex h-14 w-14 items-center justify-center rounded-2xl bg-slate-50 text-3xl shadow-sm">🏆</div>
+                <h3 className="text-2xl font-black text-slate-950">912 活動參加者抽獎</h3>
+                <p className="mt-4 leading-7 text-slate-700">
+                  所有購票參加 912 Taiwan Fan Night at Fenway 的朋友，都可以參加活動抽獎。
+                </p>
+                <div className="mt-6 rounded-2xl bg-sky-50 p-5 font-semibold text-sky-900">
+                  ⚾ 鄭宗哲簽名球多顆
+                </div>
+              </Card>
+            </div>
+          </div>
+        </section>
+
+        <section id="shirt-design" className="px-4 py-16 md:px-8 md:py-24">
+          <div className="mx-auto max-w-7xl">
+            <SectionTitle
+              eyebrow="T-shirt Design"
+              title="台灣主題 T-shirt 設計比賽"
+              description="912 當天大家都會穿上的台灣主題 T-shirt，將由社群一起參與設計。"
+            />
+            <Card className="overflow-hidden border-emerald-200 bg-white shadow-lg">
+              <div className="grid gap-0 lg:grid-cols-[0.95fr_1.05fr] lg:items-center">
+                <div className="bg-gradient-to-br from-emerald-700 to-sky-700 p-8 text-white md:p-10">
+                  <p className="text-sm font-semibold uppercase tracking-[0.25em] text-white/75">Coming Soon</p>
+                  <h3 className="mt-3 text-4xl font-black">設計比賽即將公布</h3>
+                  <p className="mt-5 leading-7 text-white/90">
+                    912 Taiwan Fan Night at Fenway｜912 台灣集結的台灣主題 T-shirt 設計比賽即將公開公布。
+                  </p>
+                  <p className="mt-4 leading-7 text-white/90">
+                    我們將邀請社群一起參與設計、投稿與投票，選出最能代表台灣精神與波士頓台灣社群凝聚力的紀念 T-shirt。
+                  </p>
+                </div>
+                <div className="p-8 md:p-10">
+                  <div className="rounded-[2rem] border border-emerald-100 bg-emerald-50 p-8 text-center">
+                    <div className="mx-auto mb-5 flex h-20 w-20 items-center justify-center rounded-3xl bg-white text-4xl shadow-sm">👕</div>
+                    <h4 className="text-2xl font-black text-slate-950">敬請期待</h4>
+                    <p className="mt-4 leading-7 text-slate-600">
+                      投稿規則、設計主題、獎品、截止日期與投票方式，將於近期公布。請加入官方 LINE 群或填寫 Google Form，收到最新消息。
+                    </p>
+                    <div className="mt-6 flex flex-col gap-3 sm:flex-row sm:justify-center">
+                      <a href={officialLineGroup} target="_blank" rel="noreferrer" className="rounded-full bg-emerald-700 px-5 py-3 text-center text-sm font-bold text-white transition hover:bg-emerald-800">
+                        加入官方 LINE 群
+                      </a>
+                      <a href={googleFormLink} target="_blank" rel="noreferrer" className="rounded-full border border-emerald-200 bg-white px-5 py-3 text-center text-sm font-bold text-emerald-800 transition hover:bg-emerald-50">
+                        填寫 Google Form
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </Card>
+          </div>
+        </section>
+
+        <section id="faq" className="px-4 py-16 md:px-8 md:py-24">
+          <div className="mx-auto max-w-5xl">
+            <SectionTitle
+              eyebrow="FAQ"
+              title="注意事項與常見問題"
+              description="這些規則可以放在報名表底部，避免後續對帳、座位、衣服尺寸與退款爭議。"
+            />
+
+            <div className="space-y-4">
+              {faqs.map((item, index) => (
+                <Card key={item.q}>
+                  <button onClick={() => setOpenFaq(openFaq === index ? -1 : index)} className="flex w-full items-center justify-between gap-4 p-5 text-left">
+                    <span className="font-bold text-slate-950">{item.q}</span>
+                    <span className={`text-slate-400 transition ${openFaq === index ? "rotate-90" : ""}`}>›</span>
+                  </button>
+                  {openFaq === index && <div className="px-5 pb-5 pt-0 text-sm leading-7 text-slate-600">{item.a}</div>}
+                </Card>
+              ))}
+            </div>
+
+            <div className="mt-8 rounded-[2rem] border border-amber-200 bg-amber-50 p-6 text-sm leading-7 text-amber-950">
+              <div className="flex gap-3">
+                <span className="mt-1 text-xl">⚠️</span>
+                <div>
+                  <p className="font-bold">重要提醒</p>
+                  <p>
+                    台灣主題 T-shirt 將公開徵稿與投票，並會在 9/12 比賽當天前發出。Red Sox × Bruins co-branding Baseball Jersey 是 Red Sox 現場限量贈品，先到先領，尺寸發完為止。
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="contact" className="bg-white px-4 py-16 md:px-8 md:py-24">
+          <div className="mx-auto max-w-5xl">
+            <SectionTitle
+              eyebrow="Contact"
+              title="主辦單位與聯絡方式"
+              description="如需組隊表單、付款資訊、Zelle 帳號、銀行轉帳資料，或有大隊伍報名問題，請 Email 主辦單位，或加入 LINE 聯絡。"
+            />
+            <div className="mb-10 flex justify-center">
+              <div className="rounded-3xl border border-slate-200 bg-white p-5 shadow-sm">
+                <img src={hostLogo} alt="BTCC & BTCF Logo" className="h-auto w-full max-w-[380px] object-contain" />
+              </div>
+            </div>
+            <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+              <InfoCard icon="🏛️" title="主辦單位">
+                波克萊台灣商會基金會（BTCF）主辦<br />
+                波克萊台灣商會（BTCC）協辦<br />
+                <span className="text-xs text-slate-500">BTCF 不從門票中獲利</span>
+              </InfoCard>
+              <InfoCard icon="✉️" title="主辦單位 Email">
+                <a className="font-bold text-emerald-700 underline" href="mailto:medianchen@gmail.com">medianchen@gmail.com</a><br />
+                Zelle 帳號與銀行轉帳資料請向主辦單位聯絡人索取。
+              </InfoCard>
+              <InfoCard icon="💬" title="LINE 聯絡">
+                <a className="font-bold text-emerald-700 underline" href={organizerLine} target="_blank" rel="noreferrer">加入 LINE 聯絡主辦單位</a><br />
+                也可以透過 LINE 詢問組隊、付款與大隊伍報名問題。
+              </InfoCard>
+              <InfoCard icon="🙌" title="加入志工團隊">
+                <a className="font-bold text-emerald-700 underline" href={volunteerFormLink} target="_blank" rel="noreferrer">填寫志工報名表</a><br />
+                歡迎一起加入波克萊志工團隊，協助推廣台灣與服務社區。
+              </InfoCard>
+            </div>
+          </div>
+        </section>
+
         <section className="px-4 pb-20 md:px-8">
           <div className="mx-auto max-w-7xl rounded-[2rem] bg-slate-950 p-8 text-white md:p-12">
             <div className="grid gap-8 lg:grid-cols-[1fr_auto] lg:items-center">
