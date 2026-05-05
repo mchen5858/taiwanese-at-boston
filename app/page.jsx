@@ -557,8 +557,8 @@ export default function TaiwanFanNightWebsite() {
                   </a>
                 </div>
                 <div className="mt-6 space-y-3 text-slate-700">
-                  <p className="rounded-2xl bg-white p-4 font-semibold">🎟 912 球票多張</p>
-                  <p className="rounded-2xl bg-white p-4 font-semibold">👕 鄭宗哲簽名台灣主題 T-shirt 多件</p>
+                  <p className="rounded-2xl bg-white p-4 font-semibold">🎟 912 球票（很多張）</p>
+                  <p className="rounded-2xl bg-white p-4 font-semibold">👕 鄭宗哲簽名台灣主題 T-shirt（不只一件唷）</p>
                 </div>
               </Card>
 
@@ -569,7 +569,7 @@ export default function TaiwanFanNightWebsite() {
                   所有購票參加 912 Taiwan Fan Night at Fenway 的朋友，都可以參加活動抽獎。
                 </p>
                 <div className="mt-6 rounded-2xl bg-sky-50 p-5 font-semibold text-sky-900">
-                  ⚾ 鄭宗哲簽名球多顆
+                  ⚾ 鄭宗哲簽名球（不只一顆喔！）
                 </div>
               </Card>
             </div>
