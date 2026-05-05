@@ -56,7 +56,7 @@ const faqs = [
     items: [
       {
         q: "我們會坐在一起嗎？",
-        a: "所有透過本活動購票的參與者，將集中安排在同一區域（Bleacher 42），讓數百位台灣人與台灣之友一起坐在 Fenway，展現 Taiwanese at Boston 的力量。同一筆訂單、同一隊伍 Team Name 的參加者，主辦單位會盡量安排在一起。",
+        a: "所有透過本活動購票的參與者，將集中安排在同一區域（Bleacher 42），讓數百位台灣人與台灣之友一起坐在 Fenway，展現 Taiwanese at Boston 的力量。同一筆訂單、同一隊伍 Team Name 的參加者，主辦單位會盡量安排在附近的位置（例如前後左右）。",
       },
       {
         q: "座位可以自己選嗎？",
@@ -64,7 +64,7 @@ const faqs = [
       },
       {
         q: "我跟朋友分開買票，可以坐一起嗎？",
-        a: "可以。請在購票時填寫相同的 Team Name，主辦單位會依照 Team Name 盡量安排座位在一起。",
+        a: "可以。請在購票時填寫相同的 Team Name，主辦單位會依照 Team Name 盡量安排在附近的位置（例如前後左右）。",
       },
     ],
   },
@@ -444,7 +444,7 @@ export default function TaiwanFanNightWebsite() {
                     "可獲得限量 Red Sox × Bruins co-branding Baseball Jersey 一件",
                     "每張票 BTCF 將另外捐出 $3 給 Boys & Girls Clubs of Boston",
                     "每人一件台灣主題 T-shirt",
-                    "同隊的人將會坐在一起",
+                    "會盡量安排在附近的位置（例如前後左右）",
                     "可參加最佳創意隊名比賽",
                   ].map((item) => (
                     <li key={item} className="flex gap-3">
@@ -463,8 +463,8 @@ export default function TaiwanFanNightWebsite() {
                   <div className="rounded-2xl border border-emerald-200 bg-emerald-50 p-5 text-sm leading-7 text-emerald-900">
                     <div className="mb-3 flex h-11 w-11 items-center justify-center rounded-2xl bg-white text-2xl shadow-sm">📍</div>
                     <p className="text-base font-black text-emerald-950">座位安排 Seating</p>
-                    <p className="mt-2">Seats will be arranged by group/team when possible.</p>
-                    <p className="mt-2">座位將盡量依隊伍或同行者安排。</p>
+                    <p className="mt-2">Seats will be arranged near your group/team when possible, such as nearby rows or adjacent seats.</p>
+                    <p className="mt-2">座位將盡量依隊伍或同行者安排在附近的位置（例如前後左右）。</p>
                   </div>
                   <div className="rounded-2xl border border-sky-200 bg-sky-50 p-5 text-sm leading-7 text-sky-900">
                     <div className="mb-3 flex h-11 w-11 items-center justify-center rounded-2xl bg-white text-2xl shadow-sm">🎟️</div>
@@ -487,6 +487,9 @@ export default function TaiwanFanNightWebsite() {
                 </div>
                 <p className="mt-6 text-sm leading-7 text-slate-600">
                   無論是 6/1 前或是 6/1 後購票者，我們全都會坐在 Bleacher 42 同一區、得到主辦單位發的台灣主題 T-shirt，並參加 912 台灣集結活動大抽獎！
+                </p>
+                <p className="mt-3 rounded-2xl bg-amber-50 p-4 text-sm font-semibold leading-7 text-amber-900">
+                  ⚠️ 注意：6/1 之後透過官方購票連結購買的票券，將不包含限量 Red Sox × Bruins co-branding Baseball Jersey。
                 </p>
                 <p className="mt-4 rounded-2xl bg-slate-50 p-4 text-sm leading-7 text-slate-700">
                   依據紅襪官網，目前 Fenway Park 912 當天 Bleacher 42 區票價約為 <strong>$64 ~ $88</strong> 一張，而且每張票還需要再加上 <strong>$8.75 per-ticket fee</strong>。相較之下，無論是 <strong>$47 組隊優惠</strong> 或是 <strong>$41 專屬團體購票</strong>，都是主辦單位幫我們 TEAM TAIWAN 與紅襪爭取到的很好優惠！大家所付的票價將全數用於支付給 Red Sox 的團體票費用，BTCF 不從本活動中營利。
@@ -782,11 +785,7 @@ export default function TaiwanFanNightWebsite() {
 
         <section id="donate" className="bg-white px-4 py-16 md:px-8 md:py-20">
           <div className="mx-auto max-w-7xl">
-            <SectionTitle
-              eyebrow="Support BTCF"
-              title="支持波克萊台灣商會基金會"
-              description="如果您支持我們推廣台灣、服務社區與舉辦更多公益活動，歡迎以以下方式捐款支持 BTCF。"
-            />
+            <SectionTitle eyebrow="Support BTCF" title="支持波克萊台灣商會基金會" description="如果您支持我們推廣台灣、服務社區與舉辦更多公益活動，歡迎以以下方式捐款支持 BTCF。" />
             <div className="grid gap-6 lg:grid-cols-3">
               <DonateCard type="primary" icon="💳" title="Zelle 捐款">
                 <p className="text-sm font-bold text-white/80">Zelle</p>
