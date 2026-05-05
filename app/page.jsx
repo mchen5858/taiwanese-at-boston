@@ -24,18 +24,6 @@ const navItems = [
 ];
 
 const teamExamples = [
-  "家庭隊",
-  "朋友隊",
-  "媽媽隊",
-  "校友隊",
-  "公司隊",
-  "商家隊",
-  "社團隊",
-  "志工隊",
-  "僑團隊",
-  "創意隊名隊",
-
-  // 有趣版本
   "台灣No.1隊",
   "Fenway佔領隊",
   "台灣應援最強隊",
@@ -341,7 +329,7 @@ export default function TaiwanFanNightWebsite() {
                   想享有組隊優惠，隊長必須在 5/31 前完成「隊伍登記 + 整隊付款」。
                 </div>
                 <div className="mt-4 rounded-2xl bg-slate-50 p-4 text-sm leading-7 text-slate-700">
-                  目前 Fenway Park 當天 Bleacher 42 區票價約為 <strong>$64–$88</strong> 一張，而且一般購票還需要再加上每張 <strong>$8.75 per-ticket fee</strong>。相較之下，無論是 <strong>$47 組隊優惠</strong> 或是 <strong>$41 + 手續費</strong> 的正式購票連結，都是很大的優惠。
+                  依據紅襪官網，目前 Fenway Park 912 當天 Bleacher 42 區票價約為 <strong>$64 ~ $88</strong> 一張，而且每張票還需要再加上 <strong>$8.75 per-ticket fee</strong>。相較之下，無論是 <strong>$47 組隊優惠</strong> 或是 <strong>$41 專屬團體購票</strong>，都是主辦單位幫我們 TEAM TAIWAN 與紅襪爭取到的很好優惠！
                 </div>
               </Card>
 
@@ -359,7 +347,7 @@ export default function TaiwanFanNightWebsite() {
                   無論是 6/1 前或是 6/1 後購票者，我們全都會坐在 Bleacher 42 同一區、得到主辦單位發的台灣主題 T-shirt，並參加 912 台灣集結活動大抽獎！
                 </p>
                 <p className="mt-4 rounded-2xl bg-slate-50 p-4 text-sm leading-7 text-slate-700">
-                  目前 Fenway Park 當天 Bleacher 42 區票價約為 <strong>$64–$88</strong> 一張，而且一般購票還需要再加上每張 <strong>$8.75 per-ticket fee</strong>。相較之下，無論是 <strong>$47 組隊優惠</strong> 或是 <strong>$41 + 手續費</strong> 的正式購票連結，都是很大的優惠。
+                  依據紅襪官網，目前 Fenway Park 912 當天 Bleacher 42 區票價約為 <strong>$64 ~ $88</strong> 一張，而且每張票還需要再加上 <strong>$8.75 per-ticket fee</strong>。相較之下，無論是 <strong>$47 組隊優惠</strong> 或是 <strong>$41 專屬團體購票</strong>，都是主辦單位幫我們 TEAM TAIWAN 與紅襪爭取到的很好優惠！
                 </p>
               </Card>
             </div>
@@ -461,12 +449,12 @@ export default function TaiwanFanNightWebsite() {
 
               <div className="p-6 md:p-8">
                 <div className="rounded-[2rem] border border-emerald-100 bg-gradient-to-br from-emerald-50 via-white to-sky-50 p-6 md:p-10">
-                  <div className="relative mx-auto min-h-[560px] max-w-5xl md:min-h-[520px]">
+                  <div className="mx-auto flex max-w-5xl flex-col items-center gap-6 md:relative md:min-h-[520px] md:block">
                     {teamLeaderboard.map((team, index) => {
                       const bubbleStyles = [
-                        "left-1/2 top-4 h-72 w-72 -translate-x-1/2 bg-emerald-700 text-white ring-8 ring-emerald-100 md:h-80 md:w-80",
-                        "left-4 bottom-8 h-56 w-56 bg-sky-600 text-white ring-8 ring-sky-100 md:left-16 md:h-64 md:w-64",
-                        "right-4 bottom-20 h-48 w-48 bg-emerald-500 text-white ring-8 ring-emerald-100 md:right-20 md:h-56 md:w-56",
+                        "h-72 w-72 bg-emerald-700 text-white ring-8 ring-emerald-100 md:absolute md:left-1/2 md:top-4 md:h-80 md:w-80 md:-translate-x-1/2",
+                        "h-56 w-56 bg-sky-600 text-white ring-8 ring-sky-100 md:absolute md:left-16 md:bottom-8 md:h-64 md:w-64",
+                        "h-48 w-48 bg-emerald-500 text-white ring-8 ring-emerald-100 md:absolute md:right-20 md:bottom-20 md:h-56 md:w-56",
                       ];
                       const textStyles = [
                         "text-3xl md:text-4xl",
