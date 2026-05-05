@@ -448,10 +448,12 @@ export default function TaiwanFanNightWebsite() {
                       加入官方 LINE 群
                     </a>
                     <a href={googleFormLink} target="_blank" rel="noreferrer" className="rounded-full border border-emerald-300 bg-white px-6 py-3 text-center font-bold text-emerald-800 transition hover:bg-emerald-50">
-                  沒有 LINE？填 Google Form
-                </a>
+                      沒有 LINE？填 Google Form
+                    </a>
+                  </div>
+                </div>
               </div>
-            </div>
+            </Card>
           </div>
         </section>
 
