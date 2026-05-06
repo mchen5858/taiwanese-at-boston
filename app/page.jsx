@@ -189,6 +189,8 @@ function Button({ children, onClick, variant = "solid" }) {
   const styles =
     variant === "outline"
       ? "border border-emerald-200 bg-white text-emerald-800 hover:bg-emerald-50"
+      : variant === "purchase"
+      ? "bg-slate-950 text-white shadow-md ring-2 ring-sky-100 hover:bg-sky-900"
       : "bg-emerald-700 text-white hover:bg-emerald-800";
 
   return (
@@ -277,7 +279,7 @@ export default function TaiwanFanNightWebsite() {
           </nav>
 
           <div className="hidden md:block">
-            <Button onClick={() => window.open(zeffyPaymentLink, "_blank")}>立即前往 Zeffy 購票</Button>
+            <Button onClick={() => window.open(zeffyPaymentLink, "_blank")} variant="purchase">立即前往 Zeffy 購票</Button>
           </div>
 
           <button className="text-2xl md:hidden" onClick={() => setOpenMenu(!openMenu)} aria-label="Open menu">
@@ -327,7 +329,7 @@ export default function TaiwanFanNightWebsite() {
               <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
                 <Button onClick={() => scrollToSection("tickets")}>查看組隊優惠</Button>
                 <Button onClick={() => window.open(officialLineGroup, "_blank")}>加入官方 LINE 群</Button>
-                <Button onClick={() => window.open(zeffyPaymentLink, "_blank")}>立即前往購票</Button>
+                <Button onClick={() => window.open(zeffyPaymentLink, "_blank")} variant="purchase">立即前往購票</Button>
                 <Button onClick={() => window.open(googleFormLink, "_blank")} variant="outline">
                   沒有 LINE？用 Google Form 加入
                 </Button>
@@ -465,8 +467,30 @@ export default function TaiwanFanNightWebsite() {
                 <div className="mt-7 rounded-2xl bg-amber-50 p-4 text-sm leading-7 text-amber-900">
                   想享有 5/31 前 $47 優惠，請每位參加者於 5/31 前自行完成 Zeffy 購票付款。沒有要組隊、或未滿 3 人也可以直接購票，同樣享有每張票 $47 的價格。若要組隊，請填寫相同 Team Name。
                 </div>
-                <div className="mt-4 rounded-2xl bg-slate-50 p-4 text-sm leading-7 text-slate-700">
-                  依據紅襪官網，目前 Fenway Park 912 當天 Bleacher 42 區票價約為 <strong>$64 ~ $88</strong> 一張，而且每張票還需要再加上 <strong>$8.75 per-ticket fee</strong>。相較之下，無論是 <strong>$47 組隊優惠</strong> 或是 <strong>$41 專屬團體購票</strong>，都是主辦單位幫我們 TEAM TAIWAN 與紅襪爭取到的很好優惠！大家所付的票價將全數用於支付給 Red Sox 的團體票費用，BTCF 不從本活動中營利。
+                <div className="mt-4 rounded-3xl border border-sky-200 bg-gradient-to-br from-sky-50 via-white to-emerald-50 p-6 text-sm leading-7 text-slate-700 shadow-sm">
+                  <p className="text-xl font-black text-slate-950">關於票價說明</p>
+                  <p className="mt-3">
+                    我們這次的票價其實已經低於 Red Sox 官方同區票價。目前同區官方票價約為 <strong>$64–$88</strong>，且每張票還會再加上約 <strong>$8.75 手續費</strong>。
+                  </p>
+                  <p className="mt-3 font-bold text-slate-950">本活動票價不只是包含一張球票，也包含：</p>
+                  <ul className="mt-3 space-y-2">
+                    {[
+                      "台灣社群專屬集結區",
+                      "和大家坐在同一區的活動體驗",
+                      "一起讓 Fenway 看見台灣的共同意義",
+                    ].map((item) => (
+                      <li key={item} className="flex gap-3">
+                        <span className="mt-1 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-emerald-100 text-xs font-black text-emerald-800">✓</span>
+                        <span>{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                  <p className="mt-4">
+                    如果您只是想單純看一場球賽，市場上也許有機會找到更便宜的票。但如果您想和上百位台灣人一起坐在同一區、一起穿上台灣、一起讓 Red Sox 看見台灣，這份價值是其他票無法取代的。
+                  </p>
+                  <p className="mt-4 rounded-2xl bg-emerald-700 p-4 text-base font-black leading-7 text-white">
+                    這不只是買一張球票，而是一起完成一件讓 Fenway 看見台灣的事。
+                  </p>
                 </div>
                 <div className="mt-4 grid gap-3 md:grid-cols-2">
                   <div className="rounded-2xl border border-emerald-200 bg-emerald-50 p-5 text-sm leading-7 text-emerald-900">
