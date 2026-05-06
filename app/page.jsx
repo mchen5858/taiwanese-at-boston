@@ -190,7 +190,7 @@ function Button({ children, onClick, variant = "solid" }) {
     variant === "outline"
       ? "border border-emerald-200 bg-white text-emerald-800 hover:bg-emerald-50"
       : variant === "purchase"
-      ? "bg-slate-950 text-white shadow-md ring-2 ring-sky-100 hover:bg-sky-900"
+      ? "bg-sky-600 text-white shadow-md ring-2 ring-sky-100 hover:bg-sky-700"
       : "bg-emerald-700 text-white hover:bg-emerald-800";
 
   return (
@@ -827,7 +827,6 @@ export default function TaiwanFanNightWebsite() {
                 </div>
                 <p className="mt-4 text-white/90">備註可寫：Donation / BTCF Support</p>
               </DonateCard>
-
               <DonateCard icon="🏦" title="銀行轉帳">
                 <div className="rounded-2xl bg-slate-50 p-4">
                   <p className="text-xs font-bold uppercase tracking-wide text-slate-500">Account number</p>
@@ -838,16 +837,12 @@ export default function TaiwanFanNightWebsite() {
                   <p className="mt-1 text-2xl font-black text-slate-950">011000138</p>
                 </div>
               </DonateCard>
-
               <DonateCard icon="🧾" title="支票捐款">
                 <div className="rounded-3xl bg-amber-50 p-5 text-amber-950">
                   <p className="text-sm font-bold">支票抬頭請寫</p>
                   <p className="mt-2 text-lg font-black leading-7">Brookline Taiwanese Chamber Foundation</p>
                   <p className="mt-5 text-sm font-bold">支票請寄至</p>
-                  <p className="mt-2 text-lg font-black leading-7">
-                    7 Bow St., Suite 1<br />
-                    North Reading, MA 01864
-                  </p>
+                  <p className="mt-2 text-lg font-black leading-7">7 Bow St., Suite 1<br />North Reading, MA 01864</p>
                 </div>
               </DonateCard>
             </div>
@@ -860,9 +855,7 @@ export default function TaiwanFanNightWebsite() {
           <div className="mb-5 flex justify-center md:justify-start">
             <img src={hostLogo} alt="BTCC & BTCF Logo" className="h-auto w-full max-w-[200px] object-contain" />
           </div>
-          <p className="text-center text-sm text-slate-500 md:text-left">
-            © 2026 912 Taiwan Fan Night at Fenway｜波克萊台灣商會基金會（BTCF）
-          </p>
+          <p className="text-center text-sm text-slate-500 md:text-left">© 2026 912 Taiwan Fan Night at Fenway｜波克萊台灣商會基金會（BTCF）</p>
         </div>
       </footer>
     </div>
