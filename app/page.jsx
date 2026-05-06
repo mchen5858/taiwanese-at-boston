@@ -469,9 +469,12 @@ export default function TaiwanFanNightWebsite() {
                 </div>
                 <div className="mt-4 rounded-3xl border border-sky-200 bg-gradient-to-br from-sky-50 via-white to-emerald-50 p-6 text-sm leading-7 text-slate-700 shadow-sm">
                   <p className="text-xl font-black text-slate-950">關於票價說明</p>
-                  <p className="mt-3">
-                    我們這次的票價其實已經低於 Red Sox 官方同區票價。目前同區官方票價約為 <strong>$64–$88</strong>，且每張票還會再加上約 <strong>$8.75 手續費</strong>。
-                  </p>
+                  <div className="mt-4 rounded-2xl border border-emerald-300 bg-white p-5 shadow-sm">
+                    <p className="text-lg font-black text-emerald-800">這次票價遠低於 Red Sox 官方同區票價</p>
+                    <p className="mt-3">
+                      目前同區官方票價約為 <strong>$64–$88</strong>，且每張票還會再加上約 <strong>$8.75 手續費</strong>。這次能有這麼好的優惠，是主辦單位辛苦替大家向 Red Sox 爭取而來的。
+                    </p>
+                  </div>
                   <p className="mt-3 font-bold text-slate-950">本活動票價不只是包含一張球票，也包含：</p>
                   <ul className="mt-3 space-y-2">
                     {[
@@ -713,7 +716,7 @@ export default function TaiwanFanNightWebsite() {
                 </div>
                 <div className="mt-6 space-y-3 text-slate-700">
                   <p className="rounded-2xl bg-white p-4 font-semibold">🎟 912 球票（很多張）</p>
-                  <p className="rounded-2xl bg-white p-4 font-semibold">👕 鄭宗哲簽名台灣主題 T-shirt（不只一件唷）</p>
+                  <p className="rounded-2xl bg-white p-4 font-semibold">👕 鄭宗哲簽名 Taiwanese @ Boston 主題 T-shirt（不只一件唷）</p>
                 </div>
               </Card>
               <Card className="p-8">
