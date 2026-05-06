@@ -249,7 +249,7 @@ export default function TaiwanFanNightWebsite() {
 
   const stats = useMemo(
     () => [
-      { label: "比賽日期", value: "9/12 Sat" },
+      { label: "比賽日期", value: "9/12/26" },
       { label: "比賽時間", value: "4:15 PM" },
       { label: "對戰組合", value: "Royals vs Red Sox" },
       { label: "座位區域", value: "Bleacher 42" },
