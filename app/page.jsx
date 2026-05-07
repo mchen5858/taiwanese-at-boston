@@ -31,7 +31,12 @@ const teamLeaderboard = [
   { name: "波克萊台灣商會", tickets: "130", note: "目前領先" },
   { name: "波士頓台灣媽媽親子會", tickets: "30+", note: "持續增加中" },
   { name: "波士頓台灣人生技協會 BTBA", tickets: "20+", note: "持續增加中" },
+  { name: "羅德島台灣同好會", tickets: "13", note: "持續增加中" },
+  { name: "NCCU, TCCNE & BTEAA", tickets: "7", note: "持續增加中" },
   { name: "Woo告台", tickets: "5+", note: "持續增加中" },
+  { name: "Boston FASCA", tickets: "4", note: "持續增加中" },
+  { name: "波士頓北一女校友會", tickets: "3", note: "持續增加中" },
+  { name: "襪賽！Taiwan", tickets: "3", note: "持續增加中" },
 ];
 
 const faqs = [
@@ -297,7 +302,71 @@ export default function TaiwanFanNightWebsite() {
         <section id="leaderboard" className="px-4 py-16 md:px-8 md:py-24">
           <div className="mx-auto max-w-7xl">
             <SectionTitle eyebrow="Leaderboard" title="TEAM TAIWAN 集氣榜" description="感謝各隊熱情響應！集氣榜將依照各隊目前認票／報名票數持續更新。" />
-            <Card className="overflow-hidden border-emerald-200 bg-white shadow-lg"><div className="bg-gradient-to-br from-emerald-700 to-sky-700 p-8 text-white md:p-10"><p className="text-sm font-semibold uppercase tracking-[0.25em] text-white/75">Current Teams</p><h3 className="mt-3 text-3xl font-black">讓 Red Sox 看見 Team Taiwan 的力量</h3><p className="mt-4 max-w-3xl leading-7 text-white/90">每一隊的加入，都是為 912 台灣集結與 2027 Red Sox Taiwan Day 集氣。歡迎更多家庭、朋友、僑團、公司、組織、校友會、社團與商家一起加入！各單位也可以直接使用單位名稱作為隊名，讓大家在集氣榜上看見你們的力量。</p></div><div className="p-6 md:p-8"><div className="rounded-[2rem] border border-emerald-100 bg-gradient-to-br from-emerald-50 via-white to-sky-50 p-6 md:p-10"><div className="mx-auto flex max-w-5xl flex-col items-center gap-6 md:relative md:min-h-[520px] md:block">{teamLeaderboard.map((team, index) => { const bubbleStyles = ["h-72 w-72 bg-emerald-700 text-white ring-8 ring-emerald-100 md:absolute md:left-1/2 md:top-4 md:h-80 md:w-80 md:-translate-x-1/2", "h-56 w-56 bg-sky-600 text-white ring-8 ring-sky-100 md:absolute md:left-10 md:bottom-8 md:h-64 md:w-64", "h-48 w-48 bg-emerald-500 text-white ring-8 ring-emerald-100 md:absolute md:right-12 md:bottom-20 md:h-56 md:w-56", "h-40 w-40 bg-cyan-600 text-white ring-8 ring-cyan-100 md:absolute md:right-72 md:bottom-0 md:h-44 md:w-44"]; const textStyles = ["text-3xl md:text-4xl", "text-2xl md:text-3xl", "text-xl md:text-2xl", "text-lg md:text-xl"]; return <div key={team.name} className={`flex shrink-0 flex-col items-center justify-center rounded-full p-6 text-center shadow-xl ${bubbleStyles[index]}`}><div className={`font-black leading-tight ${textStyles[index]}`}>{team.name}</div><div className="mt-3 rounded-full bg-white/20 px-4 py-2 text-lg font-black md:text-xl">{team.tickets} 張票</div><div className="mt-2 text-xs font-semibold opacity-90 md:text-sm">{team.note}</div></div>; })}</div></div><div className="mt-8 rounded-3xl border border-emerald-200 bg-emerald-50 p-6 text-center"><h4 className="text-2xl font-black text-slate-950">你的隊伍也可以一起集氣！</h4><p className="mx-auto mt-3 max-w-2xl leading-7 text-slate-600">3 人以上就可以組隊，自取隊名並加入 TEAM TAIWAN 集氣榜。5/31 前透過 Zeffy 購票，每張票都是 $47。隊名請使用適當、尊重、友善的名稱；主辦單位保留隊名審核與調整之權利。</p><div className="mt-6 flex justify-center"><a href={zeffyPaymentLink} target="_blank" rel="noreferrer" className="rounded-full bg-emerald-700 px-6 py-3 text-center font-bold text-white transition hover:bg-emerald-800">立即組隊</a></div></div></div></Card>
+            <Card className="overflow-hidden border-emerald-200 bg-white shadow-lg"><div className="bg-gradient-to-br from-emerald-700 to-sky-700 p-8 text-white md:p-10"><p className="text-sm font-semibold uppercase tracking-[0.25em] text-white/75">Current Teams</p><h3 className="mt-3 text-3xl font-black">讓 Red Sox 看見 Team Taiwan 的力量</h3><p className="mt-4 max-w-3xl leading-7 text-white/90">每一隊的加入，都是為 912 台灣集結與 2027 Red Sox Taiwan Day 集氣。歡迎更多家庭、朋友、僑團、公司、組織、校友會、社團與商家一起加入！各單位也可以直接使用單位名稱作為隊名，讓大家在集氣榜上看見你們的力量。</p></div><div className="p-6 md:p-8"><div className="rounded-[2rem] border border-emerald-100 bg-gradient-to-br from-emerald-50 via-white to-sky-50 p-6 md:p-10"><div className="relative mx-auto hidden min-h-[960px] max-w-6xl md:block">
+{teamLeaderboard.map((team, index) => {
+const bubbleStyles = [
+  "absolute left-[36%] top-0 h-80 w-80 bg-emerald-700 text-white ring-8 ring-emerald-100",
+  "absolute left-[3%] top-[300px] h-64 w-64 bg-sky-600 text-white ring-8 ring-sky-100",
+  "absolute right-[5%] top-[300px] h-56 w-56 bg-emerald-500 text-white ring-8 ring-emerald-100",
+  "absolute left-[37%] top-[420px] h-48 w-48 bg-teal-600 text-white ring-8 ring-teal-100",
+  "absolute left-[16%] top-[610px] h-44 w-44 bg-indigo-600 text-white ring-8 ring-indigo-100",
+  "absolute right-[28%] top-[660px] h-40 w-40 bg-cyan-600 text-white ring-8 ring-cyan-100",
+  "absolute left-[16%] top-[60px] h-36 w-36 bg-amber-500 text-white ring-8 ring-amber-100",
+  "absolute left-[2%] top-[720px] h-36 w-36 bg-rose-500 text-white ring-8 ring-rose-100",
+  "absolute right-[2%] top-[620px] h-36 w-36 bg-violet-600 text-white ring-8 ring-violet-100"
+];
+
+const textStyles = [
+  "text-4xl",
+  "text-3xl",
+  "text-2xl",
+  "text-xl",
+  "text-lg",
+  "text-lg",
+  "text-base",
+  "text-base",
+  "text-base"
+];
+
+return (
+  <div
+    key={team.name}
+    className={`flex flex-col items-center justify-center rounded-full p-5 text-center shadow-2xl transition hover:scale-105 ${bubbleStyles[index]}`}
+  >
+    <div className={`font-black leading-tight ${textStyles[index]}`}>{team.name}</div>
+    <div className="mt-3 rounded-full bg-white/20 px-4 py-2 text-lg font-black">{team.tickets} 張票</div>
+    <div className="mt-2 text-sm font-semibold opacity-90">{team.note}</div>
+  </div>
+);
+})}
+</div>
+
+<div className="grid grid-cols-2 gap-5 md:hidden">
+{teamLeaderboard.map((team, index) => {
+const mobileStyles = [
+  "bg-emerald-700",
+  "bg-sky-600",
+  "bg-emerald-500",
+  "bg-teal-600",
+  "bg-indigo-600",
+  "bg-cyan-600",
+  "bg-amber-500",
+  "bg-rose-500",
+  "bg-violet-600"
+];
+
+return (
+  <div
+    key={team.name}
+    className={`flex aspect-square flex-col items-center justify-center rounded-full p-4 text-center text-white shadow-xl ${mobileStyles[index]}`}
+  >
+    <div className="text-sm font-black leading-tight">{team.name}</div>
+    <div className="mt-2 rounded-full bg-white/20 px-3 py-1 text-sm font-black">{team.tickets} 張票</div>
+    <div className="mt-1 text-[10px] font-semibold opacity-90">{team.note}</div>
+  </div>
+);
+})}
+</div></div><div className="mt-8 rounded-3xl border border-emerald-200 bg-emerald-50 p-6 text-center"><h4 className="text-2xl font-black text-slate-950">你的隊伍也可以一起集氣！</h4><p className="mx-auto mt-3 max-w-2xl leading-7 text-slate-600">3 人以上就可以組隊，自取隊名並加入 TEAM TAIWAN 集氣榜。5/31 前透過 Zeffy 購票，每張票都是 $47。隊名請使用適當、尊重、友善的名稱；主辦單位保留隊名審核與調整之權利。</p><div className="mt-6 flex justify-center"><a href={zeffyPaymentLink} target="_blank" rel="noreferrer" className="rounded-full bg-emerald-700 px-6 py-3 text-center font-bold text-white transition hover:bg-emerald-800">立即組隊</a></div></div></div></Card>
           </div>
         </section>
 
