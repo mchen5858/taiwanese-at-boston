@@ -415,7 +415,6 @@ return (
                   <p className="mt-5 leading-7 text-white/90">
                     今年 9/12，我們希望邀請數百位台灣人與台灣之友，一起走進 Fenway Park。這不只是一場棒球賽，更是波士頓台灣社群的一次大型集結。這件紀念 T-shirt 將由社群一起參與創作，成為屬於波士頓台灣人的共同記憶。
                   </p>
-
                   <div className="mt-8 grid gap-4 sm:grid-cols-2">
                     <div className="rounded-2xl bg-white/15 p-4">
                       <p className="text-sm font-bold text-white/75">投稿截止</p>
@@ -427,44 +426,38 @@ return (
                     </div>
                   </div>
                 </div>
-
                 <div className="p-8 md:p-10">
                   <div className="grid gap-5 md:grid-cols-2">
-                    <InfoCard icon="🎯" title="設計主題">
-                      Taiwan、Boston、Baseball、Fenway、Taiwanese Community、台灣文化、台灣精神、912 Taiwan Fans Night。
-                    </InfoCard>
-                    <InfoCard icon="⚾" title="設計方向">
-                      以「棒球文化 × 台灣認同 × 波士頓社群」為方向。建議適合球場穿搭、遠距離辨識度高、拍照效果佳。
-                    </InfoCard>
-                    <InfoCard icon="👥" title="參賽資格">
-                      不限年齡、國籍與居住地。歡迎設計師、學生、插畫創作者、棒球愛好者與台灣文化支持者參加。
-                    </InfoCard>
-                    <InfoCard icon="📁" title="投稿規格">
-                      可提交正面、背面或完整正反面設計，並附 50–150 字設計理念。接受 PNG、JPG、PDF。
-                    </InfoCard>
+                    <InfoCard icon="🎯" title="設計主題">Taiwan、Boston、Baseball、Fenway、Taiwanese Community、台灣文化、台灣精神、912 Taiwan Fans Night。</InfoCard>
+                    <InfoCard icon="⚾" title="設計方向">以「棒球文化 × 台灣認同 × 波士頓社群」為方向。建議適合球場穿搭、遠距離辨識度高、拍照效果佳。</InfoCard>
+                    <InfoCard icon="👥" title="參賽資格">不限年齡、國籍與居住地。歡迎設計師、學生、插畫創作者、棒球愛好者與台灣文化支持者參加。</InfoCard>
+                    <InfoCard icon="📁" title="投稿規格">可提交正面、背面或完整正反面設計，並附 50–150 字設計理念。接受 PNG、JPG、PDF。</InfoCard>
                   </div>
                 </div>
               </div>
             </Card>
 
-            <div className="mt-8 rounded-[2rem] border border-emerald-200 bg-white p-8 shadow-lg">
-              <div className="grid gap-6 lg:grid-cols-[1fr_auto] lg:items-center">
-                <div>
-                  <p className="text-sm font-semibold uppercase tracking-[0.25em] text-emerald-700">Submission</p>
-                  <h3 className="mt-2 text-3xl font-black text-slate-950">立即投稿參加設計大賽</h3>
-                  <p className="mt-4 leading-7 text-slate-700">
-                    請透過官方 Google Form 投稿，提交您的 T-shirt 設計作品、設計理念與相關資料。
-                  </p>
+            <div className="mt-8 grid gap-6 lg:grid-cols-2">
+              <Card className="border-emerald-200 bg-white p-7 shadow-lg">
+                <p className="text-sm font-semibold uppercase tracking-[0.25em] text-emerald-700">Mockup Download</p>
+                <h3 className="mt-2 text-3xl font-black text-slate-950">T-shirt Mockup 下載</h3>
+                <p className="mt-4 leading-7 text-slate-700">
+                  主辦單位提供 Front / Back Mockup，方便大家直接套用設計投稿。Mockup 僅供投稿示意使用，實際衣服顏色、印刷位置與尺寸可能依製作需求調整。
+                </p>
+                <div className="mt-6 flex flex-col gap-3 sm:flex-row">
+                  <a href="/912-tshirt-front-mockup.png" target="_blank" rel="noreferrer" className="rounded-full bg-emerald-700 px-6 py-3 text-center font-bold text-white transition hover:bg-emerald-800">下載 Front Mockup</a>
+                  <a href="/912-tshirt-back-mockup.png" target="_blank" rel="noreferrer" className="rounded-full border border-emerald-300 bg-white px-6 py-3 text-center font-bold text-emerald-800 transition hover:bg-emerald-50">下載 Back Mockup</a>
                 </div>
-                <a
-                  href={tshirtSubmissionFormLink}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="rounded-full bg-sky-600 px-8 py-4 text-center text-lg font-black text-white shadow-lg ring-2 ring-sky-100 transition hover:bg-sky-700"
-                >
-                  立即投稿
-                </a>
-              </div>
+              </Card>
+
+              <Card className="border-sky-200 bg-white p-7 shadow-lg">
+                <p className="text-sm font-semibold uppercase tracking-[0.25em] text-sky-700">Submission</p>
+                <h3 className="mt-2 text-3xl font-black text-slate-950">立即投稿參加設計大賽</h3>
+                <p className="mt-4 leading-7 text-slate-700">
+                  請透過官方 Google Form 投稿，提交您的 T-shirt 設計作品、設計理念與相關資料。
+                </p>
+                <a href={tshirtSubmissionFormLink} target="_blank" rel="noreferrer" className="mt-6 inline-flex rounded-full bg-sky-600 px-8 py-4 text-center text-lg font-black text-white shadow-lg ring-2 ring-sky-100 transition hover:bg-sky-700">立即投稿</a>
+              </Card>
             </div>
 
             <div className="mt-8 grid gap-6 lg:grid-cols-3">
@@ -477,7 +470,6 @@ return (
                   <p><strong>得獎公布：</strong>Before May 31, 2026</p>
                 </div>
               </Card>
-
               <Card className="p-7">
                 <h3 className="text-2xl font-black text-slate-950">評選方式</h3>
                 <div className="mt-5 space-y-4 text-sm leading-7 text-slate-700">
@@ -487,7 +479,6 @@ return (
                   <p>主辦單位將綜合考量設計品質、主題契合度、球場效果、社群代表性與實際製作可行性。</p>
                 </div>
               </Card>
-
               <Card className="p-7">
                 <h3 className="text-2xl font-black text-slate-950">獎項內容</h3>
                 <div className="mt-5 space-y-4 text-sm leading-7 text-slate-700">
@@ -528,12 +519,8 @@ return (
 
             <div className="mt-8 rounded-[2rem] bg-gradient-to-br from-emerald-700 to-sky-700 p-8 text-center text-white shadow-lg">
               <h3 className="text-3xl font-black">一起做出屬於波士頓台灣人的球衣</h3>
-              <p className="mx-auto mt-4 max-w-3xl leading-7 text-white/90">
-                我們希望 9/12 當天，大家穿上的不只是一件衣服，而是一份屬於波士頓台灣社群的共同記憶。
-              </p>
-              <p className="mt-5 text-sm font-semibold text-white/80">
-                #912台灣集結 #TaiwanFansNight #TaiwanAtFenway #BostonTaiwanese #TaiwaneseCommunity #FenwayTaiwanNight #台灣人在波士頓 #讓Fenway看見台灣
-              </p>
+              <p className="mx-auto mt-4 max-w-3xl leading-7 text-white/90">我們希望 9/12 當天，大家穿上的不只是一件衣服，而是一份屬於波士頓台灣社群的共同記憶。</p>
+              <p className="mt-5 text-sm font-semibold text-white/80">#912台灣集結 #TaiwanFansNight #TaiwanAtFenway #BostonTaiwanese #TaiwaneseCommunity #FenwayTaiwanNight #台灣人在波士頓 #讓Fenway看見台灣</p>
             </div>
           </div>
         </section>
@@ -550,16 +537,11 @@ return (
                       const faqIndex = `${groupIndex}-${itemIndex}`;
                       return (
                         <Card key={item.q}>
-                          <button
-                            onClick={() => setOpenFaq(openFaq === faqIndex ? "" : faqIndex)}
-                            className="flex w-full items-center justify-between gap-4 p-5 text-left"
-                          >
+                          <button onClick={() => setOpenFaq(openFaq === faqIndex ? "" : faqIndex)} className="flex w-full items-center justify-between gap-4 p-5 text-left">
                             <span className="font-bold text-slate-950">Q{itemIndex + 1}：{item.q}</span>
                             <span className={`text-slate-400 transition ${openFaq === faqIndex ? "rotate-90" : ""}`}>›</span>
                           </button>
-                          {openFaq === faqIndex && (
-                            <div className="px-5 pb-5 pt-0 text-sm leading-7 text-slate-600">{item.a}</div>
-                          )}
+                          {openFaq === faqIndex && <div className="px-5 pb-5 pt-0 text-sm leading-7 text-slate-600">{item.a}</div>}
                         </Card>
                       );
                     })}
@@ -579,18 +561,10 @@ return (
               </div>
             </div>
             <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
-              <InfoCard icon="🏛️" title="主辦單位">
-                波克萊台灣商會基金會（BTCF）主辦<br />波克萊台灣商會（BTCC）協辦
-              </InfoCard>
-              <InfoCard icon="✉️" title="主辦單位 Email">
-                <a className="font-bold text-emerald-700 underline" href="mailto:medianchen@gmail.com">medianchen@gmail.com</a>
-              </InfoCard>
-              <InfoCard icon="💬" title="LINE 聯絡">
-                <a className="font-bold text-emerald-700 underline" href={organizerLine} target="_blank" rel="noreferrer">加入 LINE 聯絡主辦單位</a>
-              </InfoCard>
-              <InfoCard icon="🙌" title="加入志工團隊">
-                <a className="font-bold text-emerald-700 underline" href={volunteerFormLink} target="_blank" rel="noreferrer">填寫志工報名表</a>
-              </InfoCard>
+              <InfoCard icon="🏛️" title="主辦單位">波克萊台灣商會基金會（BTCF）主辦<br />波克萊台灣商會（BTCC）協辦</InfoCard>
+              <InfoCard icon="✉️" title="主辦單位 Email"><a className="font-bold text-emerald-700 underline" href="mailto:medianchen@gmail.com">medianchen@gmail.com</a></InfoCard>
+              <InfoCard icon="💬" title="LINE 聯絡"><a className="font-bold text-emerald-700 underline" href={organizerLine} target="_blank" rel="noreferrer">加入 LINE 聯絡主辦單位</a></InfoCard>
+              <InfoCard icon="🙌" title="加入志工團隊"><a className="font-bold text-emerald-700 underline" href={volunteerFormLink} target="_blank" rel="noreferrer">填寫志工報名表</a></InfoCard>
             </div>
           </div>
         </section>
@@ -615,31 +589,9 @@ return (
           <div className="mx-auto max-w-7xl">
             <SectionTitle eyebrow="Support BTCF" title="支持波克萊台灣商會基金會" description="如果您支持我們推廣台灣、服務社區與舉辦更多公益活動，歡迎以以下方式捐款支持 BTCF。" />
             <div className="grid gap-6 lg:grid-cols-3">
-              <DonateCard type="primary" icon="💳" title="Zelle 捐款">
-                <p className="text-sm font-bold text-white/80">Zelle</p>
-                <div className="mt-2 rounded-3xl bg-white p-5 text-emerald-900 shadow-sm">
-                  <p className="break-all text-3xl font-black">btcf-boston</p>
-                </div>
-                <p className="mt-4 text-white/90">備註可寫：Donation / BTCF Support</p>
-              </DonateCard>
-              <DonateCard icon="🏦" title="銀行轉帳">
-                <div className="rounded-2xl bg-slate-50 p-4">
-                  <p className="text-xs font-bold uppercase tracking-wide text-slate-500">Account number</p>
-                  <p className="mt-1 break-all text-2xl font-black text-slate-950">466026497066</p>
-                </div>
-                <div className="mt-3 rounded-2xl bg-slate-50 p-4">
-                  <p className="text-xs font-bold uppercase tracking-wide text-slate-500">Routing number</p>
-                  <p className="mt-1 text-2xl font-black text-slate-950">011000138</p>
-                </div>
-              </DonateCard>
-              <DonateCard icon="🧾" title="支票捐款">
-                <div className="rounded-3xl bg-amber-50 p-5 text-amber-950">
-                  <p className="text-sm font-bold">支票抬頭請寫</p>
-                  <p className="mt-2 text-lg font-black leading-7">Brookline Taiwanese Chamber Foundation</p>
-                  <p className="mt-5 text-sm font-bold">支票請寄至</p>
-                  <p className="mt-2 text-lg font-black leading-7">7 Bow St., Suite 1<br />North Reading, MA 01864</p>
-                </div>
-              </DonateCard>
+              <DonateCard type="primary" icon="💳" title="Zelle 捐款"><p className="text-sm font-bold text-white/80">Zelle</p><div className="mt-2 rounded-3xl bg-white p-5 text-emerald-900 shadow-sm"><p className="break-all text-3xl font-black">btcf-boston</p></div><p className="mt-4 text-white/90">備註可寫：Donation / BTCF Support</p></DonateCard>
+              <DonateCard icon="🏦" title="銀行轉帳"><div className="rounded-2xl bg-slate-50 p-4"><p className="text-xs font-bold uppercase tracking-wide text-slate-500">Account number</p><p className="mt-1 break-all text-2xl font-black text-slate-950">466026497066</p></div><div className="mt-3 rounded-2xl bg-slate-50 p-4"><p className="text-xs font-bold uppercase tracking-wide text-slate-500">Routing number</p><p className="mt-1 text-2xl font-black text-slate-950">011000138</p></div></DonateCard>
+              <DonateCard icon="🧾" title="支票捐款"><div className="rounded-3xl bg-amber-50 p-5 text-amber-950"><p className="text-sm font-bold">支票抬頭請寫</p><p className="mt-2 text-lg font-black leading-7">Brookline Taiwanese Chamber Foundation</p><p className="mt-5 text-sm font-bold">支票請寄至</p><p className="mt-2 text-lg font-black leading-7">7 Bow St., Suite 1<br />North Reading, MA 01864</p></div></DonateCard>
             </div>
           </div>
         </section>
