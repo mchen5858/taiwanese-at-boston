@@ -12,6 +12,7 @@ const googleFormLink = "https://forms.gle/27V7wtAEBxRbboL79";
 const zeffyPaymentLink = "https://www.zeffy.com/en-US/ticketing/912-taiwan-fan-night-at-fenway--912";
 const organizerLine = "https://line.me/ti/p/xbvkW3pO20";
 const volunteerFormLink = "https://forms.gle/1KrTH1ETd9quXNMJ6";
+const tshirtSubmissionFormLink = "https://forms.gle/g7EmFkHFmpt1t1RA7";
 
 const navItems = [
   { id: "home", label: "首頁" },
@@ -398,17 +399,260 @@ return (
 
         <section id="raffle" className="bg-white px-4 py-16 md:px-8 md:py-24"><div className="mx-auto max-w-7xl"><SectionTitle eyebrow="Raffle" title="抽獎活動" description="抽獎分成兩個活動：5/2–5/31 加入「912台灣集結」官方 LINE 群抽獎活動，以及 912 台灣集結活動大抽獎（所有購票參加者皆可參加）。" /><div className="grid gap-6 lg:grid-cols-2"><Card className="border-emerald-200 bg-emerald-50/70 p-8"><div className="mb-5 flex h-14 w-14 items-center justify-center rounded-2xl bg-white text-3xl shadow-sm">🎁</div><h3 className="text-2xl font-black text-slate-950">5/2–5/31｜加入官方 LINE 群抽獎活動</h3><p className="mt-4 leading-7 text-slate-700">只要在 5/31 前加入 912 台灣集結官方 LINE 群，或填寫 912 台灣集結 Google Form，就有機會參加抽獎，並收到最新活動資訊。</p><div className="mt-6 flex flex-col gap-3 sm:flex-row"><a href={officialLineGroup} target="_blank" rel="noreferrer" className="rounded-full bg-emerald-700 px-5 py-3 text-center text-sm font-bold text-white transition hover:bg-emerald-800">加入官方 LINE 群</a><a href={googleFormLink} target="_blank" rel="noreferrer" className="rounded-full border border-emerald-200 bg-white px-5 py-3 text-center text-sm font-bold text-emerald-800 transition hover:bg-emerald-50">沒有 LINE？用 Google Form 加入</a></div><div className="mt-6 space-y-3 text-slate-700"><p className="rounded-2xl bg-white p-4 font-semibold">🎟 912 球票（很多張）</p><p className="rounded-2xl bg-white p-4 font-semibold">👕 鄭宗哲簽名 Taiwanese @ Boston 主題 T-shirt（不只一件唷）</p></div></Card><Card className="p-8"><div className="mb-5 flex h-14 w-14 items-center justify-center rounded-2xl bg-slate-50 text-3xl shadow-sm">🏆</div><h3 className="text-2xl font-black text-slate-950">912 台灣集結活動大抽獎</h3><p className="mt-4 leading-7 text-slate-700">所有購票參加 912 Taiwan Fan Night at Fenway 的朋友，都可以參加活動大抽獎。</p><div className="mt-6 rounded-2xl bg-sky-50 p-5 font-semibold text-sky-900">⚾ 鄭宗哲簽名球（不只一顆喔！）</div></Card></div></div></section>
 
-        <section id="shirt-design" className="px-4 py-16 md:px-8 md:py-24"><div className="mx-auto max-w-7xl"><SectionTitle eyebrow="T-shirt Design" title="台灣主題 T-shirt 設計比賽" description="912 當天大家都會穿上的台灣主題 T-shirt，將由社群一起參與設計。" /><Card className="overflow-hidden border-emerald-200 bg-white shadow-lg"><div className="grid gap-0 lg:grid-cols-[0.95fr_1.05fr] lg:items-center"><div className="bg-gradient-to-br from-emerald-700 to-sky-700 p-8 text-white md:p-10"><p className="text-sm font-semibold uppercase tracking-[0.25em] text-white/75">Coming Soon</p><h3 className="mt-3 text-4xl font-black">設計比賽即將公布</h3><p className="mt-5 leading-7 text-white/90">我們將邀請社群一起參與設計、投稿與投票，選出最能代表台灣精神與波士頓台灣社群凝聚力的紀念 T-shirt。</p></div><div className="p-8 md:p-10"><div className="rounded-[2rem] border border-emerald-100 bg-emerald-50 p-8 text-center"><div className="mx-auto mb-5 flex h-20 w-20 items-center justify-center rounded-3xl bg-white text-4xl shadow-sm">👕</div><h4 className="text-2xl font-black text-slate-950">敬請期待</h4><p className="mt-4 leading-7 text-slate-600">投稿規則、設計主題、獎品、截止日期與投票方式，將於近期公布。請加入官方 LINE 群或填寫 Google Form，收到最新消息。</p></div></div></div></Card></div></section>
+        <section id="shirt-design" className="px-4 py-16 md:px-8 md:py-24">
+          <div className="mx-auto max-w-7xl">
+            <SectionTitle
+              eyebrow="T-shirt Design Contest"
+              title="912 台灣集結紀念 T-shirt 設計大賽"
+              description="一起做出屬於波士頓台灣人的球衣。這不只是設計比賽，而是一次由社群共同參與的創作與集結。"
+            />
 
-        <section id="faq" className="px-4 py-16 md:px-8 md:py-24"><div className="mx-auto max-w-5xl"><SectionTitle eyebrow="FAQ" title="注意事項與常見問題" description="重要規則與常見問題整理。" /><div className="space-y-8">{faqs.map((group, groupIndex) => <div key={group.category}><h3 className="mb-4 text-2xl font-black text-slate-950">{group.category}</h3><div className="space-y-4">{group.items.map((item, itemIndex) => { const faqIndex = `${groupIndex}-${itemIndex}`; return <Card key={item.q}><button onClick={() => setOpenFaq(openFaq === faqIndex ? "" : faqIndex)} className="flex w-full items-center justify-between gap-4 p-5 text-left"><span className="font-bold text-slate-950">Q{itemIndex + 1}：{item.q}</span><span className={`text-slate-400 transition ${openFaq === faqIndex ? "rotate-90" : ""}`}>›</span></button>{openFaq === faqIndex && <div className="px-5 pb-5 pt-0 text-sm leading-7 text-slate-600">{item.a}</div>}</Card>; })}</div></div>)}</div></div></section>
+            <Card className="overflow-hidden border-emerald-200 bg-white shadow-lg">
+              <div className="grid gap-0 lg:grid-cols-[0.95fr_1.05fr] lg:items-stretch">
+                <div className="bg-gradient-to-br from-emerald-700 to-sky-700 p-8 text-white md:p-10">
+                  <p className="text-sm font-semibold uppercase tracking-[0.25em] text-white/75">Official Contest</p>
+                  <h3 className="mt-3 text-4xl font-black">912 Taiwan Fans Night T-Shirt Design Contest</h3>
+                  <p className="mt-5 leading-7 text-white/90">
+                    今年 9/12，我們希望邀請數百位台灣人與台灣之友，一起走進 Fenway Park。這不只是一場棒球賽，更是波士頓台灣社群的一次大型集結。這件紀念 T-shirt 將由社群一起參與創作，成為屬於波士頓台灣人的共同記憶。
+                  </p>
 
-        <section id="contact" className="bg-white px-4 py-16 md:px-8 md:py-24"><div className="mx-auto max-w-5xl"><SectionTitle eyebrow="Contact" title="主辦單位與聯絡方式" description="如需付款資訊、組隊問題或大隊伍報名問題，請 Email 主辦單位，或加入 LINE 聯絡。" /><div className="mb-10 flex justify-center"><div className="rounded-3xl border border-slate-200 bg-white p-5 shadow-sm"><img src={hostLogo} alt="BTCC & BTCF Logo" className="h-auto w-full max-w-[380px] object-contain" /></div></div><div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4"><InfoCard icon="🏛️" title="主辦單位">波克萊台灣商會基金會（BTCF）主辦<br />波克萊台灣商會（BTCC）協辦</InfoCard><InfoCard icon="✉️" title="主辦單位 Email"><a className="font-bold text-emerald-700 underline" href="mailto:medianchen@gmail.com">medianchen@gmail.com</a></InfoCard><InfoCard icon="💬" title="LINE 聯絡"><a className="font-bold text-emerald-700 underline" href={organizerLine} target="_blank" rel="noreferrer">加入 LINE 聯絡主辦單位</a></InfoCard><InfoCard icon="🙌" title="加入志工團隊"><a className="font-bold text-emerald-700 underline" href={volunteerFormLink} target="_blank" rel="noreferrer">填寫志工報名表</a></InfoCard></div></div></section>
+                  <div className="mt-8 grid gap-4 sm:grid-cols-2">
+                    <div className="rounded-2xl bg-white/15 p-4">
+                      <p className="text-sm font-bold text-white/75">投稿截止</p>
+                      <p className="mt-1 text-2xl font-black">May 22, 2026</p>
+                    </div>
+                    <div className="rounded-2xl bg-white/15 p-4">
+                      <p className="text-sm font-bold text-white/75">得獎公布</p>
+                      <p className="mt-1 text-2xl font-black">Before May 31</p>
+                    </div>
+                  </div>
+                </div>
 
-        <section className="px-4 py-16 md:px-8 md:py-20"><div className="mx-auto max-w-5xl rounded-[2rem] border border-emerald-200 bg-emerald-50 p-8 shadow-sm md:p-10"><div className="grid gap-6 md:grid-cols-[1fr_auto] md:items-center"><div><p className="text-sm font-semibold uppercase tracking-[0.25em] text-emerald-700">Stay Updated</p><h2 className="mt-3 text-3xl font-black text-slate-950">立即加入我們「912 Fenway 台灣集結」</h2><p className="mt-4 leading-7 text-slate-700">加入官方 LINE 群，或透過 Google Form 加入我們，一樣可以參加抽獎並收到最新活動資訊。</p></div><div className="flex flex-col gap-3"><a href={officialLineGroup} target="_blank" rel="noreferrer" className="rounded-full bg-emerald-700 px-6 py-3 text-center font-bold text-white transition hover:bg-emerald-800">加入官方 LINE 群</a><a href={googleFormLink} target="_blank" rel="noreferrer" className="rounded-full border border-emerald-300 bg-white px-6 py-3 text-center font-bold text-emerald-800 transition hover:bg-emerald-50">沒有 LINE？用 Google Form 加入</a></div></div></div></section>
+                <div className="p-8 md:p-10">
+                  <div className="grid gap-5 md:grid-cols-2">
+                    <InfoCard icon="🎯" title="設計主題">
+                      Taiwan、Boston、Baseball、Fenway、Taiwanese Community、台灣文化、台灣精神、912 Taiwan Fans Night。
+                    </InfoCard>
+                    <InfoCard icon="⚾" title="設計方向">
+                      以「棒球文化 × 台灣認同 × 波士頓社群」為方向。建議適合球場穿搭、遠距離辨識度高、拍照效果佳。
+                    </InfoCard>
+                    <InfoCard icon="👥" title="參賽資格">
+                      不限年齡、國籍與居住地。歡迎設計師、學生、插畫創作者、棒球愛好者與台灣文化支持者參加。
+                    </InfoCard>
+                    <InfoCard icon="📁" title="投稿規格">
+                      可提交正面、背面或完整正反面設計，並附 50–150 字設計理念。接受 PNG、JPG、PDF。
+                    </InfoCard>
+                  </div>
+                </div>
+              </div>
+            </Card>
 
-        <section id="donate" className="bg-white px-4 py-16 md:px-8 md:py-20"><div className="mx-auto max-w-7xl"><SectionTitle eyebrow="Support BTCF" title="支持波克萊台灣商會基金會" description="如果您支持我們推廣台灣、服務社區與舉辦更多公益活動，歡迎以以下方式捐款支持 BTCF。" /><div className="grid gap-6 lg:grid-cols-3"><DonateCard type="primary" icon="💳" title="Zelle 捐款"><p className="text-sm font-bold text-white/80">Zelle</p><div className="mt-2 rounded-3xl bg-white p-5 text-emerald-900 shadow-sm"><p className="break-all text-3xl font-black">btcf-boston</p></div><p className="mt-4 text-white/90">備註可寫：Donation / BTCF Support</p></DonateCard><DonateCard icon="🏦" title="銀行轉帳"><div className="rounded-2xl bg-slate-50 p-4"><p className="text-xs font-bold uppercase tracking-wide text-slate-500">Account number</p><p className="mt-1 break-all text-2xl font-black text-slate-950">466026497066</p></div><div className="mt-3 rounded-2xl bg-slate-50 p-4"><p className="text-xs font-bold uppercase tracking-wide text-slate-500">Routing number</p><p className="mt-1 text-2xl font-black text-slate-950">011000138</p></div></DonateCard><DonateCard icon="🧾" title="支票捐款"><div className="rounded-3xl bg-amber-50 p-5 text-amber-950"><p className="text-sm font-bold">支票抬頭請寫</p><p className="mt-2 text-lg font-black leading-7">Brookline Taiwanese Chamber Foundation</p><p className="mt-5 text-sm font-bold">支票請寄至</p><p className="mt-2 text-lg font-black leading-7">7 Bow St., Suite 1<br />North Reading, MA 01864</p></div></DonateCard></div></div></section>
+            <div className="mt-8 rounded-[2rem] border border-emerald-200 bg-white p-8 shadow-lg">
+              <div className="grid gap-6 lg:grid-cols-[1fr_auto] lg:items-center">
+                <div>
+                  <p className="text-sm font-semibold uppercase tracking-[0.25em] text-emerald-700">Submission</p>
+                  <h3 className="mt-2 text-3xl font-black text-slate-950">立即投稿參加設計大賽</h3>
+                  <p className="mt-4 leading-7 text-slate-700">
+                    請透過官方 Google Form 投稿，提交您的 T-shirt 設計作品、設計理念與相關資料。
+                  </p>
+                </div>
+                <a
+                  href={tshirtSubmissionFormLink}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="rounded-full bg-sky-600 px-8 py-4 text-center text-lg font-black text-white shadow-lg ring-2 ring-sky-100 transition hover:bg-sky-700"
+                >
+                  立即投稿
+                </a>
+              </div>
+            </div>
+
+            <div className="mt-8 grid gap-6 lg:grid-cols-3">
+              <Card className="p-7">
+                <h3 className="text-2xl font-black text-slate-950">重要時程</h3>
+                <div className="mt-5 space-y-4 text-sm leading-7 text-slate-700">
+                  <p><strong>投稿截止：</strong>May 22, 2026</p>
+                  <p><strong>入圍公布：</strong>May 24, 2026</p>
+                  <p><strong>社群人氣票選：</strong>May 24 – May 29, 2026</p>
+                  <p><strong>得獎公布：</strong>Before May 31, 2026</p>
+                </div>
+              </Card>
+
+              <Card className="p-7">
+                <h3 className="text-2xl font-black text-slate-950">評選方式</h3>
+                <div className="mt-5 space-y-4 text-sm leading-7 text-slate-700">
+                  <p>本活動採「社群人氣票選 + 主辦單位綜合評選」。</p>
+                  <p><strong>社群人氣票選：</strong>40%</p>
+                  <p><strong>主辦單位評選：</strong>60%</p>
+                  <p>主辦單位將綜合考量設計品質、主題契合度、球場效果、社群代表性與實際製作可行性。</p>
+                </div>
+              </Card>
+
+              <Card className="p-7">
+                <h3 className="text-2xl font-black text-slate-950">獎項內容</h3>
+                <div className="mt-5 space-y-4 text-sm leading-7 text-slate-700">
+                  <p><strong>🥇 官方首獎：</strong>$500 獎金、9/12 球票一張、鄭宗哲簽名球。</p>
+                  <p><strong>❤️ 社群人氣獎：</strong>9/12 球票一張。</p>
+                  <p><strong>✨ 入圍作品：</strong>官方網站與社群平台展示。</p>
+                </div>
+              </Card>
+            </div>
+
+            <Card className="mt-8 border-amber-200 bg-amber-50 p-7">
+              <h3 className="text-2xl font-black text-slate-950">設計規範與注意事項</h3>
+              <div className="mt-5 grid gap-5 md:grid-cols-2">
+                <div className="rounded-2xl bg-white p-5 text-sm leading-7 text-slate-700">
+                  <p className="font-bold text-slate-950">建議規格</p>
+                  <p className="mt-2">以 1–4 色設計為佳，避免過度複雜背景與過細線條，並需考慮實際印刷可行性。Mockup 僅供投稿示意使用，實際衣服顏色、印刷位置與尺寸可能依製作需求調整。</p>
+                </div>
+                <div className="rounded-2xl bg-white p-5 text-sm leading-7 text-slate-700">
+                  <p className="font-bold text-slate-950">AI 設計規定</p>
+                  <p className="mt-2">本活動接受 AI 輔助創作，但參賽者需確認不侵犯第三方著作權、不使用受版權保護素材，也不得使用 MLB、Red Sox 等官方 Logo、字體或圖樣。</p>
+                </div>
+              </div>
+            </Card>
+
+            <Card className="mt-8 p-7">
+              <h3 className="text-2xl font-black text-slate-950">投稿與授權條款重點</h3>
+              <div className="mt-5 grid gap-5 md:grid-cols-2">
+                <div className="text-sm leading-7 text-slate-700">
+                  <p>參賽者需透過官方 Google Form 投稿，內容包括姓名 / 暱稱、Email、社群帳號（選填）、設計理念、作品檔案與授權條款同意。</p>
+                  <p className="mt-3">入圍作品將於官方網站、Facebook、Instagram、LINE 群組公開展示，社群人氣票選將透過 Google Form 進行，每位參與者限投一次。</p>
+                </div>
+                <div className="rounded-2xl bg-emerald-50 p-5 text-sm leading-7 text-emerald-900">
+                  <p className="font-bold">投稿即代表同意：</p>
+                  <p className="mt-2">作品為原創且未侵犯第三方權利。若作品獲選，參賽者同意授權主辦單位將作品使用於活動宣傳、社群媒體、官方網站、印刷製作與未來活動相關用途。主辦單位保留最終選擇、修改、調整、合併與實際製作之權利。</p>
+                </div>
+              </div>
+            </Card>
+
+            <div className="mt-8 rounded-[2rem] bg-gradient-to-br from-emerald-700 to-sky-700 p-8 text-center text-white shadow-lg">
+              <h3 className="text-3xl font-black">一起做出屬於波士頓台灣人的球衣</h3>
+              <p className="mx-auto mt-4 max-w-3xl leading-7 text-white/90">
+                我們希望 9/12 當天，大家穿上的不只是一件衣服，而是一份屬於波士頓台灣社群的共同記憶。
+              </p>
+              <p className="mt-5 text-sm font-semibold text-white/80">
+                #912台灣集結 #TaiwanFansNight #TaiwanAtFenway #BostonTaiwanese #TaiwaneseCommunity #FenwayTaiwanNight #台灣人在波士頓 #讓Fenway看見台灣
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section id="faq" className="px-4 py-16 md:px-8 md:py-24">
+          <div className="mx-auto max-w-5xl">
+            <SectionTitle eyebrow="FAQ" title="注意事項與常見問題" description="重要規則與常見問題整理。" />
+            <div className="space-y-8">
+              {faqs.map((group, groupIndex) => (
+                <div key={group.category}>
+                  <h3 className="mb-4 text-2xl font-black text-slate-950">{group.category}</h3>
+                  <div className="space-y-4">
+                    {group.items.map((item, itemIndex) => {
+                      const faqIndex = `${groupIndex}-${itemIndex}`;
+                      return (
+                        <Card key={item.q}>
+                          <button
+                            onClick={() => setOpenFaq(openFaq === faqIndex ? "" : faqIndex)}
+                            className="flex w-full items-center justify-between gap-4 p-5 text-left"
+                          >
+                            <span className="font-bold text-slate-950">Q{itemIndex + 1}：{item.q}</span>
+                            <span className={`text-slate-400 transition ${openFaq === faqIndex ? "rotate-90" : ""}`}>›</span>
+                          </button>
+                          {openFaq === faqIndex && (
+                            <div className="px-5 pb-5 pt-0 text-sm leading-7 text-slate-600">{item.a}</div>
+                          )}
+                        </Card>
+                      );
+                    })}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section id="contact" className="bg-white px-4 py-16 md:px-8 md:py-24">
+          <div className="mx-auto max-w-5xl">
+            <SectionTitle eyebrow="Contact" title="主辦單位與聯絡方式" description="如需付款資訊、組隊問題或大隊伍報名問題，請 Email 主辦單位，或加入 LINE 聯絡。" />
+            <div className="mb-10 flex justify-center">
+              <div className="rounded-3xl border border-slate-200 bg-white p-5 shadow-sm">
+                <img src={hostLogo} alt="BTCC & BTCF Logo" className="h-auto w-full max-w-[380px] object-contain" />
+              </div>
+            </div>
+            <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+              <InfoCard icon="🏛️" title="主辦單位">
+                波克萊台灣商會基金會（BTCF）主辦<br />波克萊台灣商會（BTCC）協辦
+              </InfoCard>
+              <InfoCard icon="✉️" title="主辦單位 Email">
+                <a className="font-bold text-emerald-700 underline" href="mailto:medianchen@gmail.com">medianchen@gmail.com</a>
+              </InfoCard>
+              <InfoCard icon="💬" title="LINE 聯絡">
+                <a className="font-bold text-emerald-700 underline" href={organizerLine} target="_blank" rel="noreferrer">加入 LINE 聯絡主辦單位</a>
+              </InfoCard>
+              <InfoCard icon="🙌" title="加入志工團隊">
+                <a className="font-bold text-emerald-700 underline" href={volunteerFormLink} target="_blank" rel="noreferrer">填寫志工報名表</a>
+              </InfoCard>
+            </div>
+          </div>
+        </section>
+
+        <section className="px-4 py-16 md:px-8 md:py-20">
+          <div className="mx-auto max-w-5xl rounded-[2rem] border border-emerald-200 bg-emerald-50 p-8 shadow-sm md:p-10">
+            <div className="grid gap-6 md:grid-cols-[1fr_auto] md:items-center">
+              <div>
+                <p className="text-sm font-semibold uppercase tracking-[0.25em] text-emerald-700">Stay Updated</p>
+                <h2 className="mt-3 text-3xl font-black text-slate-950">立即加入我們「912 Fenway 台灣集結」</h2>
+                <p className="mt-4 leading-7 text-slate-700">加入官方 LINE 群，或透過 Google Form 加入我們，一樣可以參加抽獎並收到最新活動資訊。</p>
+              </div>
+              <div className="flex flex-col gap-3">
+                <a href={officialLineGroup} target="_blank" rel="noreferrer" className="rounded-full bg-emerald-700 px-6 py-3 text-center font-bold text-white transition hover:bg-emerald-800">加入官方 LINE 群</a>
+                <a href={googleFormLink} target="_blank" rel="noreferrer" className="rounded-full border border-emerald-300 bg-white px-6 py-3 text-center font-bold text-emerald-800 transition hover:bg-emerald-50">沒有 LINE？用 Google Form 加入</a>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="donate" className="bg-white px-4 py-16 md:px-8 md:py-20">
+          <div className="mx-auto max-w-7xl">
+            <SectionTitle eyebrow="Support BTCF" title="支持波克萊台灣商會基金會" description="如果您支持我們推廣台灣、服務社區與舉辦更多公益活動，歡迎以以下方式捐款支持 BTCF。" />
+            <div className="grid gap-6 lg:grid-cols-3">
+              <DonateCard type="primary" icon="💳" title="Zelle 捐款">
+                <p className="text-sm font-bold text-white/80">Zelle</p>
+                <div className="mt-2 rounded-3xl bg-white p-5 text-emerald-900 shadow-sm">
+                  <p className="break-all text-3xl font-black">btcf-boston</p>
+                </div>
+                <p className="mt-4 text-white/90">備註可寫：Donation / BTCF Support</p>
+              </DonateCard>
+              <DonateCard icon="🏦" title="銀行轉帳">
+                <div className="rounded-2xl bg-slate-50 p-4">
+                  <p className="text-xs font-bold uppercase tracking-wide text-slate-500">Account number</p>
+                  <p className="mt-1 break-all text-2xl font-black text-slate-950">466026497066</p>
+                </div>
+                <div className="mt-3 rounded-2xl bg-slate-50 p-4">
+                  <p className="text-xs font-bold uppercase tracking-wide text-slate-500">Routing number</p>
+                  <p className="mt-1 text-2xl font-black text-slate-950">011000138</p>
+                </div>
+              </DonateCard>
+              <DonateCard icon="🧾" title="支票捐款">
+                <div className="rounded-3xl bg-amber-50 p-5 text-amber-950">
+                  <p className="text-sm font-bold">支票抬頭請寫</p>
+                  <p className="mt-2 text-lg font-black leading-7">Brookline Taiwanese Chamber Foundation</p>
+                  <p className="mt-5 text-sm font-bold">支票請寄至</p>
+                  <p className="mt-2 text-lg font-black leading-7">7 Bow St., Suite 1<br />North Reading, MA 01864</p>
+                </div>
+              </DonateCard>
+            </div>
+          </div>
+        </section>
       </main>
-      <footer className="border-t border-slate-200 bg-white px-4 py-8 md:px-8"><div className="mx-auto max-w-7xl"><div className="mb-5 flex justify-center md:justify-start"><img src={hostLogo} alt="BTCC & BTCF Logo" className="h-auto w-full max-w-[200px] object-contain" /></div><p className="text-center text-sm text-slate-500 md:text-left">© 2026 912 Taiwan Fan Night at Fenway｜波克萊台灣商會基金會（BTCF）</p></div></footer>
+
+      <footer className="border-t border-slate-200 bg-white px-4 py-8 md:px-8">
+        <div className="mx-auto max-w-7xl">
+          <div className="mb-5 flex justify-center md:justify-start">
+            <img src={hostLogo} alt="BTCC & BTCF Logo" className="h-auto w-full max-w-[200px] object-contain" />
+          </div>
+          <p className="text-center text-sm text-slate-500 md:text-left">© 2026 912 Taiwan Fan Night at Fenway｜波克萊台灣商會基金會（BTCF）</p>
+        </div>
+      </footer>
     </div>
   );
 }
