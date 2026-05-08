@@ -349,7 +349,9 @@ return (
     className={`flex flex-col items-center justify-center rounded-full p-5 text-center shadow-2xl transition hover:scale-105 ${bubbleStyles[index]}`}
   >
     <div className={`font-black leading-tight ${textStyles[index]}`}>{team.name}</div>
-    <div className="mt-3 rounded-full bg-white/20 px-4 py-2 text-lg font-black">{team.tickets} 張票</div>
+    {parseInt(team.tickets, 10) >= 10 && (
+      <div className="mt-3 rounded-full bg-white/20 px-4 py-2 text-lg font-black">{team.tickets} 張票</div>
+    )}
     <div className="mt-2 text-sm font-semibold opacity-90">{team.note}</div>
   </div>
 );
@@ -381,7 +383,9 @@ return (
     className={`flex aspect-square flex-col items-center justify-center rounded-full p-4 text-center text-white shadow-xl ${mobileStyles[index]}`}
   >
     <div className="text-sm font-black leading-tight">{team.name}</div>
-    <div className="mt-2 rounded-full bg-white/20 px-3 py-1 text-sm font-black">{team.tickets} 張票</div>
+    {parseInt(team.tickets, 10) >= 10 && (
+      <div className="mt-2 rounded-full bg-white/20 px-3 py-1 text-sm font-black">{team.tickets} 張票</div>
+    )}
     <div className="mt-1 text-[10px] font-semibold opacity-90">{team.note}</div>
   </div>
 );
