@@ -461,25 +461,26 @@ return (
             </div>
 
             <div className="mt-8 grid gap-6 lg:grid-cols-3">
-              <Card className="p-7 lg:col-span-3">
-                <h3 className="text-2xl font-black text-slate-950">獎項內容</h3>
-                <div className="mt-5 grid gap-5 lg:grid-cols-[1.25fr_0.75fr_0.75fr]">
-                  <div className="rounded-3xl border-4 border-emerald-300 bg-gradient-to-br from-emerald-600 to-sky-700 p-6 text-center text-white shadow-xl ring-4 ring-emerald-100">
+              <Card className="overflow-hidden border-emerald-200 bg-white shadow-xl lg:col-span-3">
+                <div className="grid gap-0 lg:grid-cols-[1.15fr_0.85fr]">
+                  <div className="bg-gradient-to-br from-emerald-700 to-sky-700 p-8 text-center text-white md:p-10">
                     <p className="text-lg font-bold uppercase tracking-[0.2em] text-white/80">🥇 官方首獎</p>
                     <p className="mt-3 text-7xl font-black leading-none md:text-8xl">$1,000</p>
                     <p className="mt-4 text-lg font-bold leading-8 text-white/90">由波克萊基金會與北美最帥氣 Tony 哥（許志遠）贊助</p>
-                    <div className="mt-6 rounded-2xl bg-white/15 p-4 text-left text-base leading-8 text-white/95">
+                    <div className="mx-auto mt-6 max-w-md rounded-2xl bg-white/15 p-4 text-left text-base leading-8 text-white/95">
                       <p>• 9/12 球票一張</p>
                       <p>• 鄭宗哲簽名球</p>
                     </div>
                   </div>
-                  <div className="rounded-2xl bg-rose-50 p-5 text-rose-900">
-                    <p className="text-xl font-black">❤️ 社群人氣獎</p>
-                    <p className="mt-3 text-base leading-8">• 9/12 球票一張</p>
-                  </div>
-                  <div className="rounded-2xl bg-slate-50 p-5 text-slate-700">
-                    <p className="font-black text-slate-950">✨ 入圍作品</p>
-                    <p className="mt-2">官方網站與社群平台展示</p>
+                  <div className="grid gap-4 bg-slate-50 p-6 md:grid-cols-2 lg:grid-cols-1">
+                    <div className="rounded-3xl bg-white p-6 shadow-sm">
+                      <p className="text-xl font-black text-rose-900">❤️ 社群人氣獎</p>
+                      <p className="mt-3 text-base leading-8 text-slate-700">• 9/12 球票一張</p>
+                    </div>
+                    <div className="rounded-3xl bg-white p-6 shadow-sm">
+                      <p className="text-xl font-black text-slate-950">✨ 入圍作品</p>
+                      <p className="mt-3 text-base leading-8 text-slate-700">官方網站與社群平台展示</p>
+                    </div>
                   </div>
                 </div>
               </Card>
