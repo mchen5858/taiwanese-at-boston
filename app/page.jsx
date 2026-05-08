@@ -28,15 +28,20 @@ const navItems = [
 const teamExamples = ["台灣No.1隊", "Fenway佔領隊", "珍奶續命隊", "Team Taiwan GO隊", "波士頓台味隊"];
 
 const teamLeaderboard = [
-  { name: "波克萊台灣商會", tickets: "130", note: "目前領先" },
+  { name: "波克萊台灣商會", tickets: "130+", note: "目前領先" },
   { name: "波士頓台灣媽媽親子會", tickets: "30+", note: "持續增加中" },
   { name: "波士頓台灣人生技協會 BTBA", tickets: "20+", note: "持續增加中" },
-  { name: "羅德島台灣同好會", tickets: "13", note: "持續增加中" },
-  { name: "NCCU, TCCNE & BTEAA", tickets: "7", note: "持續增加中" },
-  { name: "Woo告台", tickets: "5+", note: "持續增加中" },
-  { name: "Boston FASCA", tickets: "4", note: "持續增加中" },
-  { name: "波士頓北一女校友會", tickets: "3", note: "持續增加中" },
-  { name: "襪賽！Taiwan", tickets: "3", note: "持續增加中" },
+  { name: "羅德島台灣同好會", tickets: "10+", note: "持續增加中" },
+  { name: "NCCU, TCCNE & BTEAA", tickets: "10+", note: "持續增加中" },
+  { name: "Andover 貢茶", tickets: "5+", note: "持續增加中" },
+  { name: "Boston FASCA", tickets: "3+", note: "持續增加中" },
+  { name: "North Shore TAIWANESE", tickets: "3+", note: "持續增加中" },
+  { name: "Tâioân Siothéng", tickets: "3+", note: "持續增加中" },
+  { name: "Woo告台", tickets: "3+", note: "持續增加中" },
+  { name: "我朋友說想湊個50人的隊", tickets: "3+", note: "持續增加中" },
+  { name: "波士頓北一女校友會", tickets: "3+", note: "持續增加中" },
+  { name: "波士頓台灣世衞協進會", tickets: "3+", note: "持續增加中" },
+  { name: "襪賽！Taiwan", tickets: "3+", note: "持續增加中" },
 ];
 
 const faqs = [
@@ -302,18 +307,23 @@ export default function TaiwanFanNightWebsite() {
         <section id="leaderboard" className="px-4 py-16 md:px-8 md:py-24">
           <div className="mx-auto max-w-7xl">
             <SectionTitle eyebrow="Leaderboard" title="TEAM TAIWAN 集氣榜" description="感謝各隊熱情響應！集氣榜將依照各隊目前認票／報名票數持續更新。" />
-            <Card className="overflow-hidden border-emerald-200 bg-white shadow-lg"><div className="bg-gradient-to-br from-emerald-700 to-sky-700 p-8 text-white md:p-10"><p className="text-sm font-semibold uppercase tracking-[0.25em] text-white/75">Current Teams</p><h3 className="mt-3 text-3xl font-black">讓 Red Sox 看見 Team Taiwan 的力量</h3><p className="mt-4 max-w-3xl leading-7 text-white/90">每一隊的加入，都是為 912 台灣集結與 2027 Red Sox Taiwan Day 集氣。歡迎更多家庭、朋友、僑團、公司、組織、校友會、社團與商家一起加入！各單位也可以直接使用單位名稱作為隊名，讓大家在集氣榜上看見你們的力量。</p></div><div className="p-6 md:p-8"><div className="rounded-[2rem] border border-emerald-100 bg-gradient-to-br from-emerald-50 via-white to-sky-50 p-6 md:p-10"><div className="relative mx-auto hidden min-h-[960px] max-w-6xl md:block">
+            <Card className="overflow-hidden border-emerald-200 bg-white shadow-lg"><div className="bg-gradient-to-br from-emerald-700 to-sky-700 p-8 text-white md:p-10"><p className="text-sm font-semibold uppercase tracking-[0.25em] text-white/75">Current Teams</p><h3 className="mt-3 text-3xl font-black">讓 Red Sox 看見 Team Taiwan 的力量</h3><p className="mt-4 max-w-3xl leading-7 text-white/90">每一隊的加入，都是為 912 台灣集結與 2027 Red Sox Taiwan Day 集氣。歡迎更多家庭、朋友、僑團、公司、組織、校友會、社團與商家一起加入！各單位也可以直接使用單位名稱作為隊名，讓大家在集氣榜上看見你們的力量。</p></div><div className="p-6 md:p-8"><div className="rounded-[2rem] border border-emerald-100 bg-gradient-to-br from-emerald-50 via-white to-sky-50 p-6 md:p-10"><div className="relative mx-auto hidden min-h-[1250px] max-w-6xl md:block">
 {teamLeaderboard.map((team, index) => {
 const bubbleStyles = [
-  "absolute left-[36%] top-0 h-80 w-80 bg-emerald-700 text-white ring-8 ring-emerald-100",
-  "absolute left-[3%] top-[300px] h-64 w-64 bg-sky-600 text-white ring-8 ring-sky-100",
-  "absolute right-[5%] top-[300px] h-56 w-56 bg-emerald-500 text-white ring-8 ring-emerald-100",
-  "absolute left-[37%] top-[420px] h-48 w-48 bg-teal-600 text-white ring-8 ring-teal-100",
-  "absolute left-[16%] top-[610px] h-44 w-44 bg-indigo-600 text-white ring-8 ring-indigo-100",
-  "absolute right-[28%] top-[660px] h-40 w-40 bg-cyan-600 text-white ring-8 ring-cyan-100",
-  "absolute left-[16%] top-[60px] h-36 w-36 bg-amber-500 text-white ring-8 ring-amber-100",
-  "absolute left-[2%] top-[720px] h-36 w-36 bg-rose-500 text-white ring-8 ring-rose-100",
-  "absolute right-[2%] top-[620px] h-36 w-36 bg-violet-600 text-white ring-8 ring-violet-100"
+  "absolute left-[35%] top-[0px] h-80 w-80 bg-emerald-700 text-white ring-8 ring-emerald-100",
+  "absolute left-[2%] top-[320px] h-64 w-64 bg-sky-600 text-white ring-8 ring-sky-100",
+  "absolute right-[4%] top-[330px] h-56 w-56 bg-emerald-500 text-white ring-8 ring-emerald-100",
+  "absolute left-[39%] top-[500px] h-48 w-48 bg-teal-600 text-white ring-8 ring-teal-100",
+  "absolute left-[18%] top-[760px] h-44 w-44 bg-indigo-600 text-white ring-8 ring-indigo-100",
+  "absolute left-[10%] top-[80px] h-40 w-40 bg-amber-500 text-white ring-8 ring-amber-100",
+  "absolute right-[28%] top-[760px] h-36 w-36 bg-cyan-600 text-white ring-8 ring-cyan-100",
+  "absolute right-[8%] top-[80px] h-36 w-36 bg-rose-500 text-white ring-8 ring-rose-100",
+  "absolute left-[0%] top-[980px] h-36 w-36 bg-violet-600 text-white ring-8 ring-violet-100",
+  "absolute right-[2%] top-[940px] h-36 w-36 bg-fuchsia-600 text-white ring-8 ring-fuchsia-100",
+  "absolute left-[40%] top-[920px] h-36 w-36 bg-orange-500 text-white ring-8 ring-orange-100",
+  "absolute left-[30%] top-[1040px] h-36 w-36 bg-pink-500 text-white ring-8 ring-pink-100",
+  "absolute right-[32%] top-[1080px] h-36 w-36 bg-lime-600 text-white ring-8 ring-lime-100",
+  "absolute right-[0%] top-[1120px] h-36 w-36 bg-purple-600 text-white ring-8 ring-purple-100"
 ];
 
 const textStyles = [
@@ -325,7 +335,12 @@ const textStyles = [
   "text-lg",
   "text-base",
   "text-base",
-  "text-base"
+  "text-sm",
+  "text-sm",
+  "text-sm",
+  "text-sm",
+  "text-sm",
+  "text-sm"
 ];
 
 return (
@@ -349,10 +364,15 @@ const mobileStyles = [
   "bg-emerald-500",
   "bg-teal-600",
   "bg-indigo-600",
-  "bg-cyan-600",
   "bg-amber-500",
+  "bg-cyan-600",
   "bg-rose-500",
-  "bg-violet-600"
+  "bg-violet-600",
+  "bg-fuchsia-600",
+  "bg-orange-500",
+  "bg-pink-500",
+  "bg-lime-600",
+  "bg-purple-600"
 ];
 
 return (
