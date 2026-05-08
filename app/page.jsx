@@ -418,7 +418,7 @@ return (
                   <div className="mt-8 grid gap-4 sm:grid-cols-2">
                     <div className="rounded-2xl bg-white/15 p-4">
                       <p className="text-sm font-bold text-white/75">投稿截止</p>
-                      <p className="mt-1 text-2xl font-black">May 22, 2026</p>
+                      <p className="mt-1 text-2xl font-black">May 24 midnight, 2026</p>
                     </div>
                     <div className="rounded-2xl bg-white/15 p-4">
                       <p className="text-sm font-bold text-white/75">得獎公布</p>
@@ -461,30 +461,45 @@ return (
             </div>
 
             <div className="mt-8 grid gap-6 lg:grid-cols-3">
+              <Card className="p-7 lg:col-span-3">
+                <h3 className="text-2xl font-black text-slate-950">獎項內容</h3>
+                <div className="mt-5 grid gap-5 lg:grid-cols-[1.25fr_0.75fr_0.75fr]">
+                  <div className="rounded-3xl border-4 border-emerald-300 bg-gradient-to-br from-emerald-600 to-sky-700 p-6 text-center text-white shadow-xl ring-4 ring-emerald-100">
+                    <p className="text-lg font-bold uppercase tracking-[0.2em] text-white/80">🥇 官方首獎</p>
+                    <p className="mt-3 text-7xl font-black leading-none md:text-8xl">$1,000</p>
+                    <p className="mt-4 text-lg font-bold leading-8 text-white/90">由波克萊基金會與北美最帥氣 Tony 哥（許志遠）贊助</p>
+                    <div className="mt-6 rounded-2xl bg-white/15 p-4 text-left text-base leading-8 text-white/95">
+                      <p>• 9/12 球票一張</p>
+                      <p>• 鄭宗哲簽名球</p>
+                    </div>
+                  </div>
+                  <div className="rounded-2xl bg-rose-50 p-5 text-rose-900">
+                    <p className="text-xl font-black">❤️ 社群人氣獎</p>
+                    <p className="mt-3 text-base leading-8">• 9/12 球票一張</p>
+                  </div>
+                  <div className="rounded-2xl bg-slate-50 p-5 text-slate-700">
+                    <p className="font-black text-slate-950">✨ 入圍作品</p>
+                    <p className="mt-2">官方網站與社群平台展示</p>
+                  </div>
+                </div>
+              </Card>
+
               <Card className="p-7">
                 <h3 className="text-2xl font-black text-slate-950">重要時程</h3>
                 <div className="mt-5 space-y-4 text-sm leading-7 text-slate-700">
-                  <p><strong>投稿截止：</strong>May 22, 2026</p>
+                  <p><strong>投稿截止：</strong>May 24 midnight, 2026</p>
                   <p><strong>入圍公布：</strong>May 24, 2026</p>
                   <p><strong>社群人氣票選：</strong>May 24 – May 29, 2026</p>
                   <p><strong>得獎公布：</strong>Before May 31, 2026</p>
                 </div>
               </Card>
-              <Card className="p-7">
+              <Card className="p-7 lg:col-span-2">
                 <h3 className="text-2xl font-black text-slate-950">評選方式</h3>
                 <div className="mt-5 space-y-4 text-sm leading-7 text-slate-700">
                   <p>本活動採「社群人氣票選 + 主辦單位綜合評選」。</p>
                   <p><strong>社群人氣票選：</strong>40%</p>
                   <p><strong>主辦單位評選：</strong>60%</p>
                   <p>主辦單位將綜合考量設計品質、主題契合度、球場效果、社群代表性與實際製作可行性。</p>
-                </div>
-              </Card>
-              <Card className="p-7">
-                <h3 className="text-2xl font-black text-slate-950">獎項內容</h3>
-                <div className="mt-5 space-y-4 text-sm leading-7 text-slate-700">
-                  <p><strong>🥇 官方首獎：</strong>$500 獎金、9/12 球票一張、鄭宗哲簽名球。</p>
-                  <p><strong>❤️ 社群人氣獎：</strong>9/12 球票一張。</p>
-                  <p><strong>✨ 入圍作品：</strong>官方網站與社群平台展示。</p>
                 </div>
               </Card>
             </div>
@@ -512,7 +527,9 @@ return (
                 </div>
                 <div className="rounded-2xl bg-emerald-50 p-5 text-sm leading-7 text-emerald-900">
                   <p className="font-bold">投稿即代表同意：</p>
-                  <p className="mt-2">作品為原創且未侵犯第三方權利。若作品獲選，參賽者同意授權主辦單位將作品使用於活動宣傳、社群媒體、官方網站、印刷製作與未來活動相關用途。主辦單位保留最終選擇、修改、調整、合併與實際製作之權利。</p>
+                  <p className="mt-2">作品需為原創且未侵犯第三方著作權、商標權或其他智慧財產權。若作品獲選，參賽者同意授權主辦單位使用該作品於活動宣傳、社群媒體、官方網站、印刷製作、紀念商品、募款用途及未來相關活動使用。</p>
+                  <p className="mt-3">主辦單位保留對作品進行最終選擇、修改、調整、合併、重製、公開展示、印刷製作與實際製作之權利，並得依印刷、成本、版型或活動需求進行適度調整。</p>
+                  <p className="mt-3">參賽者理解實際成品可能與投稿設計略有不同，主辦單位保有本活動最終解釋權。</p>
                 </div>
               </div>
             </Card>
