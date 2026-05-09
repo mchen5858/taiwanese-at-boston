@@ -30,19 +30,21 @@ const teamExamples = ["台灣No.1隊", "Fenway佔領隊", "珍奶續命隊", "Te
 
 const teamLeaderboard = [
   { name: "波克萊台灣商會", tickets: "130+", note: "目前領先" },
-  { name: "波士頓台灣媽媽親子會", tickets: "30+", note: "持續增加中" },
-  { name: "波士頓台灣人生技協會 BTBA", tickets: "20+", note: "持續增加中" },
-  { name: "羅德島台灣同好會", tickets: "10+", note: "持續增加中" },
-  { name: "NCCU, TCCNE & BTEAA", tickets: "10+", note: "持續增加中" },
   { name: "Andover 貢茶", tickets: "5+", note: "持續增加中" },
   { name: "Boston FASCA", tickets: "3+", note: "持續增加中" },
+  { name: "NCCU, TCCNE & BTEAA", tickets: "10+", note: "持續增加中" },
   { name: "North Shore TAIWANESE", tickets: "3+", note: "持續增加中" },
   { name: "Tâioân Siothéng", tickets: "3+", note: "持續增加中" },
   { name: "Woo告台", tickets: "3+", note: "持續增加中" },
-  { name: "我朋友說想湊個50人的隊", tickets: "3+", note: "持續增加中" },
+  { name: "我朋友說想湊個50人的隊", tickets: "12+", note: "持續增加中" },
   { name: "波士頓北一女校友會", tickets: "3+", note: "持續增加中" },
   { name: "波士頓台灣世衞協進會", tickets: "3+", note: "持續增加中" },
+  { name: "波士頓台灣人生技協會 (BTBA)", tickets: "20+", note: "持續增加中" },
+  { name: "波士頓台灣媽媽親子會", tickets: "32+", note: "持續增加中" },
+  { name: "羅德島台灣同好會", tickets: "10+", note: "持續增加中" },
   { name: "襪賽！Taiwan", tickets: "3+", note: "持續增加中" },
+  { name: "金余", tickets: "3+", note: "持續增加中" },
+  { name: "TECO-BOSTON", tickets: "10+", note: "持續增加中" },
 ];
 
 const faqs = [
