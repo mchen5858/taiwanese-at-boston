@@ -30,21 +30,21 @@ const teamExamples = ["台灣No.1隊", "Fenway佔領隊", "珍奶續命隊", "Te
 
 const teamLeaderboard = [
   { name: "波克萊台灣商會", tickets: "130+", note: "目前領先" },
+  { name: "波士頓台灣媽媽親子會", tickets: "32+", note: "持續增加中" },
+  { name: "波士頓台灣人生技協會 (BTBA)", tickets: "20+", note: "持續增加中" },
+  { name: "我朋友說想湊個50人的隊", tickets: "12+", note: "持續增加中" },
+  { name: "羅德島台灣同好會", tickets: "10+", note: "持續增加中" },
+  { name: "NCCU, TCCNE & BTEAA", tickets: "10+", note: "持續增加中" },
+  { name: "TECO-BOSTON", tickets: "10+", note: "持續增加中" },
   { name: "Andover 貢茶", tickets: "5+", note: "持續增加中" },
   { name: "Boston FASCA", tickets: "3+", note: "持續增加中" },
-  { name: "NCCU, TCCNE & BTEAA", tickets: "10+", note: "持續增加中" },
   { name: "North Shore TAIWANESE", tickets: "3+", note: "持續增加中" },
   { name: "Tâioân Siothéng", tickets: "3+", note: "持續增加中" },
   { name: "Woo告台", tickets: "3+", note: "持續增加中" },
-  { name: "我朋友說想湊個50人的隊", tickets: "12+", note: "持續增加中" },
   { name: "波士頓北一女校友會", tickets: "3+", note: "持續增加中" },
   { name: "波士頓台灣世衞協進會", tickets: "3+", note: "持續增加中" },
-  { name: "波士頓台灣人生技協會 (BTBA)", tickets: "20+", note: "持續增加中" },
-  { name: "波士頓台灣媽媽親子會", tickets: "32+", note: "持續增加中" },
-  { name: "羅德島台灣同好會", tickets: "10+", note: "持續增加中" },
   { name: "襪賽！Taiwan", tickets: "3+", note: "持續增加中" },
   { name: "金余", tickets: "3+", note: "持續增加中" },
-  { name: "TECO-BOSTON", tickets: "10+", note: "持續增加中" },
 ];
 
 const faqs = [
@@ -309,91 +309,135 @@ export default function TaiwanFanNightWebsite() {
 
         <section id="leaderboard" className="px-4 py-16 md:px-8 md:py-24">
           <div className="mx-auto max-w-7xl">
-            <SectionTitle eyebrow="Leaderboard" title="TEAM TAIWAN 集氣榜" description="感謝各隊熱情響應！集氣榜將依照各隊目前認票／報名票數持續更新。" />
-            <Card className="overflow-hidden border-emerald-200 bg-white shadow-lg"><div className="bg-gradient-to-br from-emerald-700 to-sky-700 p-8 text-white md:p-10"><p className="text-sm font-semibold uppercase tracking-[0.25em] text-white/75">Current Teams</p><h3 className="mt-3 text-3xl font-black">讓 Red Sox 看見 Team Taiwan 的力量</h3><p className="mt-4 max-w-3xl leading-7 text-white/90">每一隊的加入，都是為 912 台灣集結與 2027 Red Sox Taiwan Day 集氣。歡迎更多家庭、朋友、僑團、公司、組織、校友會、社團與商家一起加入！各單位也可以直接使用單位名稱作為隊名，讓大家在集氣榜上看見你們的力量。</p></div><div className="p-6 md:p-8"><div className="rounded-[2rem] border border-emerald-100 bg-gradient-to-br from-emerald-50 via-white to-sky-50 p-6 md:p-10"><div className="relative mx-auto hidden min-h-[1250px] max-w-6xl md:block">
-{teamLeaderboard.map((team, index) => {
-const bubbleStyles = [
-  "absolute left-[35%] top-[0px] h-80 w-80 bg-emerald-700 text-white ring-8 ring-emerald-100",
-  "absolute left-[2%] top-[320px] h-64 w-64 bg-sky-600 text-white ring-8 ring-sky-100",
-  "absolute right-[4%] top-[330px] h-56 w-56 bg-emerald-500 text-white ring-8 ring-emerald-100",
-  "absolute left-[39%] top-[500px] h-48 w-48 bg-teal-600 text-white ring-8 ring-teal-100",
-  "absolute left-[18%] top-[760px] h-44 w-44 bg-indigo-600 text-white ring-8 ring-indigo-100",
-  "absolute left-[10%] top-[80px] h-40 w-40 bg-amber-500 text-white ring-8 ring-amber-100",
-  "absolute right-[28%] top-[760px] h-36 w-36 bg-cyan-600 text-white ring-8 ring-cyan-100",
-  "absolute right-[8%] top-[80px] h-36 w-36 bg-rose-500 text-white ring-8 ring-rose-100",
-  "absolute left-[0%] top-[980px] h-36 w-36 bg-violet-600 text-white ring-8 ring-violet-100",
-  "absolute right-[2%] top-[940px] h-36 w-36 bg-fuchsia-600 text-white ring-8 ring-fuchsia-100",
-  "absolute left-[40%] top-[920px] h-36 w-36 bg-orange-500 text-white ring-8 ring-orange-100",
-  "absolute left-[30%] top-[1040px] h-36 w-36 bg-pink-500 text-white ring-8 ring-pink-100",
-  "absolute right-[32%] top-[1080px] h-36 w-36 bg-lime-600 text-white ring-8 ring-lime-100",
-  "absolute right-[0%] top-[1120px] h-36 w-36 bg-purple-600 text-white ring-8 ring-purple-100"
-];
+            <SectionTitle
+              eyebrow="Leaderboard"
+              title="TEAM TAIWAN 集氣榜"
+              description="感謝各隊熱情響應！集氣榜將依照各隊目前認票／報名票數持續更新。"
+            />
+            <Card className="overflow-hidden border-emerald-200 bg-white shadow-lg">
+              <div className="bg-gradient-to-br from-emerald-700 to-sky-700 p-8 text-white md:p-10">
+                <p className="text-sm font-semibold uppercase tracking-[0.25em] text-white/75">Current Teams</p>
+                <h3 className="mt-3 text-3xl font-black">讓 Red Sox 看見 Team Taiwan 的力量</h3>
+                <p className="mt-4 max-w-3xl leading-7 text-white/90">
+                  每一隊的加入，都是為 912 台灣集結與 2027 Red Sox Taiwan Day 集氣。歡迎更多家庭、朋友、僑團、公司、組織、校友會、社團與商家一起加入！各單位也可以直接使用單位名稱作為隊名，讓大家在集氣榜上看見你們的力量。
+                </p>
+              </div>
 
-const textStyles = [
-  "text-4xl",
-  "text-3xl",
-  "text-2xl",
-  "text-xl",
-  "text-lg",
-  "text-lg",
-  "text-base",
-  "text-base",
-  "text-sm",
-  "text-sm",
-  "text-sm",
-  "text-sm",
-  "text-sm",
-  "text-sm"
-];
+              <div className="p-6 md:p-8">
+                <div className="rounded-[2rem] border border-emerald-100 bg-gradient-to-br from-emerald-50 via-white to-sky-50 p-6 md:p-10">
+                  <div className="relative mx-auto hidden min-h-[1420px] max-w-6xl md:block">
+                    {teamLeaderboard.map((team, index) => {
+                      const bubbleStyles = [
+                        "absolute left-[35%] top-[0px] h-80 w-80 bg-emerald-700 text-white ring-8 ring-emerald-100",
+                        "absolute left-[2%] top-[320px] h-64 w-64 bg-sky-600 text-white ring-8 ring-sky-100",
+                        "absolute right-[4%] top-[330px] h-56 w-56 bg-emerald-500 text-white ring-8 ring-emerald-100",
+                        "absolute left-[39%] top-[500px] h-48 w-48 bg-teal-600 text-white ring-8 ring-teal-100",
+                        "absolute left-[18%] top-[760px] h-44 w-44 bg-indigo-600 text-white ring-8 ring-indigo-100",
+                        "absolute left-[10%] top-[80px] h-40 w-40 bg-amber-500 text-white ring-8 ring-amber-100",
+                        "absolute right-[28%] top-[760px] h-36 w-36 bg-cyan-600 text-white ring-8 ring-cyan-100",
+                        "absolute right-[8%] top-[80px] h-36 w-36 bg-rose-500 text-white ring-8 ring-rose-100",
+                        "absolute left-[0%] top-[980px] h-36 w-36 bg-violet-600 text-white ring-8 ring-violet-100",
+                        "absolute right-[2%] top-[940px] h-36 w-36 bg-fuchsia-600 text-white ring-8 ring-fuchsia-100",
+                        "absolute left-[40%] top-[920px] h-36 w-36 bg-orange-500 text-white ring-8 ring-orange-100",
+                        "absolute left-[30%] top-[1040px] h-36 w-36 bg-pink-500 text-white ring-8 ring-pink-100",
+                        "absolute right-[32%] top-[1080px] h-36 w-36 bg-lime-600 text-white ring-8 ring-lime-100",
+                        "absolute right-[0%] top-[1120px] h-36 w-36 bg-purple-600 text-white ring-8 ring-purple-100",
+                        "absolute right-[22%] top-[1180px] h-36 w-36 bg-blue-600 text-white ring-8 ring-blue-100",
+                        "absolute left-[18%] top-[1180px] h-36 w-36 bg-yellow-500 text-white ring-8 ring-yellow-100",
+                      ];
 
-return (
-  <div
-    key={team.name}
-    className={`flex flex-col items-center justify-center rounded-full p-5 text-center shadow-2xl transition hover:scale-105 ${bubbleStyles[index]}`}
-  >
-    <div className={`font-black leading-tight ${textStyles[index]}`}>{team.name}</div>
-    {parseInt(team.tickets, 10) >= 10 && (
-      <div className="mt-3 rounded-full bg-white/20 px-4 py-2 text-lg font-black">{team.tickets} 張票</div>
-    )}
-    <div className="mt-2 text-sm font-semibold opacity-90">{team.note}</div>
-  </div>
-);
-})}
-</div>
+                      const textStyles = [
+                        "text-3xl",
+                        "text-2xl",
+                        "text-xl",
+                        "text-base",
+                        "text-base",
+                        "text-sm",
+                        "text-xs",
+                        "text-xs",
+                        "text-xs",
+                        "text-xs",
+                        "text-xs",
+                        "text-[10px]",
+                        "text-[10px]",
+                        "text-[10px]",
+                        "text-xs",
+                        "text-xs",
+                      ];
 
-<div className="grid grid-cols-2 gap-5 md:hidden">
-{teamLeaderboard.map((team, index) => {
-const mobileStyles = [
-  "bg-emerald-700",
-  "bg-sky-600",
-  "bg-emerald-500",
-  "bg-teal-600",
-  "bg-indigo-600",
-  "bg-amber-500",
-  "bg-cyan-600",
-  "bg-rose-500",
-  "bg-violet-600",
-  "bg-fuchsia-600",
-  "bg-orange-500",
-  "bg-pink-500",
-  "bg-lime-600",
-  "bg-purple-600"
-];
+                      return (
+                        <div
+                          key={team.name}
+                          className={`flex flex-col items-center justify-center rounded-full p-4 text-center shadow-2xl transition hover:scale-105 ${bubbleStyles[index]}`}
+                        >
+                          <div className={`max-w-[72%] px-2 text-center font-black leading-[1.08] [overflow-wrap:anywhere] ${textStyles[index]}`}>
+                            {team.name}
+                          </div>
+                          {parseInt(team.tickets, 10) >= 10 && (
+                            <div className="mt-2 whitespace-nowrap rounded-full bg-white/20 px-3 py-1 text-sm font-black">
+                              {team.tickets} 張票
+                            </div>
+                          )}
+                          <div className="mt-2 text-[11px] font-semibold opacity-90">{team.note}</div>
+                        </div>
+                      );
+                    })}
+                  </div>
 
-return (
-  <div
-    key={team.name}
-    className={`flex aspect-square flex-col items-center justify-center rounded-full p-4 text-center text-white shadow-xl ${mobileStyles[index]}`}
-  >
-    <div className="text-sm font-black leading-tight">{team.name}</div>
-    {parseInt(team.tickets, 10) >= 10 && (
-      <div className="mt-2 rounded-full bg-white/20 px-3 py-1 text-sm font-black">{team.tickets} 張票</div>
-    )}
-    <div className="mt-1 text-[10px] font-semibold opacity-90">{team.note}</div>
-  </div>
-);
-})}
-</div></div><div className="mt-8 rounded-3xl border border-emerald-200 bg-emerald-50 p-6 text-center"><h4 className="text-2xl font-black text-slate-950">你的隊伍也可以一起集氣！</h4><p className="mx-auto mt-3 max-w-2xl leading-7 text-slate-600">3 人以上就可以組隊，自取隊名並加入 TEAM TAIWAN 集氣榜。5/31 前透過 Zeffy 購票，每張票都是 $47。隊名請使用適當、尊重、友善的名稱；主辦單位保留隊名審核與調整之權利。</p><div className="mt-6 flex justify-center"><a href={zeffyPaymentLink} target="_blank" rel="noreferrer" className="rounded-full bg-emerald-700 px-6 py-3 text-center font-bold text-white transition hover:bg-emerald-800">立即組隊</a></div></div></div></Card>
+                  <div className="grid grid-cols-2 gap-5 md:hidden">
+                    {teamLeaderboard.map((team, index) => {
+                      const mobileStyles = [
+                        "bg-emerald-700",
+                        "bg-sky-600",
+                        "bg-emerald-500",
+                        "bg-teal-600",
+                        "bg-indigo-600",
+                        "bg-amber-500",
+                        "bg-cyan-600",
+                        "bg-rose-500",
+                        "bg-violet-600",
+                        "bg-fuchsia-600",
+                        "bg-orange-500",
+                        "bg-pink-500",
+                        "bg-lime-600",
+                        "bg-purple-600",
+                        "bg-blue-600",
+                        "bg-yellow-500",
+                      ];
+
+                      return (
+                        <div
+                          key={team.name}
+                          className={`flex aspect-square flex-col items-center justify-center rounded-full p-4 text-center text-white shadow-xl ${mobileStyles[index]}`}
+                        >
+                          <div className="max-w-[72%] px-1 text-center text-[11px] font-black leading-[1.08] [overflow-wrap:anywhere]">
+                            {team.name}
+                          </div>
+                          {parseInt(team.tickets, 10) >= 10 && (
+                            <div className="mt-2 whitespace-nowrap rounded-full bg-white/20 px-3 py-1 text-xs font-black">
+                              {team.tickets} 張票
+                            </div>
+                          )}
+                          <div className="mt-1 text-[10px] font-semibold opacity-90">{team.note}</div>
+                        </div>
+                      );
+                    })}
+                  </div>
+                </div>
+
+                <div className="mt-8 rounded-3xl border border-emerald-200 bg-emerald-50 p-6 text-center">
+                  <h4 className="text-2xl font-black text-slate-950">你的隊伍也可以一起集氣！</h4>
+                  <p className="mx-auto mt-3 max-w-2xl leading-7 text-slate-600">
+                    3 人以上就可以組隊，自取隊名並加入 TEAM TAIWAN 集氣榜。5/31 前透過 Zeffy 購票，每張票都是 $47。隊名請使用適當、尊重、友善的名稱；主辦單位保留隊名審核與調整之權利。
+                  </p>
+                  <div className="mt-6 flex justify-center">
+                    <a href={zeffyPaymentLink} target="_blank" rel="noreferrer" className="rounded-full bg-emerald-700 px-6 py-3 text-center font-bold text-white transition hover:bg-emerald-800">
+                      立即組隊
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </Card>
           </div>
         </section>
 
