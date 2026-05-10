@@ -52,8 +52,8 @@ const faqs = [
     category: "📍 活動與座位安排",
     items: [
       {
-        q: "我們會坐在一起嗎？",
-        a: "所有透過本活動購票的參與者，將集中安排在同一區域（Bleacher 42）。同一筆訂單、同一隊伍 Team Name 的參加者，主辦單位會盡量安排在附近的位置（例如前後左右）。",
+        q: "🎟 座位提醒 Seating Notice",
+        a: "5/31 前購買的 $47 票券包含 Red Sox × Bruins 限量聯名 Jersey，與 6/1 後的一般票屬於不同票種與不同批次。填寫相同 Team Name 的朋友，主辦單位會盡量安排坐在一起或附近；但若同一隊伍有人在 5/31 前購票、有人在 6/1 後購票，座位可能會被分成不同小組處理，不一定能完全坐在旁邊。所有參與者仍會安排在 Fenway Park — Bleacher 42 區。若希望和朋友、家人或隊友坐得更近，建議大家盡早完成購票，並填寫完全相同的 Team Name。",
       },
       { q: "座位可以自己選嗎？", a: "本活動為團體購票，座位將由主辦單位統一安排，無法自行選位。" },
       { q: "我跟朋友分開買票，可以坐一起嗎？", a: "可以。請在購票時填寫相同的 Team Name，主辦單位會依照 Team Name 盡量安排在附近的位置。" },
@@ -62,9 +62,8 @@ const faqs = [
   {
     category: "🎟️ 票務相關",
     items: [
-      { q: "什麼時候會拿到球票？", a: "電子票將於活動前寄出，主要會依照 Zeffy 購票時填寫的 Email 發送。請務必確認 Email 正確，並留意垃圾郵件夾。" },
+      { q: "電子票要怎麼收到？可以轉讓嗎？", a: "所有參與者都必須先下載 MLB Ballpark App。請確認您購票時使用的 Email，與註冊／登入 MLB Ballpark App 的 Email 是同一個，因為電子票將會發送到您的 MLB Ballpark App 帳號中。電子票可以轉讓給其他人；如果活動當天無法參加，可以透過 MLB Ballpark App 將票轉送給朋友或家人。" },
       { q: "可以退款嗎？", a: "票券售出後原則上恕不退款。如因特殊情況需要處理，請儘早聯繫主辦單位。" },
-      { q: "可以轉讓票券嗎？", a: "可以自行轉讓給他人，但請通知主辦單位更新參加者資料、T-shirt 尺寸與聯絡方式，以免影響後續安排。" },
       { q: "會提供收據嗎？", a: "Zeffy 會自動將付款收據寄至購票者填寫的 Email。" },
     ],
   },
@@ -262,27 +261,48 @@ export default function TaiwanFanNightWebsite() {
               <p className="mt-4 text-base leading-7 text-slate-600 md:text-lg">無論是否組隊，只要在 5/31 前透過 Zeffy 購票付款，每張票都是 $47。3 人以上可自行組隊並使用相同 Team Name 參加創意隊名比賽。</p>
               <div className="mt-6 rounded-3xl border border-emerald-200 bg-emerald-50 p-5 text-center shadow-sm"><p className="text-xl font-black text-emerald-900">不到 3 人也可以直接購買！</p><p className="mt-2 text-sm leading-7 text-emerald-800">個人、兩人同行，或還沒有隊伍的朋友，一樣可以直接透過 Zeffy 購票，5/31 前同樣享有每張票 $47 的優惠價格。</p></div>
             </div>
-            <div className="grid gap-6 lg:grid-cols-2">
+            <div className="grid items-start gap-6 lg:grid-cols-2">
               <Card className="border-emerald-200 p-8 shadow-lg">
                 <div className="mb-6 flex items-center justify-between gap-4"><div><p className="text-sm font-bold text-emerald-700">5/31 前完成 Zeffy 購票</p><h3 className="mt-1 text-3xl font-black text-slate-950">組隊優惠票</h3></div><div className="rounded-[2rem] bg-emerald-700 px-8 py-6 text-center text-white shadow-lg ring-4 ring-emerald-100"><p className="text-7xl font-black leading-none md:text-8xl">$47</p><p className="mt-2 text-sm font-semibold uppercase tracking-wide">per ticket</p></div></div>
                 <ul className="space-y-4 text-slate-700">
                   {["完全無任何其他費用或手續費", "可獲得限量 Red Sox × Bruins co-branding Baseball Jersey 一件", "每張票 BTCF 將另外捐出 $3 給 Boys & Girls Clubs of Boston", "每人一件台灣主題 T-shirt", "會盡量安排在附近的位置（例如前後左右）", "可參加最佳創意隊名比賽"].map((item) => <li key={item} className="flex gap-3"><span className="mt-1 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-emerald-100 text-xs font-bold text-emerald-800">✓</span><span>{item}</span></li>)}
                 </ul>
                 <div className="mt-7 rounded-2xl bg-amber-50 p-4 text-sm leading-7 text-amber-900">想享有 5/31 前 $47 優惠，請每位參加者於 5/31 前自行完成 Zeffy 購票付款。沒有要組隊、或未滿 3 人也可以直接購票，同樣享有每張票 $47 的價格。若要組隊，請填寫相同 Team Name。</div>
-                <div className="mt-4 rounded-3xl border border-sky-200 bg-gradient-to-br from-sky-50 via-white to-emerald-50 p-6 text-sm leading-7 text-slate-700 shadow-sm">
-                  <p className="text-xl font-black text-slate-950">關於票價說明</p>
-                  <div className="mt-4 rounded-2xl border border-emerald-300 bg-white p-5 shadow-sm"><p className="text-lg font-black text-emerald-800">這次票價遠低於 Red Sox 官方同區票價</p><p className="mt-3">目前同區官方票價約為 <strong>$64–$88</strong>，且每張票還會再加上約 <strong>$8.75 手續費</strong>。這次能有這麼好的優惠，是主辦單位辛苦替大家向 Red Sox 爭取而來的。</p></div>
-                  <p className="mt-3 font-bold text-slate-950">本活動票價不只是包含一張球票，也包含：</p>
-                  <ul className="mt-3 space-y-2">{["台灣社群專屬集結區", "和大家坐在同一區的活動體驗", "一起讓 Fenway 看見台灣的共同意義"].map((item) => <li key={item} className="flex gap-3"><span className="mt-1 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-emerald-100 text-xs font-black text-emerald-800">✓</span><span>{item}</span></li>)}</ul>
-                  <p className="mt-4">如果您只是想單純看一場球賽，市場上也許有機會找到更便宜的票。但如果您想和上百位台灣人一起坐在同一區、一起穿上台灣、一起讓 Red Sox 看見台灣，這份價值是其他票無法取代的。</p>
-                  <p className="mt-4 rounded-2xl bg-emerald-700 p-4 text-base font-black leading-7 text-white">這不只是買一張球票，而是一起完成一件讓 Fenway 看見台灣的事。</p>
-                </div>
-                <div className="mt-4 grid gap-3 md:grid-cols-2">
-                  <div className="rounded-2xl border border-emerald-200 bg-emerald-50 p-5 text-sm leading-7 text-emerald-900"><div className="mb-3 flex h-11 w-11 items-center justify-center rounded-2xl bg-white text-2xl shadow-sm">📍</div><p className="text-base font-black text-emerald-950">座位安排 Seating</p><p className="mt-2">Seats will be arranged near your group/team when possible, such as nearby rows or adjacent seats.</p><p className="mt-2">座位將盡量依隊伍或同行者安排在附近的位置（例如前後左右）。</p></div>
-                  <div className="rounded-2xl border border-sky-200 bg-sky-50 p-5 text-sm leading-7 text-sky-900"><div className="mb-3 flex h-11 w-11 items-center justify-center rounded-2xl bg-white text-2xl shadow-sm">🎟️</div><p className="text-base font-black text-sky-950">電子票 E-Tickets</p><p className="mt-2">Tickets will be distributed electronically closer to the event, based on the email address entered by each purchaser on Zeffy.</p><p className="mt-2">電子票將於活動前發送，並以購票者在 Zeffy 上填寫的 Email 為主要發送依據。</p></div>
+                <div className="mt-4 rounded-3xl border border-amber-200 bg-amber-50 p-6 text-sm leading-7 text-amber-950 shadow-sm">
+                  <p className="text-xl font-black text-slate-950">🎟 座位提醒 Seating Notice</p>
+                  <p className="mt-3">5/31 前購買的 <strong>$47 票券</strong>包含 Red Sox × Bruins 限量聯名 Jersey，與 6/1 後的一般票屬於不同票種與不同批次。</p>
+                  <p className="mt-3">填寫相同 <strong>Team Name</strong> 的朋友，主辦單位會盡量安排坐在一起或附近；但若同一隊伍有人在 5/31 前購票、有人在 6/1 後購票，座位可能會被分成不同小組處理，不一定能完全坐在旁邊。</p>
+                  <p className="mt-3">所有參與者仍會安排在 <strong>Fenway Park — Bleacher 42 區</strong>。若希望和朋友、家人或隊友坐得更近，建議大家盡早完成購票，並填寫完全相同的 Team Name。</p>
                 </div>
               </Card>
-              <Card className="p-8"><p className="text-sm font-bold text-slate-500">6/1 後正式開賣</p><h3 className="mt-1 text-3xl font-black text-slate-950">專屬團體購票連結</h3><p className="mt-5 text-lg leading-8 text-slate-600">6/1 之後，大家可以透過 Red Sox 提供給波克萊基金會專屬的 Taiwan Fans Night 優惠購票連結購票。</p><div className="mt-6 rounded-3xl bg-slate-50 p-6"><p className="text-sm font-semibold text-slate-500">票價</p><p className="mt-1 text-4xl font-black text-slate-950">$41 + 約 8–9% 手續費</p></div><p className="mt-6 text-sm leading-7 text-slate-600">無論是 6/1 前或是 6/1 後購票者，我們全都會坐在 Bleacher 42 同一區、得到主辦單位發的台灣主題 T-shirt，並參加 912 台灣集結活動大抽獎！</p><p className="mt-3 rounded-2xl bg-amber-50 p-4 text-sm font-semibold leading-7 text-amber-900">⚠️ 注意：6/1 之後透過官方購票連結購買的票券，將不包含限量 Red Sox × Bruins co-branding Baseball Jersey。</p><p className="mt-4 rounded-2xl bg-slate-50 p-4 text-sm leading-7 text-slate-700">依據紅襪官網，目前 Fenway Park 912 當天 Bleacher 42 區票價約為 <strong>$64 ~ $88</strong> 一張，而且每張票還需要再加上 <strong>$8.75 per-ticket fee</strong>。相較之下，無論是 <strong>$47 組隊優惠</strong> 或是 <strong>$41 專屬團體購票</strong>，都是主辦單位幫我們 TEAM TAIWAN 與紅襪爭取到的很好優惠！大家所付的票價將全數用於支付給 Red Sox 的團體票費用，BTCF 不從本活動中營利。</p></Card>
+              <Card className="self-start p-8"><p className="text-sm font-bold text-slate-500">6/1 後正式開賣</p><h3 className="mt-1 text-3xl font-black text-slate-950">專屬團體購票連結</h3><p className="mt-5 text-lg leading-8 text-slate-600">6/1 之後，大家可以透過 Red Sox 提供給波克萊基金會專屬的 Taiwan Fans Night 優惠購票連結購票。</p><div className="mt-6 rounded-3xl bg-slate-50 p-6"><p className="text-sm font-semibold text-slate-500">票價</p><p className="mt-1 text-4xl font-black text-slate-950">$41 + 約 8–9% 手續費</p></div><p className="mt-6 text-sm leading-7 text-slate-600">無論是 6/1 前或是 6/1 後購票者，我們全都會坐在 Bleacher 42 同一區、得到主辦單位發的台灣主題 T-shirt，並參加 912 台灣集結活動大抽獎！</p><p className="mt-3 rounded-2xl bg-amber-50 p-4 text-sm font-semibold leading-7 text-amber-900">⚠️ 注意：6/1 之後透過官方購票連結購買的票券，將不包含限量 Red Sox × Bruins co-branding Baseball Jersey。</p><p className="mt-4 rounded-2xl bg-slate-50 p-4 text-sm leading-7 text-slate-700">依據紅襪官網，目前 Fenway Park 912 當天 Bleacher 42 區票價約為 <strong>$64 ~ $88</strong> 一張，而且每張票還需要再加上 <strong>$8.75 per-ticket fee</strong>。相較之下，無論是 <strong>$47 組隊優惠</strong> 或是 <strong>$41 專屬團體購票</strong>，都是主辦單位幫我們 TEAM TAIWAN 與紅襪爭取到的很好優惠！大家所付的票價將全數用於支付給 Red Sox 的團體票費用，BTCF 不從本活動中營利。</p></Card>
+            </div>
+            <div className="mt-8 grid gap-6 lg:grid-cols-2 lg:items-start">
+              <div className="rounded-3xl border border-sky-200 bg-gradient-to-br from-sky-50 via-white to-emerald-50 p-6 text-sm leading-7 text-slate-700 shadow-sm md:p-8">
+                <p className="text-2xl font-black text-slate-950">關於票價說明</p>
+                <div className="mt-4 rounded-2xl border border-emerald-300 bg-white p-5 shadow-sm">
+                  <p className="text-lg font-black text-emerald-800">這次票價遠低於 Red Sox 官方同區票價</p>
+                  <p className="mt-3">目前同區官方票價約為 <strong>$64–$88</strong>，且每張票還會再加上約 <strong>$8.75 手續費</strong>。這次能有這麼好的優惠，是主辦單位辛苦替大家向 Red Sox 爭取而來的。</p>
+                </div>
+                <p className="mt-4 font-bold text-slate-950">本活動票價不只是包含一張球票，也包含：</p>
+                <ul className="mt-3 space-y-2">
+                  {["台灣社群專屬集結區", "和大家坐在同一區的活動體驗", "一起讓 Fenway 看見台灣的共同意義"].map((item) => (
+                    <li key={item} className="flex gap-3">
+                      <span className="mt-1 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-emerald-100 text-xs font-black text-emerald-800">✓</span>
+                      <span>{item}</span>
+                    </li>
+                  ))}
+                </ul>
+                <p className="mt-4">如果您只是想單純看一場球賽，市場上也許有機會找到更便宜的票。但如果您想和上百位台灣人一起坐在同一區、一起穿上台灣、一起讓 Red Sox 看見台灣，這份價值是其他票無法取代的。</p>
+                <p className="mt-4 rounded-2xl bg-emerald-700 p-4 text-base font-black leading-7 text-white">這不只是買一張球票，而是一起完成一件讓 Fenway 看見台灣的事。</p>
+              </div>
+
+              <div className="rounded-3xl border border-sky-200 bg-sky-50 p-6 text-sm leading-7 text-sky-900 shadow-sm md:p-8">
+                <div className="mb-3 flex h-11 w-11 items-center justify-center rounded-2xl bg-white text-2xl shadow-sm">🎟️</div>
+                <p className="text-2xl font-black text-sky-950">電子票 E-Tickets</p>
+                <p className="mt-3">所有參與者都必須先下載 <strong>MLB Ballpark App</strong>。請確認您購票時使用的 Email，與註冊／登入 MLB Ballpark App 的 Email 是同一個，因為電子票將會發送到您的 MLB Ballpark App 帳號中。</p>
+                <p className="mt-3">電子票可以轉讓給其他人；如果活動當天無法參加，可以透過 MLB Ballpark App 將票轉送給朋友或家人。</p>
+              </div>
             </div>
             <Card className="mt-8 overflow-hidden border-slate-200 bg-white shadow-lg"><div className="grid gap-0 lg:grid-cols-[1.05fr_0.95fr] lg:items-center"><div className="bg-gradient-to-br from-emerald-700 to-sky-700 p-8 text-white md:p-10"><p className="text-sm font-semibold uppercase tracking-[0.25em] text-white/75">Red Sox Giveaway</p><h3 className="mt-3 text-3xl font-black">當天紅襪現場贈品</h3><p className="mt-4 leading-7 text-white/90">5/31 前完成購票者，可獲得 Red Sox 提供的限量 Red Sox × Bruins co-branding Baseball Jersey。此為 9/12 當天在 Fenway Park 現場領取的贈品。</p><p className="mt-4 rounded-2xl bg-white/15 p-4 text-sm leading-7 text-white/90">先到先領，尺寸發完為止；數量與尺寸依 Red Sox 現場提供為準。</p></div><div className="bg-emerald-900/5 p-5"><img src={jerseyImage} alt="Red Sox × Bruins co-branding Baseball Jersey" className="h-auto w-full rounded-3xl object-cover shadow-md" /></div></div></Card>
           </div>
