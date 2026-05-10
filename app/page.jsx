@@ -30,21 +30,23 @@ const teamExamples = ["台灣No.1隊", "Fenway佔領隊", "珍奶續命隊", "Te
 
 const teamLeaderboard = [
   { name: "波克萊台灣商會", tickets: "130+", note: "目前領先" },
-  { name: "波士頓台灣媽媽親子會", tickets: "32+", note: "持續增加中" },
+  { name: "波士頓台灣媽媽親子會", tickets: "37", note: "持續增加中" },
+  { name: "我朋友說想湊個50人的隊", tickets: "26", note: "持續增加中" },
   { name: "波士頓台灣人生技協會 (BTBA)", tickets: "20+", note: "持續增加中" },
-  { name: "我朋友說想湊個50人的隊", tickets: "12+", note: "持續增加中" },
-  { name: "羅德島台灣同好會", tickets: "10+", note: "持續增加中" },
   { name: "NCCU, TCCNE & BTEAA", tickets: "10+", note: "持續增加中" },
+  { name: "羅德島台灣同好會", tickets: "10+", note: "持續增加中" },
   { name: "TECO-BOSTON", tickets: "10+", note: "持續增加中" },
-  { name: "Andover 貢茶", tickets: "5+", note: "持續增加中" },
-  { name: "Boston FASCA", tickets: "3+", note: "持續增加中" },
+  { name: "Andover 貢茶", tickets: "6+", note: "持續增加中" },
+  { name: "Boston FASCA", tickets: "7+", note: "持續增加中" },
+  { name: "Formosa Strong", tickets: "6+", note: "持續增加中" },
   { name: "North Shore TAIWANESE", tickets: "3+", note: "持續增加中" },
-  { name: "Tâioân Siothéng", tickets: "3+", note: "持續增加中" },
-  { name: "Woo告台", tickets: "3+", note: "持續增加中" },
-  { name: "波士頓北一女校友會", tickets: "3+", note: "持續增加中" },
+  { name: "Tâioân Siothéng", tickets: "7+", note: "持續增加中" },
+  { name: "Taiwan 襪Up！", tickets: "3+", note: "持續增加中" },
+  { name: "Woo告台", tickets: "5+", note: "持續增加中" },
+  { name: "波士頓北一女校友會", tickets: "4+", note: "持續增加中" },
   { name: "波士頓台灣世衞協進會", tickets: "3+", note: "持續增加中" },
-  { name: "襪賽！Taiwan", tickets: "3+", note: "持續增加中" },
-  { name: "金余", tickets: "3+", note: "持續增加中" },
+  { name: "襪賽！Taiwan", tickets: "4+", note: "持續增加中" },
+  { name: "金余", tickets: "4+", note: "持續增加中" },
 ];
 
 const faqs = [
@@ -357,40 +359,51 @@ export default function TaiwanFanNightWebsite() {
 
               <div className="p-6 md:p-8">
                 <div className="rounded-[2rem] border border-emerald-100 bg-gradient-to-br from-emerald-50 via-white to-sky-50 p-6 md:p-10">
-                  <div className="relative mx-auto hidden min-h-[1420px] max-w-6xl md:block">
+                  <div className="relative mx-auto hidden min-h-[1220px] max-w-6xl md:block">
                     {teamLeaderboard.map((team, index) => {
                       const bubbleStyles = [
-                        "absolute left-[35%] top-[0px] h-80 w-80 bg-emerald-700 text-white ring-8 ring-emerald-100",
-                        "absolute left-[2%] top-[320px] h-64 w-64 bg-sky-600 text-white ring-8 ring-sky-100",
-                        "absolute right-[4%] top-[330px] h-56 w-56 bg-emerald-500 text-white ring-8 ring-emerald-100",
-                        "absolute left-[39%] top-[500px] h-48 w-48 bg-teal-600 text-white ring-8 ring-teal-100",
-                        "absolute left-[18%] top-[760px] h-44 w-44 bg-indigo-600 text-white ring-8 ring-indigo-100",
-                        "absolute left-[10%] top-[80px] h-40 w-40 bg-amber-500 text-white ring-8 ring-amber-100",
-                        "absolute right-[28%] top-[760px] h-36 w-36 bg-cyan-600 text-white ring-8 ring-cyan-100",
-                        "absolute right-[8%] top-[80px] h-36 w-36 bg-rose-500 text-white ring-8 ring-rose-100",
-                        "absolute left-[0%] top-[980px] h-36 w-36 bg-violet-600 text-white ring-8 ring-violet-100",
-                        "absolute right-[2%] top-[940px] h-36 w-36 bg-fuchsia-600 text-white ring-8 ring-fuchsia-100",
-                        "absolute left-[40%] top-[920px] h-36 w-36 bg-orange-500 text-white ring-8 ring-orange-100",
-                        "absolute left-[30%] top-[1040px] h-36 w-36 bg-pink-500 text-white ring-8 ring-pink-100",
-                        "absolute right-[32%] top-[1080px] h-36 w-36 bg-lime-600 text-white ring-8 ring-lime-100",
-                        "absolute right-[0%] top-[1120px] h-36 w-36 bg-purple-600 text-white ring-8 ring-purple-100",
-                        "absolute right-[22%] top-[1180px] h-36 w-36 bg-blue-600 text-white ring-8 ring-blue-100",
-                        "absolute left-[18%] top-[1180px] h-36 w-36 bg-yellow-500 text-white ring-8 ring-yellow-100",
+                        // 中間主球：波克萊台灣商會
+                        "absolute left-[36%] top-[320px] h-80 w-80 bg-emerald-700 text-white ring-8 ring-emerald-100",
+
+                        // 大球分散，不重疊
+                        "absolute left-[6%] top-[55px] h-64 w-64 bg-sky-600 text-white ring-8 ring-sky-100",
+                        "absolute left-[24%] top-[660px] h-60 w-60 bg-rose-500 text-white ring-8 ring-rose-100",
+                        "absolute right-[7%] top-[70px] h-56 w-56 bg-blue-600 text-white ring-8 ring-blue-100",
+
+                        // 中型球分散四周
+                        "absolute left-[5%] top-[360px] h-48 w-48 bg-teal-600 text-white ring-8 ring-teal-100",
+                        "absolute right-[16%] top-[450px] h-44 w-44 bg-emerald-500 text-white ring-8 ring-emerald-100",
+                        "absolute left-[5%] top-[640px] h-36 w-36 bg-cyan-600 text-white ring-8 ring-cyan-100",
+
+                        // 小球四處散開
+                        "absolute right-[3%] top-[350px] h-36 w-36 bg-pink-500 text-white ring-8 ring-pink-100",
+                        "absolute right-[25%] top-[690px] h-40 w-40 bg-violet-600 text-white ring-8 ring-violet-100",
+                        "absolute left-[50%] top-[130px] h-36 w-36 bg-orange-500 text-white ring-8 ring-orange-100",
+                        "absolute left-[8%] top-[850px] h-36 w-36 bg-green-600 text-white ring-8 ring-green-100",
+                        "absolute right-[15%] top-[845px] h-36 w-36 bg-purple-600 text-white ring-8 ring-purple-100",
+                        "absolute right-[7%] top-[635px] h-36 w-36 bg-rose-400 text-white ring-8 ring-rose-100",
+                        "absolute left-[34%] top-[95px] h-32 w-32 bg-purple-600 text-white ring-8 ring-purple-100",
+                        "absolute left-[20%] top-[990px] h-36 w-36 bg-teal-500 text-white ring-8 ring-teal-100",
+                        "absolute left-[38%] top-[990px] h-36 w-36 bg-violet-600 text-white ring-8 ring-violet-100",
+                        "absolute left-[51%] top-[885px] h-36 w-36 bg-red-500 text-white ring-8 ring-red-100",
+                        "absolute left-[62%] top-[1010px] h-32 w-32 bg-amber-500 text-white ring-8 ring-amber-100",
                       ];
 
                       const textStyles = [
                         "text-3xl",
                         "text-2xl",
+                        "text-2xl",
                         "text-xl",
                         "text-base",
                         "text-base",
+                        "text-xs",
+                        "text-xs",
                         "text-sm",
                         "text-xs",
                         "text-xs",
                         "text-xs",
                         "text-xs",
                         "text-xs",
-                        "text-[10px]",
                         "text-[10px]",
                         "text-[10px]",
                         "text-xs",
@@ -405,7 +418,7 @@ export default function TaiwanFanNightWebsite() {
                           <div className={`max-w-[72%] px-2 text-center font-black leading-[1.08] [overflow-wrap:anywhere] ${textStyles[index]}`}>
                             {team.name}
                           </div>
-                          {parseInt(team.tickets, 10) >= 10 && (
+                          {team.tickets && parseInt(team.tickets, 10) >= 10 && (
                             <div className="mt-2 whitespace-nowrap rounded-full bg-white/20 px-3 py-1 text-sm font-black">
                               {team.tickets} 張票
                             </div>
@@ -421,20 +434,22 @@ export default function TaiwanFanNightWebsite() {
                       const mobileStyles = [
                         "bg-emerald-700",
                         "bg-sky-600",
-                        "bg-emerald-500",
-                        "bg-teal-600",
-                        "bg-indigo-600",
-                        "bg-amber-500",
-                        "bg-cyan-600",
                         "bg-rose-500",
-                        "bg-violet-600",
-                        "bg-fuchsia-600",
-                        "bg-orange-500",
-                        "bg-pink-500",
-                        "bg-lime-600",
-                        "bg-purple-600",
                         "bg-blue-600",
-                        "bg-yellow-500",
+                        "bg-teal-600",
+                        "bg-emerald-500",
+                        "bg-cyan-600",
+                        "bg-pink-500",
+                        "bg-violet-600",
+                        "bg-orange-500",
+                        "bg-green-600",
+                        "bg-purple-600",
+                        "bg-rose-400",
+                        "bg-purple-600",
+                        "bg-teal-500",
+                        "bg-violet-600",
+                        "bg-red-500",
+                        "bg-amber-500",
                       ];
 
                       return (
@@ -445,7 +460,7 @@ export default function TaiwanFanNightWebsite() {
                           <div className="max-w-[72%] px-1 text-center text-[11px] font-black leading-[1.08] [overflow-wrap:anywhere]">
                             {team.name}
                           </div>
-                          {parseInt(team.tickets, 10) >= 10 && (
+                          {team.tickets && parseInt(team.tickets, 10) >= 10 && (
                             <div className="mt-2 whitespace-nowrap rounded-full bg-white/20 px-3 py-1 text-xs font-black">
                               {team.tickets} 張票
                             </div>
