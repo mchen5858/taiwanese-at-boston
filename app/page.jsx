@@ -53,7 +53,7 @@ const faqs = [
     items: [
       {
         q: "🎟 座位提醒 Seating Notice",
-        a: "5/31 前購買的 $47 票券包含 Red Sox × Bruins 限量聯名 Jersey，與 6/1 後的一般票屬於不同票種與不同批次。填寫相同 Team Name 的朋友，主辦單位會盡量安排坐在一起或附近；但若同一隊伍有人在 5/31 前購票、有人在 6/1 後購票，座位可能會被分成不同小組處理，不一定能完全坐在旁邊。所有參與者仍會安排在 Fenway Park — Bleacher 42 區。若希望和朋友、家人或隊友坐得更近，建議大家盡早完成購票，並填寫完全相同的 Team Name。",
+        a: "填寫相同 Team Name 的朋友，主辦單位會盡量安排坐在一起或附近。所有參與者都會安排在 Fenway Park — Bleacher 42 區，一起為台灣應援。由於 5/31 前購買的 $47 票券包含 Red Sox × Bruins 限量聯名 Jersey，與 6/1 後的一般票券屬於不同票種與不同批次，座位安排可能會分批處理。若同一隊伍中有人在 5/31 前購票、有人在 6/1 後購票，主辦單位仍會盡量協助安排在附近，但無法保證完全連號或坐在同一排。若希望和朋友、家人或隊友坐得更近，建議大家盡早購票，並填寫完全相同的 Team Name。",
       },
       { q: "座位可以自己選嗎？", a: "本活動為團體購票，座位將由主辦單位統一安排，無法自行選位。" },
       { q: "我跟朋友分開買票，可以坐一起嗎？", a: "可以。請在購票時填寫相同的 Team Name，主辦單位會依照 Team Name 盡量安排在附近的位置。" },
@@ -270,9 +270,21 @@ export default function TaiwanFanNightWebsite() {
                 <div className="mt-7 rounded-2xl bg-amber-50 p-4 text-sm leading-7 text-amber-900">想享有 5/31 前 $47 優惠，請每位參加者於 5/31 前自行完成 Zeffy 購票付款。沒有要組隊、或未滿 3 人也可以直接購票，同樣享有每張票 $47 的價格。若要組隊，請填寫相同 Team Name。</div>
                 <div className="mt-4 rounded-3xl border border-amber-200 bg-amber-50 p-6 text-sm leading-7 text-amber-950 shadow-sm">
                   <p className="text-xl font-black text-slate-950">🎟 座位提醒 Seating Notice</p>
-                  <p className="mt-3">5/31 前購買的 <strong>$47 票券</strong>包含 Red Sox × Bruins 限量聯名 Jersey，與 6/1 後的一般票屬於不同票種與不同批次。</p>
-                  <p className="mt-3">填寫相同 <strong>Team Name</strong> 的朋友，主辦單位會盡量安排坐在一起或附近；但若同一隊伍有人在 5/31 前購票、有人在 6/1 後購票，座位可能會被分成不同小組處理，不一定能完全坐在旁邊。</p>
-                  <p className="mt-3">所有參與者仍會安排在 <strong>Fenway Park — Bleacher 42 區</strong>。若希望和朋友、家人或隊友坐得更近，建議大家盡早完成購票，並填寫完全相同的 Team Name。</p>
+                  <p className="mt-3">
+                    填寫相同 <strong>Team Name</strong> 的朋友，主辦單位會盡量安排坐在一起或附近。
+                    所有參與者都會安排在 <strong>Fenway Park — Bleacher 42 區</strong>，一起為台灣應援。
+                  </p>
+                  <p className="mt-3">
+                    由於 <strong>5/31 前購買的 $47 票券</strong> 包含 Red Sox × Bruins 限量聯名 Jersey，
+                    與 <strong>6/1 後的一般票券</strong> 屬於不同票種與不同批次，座位安排可能會分批處理。
+                  </p>
+                  <p className="mt-3">
+                    若同一隊伍中有人在 5/31 前購票、有人在 6/1 後購票，
+                    主辦單位仍會盡量協助安排在附近，但無法保證完全連號或坐在同一排。
+                  </p>
+                  <p className="mt-3">
+                    若希望和朋友、家人或隊友坐得更近，建議大家盡早購票，並填寫完全相同的 Team Name。
+                  </p>
                 </div>
               </Card>
               <Card className="self-start p-8"><p className="text-sm font-bold text-slate-500">6/1 後正式開賣</p><h3 className="mt-1 text-3xl font-black text-slate-950">專屬團體購票連結</h3><p className="mt-5 text-lg leading-8 text-slate-600">6/1 之後，大家可以透過 Red Sox 提供給波克萊基金會專屬的 Taiwan Fans Night 優惠購票連結購票。</p><div className="mt-6 rounded-3xl bg-slate-50 p-6"><p className="text-sm font-semibold text-slate-500">票價</p><p className="mt-1 text-4xl font-black text-slate-950">$41 + 約 8–9% 手續費</p></div><p className="mt-6 text-sm leading-7 text-slate-600">無論是 6/1 前或是 6/1 後購票者，我們全都會坐在 Bleacher 42 同一區、得到主辦單位發的台灣主題 T-shirt，並參加 912 台灣集結活動大抽獎！</p><p className="mt-3 rounded-2xl bg-amber-50 p-4 text-sm font-semibold leading-7 text-amber-900">⚠️ 注意：6/1 之後透過官方購票連結購買的票券，將不包含限量 Red Sox × Bruins co-branding Baseball Jersey。</p><p className="mt-4 rounded-2xl bg-slate-50 p-4 text-sm leading-7 text-slate-700">依據紅襪官網，目前 Fenway Park 912 當天 Bleacher 42 區票價約為 <strong>$64 ~ $88</strong> 一張，而且每張票還需要再加上 <strong>$8.75 per-ticket fee</strong>。相較之下，無論是 <strong>$47 組隊優惠</strong> 或是 <strong>$41 專屬團體購票</strong>，都是主辦單位幫我們 TEAM TAIWAN 與紅襪爭取到的很好優惠！大家所付的票價將全數用於支付給 Red Sox 的團體票費用，BTCF 不從本活動中營利。</p></Card>
