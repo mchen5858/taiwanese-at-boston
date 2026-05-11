@@ -392,7 +392,7 @@ export default function TaiwanFanNightWebsite() {
                         "absolute left-[3%] top-[560px] h-36 w-36 bg-cyan-600 text-white ring-8 ring-cyan-100",
                         "absolute right-[3%] top-[250px] h-36 w-36 bg-pink-500 text-white ring-8 ring-pink-100",
                         "absolute right-[25%] top-[670px] h-44 w-44 bg-violet-600 text-white ring-8 ring-violet-100",
-                        "absolute left-[50%] top-[115px] h-44 w-44 bg-orange-500 text-white ring-8 ring-orange-100",
+                        "absolute left-[50%] top-[95px] h-56 w-56 bg-orange-500 text-white ring-8 ring-orange-100",
                         "absolute left-[5%] top-[760px] h-36 w-36 bg-emerald-600 text-white ring-8 ring-emerald-100",
                         "absolute right-[12%] top-[835px] h-36 w-36 bg-purple-600 text-white ring-8 ring-purple-100",
                         "absolute right-[6%] top-[620px] h-36 w-36 bg-rose-500 text-white ring-8 ring-rose-100",
