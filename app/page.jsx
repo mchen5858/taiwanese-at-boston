@@ -41,13 +41,14 @@ const teamExamples = ["台灣No.1隊", "Fenway佔領隊", "珍奶續命隊", "Te
 const teamLeaderboard = [
   { name: "波克萊台灣商會", tickets: "130+", note: "目前領先" },
   { name: "波士頓台灣媽媽親子會", tickets: "37", note: "持續增加中" },
-  { name: "我朋友說想湊個50人的隊", tickets: "26", note: "持續增加中" },
+  { name: "我朋友說想湊個50人的隊", tickets: "33", note: "持續增加中" },
   { name: "波士頓台灣人生技協會 (BTBA)", tickets: "20+", note: "持續增加中" },
+  { name: "Taiwan Film Festival of Boston", tickets: "10+", note: "持續增加中" },
   { name: "NCCU, TCCNE & BTEAA", tickets: "10+", note: "持續增加中" },
   { name: "羅德島台灣同好會", tickets: "10+", note: "持續增加中" },
   { name: "TECO-BOSTON", tickets: "10+", note: "持續增加中" },
   { name: "Andover 貢茶", tickets: "", note: "持續增加中" },
-  { name: "Boston FASCA", tickets: "", note: "持續增加中" },
+  { name: "Boston FASCA", tickets: "20+", note: "持續增加中" },
   { name: "Formosa Strong", tickets: "", note: "持續增加中" },
   { name: "North Shore TAIWANESE", tickets: "", note: "持續增加中" },
   { name: "Tâioân Siothéng", tickets: "", note: "持續增加中" },
@@ -379,7 +380,7 @@ export default function TaiwanFanNightWebsite() {
 
               <div className="p-6 md:p-8">
                 <div className="rounded-[2rem] border border-emerald-100 bg-gradient-to-br from-emerald-50 via-white to-sky-50 p-6 md:p-10">
-                  <div className="relative mx-auto hidden min-h-[1180px] max-w-6xl md:block">
+                  <div className="relative mx-auto hidden min-h-[1260px] max-w-6xl md:block">
                     {teamLeaderboard.map((team, index) => {
                       const bubbleStyles = [
                         "absolute left-[35%] top-[320px] h-80 w-80 bg-emerald-700 text-white ring-8 ring-emerald-100",
@@ -391,36 +392,38 @@ export default function TaiwanFanNightWebsite() {
                         "absolute left-[3%] top-[560px] h-36 w-36 bg-cyan-600 text-white ring-8 ring-cyan-100",
                         "absolute right-[3%] top-[250px] h-36 w-36 bg-pink-500 text-white ring-8 ring-pink-100",
                         "absolute right-[25%] top-[670px] h-44 w-44 bg-violet-600 text-white ring-8 ring-violet-100",
-                        "absolute left-[52%] top-[130px] h-36 w-36 bg-orange-500 text-white ring-8 ring-orange-100",
+                        "absolute left-[50%] top-[115px] h-44 w-44 bg-orange-500 text-white ring-8 ring-orange-100",
                         "absolute left-[5%] top-[760px] h-36 w-36 bg-emerald-600 text-white ring-8 ring-emerald-100",
                         "absolute right-[12%] top-[835px] h-36 w-36 bg-purple-600 text-white ring-8 ring-purple-100",
                         "absolute right-[6%] top-[620px] h-36 w-36 bg-rose-500 text-white ring-8 ring-rose-100",
                         "absolute left-[32%] top-[65px] h-32 w-32 bg-violet-600 text-white ring-8 ring-violet-100",
                         "absolute left-[14%] top-[930px] h-36 w-36 bg-teal-600 text-white ring-8 ring-teal-100",
                         "absolute left-[35%] top-[965px] h-36 w-36 bg-purple-600 text-white ring-8 ring-purple-100",
-                        "absolute left-[48%] top-[850px] h-36 w-36 bg-red-500 text-white ring-8 ring-red-100",
-                        "absolute right-[33%] top-[990px] h-36 w-36 bg-orange-500 text-white ring-8 ring-orange-100",
+                        "absolute left-[52%] top-[850px] h-36 w-36 bg-red-500 text-white ring-8 ring-red-100",
+                        "absolute right-[28%] top-[1030px] h-36 w-36 bg-orange-500 text-white ring-8 ring-orange-100",
+                        "absolute left-[43%] top-[1080px] h-32 w-32 bg-amber-500 text-white ring-8 ring-amber-100",
                       ];
 
                       const textStyles = [
-                        "text-3xl",
+                        "text-4xl",
                         "text-2xl",
-                        "text-xl",
-                        "text-xl",
+                        "text-2xl",
+                        "text-2xl",
+                        "text-lg",
+                        "text-lg",
                         "text-base",
                         "text-base",
-                        "text-xs",
-                        "text-xs",
-                        "text-xs",
-                        "text-xs",
-                        "text-xs",
-                        "text-xs",
-                        "text-xs",
-                        "text-xs",
-                        "text-xs",
-                        "text-[10px]",
-                        "text-xs",
-                        "text-xs",
+                        "text-base",
+                        "text-base",
+                        "text-base",
+                        "text-base",
+                        "text-base",
+                        "text-base",
+                        "text-base",
+                        "text-sm",
+                        "text-sm",
+                        "text-sm",
+                        "text-sm",
                       ];
 
                       return (
@@ -428,7 +431,7 @@ export default function TaiwanFanNightWebsite() {
                           key={team.name}
                           className={`flex flex-col items-center justify-center rounded-full p-4 text-center shadow-2xl transition hover:scale-105 ${bubbleStyles[index]}`}
                         >
-                          <div className={`max-w-[72%] px-2 text-center font-black leading-[1.08] [overflow-wrap:anywhere] ${textStyles[index]}`}>
+                          <div className={`max-w-[82%] px-2 text-center font-black leading-[1.12] [overflow-wrap:anywhere] ${textStyles[index]}`}>
                             {team.name}
                           </div>
                           {team.tickets && parseInt(team.tickets, 10) >= 10 && (
@@ -463,6 +466,7 @@ export default function TaiwanFanNightWebsite() {
                         "bg-purple-600",
                         "bg-red-500",
                         "bg-orange-500",
+                        "bg-amber-500",
                       ];
 
                       return (
@@ -470,7 +474,7 @@ export default function TaiwanFanNightWebsite() {
                           key={team.name}
                           className={`flex aspect-square flex-col items-center justify-center rounded-full p-4 text-center text-white shadow-xl ${mobileStyles[index]}`}
                         >
-                          <div className="max-w-[72%] px-1 text-center text-[11px] font-black leading-[1.08] [overflow-wrap:anywhere]">
+                          <div className="max-w-[82%] px-1 text-center text-sm font-black leading-[1.12] [overflow-wrap:anywhere]">
                             {team.name}
                           </div>
                           {team.tickets && parseInt(team.tickets, 10) >= 10 && (
