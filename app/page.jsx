@@ -14,6 +14,16 @@ const organizerLine = "https://line.me/ti/p/xbvkW3pO20";
 const volunteerFormLink = "https://forms.gle/1KrTH1ETd9quXNMJ6";
 const tshirtSubmissionFormLink = "https://forms.gle/g7EmFkHFmpt1t1RA7";
 
+const coHosts = [
+  "波克萊台灣商會",
+  "新英格蘭地區臺灣同學聯合會",
+  "波士頓臺灣影展",
+  "波士頓台灣人生技協會",
+  "波士頓台灣媽媽親子會",
+  "新英格蘭大波士頓台灣商會",
+  "波士頓台灣世衛協進會",
+];
+
 const navItems = [
   { id: "home", label: "首頁" },
   { id: "tickets", label: "票價優惠" },
@@ -36,17 +46,17 @@ const teamLeaderboard = [
   { name: "NCCU, TCCNE & BTEAA", tickets: "10+", note: "持續增加中" },
   { name: "羅德島台灣同好會", tickets: "10+", note: "持續增加中" },
   { name: "TECO-BOSTON", tickets: "10+", note: "持續增加中" },
-  { name: "Andover 貢茶", tickets: "6+", note: "持續增加中" },
-  { name: "Boston FASCA", tickets: "7+", note: "持續增加中" },
-  { name: "Formosa Strong", tickets: "6+", note: "持續增加中" },
-  { name: "North Shore TAIWANESE", tickets: "3+", note: "持續增加中" },
-  { name: "Tâioân Siothéng", tickets: "7+", note: "持續增加中" },
-  { name: "Taiwan 襪Up！", tickets: "3+", note: "持續增加中" },
-  { name: "Woo告台", tickets: "5+", note: "持續增加中" },
-  { name: "波士頓北一女校友會", tickets: "4+", note: "持續增加中" },
-  { name: "波士頓台灣世衞協進會", tickets: "3+", note: "持續增加中" },
-  { name: "襪賽！Taiwan", tickets: "4+", note: "持續增加中" },
-  { name: "金余", tickets: "4+", note: "持續增加中" },
+  { name: "Andover 貢茶", tickets: "", note: "持續增加中" },
+  { name: "Boston FASCA", tickets: "", note: "持續增加中" },
+  { name: "Formosa Strong", tickets: "", note: "持續增加中" },
+  { name: "North Shore TAIWANESE", tickets: "", note: "持續增加中" },
+  { name: "Tâioân Siothéng", tickets: "", note: "持續增加中" },
+  { name: "Taiwan 襪 Up!", tickets: "", note: "持續增加中" },
+  { name: "Woo告台", tickets: "", note: "持續增加中" },
+  { name: "波士頓北一女校友會", tickets: "", note: "持續增加中" },
+  { name: "波士頓台灣世衛協進會", tickets: "", note: "持續增加中" },
+  { name: "襪賽！Taiwan", tickets: "", note: "持續增加中" },
+  { name: "金余", tickets: "", note: "持續增加中" },
 ];
 
 const faqs = [
@@ -235,7 +245,17 @@ export default function TaiwanFanNightWebsite() {
                 <p className="mt-4 text-sm leading-7 text-white/90">本活動由波克萊台灣商會基金會（BTCF）主辦。每售出一張票，BTCF 將代表參與本次活動的台灣社群，額外捐出 $3 給 Boys & Girls Clubs of Boston。$3 捐款並非從大家購買球票的費用中扣除；大家所付的票價，將全數用於支付給 Red Sox 的團體票費用，BTCF 不從本活動中營利。</p>
               </div>
               <div className="grid gap-4">
-                <div className="flex gap-4"><span className="text-xl">🏛️</span><div><p className="font-bold">主辦單位</p><p className="text-sm leading-relaxed text-slate-600">波克萊台灣商會基金會（BTCF） 主辦<br />波克萊台灣商會（BTCC） 協辦</p></div></div>
+                <div className="flex gap-4">
+                  <span className="text-xl">🏛️</span>
+                  <div>
+                    <p className="font-bold">主辦 Organized by</p>
+                    <p className="text-sm leading-relaxed text-slate-600">波克萊台灣商會基金會（BTCF）<br />波克萊台灣商會（BTCC）</p>
+                    <p className="mt-3 font-bold">Co-Hosts</p>
+                    <p className="text-sm leading-relaxed text-slate-600">
+                      {coHosts.join(" × ")}<br />（持續增加中！）
+                    </p>
+                  </div>
+                </div>
                 <div className="flex gap-4"><span className="text-xl">📅</span><div><p className="font-bold">日期</p><p className="text-sm text-slate-600">2026 年 9 月 12 日｜4:15 PM</p></div></div>
                 <div className="flex gap-4"><span className="text-xl">📍</span><div><p className="font-bold">地點</p><p className="text-sm text-slate-600">Fenway Park｜Bleacher 42</p></div></div>
               </div>
@@ -359,52 +379,45 @@ export default function TaiwanFanNightWebsite() {
 
               <div className="p-6 md:p-8">
                 <div className="rounded-[2rem] border border-emerald-100 bg-gradient-to-br from-emerald-50 via-white to-sky-50 p-6 md:p-10">
-                  <div className="relative mx-auto hidden min-h-[1220px] max-w-6xl md:block">
+                  <div className="relative mx-auto hidden min-h-[1180px] max-w-6xl md:block">
                     {teamLeaderboard.map((team, index) => {
                       const bubbleStyles = [
-                        // 中間主球：波克萊台灣商會
-                        "absolute left-[36%] top-[320px] h-80 w-80 bg-emerald-700 text-white ring-8 ring-emerald-100",
-
-                        // 大球分散，不重疊
-                        "absolute left-[6%] top-[55px] h-64 w-64 bg-sky-600 text-white ring-8 ring-sky-100",
-                        "absolute left-[24%] top-[660px] h-60 w-60 bg-rose-500 text-white ring-8 ring-rose-100",
-                        "absolute right-[7%] top-[70px] h-56 w-56 bg-blue-600 text-white ring-8 ring-blue-100",
-
-                        // 中型球分散四周
-                        "absolute left-[5%] top-[360px] h-48 w-48 bg-teal-600 text-white ring-8 ring-teal-100",
-                        "absolute right-[16%] top-[450px] h-44 w-44 bg-emerald-500 text-white ring-8 ring-emerald-100",
-                        "absolute left-[5%] top-[640px] h-36 w-36 bg-cyan-600 text-white ring-8 ring-cyan-100",
-
-                        // 小球四處散開
-                        "absolute right-[3%] top-[350px] h-36 w-36 bg-pink-500 text-white ring-8 ring-pink-100",
-                        "absolute right-[25%] top-[690px] h-40 w-40 bg-violet-600 text-white ring-8 ring-violet-100",
-                        "absolute left-[50%] top-[130px] h-36 w-36 bg-orange-500 text-white ring-8 ring-orange-100",
-                        "absolute left-[8%] top-[850px] h-36 w-36 bg-green-600 text-white ring-8 ring-green-100",
-                        "absolute right-[15%] top-[845px] h-36 w-36 bg-purple-600 text-white ring-8 ring-purple-100",
-                        "absolute right-[7%] top-[635px] h-36 w-36 bg-rose-400 text-white ring-8 ring-rose-100",
-                        "absolute left-[34%] top-[95px] h-32 w-32 bg-purple-600 text-white ring-8 ring-purple-100",
-                        "absolute left-[20%] top-[990px] h-36 w-36 bg-teal-500 text-white ring-8 ring-teal-100",
-                        "absolute left-[38%] top-[990px] h-36 w-36 bg-violet-600 text-white ring-8 ring-violet-100",
-                        "absolute left-[51%] top-[885px] h-36 w-36 bg-red-500 text-white ring-8 ring-red-100",
-                        "absolute left-[62%] top-[1010px] h-32 w-32 bg-amber-500 text-white ring-8 ring-amber-100",
+                        "absolute left-[35%] top-[320px] h-80 w-80 bg-emerald-700 text-white ring-8 ring-emerald-100",
+                        "absolute left-[6%] top-[30px] h-60 w-60 bg-sky-600 text-white ring-8 ring-sky-100",
+                        "absolute left-[24%] top-[630px] h-64 w-64 bg-rose-500 text-white ring-8 ring-rose-100",
+                        "absolute right-[8%] top-[30px] h-56 w-56 bg-sky-600 text-white ring-8 ring-sky-100",
+                        "absolute left-[4%] top-[300px] h-48 w-48 bg-teal-600 text-white ring-8 ring-teal-100",
+                        "absolute right-[14%] top-[430px] h-44 w-44 bg-emerald-500 text-white ring-8 ring-emerald-100",
+                        "absolute left-[3%] top-[560px] h-36 w-36 bg-cyan-600 text-white ring-8 ring-cyan-100",
+                        "absolute right-[3%] top-[250px] h-36 w-36 bg-pink-500 text-white ring-8 ring-pink-100",
+                        "absolute right-[25%] top-[670px] h-44 w-44 bg-violet-600 text-white ring-8 ring-violet-100",
+                        "absolute left-[52%] top-[130px] h-36 w-36 bg-orange-500 text-white ring-8 ring-orange-100",
+                        "absolute left-[5%] top-[760px] h-36 w-36 bg-emerald-600 text-white ring-8 ring-emerald-100",
+                        "absolute right-[12%] top-[835px] h-36 w-36 bg-purple-600 text-white ring-8 ring-purple-100",
+                        "absolute right-[6%] top-[620px] h-36 w-36 bg-rose-500 text-white ring-8 ring-rose-100",
+                        "absolute left-[32%] top-[65px] h-32 w-32 bg-violet-600 text-white ring-8 ring-violet-100",
+                        "absolute left-[14%] top-[930px] h-36 w-36 bg-teal-600 text-white ring-8 ring-teal-100",
+                        "absolute left-[35%] top-[965px] h-36 w-36 bg-purple-600 text-white ring-8 ring-purple-100",
+                        "absolute left-[48%] top-[850px] h-36 w-36 bg-red-500 text-white ring-8 ring-red-100",
+                        "absolute right-[33%] top-[990px] h-36 w-36 bg-orange-500 text-white ring-8 ring-orange-100",
                       ];
 
                       const textStyles = [
                         "text-3xl",
                         "text-2xl",
-                        "text-2xl",
+                        "text-xl",
                         "text-xl",
                         "text-base",
                         "text-base",
                         "text-xs",
                         "text-xs",
-                        "text-sm",
                         "text-xs",
                         "text-xs",
                         "text-xs",
                         "text-xs",
                         "text-xs",
-                        "text-[10px]",
+                        "text-xs",
+                        "text-xs",
                         "text-[10px]",
                         "text-xs",
                         "text-xs",
@@ -435,21 +448,21 @@ export default function TaiwanFanNightWebsite() {
                         "bg-emerald-700",
                         "bg-sky-600",
                         "bg-rose-500",
-                        "bg-blue-600",
+                        "bg-sky-600",
                         "bg-teal-600",
                         "bg-emerald-500",
                         "bg-cyan-600",
                         "bg-pink-500",
                         "bg-violet-600",
                         "bg-orange-500",
-                        "bg-green-600",
+                        "bg-emerald-600",
                         "bg-purple-600",
-                        "bg-rose-400",
-                        "bg-purple-600",
-                        "bg-teal-500",
+                        "bg-rose-500",
                         "bg-violet-600",
+                        "bg-teal-600",
+                        "bg-purple-600",
                         "bg-red-500",
-                        "bg-amber-500",
+                        "bg-orange-500",
                       ];
 
                       return (
@@ -672,7 +685,7 @@ export default function TaiwanFanNightWebsite() {
               </div>
             </div>
             <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
-              <InfoCard icon="🏛️" title="主辦單位">波克萊台灣商會基金會（BTCF）主辦<br />波克萊台灣商會（BTCC）協辦</InfoCard>
+              <InfoCard icon="🏛️" title="主辦 Organized by">波克萊台灣商會基金會（BTCF）<br />波克萊台灣商會（BTCC）<br /><br /><strong>Co-Hosts</strong><br />{coHosts.join(" × ")}<br />（持續增加中！）</InfoCard>
               <InfoCard icon="✉️" title="主辦單位 Email"><a className="font-bold text-emerald-700 underline" href="mailto:medianchen@gmail.com">medianchen@gmail.com</a></InfoCard>
               <InfoCard icon="💬" title="LINE 聯絡"><a className="font-bold text-emerald-700 underline" href={organizerLine} target="_blank" rel="noreferrer">加入 LINE 聯絡主辦單位</a></InfoCard>
               <InfoCard icon="🙌" title="加入志工團隊"><a className="font-bold text-emerald-700 underline" href={volunteerFormLink} target="_blank" rel="noreferrer">填寫志工報名表</a></InfoCard>
