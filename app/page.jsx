@@ -40,16 +40,16 @@ const teamExamples = ["台灣No.1隊", "Fenway佔領隊", "珍奶續命隊", "Te
 
 const teamLeaderboard = [
   { name: "波克萊台灣商會", tickets: "130+", note: "目前領先" },
-  { name: "我朋友說想湊個50人的隊", tickets: "90+", note: "持續增加中" },
-  { name: "波士頓台灣媽媽親子會", tickets: "90+", note: "持續增加中" },
+  { name: "波士頓台灣媽媽親子會", tickets: "125+", note: "持續增加中" },
+  { name: "我朋友說想湊個50人的隊", tickets: "100+", note: "持續增加中" },
+  { name: "Boston FASCA", tickets: "25+", note: "持續增加中" },
+  { name: "BTBC 波士頓台灣龍舟隊", tickets: "20+", note: "持續增加中" },
   { name: "波士頓台灣人生技協會 (BTBA)", tickets: "20+", note: "持續增加中" },
-  { name: "Boston FASCA", tickets: "20+", note: "持續增加中" },
   { name: "波士頓台灣世衞協進會", tickets: "17+", note: "持續增加中" },
   { name: "Taiwan Film Festival of Boston", tickets: "15+", note: "持續增加中" },
   { name: "當偶們同在一起", tickets: "15+", note: "持續增加中" },
   { name: "羅德島台灣同好會", tickets: "14", note: "持續增加中" },
   { name: "Andover 貢茶", tickets: "10+", note: "持續增加中" },
-  { name: "BTBC 波士頓台灣龍舟隊", tickets: "10+", note: "持續增加中" },
   { name: "Formosa Strong", tickets: "10+", note: "持續增加中" },
   { name: "NCCU, TCCNE & BTEAA", tickets: "10+", note: "持續增加中" },
   { name: "Tâioân Siothéng", tickets: "10+", note: "持續增加中" },
@@ -64,7 +64,7 @@ const teamLeaderboard = [
   { name: "襪哩咧", tickets: "6+", note: "持續增加中" },
   { name: "Woo告台", tickets: "5+", note: "持續增加中" },
   { name: "Taiwan Bon Bon", tickets: "4+", note: "持續增加中" },
-  { name: "Taiwan 襪 Up!", tickets: "4+", note: "持續增加中" },
+  { name: "Taiwan 襪Up！", tickets: "4+", note: "持續增加中" },
   { name: "Tide One Pioneers (TOP) 台灣拓荒者船隊", tickets: "4+", note: "持續增加中" },
   { name: "波士頓北一女校友會", tickets: "4+", note: "持續增加中" },
   { name: "襪賽！Taiwan", tickets: "4+", note: "持續增加中" },
@@ -72,6 +72,8 @@ const teamLeaderboard = [
   { name: "North Shore TAIWANESE", tickets: "3+", note: "持續增加中" },
   { name: "NTUB05BOS", tickets: "3+", note: "持續增加中" },
   { name: "Taiwan 55688", tickets: "3+", note: "持續增加中" },
+  { name: "台灣留學生聯合加油團", tickets: "3+", note: "持續增加中" },
+  { name: "Alexida", tickets: "2+", note: "持續增加中" },
   { name: "Boston Taiwanese Biotechnology Association", tickets: "2+", note: "持續增加中" },
   { name: "Taiwanese Family Association of Boston", tickets: "2+", note: "持續增加中" },
   { name: "羅德島灰姑娘", tickets: "2+", note: "持續增加中" },
@@ -435,7 +437,7 @@ export default function TaiwanFanNightWebsite() {
 
               <div className="p-6 md:p-8">
                 <div className="rounded-[2rem] border border-emerald-100 bg-gradient-to-br from-emerald-50 via-white to-sky-50 p-6 md:p-10">
-                  <div className="relative mx-auto hidden min-h-[2550px] max-w-6xl md:block">
+                  <div className="relative mx-auto hidden min-h-[2750px] max-w-6xl md:block">
                     {teamLeaderboard.map((team, index) => {
                       const bubbleStyles = [
                         "absolute left-[34%] top-[40px] h-80 w-80 bg-emerald-700 text-white ring-8 ring-emerald-100",
@@ -522,9 +524,9 @@ export default function TaiwanFanNightWebsite() {
                       return (
                         <div
                           key={team.name}
-                          className={`flex flex-col items-center justify-center rounded-full p-4 text-center shadow-2xl transition hover:scale-105 ${bubbleStyles[index]}`}
+                          className={`flex flex-col items-center justify-center rounded-full p-4 text-center shadow-2xl transition hover:scale-105 ${bubbleStyles[index] || "absolute left-[40%] top-[2520px] h-32 w-32 bg-slate-600 text-white ring-8 ring-slate-200"}`}
                         >
-                          <div className={`max-w-[82%] px-2 text-center font-black leading-[1.12] [overflow-wrap:anywhere] ${textStyles[index]}`}>
+                          <div className={`max-w-[82%] px-2 text-center font-black leading-[1.12] [overflow-wrap:anywhere] ${textStyles[index] || "text-xs"}`}>
                             {team.name}
                           </div>
                           {team.tickets && parseInt(team.tickets, 10) >= 10 && (
@@ -584,7 +586,7 @@ export default function TaiwanFanNightWebsite() {
                       return (
                         <div
                           key={team.name}
-                          className={`flex aspect-square flex-col items-center justify-center rounded-full p-4 text-center text-white shadow-xl ${mobileStyles[index]}`}
+                          className={`flex aspect-square flex-col items-center justify-center rounded-full p-4 text-center text-white shadow-xl ${mobileStyles[index] || "bg-slate-600"}`}
                         >
                           <div className="max-w-[82%] px-1 text-center text-sm font-black leading-[1.12] [overflow-wrap:anywhere]">
                             {team.name}
