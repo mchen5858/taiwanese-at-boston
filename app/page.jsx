@@ -87,7 +87,7 @@ const faqs = [
     items: [
       {
         q: "🎟 座位提醒 Seating Notice",
-        a: "填寫相同 Team Name 的朋友，主辦單位會盡量安排坐在一起或附近。所有參與者都會安排在 Fenway Park — Bleacher 42 區，一起為台灣應援。由於 5/31 前購買的 $47 票券包含 Red Sox × Bruins 限量聯名 Jersey，與 6/1 後的一般票券屬於不同票種與不同批次，座位安排可能會分批處理。若同一隊伍中有人在 5/31 前購票、有人在 6/1 後購票，主辦單位仍會盡量協助安排在附近，但無法保證完全連號或坐在同一排。若希望和朋友、家人或隊友坐得更近，建議大家盡早購票，並填寫完全相同的 Team Name。",
+        a: "填寫相同 Team Name 的朋友，主辦單位會盡量安排坐在一起或附近。所有參與者都會安排在 Fenway Park — Bleacher 41, 42, & 43 區，一起為台灣應援。由於 5/31 前購買的 $47 票券包含 Red Sox × Bruins 限量聯名 Jersey，與 6/1 後的一般票券屬於不同票種與不同批次，座位安排可能會分批處理。若同一隊伍中有人在 5/31 前購票、有人在 6/1 後購票，主辦單位仍會盡量協助安排在附近，但無法保證完全連號或坐在同一排。若希望和朋友、家人或隊友坐得更近，建議大家盡早購票，並填寫完全相同的 Team Name。",
       },
       { q: "座位可以自己選嗎？", a: "本活動為團體購票，座位將由主辦單位統一安排，無法自行選位。" },
       { q: "我跟朋友分開買票，可以坐一起嗎？", a: "可以。請在購票時填寫相同的 Team Name，主辦單位會依照 Team Name 盡量安排在附近的位置。" },
@@ -203,7 +203,7 @@ export default function TaiwanFanNightWebsite() {
     { label: "比賽日期", value: "9/12/26" },
     { label: "比賽時間", value: "4:15 PM" },
     { label: "對戰組合", value: "Royals vs Red Sox" },
-    { label: "座位區域", value: "Bleacher 42" },
+    { label: "座位區域", value: "Bleacher 41, 42, & 43" },
   ], []);
 
   return (
@@ -232,42 +232,6 @@ export default function TaiwanFanNightWebsite() {
       </header>
 
       <main>
-
-        <section className="px-4 pt-8 md:px-8">
-          <div className="mx-auto max-w-5xl">
-            <div className="rounded-[2rem] border border-red-200 bg-red-50 p-8 shadow-sm">
-              <h2 className="text-3xl font-black text-slate-950">
-                🎟 售票再次暫停公告
-              </h2>
-
-              <p className="mt-2 text-sm font-semibold tracking-wide text-slate-500 uppercase">
-                波克萊台灣商會基金會 ｜ 5/14/2026 10:20 PM
-              </p>
-
-              <div className="mt-5 space-y-5 text-base leading-8 text-slate-700">
-                <p>
-                  大家好，不好意思，因為目前釋出的票券又已全數售完，我們需要再次暫時停止售票。
-                </p>
-
-                <p>
-                  真的非常感謝大家的支持！波士頓台灣社群的集結速度遠遠超出預期，
-                  也讓我們再次看見大家對 912 Taiwan Fan Night at Fenway 的熱情與凝聚力。
-                </p>
-
-                <p>
-                  我們今天早上已經先和紅襪聯絡，提醒他們剩下的票可能撐不過今晚，
-                  結果真的在今晚售完。目前我們正在等待紅襪確認是否能再釋出更多票券給我們。
-                </p>
-
-                <p>
-                  等紅襪確認後，我們會第一時間重新開放售票，並透過網站、Email 與 LINE 群通知大家。
-                  造成不便，真的很不好意思，也再次感謝大家讓紅襪看見波士頓台灣人的團結！
-                </p>
-              </div>
-            </div>
-          </div>
-        </section>
-
         <section id="home" className="relative overflow-hidden px-4 py-16 md:px-8 md:py-24">
           <div className="absolute left-1/2 top-8 h-80 w-80 -translate-x-1/2 rounded-full bg-emerald-200/40 blur-3xl" />
           <div className="relative mx-auto grid max-w-7xl items-center gap-10 lg:grid-cols-[1.1fr_0.9fr]">
@@ -315,7 +279,7 @@ export default function TaiwanFanNightWebsite() {
                   </div>
                 </div>
                 <div className="flex gap-4"><span className="text-xl">📅</span><div><p className="font-bold">日期</p><p className="text-sm text-slate-600">2026 年 9 月 12 日｜4:15 PM</p></div></div>
-                <div className="flex gap-4"><span className="text-xl">📍</span><div><p className="font-bold">地點</p><p className="text-sm text-slate-600">Fenway Park｜Bleacher 42</p></div></div>
+                <div className="flex gap-4"><span className="text-xl">📍</span><div><p className="font-bold">地點</p><p className="text-sm text-slate-600">Fenway Park｜Bleacher 41, 42, & 43</p></div></div>
               </div>
             </Card>
           </div>
@@ -352,7 +316,7 @@ export default function TaiwanFanNightWebsite() {
                   <p className="text-xl font-black text-slate-950">🎟 座位提醒 Seating Notice</p>
                   <p className="mt-3">
                     填寫相同 <strong>Team Name</strong> 的朋友，主辦單位會盡量安排坐在一起或附近。
-                    所有參與者都會安排在 <strong>Fenway Park — Bleacher 42 區</strong>，一起為台灣應援。
+                    所有參與者都會安排在 <strong>Fenway Park — Bleacher 41, 42, & 43 區</strong>，一起為台灣應援。
                   </p>
                   <p className="mt-3">
                     由於 <strong>5/31 前購買的 $47 票券</strong> 包含 Red Sox × Bruins 限量聯名 Jersey，
@@ -367,7 +331,7 @@ export default function TaiwanFanNightWebsite() {
                   </p>
                 </div>
               </Card>
-              <Card className="self-start p-8"><p className="text-sm font-bold text-slate-500">6/1 後正式開賣</p><h3 className="mt-1 text-3xl font-black text-slate-950">專屬團體購票連結</h3><p className="mt-5 text-lg leading-8 text-slate-600">6/1 之後，大家可以透過 Red Sox 提供給波克萊基金會專屬的 Taiwan Fans Night 優惠購票連結購票。</p><div className="mt-6 rounded-3xl bg-slate-50 p-6"><p className="text-sm font-semibold text-slate-500">票價</p><p className="mt-1 text-4xl font-black text-slate-950">$41 + 約 8–9% 手續費</p></div><p className="mt-6 text-sm leading-7 text-slate-600">無論是 6/1 前或是 6/1 後購票者，我們全都會坐在 Bleacher 42 同一區、得到主辦單位發的台灣主題 T-shirt，並參加 912 台灣集結活動大抽獎！</p><p className="mt-3 rounded-2xl bg-amber-50 p-4 text-sm font-semibold leading-7 text-amber-900">⚠️ 注意：6/1 之後透過官方購票連結購買的票券，將不包含限量 Red Sox × Bruins co-branding Baseball Jersey。</p><p className="mt-4 rounded-2xl bg-slate-50 p-4 text-sm leading-7 text-slate-700">依據紅襪官網，目前 Fenway Park 912 當天 Bleacher 42 區票價約為 <strong>$64 ~ $88</strong> 一張，而且每張票還需要再加上 <strong>$8.75 per-ticket fee</strong>。相較之下，無論是 <strong>$47 組隊優惠</strong> 或是 <strong>$41 專屬團體購票</strong>，都是主辦單位幫我們 TEAM TAIWAN 與紅襪爭取到的很好優惠！大家所付的票價將全數用於支付給 Red Sox 的團體票費用，BTCF 不從本活動中營利。</p></Card>
+              <Card className="self-start p-8"><p className="text-sm font-bold text-slate-500">6/1 後正式開賣</p><h3 className="mt-1 text-3xl font-black text-slate-950">專屬團體購票連結</h3><p className="mt-5 text-lg leading-8 text-slate-600">6/1 之後，大家可以透過 Red Sox 提供給波克萊基金會專屬的 Taiwan Fans Night 優惠購票連結購票。</p><div className="mt-6 rounded-3xl bg-slate-50 p-6"><p className="text-sm font-semibold text-slate-500">票價</p><p className="mt-1 text-4xl font-black text-slate-950">$41 + 約 8–9% 手續費</p></div><p className="mt-6 text-sm leading-7 text-slate-600">無論是 6/1 前或是 6/1 後購票者，我們全都會坐在 Bleacher 41, 42, & 43 同一區、得到主辦單位發的台灣主題 T-shirt，並參加 912 台灣集結活動大抽獎！</p><p className="mt-3 rounded-2xl bg-amber-50 p-4 text-sm font-semibold leading-7 text-amber-900">⚠️ 注意：6/1 之後透過官方購票連結購買的票券，將不包含限量 Red Sox × Bruins co-branding Baseball Jersey。</p><p className="mt-4 rounded-2xl bg-slate-50 p-4 text-sm leading-7 text-slate-700">依據紅襪官網，目前 Fenway Park 912 當天 Bleacher 41, 42, & 43 區票價約為 <strong>$64 ~ $88</strong> 一張，而且每張票還需要再加上 <strong>$8.75 per-ticket fee</strong>。相較之下，無論是 <strong>$47 組隊優惠</strong> 或是 <strong>$41 專屬團體購票</strong>，都是主辦單位幫我們 TEAM TAIWAN 與紅襪爭取到的很好優惠！大家所付的票價將全數用於支付給 Red Sox 的團體票費用，BTCF 不從本活動中營利。</p></Card>
             </div>
             <div className="mt-8 grid gap-6 lg:grid-cols-2 lg:items-start">
               <div className="rounded-3xl border border-sky-200 bg-gradient-to-br from-sky-50 via-white to-emerald-50 p-6 text-sm leading-7 text-slate-700 shadow-sm md:p-8">
