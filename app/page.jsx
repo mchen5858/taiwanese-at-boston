@@ -230,6 +230,42 @@ export default function TaiwanFanNightWebsite() {
       </header>
 
       <main>
+
+        <section className="px-4 pt-8 md:px-8">
+          <div className="mx-auto max-w-5xl">
+            <div className="rounded-[2rem] border border-red-200 bg-red-50 p-8 shadow-sm">
+              <h2 className="text-3xl font-black text-slate-950">
+                🎟 售票再次暫停公告
+              </h2>
+
+              <p className="mt-2 text-sm font-semibold tracking-wide text-slate-500 uppercase">
+                波克萊台灣商會基金會 ｜ 5/14/2026 10:20 PM
+              </p>
+
+              <div className="mt-5 space-y-5 text-base leading-8 text-slate-700">
+                <p>
+                  大家好，不好意思，因為目前釋出的票券又已全數售完，我們需要再次暫時停止售票。
+                </p>
+
+                <p>
+                  真的非常感謝大家的支持！波士頓台灣社群的集結速度遠遠超出預期，
+                  也讓我們再次看見大家對 912 Taiwan Fan Night at Fenway 的熱情與凝聚力。
+                </p>
+
+                <p>
+                  我們今天早上已經先和紅襪聯絡，提醒他們剩下的票可能撐不過今晚，
+                  結果真的在今晚售完。目前我們正在等待紅襪確認是否能再釋出更多票券給我們。
+                </p>
+
+                <p>
+                  等紅襪確認後，我們會第一時間重新開放售票，並透過網站、Email 與 LINE 群通知大家。
+                  造成不便，真的很不好意思，也再次感謝大家讓紅襪看見波士頓台灣人的團結！
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
         <section id="home" className="relative overflow-hidden px-4 py-16 md:px-8 md:py-24">
           <div className="absolute left-1/2 top-8 h-80 w-80 -translate-x-1/2 rounded-full bg-emerald-200/40 blur-3xl" />
           <div className="relative mx-auto grid max-w-7xl items-center gap-10 lg:grid-cols-[1.1fr_0.9fr]">
