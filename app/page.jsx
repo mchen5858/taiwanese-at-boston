@@ -28,9 +28,9 @@ const coHosts = [
 const teamExamples = ["台灣No.1隊", "Fenway佔領隊", "珍奶續命隊", "Team Taiwan GO隊", "波士頓台味隊"];
 
 const teamLeaderboard = [
-  { name: "波士頓台灣媽媽親子會", tickets: "140+" },
+  { name: "波士頓台灣媽媽親子會", tickets: "145+" },
   { name: "波克萊台灣商會", tickets: "130+" },
-  { name: "我朋友說想湊個50人的隊", tickets: "100+" },
+  { name: "我朋友說想湊個50人的隊", tickets: "110+" },
   { name: "Boston FASCA", tickets: "30+" },
   { name: "BTBC 波士頓台灣龍舟隊", tickets: "25+" },
   { name: "我們也來組一隊", tickets: "20+" },
@@ -40,6 +40,7 @@ const teamLeaderboard = [
   { name: "Taiwan Film Festival of Boston", tickets: "15+" },
   { name: "當偶們同在一起", tickets: "15+" },
   { name: "羅德島台灣同好會", tickets: "14" },
+  { name: "The Boba Tea Party", tickets: "12+" },
   { name: "Formosa Strong", tickets: "10+" },
   { name: "NCCU, TCCNE & BTEAA", tickets: "10+" },
   { name: "Red Sox Fernando Day", tickets: "10+" },
@@ -48,28 +49,34 @@ const teamLeaderboard = [
   { name: "Tide One Pioneers (TOP) 台灣拓荒者船隊", tickets: "10+" },
   { name: "TECO-BOSTON", tickets: "10+" },
   { name: "Woo告台", tickets: "9+" },
-  { name: "Need好台", tickets: "7+" },
+  { name: "Need好台", tickets: "8+" },
   { name: "Taiwanzonian-bos", tickets: "7+" },
   { name: "Taiwan熊讚", tickets: "6+" },
   { name: "從南到北 襪ㄧ下！", tickets: "6+" },
   { name: "襪哩咧", tickets: "6+" },
+  { name: "0800092000", tickets: "5+" },
   { name: "拚明年總統來開球", tickets: "5+" },
+  { name: "波士頓北一女校友會", tickets: "5+" },
+  { name: "花栗鼠吃雞排", tickets: "5+" },
+  { name: "Lala Mountain", tickets: "4+" },
+  { name: "MOCHI", tickets: "4+" },
   { name: "Taiwan Bon Bon", tickets: "4+" },
   { name: "Taiwan 襪Up！", tickets: "4+" },
-  { name: "波士頓北一女校友會", tickets: "4+" },
+  { name: "灣a紅襪", tickets: "4+" },
   { name: "襪賽！Taiwan", tickets: "4+" },
   { name: "金余", tickets: "4+" },
-  { name: "0800092000", tickets: "3+" },
   { name: "North Shore TAIWANESE", tickets: "3+" },
   { name: "NTUB05BOS", tickets: "3+" },
   { name: "Taiwan 55688", tickets: "3+" },
   { name: "台灣留學生聯合加油團", tickets: "3+" },
   { name: "襪係臺灣郎", tickets: "3+" },
+  { name: "飛天少女豬", tickets: "3+" },
   { name: "Alexida", tickets: "2+" },
+  { name: "AmiLumiGoGoGo", tickets: "2+" },
   { name: "Boston Taiwanese Biotechnology Association", tickets: "2+" },
+  { name: "台灣霹靂火鳳凰", tickets: "2+" },
   { name: "羅德島灰姑娘", tickets: "2+" },
   { name: "芬威要有TaiwanDay才隊", tickets: "2+" },
-  { name: "飛天少女豬", tickets: "2+" },
 ];
 
 const content = {
@@ -890,6 +897,15 @@ function BubbleLeaderboard({ t }) {
     "absolute left-[63%] top-[2340px] h-32 w-32 bg-cyan-600 text-xs ring-8 ring-cyan-100",
     "absolute left-[82%] top-[2380px] h-32 w-32 bg-indigo-600 text-xs ring-8 ring-indigo-100",
     "absolute left-[46%] top-[2485px] h-32 w-32 bg-orange-500 text-xs ring-8 ring-orange-100",
+    "absolute left-[6%] top-[2525px] h-32 w-32 bg-fuchsia-600 text-xs ring-8 ring-fuchsia-100",
+    "absolute left-[24%] top-[2520px] h-32 w-32 bg-slate-700 text-xs ring-8 ring-slate-200",
+    "absolute left-[66%] top-[2520px] h-32 w-32 bg-amber-500 text-xs ring-8 ring-amber-100",
+    "absolute left-[83%] top-[2575px] h-32 w-32 bg-lime-600 text-[11px] ring-8 ring-lime-100",
+    "absolute left-[44%] top-[2660px] h-32 w-32 bg-sky-600 text-xs ring-8 ring-sky-100",
+    "absolute left-[12%] top-[2740px] h-32 w-32 bg-red-500 text-xs ring-8 ring-red-100",
+    "absolute left-[31%] top-[2800px] h-32 w-32 bg-emerald-700 text-[11px] ring-8 ring-emerald-100",
+    "absolute left-[58%] top-[2735px] h-32 w-32 bg-blue-600 text-[11px] ring-8 ring-blue-100",
+    "absolute left-[80%] top-[2800px] h-32 w-32 bg-teal-600 text-[11px] ring-8 ring-teal-100",
   ];
 
   const mobileColors = [
@@ -900,7 +916,7 @@ function BubbleLeaderboard({ t }) {
 
   return (
     <>
-      <div className="relative mx-auto hidden min-h-[2650px] max-w-6xl md:block">
+      <div className="relative mx-auto hidden min-h-[2950px] max-w-6xl md:block">
         {teamLeaderboard.map((team, index) => (
           <div
             key={team.name}
@@ -1132,7 +1148,7 @@ export default function TaiwanFanNightWebsite() {
           <div className="mx-auto max-w-7xl">
             <SectionTitle eyebrow={t.leaderboard.eyebrow} title={t.leaderboard.title} description={t.leaderboard.description} />
             <Card className="overflow-hidden border-emerald-200 bg-white p-0 shadow-lg">
-              <div className="bg-gradient-to-br from-emerald-700 to-sky-700 p-8 text-white md:p-10"><p className="text-sm font-semibold uppercase tracking-[0.25em] text-white/75">Current Teams</p><h3 className="mt-3 text-3xl font-black">{t.leaderboard.headerTitle}</h3><p className="mt-4 max-w-3xl leading-7 text-white/90">{t.leaderboard.headerText}</p></div>
+              <div className="bg-gradient-to-br from-emerald-700 to-sky-700 p-8 text-center text-white md:p-10"><p className="text-sm font-semibold uppercase tracking-[0.25em] text-white/75">Current Teams</p><h3 className="mt-3 text-3xl font-black">{t.leaderboard.headerTitle}</h3><p className="mx-auto mt-4 max-w-3xl leading-7 text-white/90">{t.leaderboard.headerText}</p><div className="mt-8 flex w-full justify-center"><div className="inline-flex items-center justify-center rounded-full bg-amber-300 px-8 py-4 text-center text-xl font-black text-emerald-950 shadow-xl ring-4 ring-white/20 md:text-2xl">{lang === "zh" ? `目前 TEAM TAIWAN 總共有 ${teamLeaderboard.length} 隊` : `TEAM TAIWAN currently has ${teamLeaderboard.length} teams`}</div></div></div>
               <div className="p-6 md:p-8"><div className="rounded-[2rem] border border-emerald-100 bg-gradient-to-br from-emerald-50 via-white to-sky-50 p-6 md:p-10"><BubbleLeaderboard t={t} /></div><div className="mt-8 rounded-3xl border border-emerald-200 bg-emerald-50 p-6 text-center"><h4 className="text-2xl font-black text-slate-950">{t.leaderboard.joinTitle}</h4><p className="mx-auto mt-3 max-w-2xl leading-7 text-slate-600">{t.leaderboard.joinText}</p><div className="mt-6 flex justify-center"><a href={zeffyPaymentLink} target="_blank" rel="noreferrer" className="rounded-full bg-emerald-700 px-6 py-3 text-center font-bold text-white transition hover:bg-emerald-800">{t.leaderboard.joinButton}</a></div></div></div>
             </Card>
           </div>
