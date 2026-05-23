@@ -30,53 +30,57 @@ const teamExamples = ["台灣No.1隊", "Fenway佔領隊", "珍奶續命隊", "Te
 const teamLeaderboard = [
   { name: "波士頓台灣媽媽親子會", tickets: "145+" },
   { name: "波克萊台灣商會", tickets: "130+" },
-  { name: "我朋友說想湊個50人的隊", tickets: "110+" },
-  { name: "Boston FASCA", tickets: "30+" },
-  { name: "BTBC 波士頓台灣龍舟隊", tickets: "25+" },
-  { name: "我們也來組一隊", tickets: "20+" },
+  { name: "我朋友說想湊個50人的隊", tickets: "125+" },
+  { name: "Boston FASCA", tickets: "40+" },
+  { name: "BTBC 波士頓台灣龍舟隊", tickets: "30+" },
+  { name: "我們也來組一隊", tickets: "25+" },
   { name: "波士頓台灣人生技協會 (BTBA)", tickets: "20+" },
   { name: "波士頓台灣世衞協進會", tickets: "17+" },
   { name: "Andover 貢茶", tickets: "15+" },
   { name: "Taiwan Film Festival of Boston", tickets: "15+" },
   { name: "當偶們同在一起", tickets: "15+" },
-  { name: "羅德島台灣同好會", tickets: "14" },
+  { name: "羅德島台灣同好會", tickets: "14+" },
+  { name: "Tâioân Siothéng", tickets: "13+" },
   { name: "The Boba Tea Party", tickets: "12+" },
   { name: "Formosa Strong", tickets: "10+" },
   { name: "NCCU, TCCNE & BTEAA", tickets: "10+" },
   { name: "Red Sox Fernando Day", tickets: "10+" },
-  { name: "Tâioân Siothéng", tickets: "10+" },
-  { name: "就是愛台灣啦", tickets: "10+" },
   { name: "Tide One Pioneers (TOP) 台灣拓荒者船隊", tickets: "10+" },
+  { name: "就是愛台灣啦", tickets: "10+" },
   { name: "TECO-BOSTON", tickets: "10+" },
   { name: "Woo告台", tickets: "9+" },
   { name: "Need好台", tickets: "8+" },
+  { name: "Lala Mountain", tickets: "8+" },
   { name: "Taiwanzonian-bos", tickets: "7+" },
   { name: "Taiwan熊讚", tickets: "6+" },
   { name: "從南到北 襪ㄧ下！", tickets: "6+" },
   { name: "襪哩咧", tickets: "6+" },
-  { name: "0800092000", tickets: "5+" },
-  { name: "拚明年總統來開球", tickets: "5+" },
-  { name: "波士頓北一女校友會", tickets: "5+" },
-  { name: "花栗鼠吃雞排", tickets: "5+" },
-  { name: "Lala Mountain", tickets: "4+" },
-  { name: "MOCHI", tickets: "4+" },
-  { name: "Taiwan Bon Bon", tickets: "4+" },
-  { name: "Taiwan 襪Up！", tickets: "4+" },
-  { name: "灣a紅襪", tickets: "4+" },
-  { name: "襪賽！Taiwan", tickets: "4+" },
-  { name: "金余", tickets: "4+" },
-  { name: "North Shore TAIWANESE", tickets: "3+" },
-  { name: "NTUB05BOS", tickets: "3+" },
-  { name: "Taiwan 55688", tickets: "3+" },
-  { name: "台灣留學生聯合加油團", tickets: "3+" },
-  { name: "襪係臺灣郎", tickets: "3+" },
-  { name: "飛天少女豬", tickets: "3+" },
-  { name: "Alexida", tickets: "2+" },
-  { name: "AmiLumiGoGoGo", tickets: "2+" },
-  { name: "Boston Taiwanese Biotechnology Association", tickets: "2+" },
-  { name: "台灣霹靂火鳳凰", tickets: "2+" },
-  { name: "羅德島灰姑娘", tickets: "2+" },
-  { name: "芬威要有TaiwanDay才隊", tickets: "2+" },
+  { name: "0800092000", tickets: "持續增加中" },
+  { name: "Taiwan 55688", tickets: "持續增加中" },
+  { name: "拚明年總統來開球", tickets: "持續增加中" },
+  { name: "波士頓北一女校友會", tickets: "持續增加中" },
+  { name: "花栗鼠吃雞排", tickets: "持續增加中" },
+  { name: "Alexida", tickets: "持續增加中" },
+  { name: "MOCHI", tickets: "持續增加中" },
+  { name: "Taiwan Bon Bon", tickets: "持續增加中" },
+  { name: "Taiwan 襪Up！", tickets: "持續增加中" },
+  { name: "灣a紅襪", tickets: "持續增加中" },
+  { name: "襪賽！Taiwan", tickets: "持續增加中" },
+  { name: "金余", tickets: "持續增加中" },
+  { name: "North Shore TAIWANESE", tickets: "持續增加中" },
+  { name: "NTUB05BOS", tickets: "持續增加中" },
+  { name: "Shield", tickets: "持續增加中" },
+  { name: "台灣留學生聯合加油團", tickets: "持續增加中" },
+  { name: "從New Hampshire來的台灣人隊", tickets: "持續增加中" },
+  { name: "波城老華僑隊", tickets: "持續增加中" },
+  { name: "襪係臺灣郎", tickets: "持續增加中" },
+  { name: "飛天少女豬", tickets: "持續增加中" },
+  { name: "AmiLumiGoGoGo", tickets: "持續增加中" },
+  { name: "台灣霹靂火鳳凰", tickets: "持續增加中" },
+  { name: "羅德島灰姑娘", tickets: "持續增加中" },
+  { name: "芬威要有TaiwanDay才隊", tickets: "持續增加中" },
+  { name: "好棒 - Good Bat", tickets: "持續增加中" },
+  { name: "加入就有朋友隊", tickets: "持續增加中" },
 ];
 
 const content = {
@@ -220,6 +224,18 @@ const content = {
         "僑團、公司、學校社團或組織可以直接使用單位名稱作為隊名，例如波士頓台灣人生技協會 BTBA。這樣大家在 TEAM TAIWAN 集氣榜上，也可以清楚看到各僑團、單位與組織的集結力量。",
       teamNameText3:
         "沒有要組隊，或未滿 3 人的朋友，也可以直接透過 Zeffy 購票，同樣享有 5/31 前每張票 $47 的價格。未滿 3 人仍可填寫隊名，但不列入創意隊名比賽資格。",
+      friendTeamEyebrow: "新隊伍",
+      friendTeamTitle: "🤝 加入就有朋友隊",
+      friendTeamIntro:
+        "因為收到很多朋友的建議，這次主辦單位特別幫大家建立了一個新隊伍：加入就有朋友隊。",
+      friendTeamText:
+        "如果你是一個人、兩個人想來參加 912，還沒有固定隊伍，或是想趁這次活動認識更多新朋友，都非常歡迎加入這一隊！912 不只是一起進 Fenway 看球，也是一個認識新朋友、連結台灣社群的好機會。",
+      friendTeamTransfer:
+        "如果你已經報名其他隊伍，但想轉到「加入就有朋友隊」，也可以直接傳訊息給主辦單位，我們會協助大家轉隊。",
+      friendTeamGift:
+        "凡是加入「加入就有朋友隊」的朋友，活動當天主辦單位也會準備一份特別小禮物送給大家！",
+      friendTeamPunch:
+        "一個人來也沒關係。兩個人來也很歡迎。加入就有朋友，912 一起坐、一起加油！🇹🇼⚾",
       exampleTitle: "可個人購票，也可以 3 人以上組隊",
       exampleText:
         "歡迎大家發揮創意，邀請親友一起加入 9/12 Fenway 台灣集結！沒有要組隊的人，也可以直接購票參加。3 人以上的隊伍將自動參加「最佳創意隊名獎」評選。主辦單位將依照隊名創意、活動精神與整體趣味性進行評選，並保有最終決定權。得獎隊伍也會有獎品喔！",
@@ -587,6 +603,18 @@ const content = {
         "Community groups, companies, student associations, or organizations can use their organization name as the team name, such as Boston Taiwanese Biotechnology Association (BTBA). This helps the community see the collective strength of each group on the TEAM TAIWAN Leaderboard.",
       teamNameText3:
         "Individuals or groups under 3 can also buy directly through Zeffy and still receive the $47 price before 5/31. Groups under 3 may enter a team name, but will not be eligible for the creative team name contest.",
+      friendTeamEyebrow: "New Team",
+      friendTeamTitle: "🤝 Join and Make Friends Team",
+      friendTeamIntro:
+        "After receiving suggestions from many friends, the organizer has created a new team for everyone: Join and Make Friends Team.",
+      friendTeamText:
+        "If you are coming alone, coming as a pair, do not have a fixed team yet, or would like to meet more new friends through this event, you are very welcome to join this team. 912 is not only about watching a game together at Fenway; it is also a great opportunity to meet new friends and connect with the Taiwanese community.",
+      friendTeamTransfer:
+        "If you have already registered under another team but would like to switch to the Join and Make Friends Team, please message the organizer directly and we will help with the team change.",
+      friendTeamGift:
+        "Everyone who joins the Join and Make Friends Team will also receive a special small gift from the organizer on event day.",
+      friendTeamPunch:
+        "Coming alone is totally fine. Coming as a pair is very welcome. Join and make friends — on 9/12, let’s sit together and cheer together! 🇹🇼⚾",
       exampleTitle: "Buy Individually or Form a Team of 3+",
       exampleText:
         "Everyone is welcome to invite friends and family to join the 9/12 Fenway Taiwan rally. People who do not want to form a team can still buy tickets directly. Teams of 3 or more will automatically enter the Best Creative Team Name contest. The organizer will evaluate creativity, event spirit, and overall fun, and reserves final decision-making authority. Winning teams will receive prizes.",
@@ -906,6 +934,10 @@ function BubbleLeaderboard({ t }) {
     "absolute left-[31%] top-[2800px] h-32 w-32 bg-emerald-700 text-[11px] ring-8 ring-emerald-100",
     "absolute left-[58%] top-[2735px] h-32 w-32 bg-blue-600 text-[11px] ring-8 ring-blue-100",
     "absolute left-[80%] top-[2800px] h-32 w-32 bg-teal-600 text-[11px] ring-8 ring-teal-100",
+    "absolute left-[6%] top-[2960px] h-32 w-32 bg-rose-600 text-xs ring-8 ring-rose-100",
+    "absolute left-[38%] top-[2940px] h-32 w-32 bg-emerald-600 text-xs ring-8 ring-emerald-100",
+    "absolute left-[70%] top-[2965px] h-32 w-32 bg-blue-600 text-xs ring-8 ring-blue-100",
+    "absolute left-[22%] top-[3090px] h-32 w-32 bg-violet-600 text-[11px] ring-8 ring-violet-100",
   ];
 
   const mobileColors = [
@@ -916,7 +948,7 @@ function BubbleLeaderboard({ t }) {
 
   return (
     <>
-      <div className="relative mx-auto hidden min-h-[2950px] max-w-6xl md:block">
+      <div className="relative mx-auto hidden min-h-[3270px] max-w-6xl md:block">
         {teamLeaderboard.map((team, index) => (
           <div
             key={team.name}
@@ -1141,6 +1173,7 @@ export default function TaiwanFanNightWebsite() {
             <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">{t.teams.steps.map(([icon, title, body]) => <InfoCard key={title} icon={icon} title={title}>{body}</InfoCard>)}</div>
             <Card className="mt-8 border-emerald-200 bg-emerald-50 p-6 md:p-8"><div className="grid gap-6 lg:grid-cols-[1fr_auto] lg:items-center"><div><p className="text-sm font-semibold uppercase tracking-[0.25em] text-emerald-700">Zeffy Team Name</p><h3 className="mt-2 text-2xl font-black text-slate-950">{t.teams.teamNameTitle}</h3><p className="mt-4 leading-7 text-slate-700">{t.teams.teamNameText1}</p><p className="mt-3 leading-7 text-slate-700">{t.teams.teamNameText2}</p><p className="mt-3 text-sm leading-7 text-slate-600">{t.teams.teamNameText3}</p></div><a href={zeffyPaymentLink} target="_blank" rel="noreferrer" className="rounded-full bg-sky-600 px-6 py-3 text-center font-bold text-white shadow-md ring-2 ring-sky-100 transition hover:bg-sky-700">{t.headerBuy}</a></div></Card>
             <div className="mt-10 rounded-[2rem] bg-gradient-to-br from-emerald-700 to-sky-700 p-8 text-white shadow-lg"><div className="grid gap-8 lg:grid-cols-[0.8fr_1.2fr] lg:items-center"><div><p className="text-sm font-semibold uppercase tracking-[0.25em] text-white/75">Team Name Ideas</p><h3 className="mt-3 text-3xl font-black">{t.teams.exampleTitle}</h3><p className="mt-4 text-sm leading-7 text-white/85">{t.teams.exampleText}</p><p className="mt-3 text-sm leading-7 text-white/85">{t.teams.nameReminder}</p></div><div><p className="mb-4 text-sm font-bold uppercase tracking-wide text-white/80">{t.teams.examplesLabel}</p><div className="flex flex-wrap gap-3">{teamExamples.map((name) => <span key={name} className="rounded-full bg-white/15 px-4 py-2 text-sm font-semibold backdrop-blur">{name}</span>)}</div></div></div></div>
+            <Card className="mt-8 overflow-hidden border-sky-200 bg-gradient-to-br from-sky-50 via-white to-emerald-50 p-0 shadow-lg"><div className="grid gap-0 lg:grid-cols-[0.72fr_1.28fr] lg:items-stretch"><div className="flex flex-col justify-center bg-gradient-to-br from-sky-600 to-teal-600 p-8 text-white md:p-10"><p className="text-sm font-semibold uppercase tracking-[0.25em] text-white/80">{t.teams.friendTeamEyebrow}</p><h3 className="mt-3 text-3xl font-black leading-tight">{t.teams.friendTeamTitle}</h3><p className="mt-5 rounded-2xl bg-white/15 p-4 text-base font-bold leading-7 text-white">{t.teams.friendTeamPunch}</p></div><div className="p-6 md:p-8"><p className="text-lg font-black leading-7 text-slate-950">{t.teams.friendTeamIntro}</p><p className="mt-4 leading-7 text-slate-700">{t.teams.friendTeamText}</p><div className="mt-5 grid gap-4 md:grid-cols-2"><div className="rounded-2xl bg-white p-4 text-sm leading-7 text-slate-700 shadow-sm ring-1 ring-sky-100">{t.teams.friendTeamTransfer}</div><div className="rounded-2xl bg-white p-4 text-sm font-bold leading-7 text-sky-900 shadow-sm ring-1 ring-sky-100">{t.teams.friendTeamGift}</div></div></div></div></Card>
           </div>
         </section>
 
