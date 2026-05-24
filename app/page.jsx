@@ -10,7 +10,7 @@ const zeffyQrCode = "/zeffy-qr-code.png";
 const officialLineGroup = "https://line.me/ti/g/uyAcZJRn75";
 const googleFormLink = "https://forms.gle/27V7wtAEBxRbboL79";
 const zeffyPaymentLink = "https://www.zeffy.com/en-US/ticketing/912-taiwan-fan-night-at-fenway--912";
-const goFundMeLink = "https://gofund.me/1264d8d4b";
+const goFundMeLink = "https://giving.gofundme.com/campaign/805027/landing";
 const organizerLine = "https://line.me/ti/p/xbvkW3pO20";
 const volunteerFormLink = "https://forms.gle/1KrTH1ETd9quXNMJ6";
 const tshirtSubmissionFormLink = "https://forms.gle/g7EmFkHFmpt1t1RA7";
@@ -1235,17 +1235,7 @@ export default function TaiwanFanNightWebsite() {
               </div>
             </Card>
 
-            <div className="mt-8 grid gap-6 lg:grid-cols-2">
-              <Card className="border-emerald-200 bg-white p-7 shadow-lg">
-                <p className="text-sm font-semibold uppercase tracking-[0.25em] text-emerald-700">Mockup Download</p>
-                <h3 className="mt-2 text-3xl font-black text-slate-950">{t.shirt.mockupDownloadTitle}</h3>
-                <p className="mt-4 leading-7 text-slate-700">{t.shirt.mockupDownloadText}</p>
-                <div className="mt-6 flex flex-wrap gap-3">
-                  <a href="#" className="rounded-full bg-emerald-700 px-5 py-3 text-sm font-bold text-white transition hover:bg-emerald-800">{t.shirt.frontMockup}</a>
-                  <a href="#" className="rounded-full border border-emerald-300 bg-white px-5 py-3 text-sm font-bold text-emerald-800 transition hover:bg-emerald-50">{t.shirt.backMockup}</a>
-                </div>
-              </Card>
-
+            <div className="mt-8">
               <Card className="border-sky-200 bg-white p-7 shadow-lg">
                 <p className="text-sm font-semibold uppercase tracking-[0.25em] text-sky-700">Submission</p>
                 <h3 className="mt-2 text-3xl font-black text-slate-950">{t.shirt.submissionTitle}</h3>
