@@ -30,7 +30,7 @@ const teamExamples = ["台灣No.1隊", "Fenway佔領隊", "珍奶續命隊", "Te
 const teamLeaderboard = [
   { name: "波士頓台灣媽媽親子會", tickets: "145+" },
   { name: "波克萊台灣商會", tickets: "130+" },
-  { name: "我朋友說想湊個50人的隊", tickets: "125+" },
+  { name: "我朋友說想湊個50人的隊", tickets: "135+" },
   { name: "Boston FASCA", tickets: "40+" },
   { name: "BTBC 波士頓台灣龍舟隊", tickets: "30+" },
   { name: "我們也來組一隊", tickets: "25+" },
@@ -887,7 +887,7 @@ function BubbleLeaderboard({ t }) {
   const bubbleStyles = [
     "absolute left-[34%] top-[40px] h-80 w-80 bg-emerald-700 text-4xl ring-8 ring-emerald-100",
     "absolute left-[8%] top-[125px] h-72 w-72 bg-rose-500 text-3xl ring-8 ring-rose-100",
-    "absolute left-[64%] top-[125px] h-72 w-72 bg-sky-600 text-3xl ring-8 ring-sky-100",
+    "absolute left-[62%] top-[110px] h-[19rem] w-[19rem] bg-sky-600 text-3xl ring-8 ring-sky-100",
     "absolute left-[37%] top-[405px] h-52 w-52 bg-blue-600 text-xl ring-8 ring-blue-100",
     "absolute left-[15%] top-[500px] h-52 w-52 bg-orange-500 text-xl ring-8 ring-orange-100",
     "absolute left-[66%] top-[500px] h-52 w-52 bg-emerald-500 text-lg ring-8 ring-emerald-100",
