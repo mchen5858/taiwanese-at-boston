@@ -28,35 +28,38 @@ const coHosts = [
 const teamExamples = ["台灣No.1隊", "Fenway佔領隊", "珍奶續命隊", "Team Taiwan GO隊", "波士頓台味隊"];
 
 const teamLeaderboard = [
-  { name: "波士頓台灣媽媽親子會", tickets: "145+" },
-  { name: "波克萊台灣商會", tickets: "130+" },
+  { name: "波士頓台灣媽媽親子會", tickets: "150+" },
   { name: "我朋友說想湊個50人的隊", tickets: "135+" },
+  { name: "波克萊台灣商會", tickets: "130+" },
   { name: "Boston FASCA", tickets: "40+" },
   { name: "BTBC 波士頓台灣龍舟隊", tickets: "30+" },
   { name: "我們也來組一隊", tickets: "25+" },
   { name: "波士頓台灣人生技協會 (BTBA)", tickets: "20+" },
-  { name: "波士頓台灣世衞協進會", tickets: "17+" },
   { name: "Andover 貢茶", tickets: "15+" },
-  { name: "Taiwan Film Festival of Boston", tickets: "15+" },
+  { name: "Taiwan Film Festival of Boston", tickets: "20+" },
+  { name: "波士頓台灣世衞協進會", tickets: "15+" },
   { name: "當偶們同在一起", tickets: "15+" },
-  { name: "羅德島台灣同好會", tickets: "14+" },
   { name: "Tâioân Siothéng", tickets: "13+" },
   { name: "The Boba Tea Party", tickets: "12+" },
   { name: "Formosa Strong", tickets: "10+" },
   { name: "NCCU, TCCNE & BTEAA", tickets: "10+" },
   { name: "Red Sox Fernando Day", tickets: "10+" },
-  { name: "Tide One Pioneers (TOP) 台灣拓荒者船隊", tickets: "10+" },
-  { name: "就是愛台灣啦", tickets: "10+" },
   { name: "TECO-BOSTON", tickets: "10+" },
-  { name: "Woo告台", tickets: "9+" },
-  { name: "Need好台", tickets: "8+" },
-  { name: "Lala Mountain", tickets: "8+" },
-  { name: "Taiwanzonian-bos", tickets: "7+" },
-  { name: "Taiwan熊讚", tickets: "6+" },
-  { name: "從南到北 襪ㄧ下！", tickets: "6+" },
-  { name: "襪哩咧", tickets: "6+" },
+  { name: "Tide One Pioneers (TOP) 台灣拓荒者船隊", tickets: "10+" },
+  { name: "加入就有朋友隊", tickets: "10+" },
+  { name: "就是愛台灣啦", tickets: "10+" },
+  { name: "羅德島台灣同好會", tickets: "10+" },
+  { name: "Woo告台", tickets: "持續增加中" },
+  { name: "Lala Mountain", tickets: "持續增加中" },
+  { name: "Need好台", tickets: "持續增加中" },
+  { name: "Taiwanzonian-bos", tickets: "持續增加中" },
+  { name: "Taiwan熊讚", tickets: "持續增加中" },
+  { name: "從南到北 襪ㄧ下！", tickets: "持續增加中" },
+  { name: "襪哩咧", tickets: "持續增加中" },
   { name: "0800092000", tickets: "持續增加中" },
+  { name: "Ellie 與她的夥伴們", tickets: "持續增加中" },
   { name: "Taiwan 55688", tickets: "持續增加中" },
+  { name: "Taiwanese-ish 台灣味 🇹🇼", tickets: "持續增加中" },
   { name: "拚明年總統來開球", tickets: "持續增加中" },
   { name: "波士頓北一女校友會", tickets: "持續增加中" },
   { name: "花栗鼠吃雞排", tickets: "持續增加中" },
@@ -80,7 +83,6 @@ const teamLeaderboard = [
   { name: "羅德島灰姑娘", tickets: "持續增加中" },
   { name: "芬威要有TaiwanDay才隊", tickets: "持續增加中" },
   { name: "好棒 - Good Bat", tickets: "持續增加中" },
-  { name: "加入就有朋友隊", tickets: "持續增加中" },
 ];
 
 const content = {
@@ -962,9 +964,11 @@ function BubbleLeaderboard({ t }) {
                 {team.tickets} {t.leaderboard.ticketsLabel}
               </div>
             )}
-            <div className="mt-2 text-[11px] font-semibold opacity-90">
-              {index === 0 ? t.leaderboard.leading : t.leaderboard.growing}
-            </div>
+            {(index === 0 || Number.isNaN(parseInt(team.tickets, 10))) && (
+              <div className="mt-2 text-[11px] font-semibold opacity-90">
+                {index === 0 ? t.leaderboard.leading : t.leaderboard.growing}
+              </div>
+            )}
           </div>
         ))}
       </div>
@@ -983,9 +987,11 @@ function BubbleLeaderboard({ t }) {
                 {team.tickets} {t.leaderboard.ticketsLabel}
               </div>
             )}
-            <div className="mt-1 text-[10px] font-semibold opacity-90">
-              {index === 0 ? t.leaderboard.leading : t.leaderboard.growing}
-            </div>
+            {(index === 0 || Number.isNaN(parseInt(team.tickets, 10))) && (
+              <div className="mt-1 text-[10px] font-semibold opacity-90">
+                {index === 0 ? t.leaderboard.leading : t.leaderboard.growing}
+              </div>
+            )}
           </div>
         ))}
       </div>
