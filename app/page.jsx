@@ -9,7 +9,7 @@ const zeffyQrCode = "/zeffy-qr-code.png";
 
 const officialLineGroup = "https://line.me/ti/g/uyAcZJRn75";
 const googleFormLink = "https://forms.gle/27V7wtAEBxRbboL79";
-const zeffyPaymentLink = "https://www.zeffy.com/en-US/ticketing/912-taiwan-fan-night-at-fenway--912";
+const zeffyPaymentLink = "https://www.zeffy.com/en-US/ticketing/912-taiwan-fan-night-at-fenway--912-3";
 const goFundMeLink = "https://giving.gofundme.com/campaign/805027/landing";
 const organizerLine = "https://line.me/ti/p/xbvkW3pO20";
 const volunteerFormLink = "https://forms.gle/1KrTH1ETd9quXNMJ6";
@@ -28,16 +28,16 @@ const coHosts = [
 const teamExamples = ["台灣No.1隊", "Fenway佔領隊", "珍奶續命隊", "Team Taiwan GO隊", "波士頓台味隊"];
 
 const teamLeaderboard = [
-  { name: "波士頓台灣媽媽親子會", tickets: "145+" },
-  { name: "波克萊台灣商會", tickets: "130+" },
-  { name: "我朋友說想湊個50人的隊", tickets: "135+" },
-  { name: "Boston FASCA", tickets: "40+" },
+  { name: "波士頓台灣媽媽親子會", tickets: "165+" },
+  { name: "我朋友說想湊個50人的隊", tickets: "145+" },
+  { name: "波克萊台灣商會", tickets: "140+" },
+  { name: "Boston FASCA", tickets: "45+" },
   { name: "BTBC 波士頓台灣龍舟隊", tickets: "30+" },
   { name: "我們也來組一隊", tickets: "25+" },
-  { name: "波士頓台灣人生技協會 (BTBA)", tickets: "20+" },
-  { name: "波士頓台灣世衞協進會", tickets: "17+" },
+  { name: "波士頓台灣人生技協會 (BTBA)", tickets: "25+" },
+  { name: "Taiwan Film Festival of Boston", tickets: "20+" },
   { name: "Andover 貢茶", tickets: "15+" },
-  { name: "Taiwan Film Festival of Boston", tickets: "15+" },
+  { name: "波士頓台灣世衞協進會", tickets: "15+" },
   { name: "當偶們同在一起", tickets: "15+" },
   { name: "羅德島台灣同好會", tickets: "14+" },
   { name: "Tâioân Siothéng", tickets: "13+" },
@@ -46,20 +46,25 @@ const teamLeaderboard = [
   { name: "NCCU, TCCNE & BTEAA", tickets: "10+" },
   { name: "Red Sox Fernando Day", tickets: "10+" },
   { name: "Tide One Pioneers (TOP) 台灣拓荒者船隊", tickets: "10+" },
+  { name: "加入就有朋友隊", tickets: "10+" },
   { name: "就是愛台灣啦", tickets: "10+" },
   { name: "TECO-BOSTON", tickets: "10+" },
-  { name: "Woo告台", tickets: "9+" },
-  { name: "Need好台", tickets: "8+" },
-  { name: "Lala Mountain", tickets: "8+" },
-  { name: "Taiwanzonian-bos", tickets: "7+" },
-  { name: "Taiwan熊讚", tickets: "6+" },
-  { name: "從南到北 襪ㄧ下！", tickets: "6+" },
-  { name: "襪哩咧", tickets: "6+" },
+  { name: "Woo告台", tickets: "持續增加中" },
+  { name: "Lala Mountain", tickets: "持續增加中" },
+  { name: "Need好台", tickets: "持續增加中" },
+  { name: "Taiwanzonian-bos", tickets: "持續增加中" },
+  { name: "Taiwan熊讚", tickets: "持續增加中" },
+  { name: "從南到北 襪ㄧ下！", tickets: "持續增加中" },
+  { name: "襪哩咧", tickets: "持續增加中" },
   { name: "0800092000", tickets: "持續增加中" },
+  { name: "Ellie 與她的夥伴們", tickets: "持續增加中" },
   { name: "Taiwan 55688", tickets: "持續增加中" },
+  { name: "Taiwanese-ish 台灣味 🇹🇼", tickets: "持續增加中" },
   { name: "拚明年總統來開球", tickets: "持續增加中" },
   { name: "波士頓北一女校友會", tickets: "持續增加中" },
+  { name: "臺灣留學生聯合加油團", tickets: "持續增加中" },
   { name: "花栗鼠吃雞排", tickets: "持續增加中" },
+  { name: "茅起來打", tickets: "持續增加中" },
   { name: "Alexida", tickets: "持續增加中" },
   { name: "MOCHI", tickets: "持續增加中" },
   { name: "Taiwan Bon Bon", tickets: "持續增加中" },
@@ -71,16 +76,19 @@ const teamLeaderboard = [
   { name: "NTUB05BOS", tickets: "持續增加中" },
   { name: "Shield", tickets: "持續增加中" },
   { name: "台灣留學生聯合加油團", tickets: "持續增加中" },
+  { name: "大直隊", tickets: "持續增加中" },
   { name: "從New Hampshire來的台灣人隊", tickets: "持續增加中" },
+  { name: "投我們就（隊）", tickets: "持續增加中" },
   { name: "波城老華僑隊", tickets: "持續增加中" },
   { name: "襪係臺灣郎", tickets: "持續增加中" },
   { name: "飛天少女豬", tickets: "持續增加中" },
   { name: "AmiLumiGoGoGo", tickets: "持續增加中" },
+  { name: "Snoopy 12", tickets: "持續增加中" },
   { name: "台灣霹靂火鳳凰", tickets: "持續增加中" },
   { name: "羅德島灰姑娘", tickets: "持續增加中" },
   { name: "芬威要有TaiwanDay才隊", tickets: "持續增加中" },
-  { name: "好棒 - Good Bat", tickets: "持續增加中" },
-  { name: "加入就有朋友隊", tickets: "持續增加中" },
+  { name: "Team KHH", tickets: "新隊伍" },
+  { name: "好棒 - Good Bat", tickets: "新隊伍" },
 ];
 
 const content = {
@@ -152,48 +160,28 @@ const content = {
     },
     tickets: {
       eyebrow: "Tickets",
-      title: "5/31 前組隊優惠",
+      title: "912 Taiwan Fans Night 購票更新",
       description:
-        "無論是否組隊，只要在 5/31 前透過 Zeffy 購票付款，每張票都是 $47。3 人以上可自行組隊並使用相同 Team Name 參加創意隊名比賽。",
-      under3Title: "不到 3 人也可以直接購買！",
+        "感謝大家對 912 Taiwan Fans Night at Fenway 的熱烈支持！6/1 起新釋出的票券為 $50 / ticket，仍包含 Red Sox × Bruins Limited-Edition Jersey。後續購票的朋友也可以繼續填寫隊名，加入原本的隊伍，我們會盡量協助安排在相近座位。",
+      under3Title: "個人、兩人同行也可以直接購買！",
       under3Text:
-        "個人、兩人同行，或還沒有隊伍的朋友，一樣可以直接透過 Zeffy 購票，5/31 前同樣享有每張票 $47 的優惠價格。",
-      dealTitle: "組隊優惠票",
-      dealSubtitle: "5/31 前完成 Zeffy 購票",
+        "個人、兩人同行，或還沒有隊伍的朋友，一樣可以直接透過 Zeffy 購票。購票時也可以填寫隊名，加入原本的隊伍或自行組隊。",
+      dealTitle: "目前新釋出票券",
+      dealSubtitle: "6/1 起新票價｜$50 / ticket｜Includes Limited-Edition Jersey",
       benefits: [
-        "完全無任何其他費用或手續費",
-        "可獲得限量 Red Sox × Bruins co-branding Baseball Jersey 一件",
-        "每張票 BTCF 將另外捐出 $3 給 Boys & Girls Clubs of Boston",
-        "每人一件台灣主題 T-shirt",
-        "會盡量安排在附近的位置（例如前後左右）",
-        "可參加最佳創意隊名比賽",
+        "$50 / ticket",
+        "Includes Red Sox × Bruins Limited-Edition Jersey",
+        "這批票券與先前販售的票種相同，仍然包含限量 Jersey",
+        "後續購票者仍可填寫隊名，加入原本隊伍",
+        "主辦單位會盡量協助安排在相近座位",
+        "每人一件台灣主題 T-shirt，並可參加活動抽獎",
       ],
       dealNote:
-        "想享有 5/31 前 $47 優惠，請每位參加者於 5/31 前自行完成 Zeffy 購票付款。沒有要組隊、或未滿 3 人也可以直接購票，同樣享有每張票 $47 的價格。若要組隊，請填寫相同 Team Name。",
+        "原本活動規劃中，5/31 前購買的票券為 $47，包含 Red Sox × Bruins 限量聯名 Jersey；6/1 之後則預計改販售一般團體優惠票。不過，在收到紅襪提供的一般團體優惠票連結後，我們發現一般團體票雖然票面價格為 $41，但加上官方售票手續費後，每張票實際價格為 $48.16。因此，經過與紅襪銷售部門討論後，我們決定不販售一般團體優惠票，而是繼續提供包含限量 Jersey 的票券。",
       seatingTitle: "🎟 座位提醒 Seating Notice",
       seating: [
         "填寫相同 Team Name 的朋友，主辦單位會盡量安排坐在一起或附近。所有參與者都會安排在 Fenway Park — Bleacher 41, 42, & 43 區，一起為台灣應援。",
-        "由於 5/31 前購買的 $47 票券包含 Red Sox × Bruins 限量聯名 Jersey，與 6/1 後的一般票券屬於不同票種與不同批次，座位安排可能會分批處理。",
-        "若同一隊伍中有人在 5/31 前購票、有人在 6/1 後購票，主辦單位仍會盡量協助安排在附近，但無法保證完全連號或坐在同一排。",
-        "若希望和朋友、家人或隊友坐得更近，建議大家盡早購票，並填寫完全相同的 Team Name。",
       ],
-      afterTitle: "專屬團體購票連結",
-      afterSubtitle: "6/1 後正式開賣",
-      afterText:
-        "6/1 之後，大家可以透過 Red Sox 提供給波克萊基金會專屬的 Taiwan Fans Night 優惠購票連結購票。",
-      afterPrice: "$41 + 約 8–9% 手續費",
-      afterNote:
-        "無論是 6/1 前或是 6/1 後購票者，我們全都會坐在 Bleacher 41, 42, & 43 同一區、得到主辦單位發的台灣主題 T-shirt，並參加 912 台灣集結活動大抽獎！",
-      afterWarning:
-        "⚠️ 注意：6/1 之後透過官方購票連結購買的票券，將不包含限量 Red Sox × Bruins co-branding Baseball Jersey。",
-      officialPrice:
-        "依據紅襪官網，目前 Fenway Park 912 當天 Bleacher 41, 42, & 43 區票價約為 $64 ~ $88 一張，而且每張票還需要再加上 $8.75 per-ticket fee。相較之下，無論是 $47 組隊優惠或是 $41 專屬團體購票，都是主辦單位幫我們 TEAM TAIWAN 與紅襪爭取到的很好優惠！大家所付的票價將全數用於支付給 Red Sox 的團體票費用，BTCF 不從本活動中營利。",
-      priceTitle: "關於票價說明",
-      priceHighlight: "這次票價遠低於 Red Sox 官方同區票價",
-      priceText:
-        "目前同區官方票價約為 $64–$88，且每張票還會再加上約 $8.75 手續費。這次能有這麼好的優惠，是主辦單位辛苦替大家向 Red Sox 爭取而來的。",
-      includesTitle: "本活動票價不只是包含一張球票，也包含：",
-      includes: ["台灣社群專屬集結區", "和大家坐在同一區的活動體驗", "一起讓 Fenway 看見台灣的共同意義"],
       valueText:
         "如果您只是想單純看一場球賽，市場上也許有機會找到更便宜的票。但如果您想和上百位台灣人一起坐在同一區、一起穿上台灣、一起讓 Red Sox 看見台灣，這份價值是其他票無法取代的。",
       valuePunch: "這不只是買一張球票，而是一起完成一件讓 Fenway 看見台灣的事。",
@@ -203,18 +191,18 @@ const content = {
       eText2: "電子票可以轉讓給其他人；如果活動當天無法參加，可以透過 MLB Ballpark App 將票轉送給朋友或家人。",
       giveawayTitle: "當天紅襪現場贈品",
       giveawayText:
-        "5/31 前完成購票者，可獲得 Red Sox 提供的限量 Red Sox × Bruins co-branding Baseball Jersey。此為 9/12 當天在 Fenway Park 現場領取的贈品。",
+        "6/1 起的 $50 票券仍包含 Red Sox × Bruins Limited-Edition Jersey。此為 9/12 當天在 Fenway Park 現場領取的贈品。",
       giveawayNote: "先到先領，尺寸發完為止；數量與尺寸依 Red Sox 現場提供為準。",
     },
     teams: {
       eyebrow: "TEAM TAIWAN",
       title: "TEAM TAIWAN 組隊方式",
       description:
-        "不管是否組隊，每位參加者都可以自行至 Zeffy 購票付款，5/31 前每張票都是 $47。3 人以上即可自行組隊並命名；隊長只需要取隊名、邀請朋友，並提醒隊員填寫完全相同的 Team Name。",
+        "不管是否組隊，每位參加者都可以自行至 Zeffy 購票付款，目前票價為 $50，並包含 Red Sox × Bruins Limited-Edition Jersey。3 人以上即可自行組隊並命名；隊長只需要取隊名、邀請朋友，並提醒隊員填寫完全相同的 Team Name。",
       steps: [
         ["👥", "1. 隊長先決定隊伍名稱", "3 人以上即可成立隊伍。隊名可以自由創意命名，中英文皆可。僑團、公司、學校社團或組織，也可以直接使用單位名稱作為隊名。"],
         ["📣", "2. 分享隊名給隊員", "隊長把隊伍名稱分享給隊員。請所有隊員購票時填寫完全相同的隊名，以利後續統計、座位安排與比賽資格確認。"],
-        ["🎟️", "3. 每位參加者自行購票付款", "每位參加者自行至 Zeffy 購票付款。隊長不需要代收款，也不需要幫大家統一購票。沒有要組隊或未滿 3 人也可以直接購票，同樣享有 5/31 前每張票 $47 的價格。"],
+        ["🎟️", "3. 每位參加者自行購票付款", "每位參加者自行至 Zeffy 購票付款。隊長不需要代收款，也不需要幫大家統一購票。沒有要組隊或未滿 3 人也可以直接購票，同樣可以直接購票並填寫隊名。"],
         ["📝", "給隊長的小提醒", "人數較多的隊伍，建議隊長可以自行建立一份名單，讓隊員回覆是否已完成報名與購票，方便隊長掌握自己隊伍的人數。"],
       ],
       teamNameTitle: "購票時請填寫 Team Name",
@@ -223,7 +211,7 @@ const content = {
       teamNameText2:
         "僑團、公司、學校社團或組織可以直接使用單位名稱作為隊名，例如波士頓台灣人生技協會 BTBA。這樣大家在 TEAM TAIWAN 集氣榜上，也可以清楚看到各僑團、單位與組織的集結力量。",
       teamNameText3:
-        "沒有要組隊，或未滿 3 人的朋友，也可以直接透過 Zeffy 購票，同樣享有 5/31 前每張票 $47 的價格。未滿 3 人仍可填寫隊名，但不列入創意隊名比賽資格。",
+        "沒有要組隊，或未滿 3 人的朋友，也可以直接透過 Zeffy 購票，同樣可以直接購票並填寫隊名。未滿 3 人仍可填寫隊名，但不列入創意隊名比賽資格。",
       friendTeamEyebrow: "新隊伍",
       friendTeamTitle: "🤝 加入就有朋友隊",
       friendTeamIntro:
@@ -254,18 +242,18 @@ const content = {
       growing: "持續增加中",
       joinTitle: "你的隊伍也可以一起集氣！",
       joinText:
-        "3 人以上就可以組隊，自取隊名並加入 TEAM TAIWAN 集氣榜。5/31 前透過 Zeffy 購票，每張票都是 $47。隊名請使用適當、尊重、友善的名稱；主辦單位保留隊名審核與調整之權利。",
+        "3 人以上就可以組隊，自取隊名並加入 TEAM TAIWAN 集氣榜。目前透過 Zeffy 購票，每張票為 $50，並包含限量 Jersey。隊名請使用適當、尊重、友善的名稱；主辦單位保留隊名審核與調整之權利。",
       joinButton: "立即組隊",
     },
     payment: {
       eyebrow: "Payment",
       title: "付款方式",
       description:
-        "新付款方式：每位參加者自行至 Zeffy 購票付款。隊長不需要代收款，也不需要幫大家統一購票。沒有要組隊或未滿 3 人也可以直接購票，5/31 前同樣享有每張票 $47。",
+        "新付款方式：每位參加者自行至 Zeffy 購票付款。隊長不需要代收款，也不需要幫大家統一購票。沒有要組隊或未滿 3 人也可以直接購票，目前可直接購買 $50 Jersey 票券。",
       main: "Main Payment Method",
       zeffyTitle: "Zeffy 購票付款",
       zeffyText:
-        "每位參加者自行透過 Zeffy 購票付款。沒有要組隊或未滿 3 人也可以直接購票，5/31 前同樣享有每張票 $47。若有組隊，購票時請務必填寫 Team Name，同一隊請填寫完全相同的隊名。",
+        "每位參加者自行透過 Zeffy 購票付款。沒有要組隊或未滿 3 人也可以直接購票，目前可直接購買 $50 Jersey 票券。若有組隊，購票時請務必填寫 Team Name，同一隊請填寫完全相同的隊名。",
       scan: "掃描 QR Code 或點擊下方按鈕完成 Zeffy 購票。",
       goTitle: "GoFundMe 支持活動",
       goText:
@@ -360,7 +348,7 @@ const content = {
         {
           category: "📍 活動與座位安排",
           items: [
-            ["🎟 座位提醒 Seating Notice", "填寫相同 Team Name 的朋友，主辦單位會盡量安排坐在一起或附近。所有參與者都會安排在 Fenway Park — Bleacher 41, 42, & 43 區，一起為台灣應援。由於 5/31 前購買的 $47 票券包含 Red Sox × Bruins 限量聯名 Jersey，與 6/1 後的一般票券屬於不同票種與不同批次，座位安排可能會分批處理。若同一隊伍中有人在 5/31 前購票、有人在 6/1 後購票，主辦單位仍會盡量協助安排在附近，但無法保證完全連號或坐在同一排。若希望和朋友、家人或隊友坐得更近，建議大家盡早購票，並填寫完全相同的 Team Name。"],
+            ["🎟 座位提醒 Seating Notice", "填寫相同 Team Name 的朋友，主辦單位會盡量安排坐在一起或附近。所有參與者都會安排在 Fenway Park — Bleacher 41, 42, & 43 區，一起為台灣應援。"],
             ["座位可以自己選嗎？", "本活動為團體購票，座位將由主辦單位統一安排，無法自行選位。"],
             ["我跟朋友分開買票，可以坐一起嗎？", "可以。請在購票時填寫相同的 Team Name，主辦單位會依照 Team Name 盡量安排在附近的位置。"],
           ],
@@ -531,48 +519,28 @@ const content = {
     },
     tickets: {
       eyebrow: "Tickets",
-      title: "Team Ticket Deal Before 5/31",
+      title: "912 Taiwan Fans Night Ticket Update",
       description:
-        "Whether or not you are joining a team, each participant can purchase tickets directly on Zeffy. Before 5/31, each ticket is $47. Groups of 3 or more can create a team name and enter the creative team name contest by using the same Team Name.",
-      under3Title: "Individuals and Groups Under 3 Can Buy Directly Too!",
+        "Thank you for the strong support for 912 Taiwan Fans Night at Fenway. Starting 6/1, the newly released tickets are $50 per ticket and still include the Red Sox × Bruins Limited-Edition Jersey. Participants may continue to enter a Team Name and join an existing team; we will do our best to seat teammates near one another.",
+      under3Title: "Individuals and Pairs Can Still Buy Directly",
       under3Text:
-        "Individuals, pairs, or people without a team can also buy directly through Zeffy. Before 5/31, the same $47 ticket price applies.",
-      dealTitle: "Team Deal Ticket",
-      dealSubtitle: "Complete Zeffy Purchase Before 5/31",
+        "Individuals, pairs, or people without a team can also buy directly through Zeffy. You may still enter a Team Name to join an existing team or create your own group.",
+      dealTitle: "Current Ticket Release",
+      dealSubtitle: "6/1 起新票價｜$50 / ticket｜Includes Limited-Edition Jersey",
       benefits: [
-        "No additional fees or service charges",
-        "Includes one limited Red Sox × Bruins co-branding Baseball Jersey",
-        "BTCF will donate an additional $3 per ticket to Boys & Girls Clubs of Boston",
-        "One Taiwan-themed T-shirt per participant",
-        "We will do our best to seat teams near each other",
-        "Eligible for the Best Creative Team Name contest",
+        "$50 per ticket",
+        "Includes one Red Sox × Bruins Limited-Edition Jersey",
+        "Same ticket type as the previous jersey tickets",
+        "Participants may continue to enter a Team Name",
+        "We will do our best to seat teammates near one another",
+        "Includes one Taiwan-themed T-shirt and event raffle eligibility",
       ],
       dealNote:
-        "To receive the $47 ticket deal before 5/31, each participant must complete their own Zeffy purchase by 5/31. Individuals or groups under 3 can also purchase directly at the same $47 price. If you are joining a team, please enter the same Team Name.",
+        "Our original plan was to offer $47 tickets with the Red Sox × Bruins jersey before 5/31, then switch to traditional group tickets after 6/1. However, after receiving the Red Sox group ticket link, we found that the $41 traditional group ticket becomes $48.16 per ticket after official ticketing fees. After discussing with the Red Sox sales team, we decided not to sell the traditional group tickets and instead continue offering tickets that include the limited-edition jersey.",
       seatingTitle: "🎟 Seating Notice",
       seating: [
-        "Participants using the same Team Name will be seated together or near one another as much as possible. Everyone will be seated in Fenway Park — Bleacher 41, 42, and 43 — to cheer for Taiwan together.",
-        "Because tickets purchased before 5/31 include the limited Red Sox × Bruins jersey and tickets after 6/1 are a different ticket batch, seating may be processed in separate batches.",
-        "If some members of the same team purchase before 5/31 and others after 6/1, the organizer will still try to seat them nearby, but cannot guarantee consecutive seats or the same row.",
-        "If you want to sit closer to friends, family, or teammates, please purchase early and enter the exact same Team Name.",
+        "Participants who enter the same Team Name will be seated together or near one another as much as possible. All participants will be seated in Fenway Park — Bleacher 41, 42, and 43 — to cheer for Taiwan together.",
       ],
-      afterTitle: "Dedicated Group Ticket Link",
-      afterSubtitle: "Official Sale After 6/1",
-      afterText:
-        "After 6/1, participants may purchase through the Red Sox Taiwan Fans Night discounted group ticket link provided to BTCF.",
-      afterPrice: "$41 + approximately 8–9% fees",
-      afterNote:
-        "Whether purchasing before or after 6/1, participants will all sit together in Bleacher 41, 42, and 43, receive the Taiwan-themed T-shirt from the organizer, and be eligible for the 912 Taiwan Fan Night raffle.",
-      afterWarning:
-        "⚠️ Please note: tickets purchased through the official group link after 6/1 will not include the limited Red Sox × Bruins co-branding Baseball Jersey.",
-      officialPrice:
-        "According to the Red Sox ticketing page, the current price for the Bleacher 41, 42, and 43 area on 9/12 is approximately $64–$88 per ticket, plus an $8.75 per-ticket fee. By comparison, the $47 team deal and the $41 dedicated group ticket are both strong discounts negotiated for TEAM TAIWAN. Ticket payments are used entirely to cover the group ticket cost paid to the Red Sox, and BTCF does not profit from this event.",
-      priceTitle: "About the Ticket Price",
-      priceHighlight: "This Event Price Is Much Lower Than the Official Red Sox Price in the Same Area",
-      priceText:
-        "The current official ticket price in the same area is approximately $64–$88, plus about an $8.75 per-ticket fee. This discounted price was negotiated with the Red Sox by the organizing team for the TEAM TAIWAN community.",
-      includesTitle: "This ticket includes more than just a seat. It also includes:",
-      includes: ["A dedicated Taiwanese community section", "The experience of sitting together as one community", "The shared meaning of letting Fenway see Taiwan together"],
       valueText:
         "If you only want to watch a baseball game, you may be able to find other tickets elsewhere. But if you want to sit together with hundreds of Taiwanese fans, wear Taiwan together, and help the Red Sox see Taiwan, that shared meaning cannot be replaced by any ordinary ticket.",
       valuePunch: "This is not just buying a ticket. It is joining a collective effort to let Fenway see Taiwan.",
@@ -582,18 +550,18 @@ const content = {
       eText2: "E-tickets can be transferred to others. If you cannot attend on the event day, you may transfer your ticket to a friend or family member through the MLB Ballpark App.",
       giveawayTitle: "Red Sox Game-Day Giveaway",
       giveawayText:
-        "Participants who complete their purchase before 5/31 may receive the limited Red Sox × Bruins co-branding Baseball Jersey provided by the Red Sox. This giveaway is picked up at Fenway Park on 9/12.",
+        "Starting 6/1, the current $50 ticket still includes the Red Sox × Bruins Limited-Edition Jersey provided by the Red Sox. This giveaway is picked up at Fenway Park on 9/12.",
       giveawayNote: "Available while supplies last. Sizes are first come, first served, and availability depends on what the Red Sox provides at the ballpark.",
     },
     teams: {
       eyebrow: "TEAM TAIWAN",
       title: "How to Form a TEAM TAIWAN Group",
       description:
-        "Whether or not you are joining a team, each participant can purchase directly through Zeffy. Before 5/31, each ticket is $47. Groups of 3 or more may create a team name; the team leader only needs to choose the name, invite friends, and remind everyone to enter the exact same Team Name.",
+        "Whether or not you are joining a team, each participant can purchase directly through Zeffy. The current ticket price is $50 and includes the Red Sox × Bruins Limited-Edition Jersey. Groups of 3 or more may create a team name; the team leader only needs to choose the name, invite friends, and remind everyone to enter the exact same Team Name.",
       steps: [
         ["👥", "1. Team Leader Chooses a Team Name", "Groups of 3 or more may form a team. Team names can be creative and can be in Chinese, English, or both. Community groups, companies, student associations, and organizations may use their official organization name."],
         ["📣", "2. Share the Team Name with Members", "The team leader shares the team name with all members. Everyone should enter the exact same Team Name when purchasing so the organizer can track team size, seating, and contest eligibility."],
-        ["🎟️", "3. Each Participant Purchases Their Own Ticket", "Each participant purchases directly through Zeffy. Team leaders do not need to collect money or buy tickets for everyone. Individuals or groups under 3 can also buy directly and still receive the $47 price before 5/31."],
+        ["🎟️", "3. Each Participant Purchases Their Own Ticket", "Each participant purchases directly through Zeffy. Team leaders do not need to collect money or buy tickets for everyone. Individuals or groups under 3 can also buy directly and still purchase the current $50 jersey ticket."],
         ["📝", "Reminder for Team Leaders", "For larger teams, we recommend that team leaders keep their own list and ask members to confirm whether they have registered and purchased tickets, so the team leader can track the current team size."],
       ],
       teamNameTitle: "Enter Your Team Name When Buying Tickets",
@@ -602,7 +570,7 @@ const content = {
       teamNameText2:
         "Community groups, companies, student associations, or organizations can use their organization name as the team name, such as Boston Taiwanese Biotechnology Association (BTBA). This helps the community see the collective strength of each group on the TEAM TAIWAN Leaderboard.",
       teamNameText3:
-        "Individuals or groups under 3 can also buy directly through Zeffy and still receive the $47 price before 5/31. Groups under 3 may enter a team name, but will not be eligible for the creative team name contest.",
+        "Individuals or groups under 3 can also buy directly through Zeffy and still purchase the current $50 jersey ticket. Groups under 3 may enter a team name, but will not be eligible for the creative team name contest.",
       friendTeamEyebrow: "New Team",
       friendTeamTitle: "🤝 Join and Make Friends Team",
       friendTeamIntro:
@@ -633,18 +601,18 @@ const content = {
       growing: "Still Growing",
       joinTitle: "Your Team Can Join the Rally Too!",
       joinText:
-        "Groups of 3 or more can create a team name and join the TEAM TAIWAN Leaderboard. Tickets purchased through Zeffy before 5/31 are $47 each. Please use an appropriate, respectful, and friendly team name; the organizer reserves the right to review or adjust team names.",
+        "Groups of 3 or more can create a team name and join the TEAM TAIWAN Leaderboard. Current tickets purchased through Zeffy are $50 each and include the limited jersey. Please use an appropriate, respectful, and friendly team name; the organizer reserves the right to review or adjust team names.",
       joinButton: "Create / Join a Team",
     },
     payment: {
       eyebrow: "Payment",
       title: "Payment",
       description:
-        "Each participant purchases tickets directly through Zeffy. Team leaders do not need to collect money or buy tickets for everyone. Individuals or groups under 3 can also purchase directly; before 5/31, each ticket is still $47.",
+        "Each participant purchases tickets directly through Zeffy. Team leaders do not need to collect money or buy tickets for everyone. Individuals or groups under 3 can also purchase directly; before 5/31, each ticket is still $50.",
       main: "Main Payment Method",
       zeffyTitle: "Purchase on Zeffy",
       zeffyText:
-        "Each participant purchases directly through Zeffy. Individuals or groups under 3 can also buy directly and still receive the $47 price before 5/31. If joining a team, please enter the same Team Name as your teammates.",
+        "Each participant purchases directly through Zeffy. Individuals or groups under 3 can also buy directly and still purchase the current $50 jersey ticket. If joining a team, please enter the same Team Name as your teammates.",
       scan: "Scan the QR code or click the button below to complete your Zeffy ticket purchase.",
       goTitle: "Support the Event on GoFundMe",
       goText:
@@ -739,7 +707,7 @@ const content = {
         {
           category: "📍 Event & Seating",
           items: [
-            ["🎟 Seating Notice", "Participants using the same Team Name will be seated together or near one another as much as possible. Everyone will be seated in Fenway Park — Bleacher 41, 42, and 43 — to cheer for Taiwan together. Because tickets purchased before 5/31 include the limited Red Sox × Bruins jersey and tickets purchased after 6/1 are a different ticket type and batch, seating may be processed separately. If members of the same team purchase in different batches, the organizer will still try to seat them nearby, but cannot guarantee consecutive seats or the same row. If you want to sit closer to friends, family, or teammates, please purchase early and enter the exact same Team Name."],
+            ["🎟 Seating Notice", "Participants who enter the same Team Name will be seated together or near one another as much as possible. All participants will be seated in Fenway Park — Bleacher 41, 42, and 43 — to cheer for Taiwan together."],
             ["Can I choose my own seat?", "No. This is a group ticket event. Seats will be assigned by the organizer and cannot be individually selected."],
             ["If my friends and I buy separately, can we sit together?", "Yes. Please enter the same Team Name when purchasing. The organizer will do its best to seat participants with the same Team Name near each other."],
           ],
@@ -884,110 +852,233 @@ function InfoCard({ icon, title, children }) {
 }
 
 function BubbleLeaderboard({ t }) {
-  const bubbleStyles = [
-    "absolute left-[34%] top-[40px] h-80 w-80 bg-emerald-700 text-4xl ring-8 ring-emerald-100",
-    "absolute left-[8%] top-[125px] h-72 w-72 bg-rose-500 text-3xl ring-8 ring-rose-100",
-    "absolute left-[62%] top-[110px] h-[19rem] w-[19rem] bg-sky-600 text-3xl ring-8 ring-sky-100",
-    "absolute left-[37%] top-[405px] h-52 w-52 bg-blue-600 text-xl ring-8 ring-blue-100",
-    "absolute left-[15%] top-[500px] h-52 w-52 bg-orange-500 text-xl ring-8 ring-orange-100",
-    "absolute left-[66%] top-[500px] h-52 w-52 bg-emerald-500 text-lg ring-8 ring-emerald-100",
-    "absolute left-[3%] top-[760px] h-48 w-48 bg-teal-600 text-base ring-8 ring-teal-100",
-    "absolute left-[27%] top-[720px] h-48 w-48 bg-pink-500 text-base ring-8 ring-pink-100",
-    "absolute left-[78%] top-[760px] h-44 w-44 bg-red-500 text-base ring-8 ring-red-100",
-    "absolute left-[49%] top-[650px] h-40 w-40 bg-lime-600 text-base ring-8 ring-lime-100",
-    "absolute left-[58%] top-[865px] h-40 w-40 bg-violet-600 text-sm ring-8 ring-violet-100",
-    "absolute left-[11%] top-[1010px] h-40 w-40 bg-emerald-600 text-base ring-8 ring-emerald-100",
-    "absolute left-[34%] top-[1000px] h-40 w-40 bg-purple-600 text-sm ring-8 ring-purple-100",
-    "absolute left-[74%] top-[1035px] h-40 w-40 bg-rose-500 text-base ring-8 ring-rose-100",
-    "absolute left-[2%] top-[1260px] h-40 w-40 bg-cyan-600 text-base ring-8 ring-cyan-100",
-    "absolute left-[25%] top-[1240px] h-40 w-40 bg-indigo-600 text-base ring-8 ring-indigo-100",
-    "absolute left-[58%] top-[1240px] h-40 w-40 bg-teal-600 text-sm ring-8 ring-teal-100",
-    "absolute left-[78%] top-[1290px] h-36 w-36 bg-fuchsia-600 text-sm ring-8 ring-fuchsia-100",
-    "absolute left-[14%] top-[1495px] h-36 w-36 bg-purple-600 text-sm ring-8 ring-purple-100",
-    "absolute left-[39%] top-[1460px] h-36 w-36 bg-orange-500 text-sm ring-8 ring-orange-100",
-    "absolute left-[63%] top-[1495px] h-36 w-36 bg-amber-500 text-sm ring-8 ring-amber-100",
-    "absolute left-[82%] top-[1535px] h-36 w-36 bg-yellow-500 text-sm ring-8 ring-yellow-100",
-    "absolute left-[2%] top-[1710px] h-36 w-36 bg-slate-700 text-sm ring-8 ring-slate-200",
-    "absolute left-[24%] top-[1690px] h-36 w-36 bg-emerald-700 text-sm ring-8 ring-emerald-100",
-    "absolute left-[47%] top-[1695px] h-36 w-36 bg-rose-500 text-xs ring-8 ring-rose-100",
-    "absolute left-[80%] top-[1750px] h-36 w-36 bg-sky-600 text-sm ring-8 ring-sky-100",
-    "absolute left-[9%] top-[1915px] h-36 w-36 bg-blue-600 text-xs ring-8 ring-blue-100",
-    "absolute left-[33%] top-[1920px] h-36 w-36 bg-orange-500 text-sm ring-8 ring-orange-100",
-    "absolute left-[61%] top-[1920px] h-36 w-36 bg-emerald-500 text-sm ring-8 ring-emerald-100",
-    "absolute left-[82%] top-[2000px] h-36 w-36 bg-teal-600 text-sm ring-8 ring-teal-100",
-    "absolute left-[2%] top-[2145px] h-32 w-32 bg-pink-500 text-xs ring-8 ring-pink-100",
-    "absolute left-[20%] top-[2130px] h-32 w-32 bg-red-500 text-sm ring-8 ring-red-100",
-    "absolute left-[39%] top-[2145px] h-32 w-32 bg-lime-600 text-sm ring-8 ring-lime-100",
-    "absolute left-[61%] top-[2140px] h-32 w-32 bg-violet-600 text-[11px] ring-8 ring-violet-100",
-    "absolute left-[81%] top-[2200px] h-32 w-32 bg-emerald-600 text-[11px] ring-8 ring-emerald-100",
-    "absolute left-[10%] top-[2335px] h-32 w-32 bg-purple-600 text-xs ring-8 ring-purple-100",
-    "absolute left-[31%] top-[2345px] h-32 w-32 bg-rose-500 text-xs ring-8 ring-rose-100",
-    "absolute left-[63%] top-[2340px] h-32 w-32 bg-cyan-600 text-xs ring-8 ring-cyan-100",
-    "absolute left-[82%] top-[2380px] h-32 w-32 bg-indigo-600 text-xs ring-8 ring-indigo-100",
-    "absolute left-[46%] top-[2485px] h-32 w-32 bg-orange-500 text-xs ring-8 ring-orange-100",
-    "absolute left-[6%] top-[2525px] h-32 w-32 bg-fuchsia-600 text-xs ring-8 ring-fuchsia-100",
-    "absolute left-[24%] top-[2520px] h-32 w-32 bg-slate-700 text-xs ring-8 ring-slate-200",
-    "absolute left-[66%] top-[2520px] h-32 w-32 bg-amber-500 text-xs ring-8 ring-amber-100",
-    "absolute left-[83%] top-[2575px] h-32 w-32 bg-lime-600 text-[11px] ring-8 ring-lime-100",
-    "absolute left-[44%] top-[2660px] h-32 w-32 bg-sky-600 text-xs ring-8 ring-sky-100",
-    "absolute left-[12%] top-[2740px] h-32 w-32 bg-red-500 text-xs ring-8 ring-red-100",
-    "absolute left-[31%] top-[2800px] h-32 w-32 bg-emerald-700 text-[11px] ring-8 ring-emerald-100",
-    "absolute left-[58%] top-[2735px] h-32 w-32 bg-blue-600 text-[11px] ring-8 ring-blue-100",
-    "absolute left-[80%] top-[2800px] h-32 w-32 bg-teal-600 text-[11px] ring-8 ring-teal-100",
-    "absolute left-[6%] top-[2960px] h-32 w-32 bg-rose-600 text-xs ring-8 ring-rose-100",
-    "absolute left-[38%] top-[2940px] h-32 w-32 bg-emerald-600 text-xs ring-8 ring-emerald-100",
-    "absolute left-[70%] top-[2965px] h-32 w-32 bg-blue-600 text-xs ring-8 ring-blue-100",
-    "absolute left-[22%] top-[3090px] h-32 w-32 bg-violet-600 text-[11px] ring-8 ring-violet-100",
+  const bubbleColors = [
+    "bg-emerald-600 text-white ring-emerald-100",
+    "bg-rose-300 text-slate-900 ring-rose-100",
+    "bg-sky-600 text-white ring-sky-100",
+    "bg-blue-200 text-slate-900 ring-blue-100",
+    "bg-orange-500 text-white ring-orange-100",
+    "bg-teal-200 text-slate-900 ring-teal-100",
+    "bg-pink-500 text-white ring-pink-100",
+    "bg-red-200 text-slate-900 ring-red-100",
+    "bg-lime-500 text-white ring-lime-100",
+    "bg-violet-200 text-slate-900 ring-violet-100",
+    "bg-purple-600 text-white ring-purple-100",
+    "bg-amber-200 text-slate-900 ring-amber-100",
+    "bg-cyan-500 text-white ring-cyan-100",
+    "bg-indigo-200 text-slate-900 ring-indigo-100",
+    "bg-fuchsia-500 text-white ring-fuchsia-100",
+    "bg-yellow-200 text-slate-900 ring-yellow-100",
+    "bg-green-600 text-white ring-green-100",
+    "bg-orange-200 text-slate-900 ring-orange-100",
+    "bg-pink-300 text-slate-900 ring-pink-100",
+    "bg-sky-300 text-slate-900 ring-sky-100",
+    "bg-teal-600 text-white ring-teal-100",
+    "bg-rose-200 text-slate-900 ring-rose-100",
+    "bg-indigo-500 text-white ring-indigo-100",
+    "bg-emerald-200 text-slate-900 ring-emerald-100",
   ];
 
-  const mobileColors = [
-    "bg-emerald-700", "bg-rose-500", "bg-sky-600", "bg-blue-600", "bg-orange-500", "bg-emerald-500",
-    "bg-teal-600", "bg-pink-500", "bg-red-500", "bg-lime-600", "bg-violet-600", "bg-purple-600",
-    "bg-amber-500", "bg-cyan-600", "bg-indigo-600", "bg-slate-700",
+  const desktopOffsets = [0, 10, 4, 14, 6, 16, 2, 12, 8, 18, 4, 10];
+  const mobileOffsets = [0, 7, 3, 9, 1, 6];
+  const desktopRowShifts = [-18, 22, -30, 14, -12, 28, -24, 10];
+  const mobileRowShifts = [-8, 6, -10, 8, -6, 4];
+  const desktopTargets = [1040, 1090, 980, 1070, 1000, 1085, 1010];
+  const mobileTargets = [360, 390, 340, 380, 355, 395];
+
+  const getTicketNumber = (tickets) => {
+    const match = String(tickets).match(/\d+/);
+    return match ? parseInt(match[0], 10) : 0;
+  };
+
+  const getBubbleSize = (tickets, isMobile = false) => {
+    const count = getTicketNumber(tickets);
+
+    if (isMobile) {
+      if (count >= 160) return 176;
+      if (count >= 140) return 164;
+      if (count >= 100) return 152;
+      if (count >= 40) return 140;
+      if (count >= 30) return 132;
+      if (count >= 25) return 126;
+      if (count >= 20) return 122;
+      if (count >= 15) return 116;
+      if (count >= 10) return 110;
+      return 100;
+    }
+
+    if (count >= 160) return 320;
+    if (count >= 140) return 285;
+    if (count >= 100) return 260;
+    if (count >= 40) return 220;
+    if (count >= 30) return 200;
+    if (count >= 25) return 190;
+    if (count >= 20) return 180;
+    if (count >= 15) return 165;
+    if (count >= 10) return 150;
+    return 122;
+  };
+
+  const getBubbleStyle = (tickets, isMobile = false) => {
+    const size = getBubbleSize(tickets, isMobile);
+    return {
+      width: `${size}px`,
+      height: `${size}px`,
+      minWidth: `${size}px`,
+      minHeight: `${size}px`,
+    };
+  };
+
+  const getNameTextClass = (tickets, isMobile = false) => {
+    const count = getTicketNumber(tickets);
+    if (isMobile) return count >= 100 ? "text-base" : count >= 40 ? "text-sm" : "text-xs";
+    if (count >= 160) return "text-2xl";
+    if (count >= 140) return "text-xl";
+    if (count >= 40) return "text-lg";
+    if (count >= 20) return "text-base";
+    return "text-sm";
+  };
+
+  const featuredTeams = teamLeaderboard.slice(0, 3);
+  const remainingTeams = teamLeaderboard.slice(3);
+
+  const mixedRemainingTeams = [
+    ...remainingTeams.filter((_, index) => index % 4 === 0),
+    ...remainingTeams.filter((_, index) => index % 4 === 2),
+    ...remainingTeams.filter((_, index) => index % 4 === 1),
+    ...remainingTeams.filter((_, index) => index % 4 === 3),
   ];
+
+  const packRows = (teams, isMobile = false) => {
+    const gap = isMobile ? 8 : 10;
+    const minRowCount = isMobile ? 3 : 5;
+    const targets = isMobile ? mobileTargets : desktopTargets;
+    const rows = [];
+    let current = [];
+    let width = 0;
+
+    teams.forEach((team) => {
+      const bubbleWidth = getBubbleSize(team.tickets, isMobile);
+      const target = targets[rows.length % targets.length];
+      const projected = current.length === 0 ? bubbleWidth : width + gap + bubbleWidth;
+
+      if (current.length >= minRowCount && projected > target) {
+        rows.push(current);
+        current = [team];
+        width = bubbleWidth;
+      } else {
+        current.push(team);
+        width = projected;
+      }
+    });
+
+    if (current.length) rows.push(current);
+    return rows;
+  };
+
+  const renderBubble = (team, index, isMobile = false, extraClass = "") => {
+    const count = getTicketNumber(team.tickets);
+    const isGrowing = Number.isNaN(parseInt(team.tickets, 10)) && team.tickets === t.leaderboard.growing;
+
+    return (
+      <div
+        key={`${team.name}-${index}-${isMobile ? "m" : "d"}`}
+        className={`flex shrink-0 flex-col items-center justify-center rounded-full p-4 text-center shadow-xl ${isMobile ? "ring-4" : "ring-8"} transition duration-300 hover:z-30 hover:scale-[1.03] ${bubbleColors[index % bubbleColors.length]} ${extraClass}`}
+        style={getBubbleStyle(team.tickets, isMobile)}
+      >
+        <div className={`max-w-[84%] px-2 text-center font-black leading-[1.12] [overflow-wrap:anywhere] ${getNameTextClass(team.tickets, isMobile)}`}>
+          {team.name}
+        </div>
+        {count >= 10 && (
+          <div className={`mt-2 whitespace-nowrap rounded-full bg-white/55 px-3 py-1 font-black text-slate-800 ${isMobile ? "text-xs" : "text-sm"}`}>
+            {team.tickets} {t.leaderboard.ticketsLabel}
+          </div>
+        )}
+        {Number.isNaN(parseInt(team.tickets, 10)) && team.tickets !== t.leaderboard.growing && (
+          <div className={`mt-2 whitespace-nowrap rounded-full bg-white/55 px-3 py-1 font-black text-slate-700 ${isMobile ? "text-[10px]" : "text-[11px]"}`}>
+            {team.tickets}
+          </div>
+        )}
+        {(team.name === featuredTeams[0]?.name || isGrowing) && (
+          <div className={`mt-2 font-semibold text-slate-700 ${isMobile ? "text-[10px]" : "text-[11px]"}`}>
+            {team.name === featuredTeams[0]?.name ? t.leaderboard.leading : t.leaderboard.growing}
+          </div>
+        )}
+      </div>
+    );
+  };
+
+  const desktopRows = packRows(mixedRemainingTeams, false);
+  const mobileRows = packRows(mixedRemainingTeams, true);
 
   return (
     <>
-      <div className="relative mx-auto hidden min-h-[3270px] max-w-6xl md:block">
-        {teamLeaderboard.map((team, index) => (
-          <div
-            key={team.name}
-            className={`flex flex-col items-center justify-center rounded-full p-4 text-center text-white shadow-2xl transition hover:scale-105 ${bubbleStyles[index] || "absolute left-[40%] top-[2520px] h-32 w-32 bg-slate-600 text-xs ring-8 ring-slate-200"}`}
-          >
-            <div className="max-w-[82%] px-2 text-center font-black leading-[1.12] [overflow-wrap:anywhere]">
-              {team.name}
-            </div>
-            {parseInt(team.tickets, 10) >= 10 && (
-              <div className="mt-2 whitespace-nowrap rounded-full bg-white/20 px-3 py-1 text-sm font-black">
-                {team.tickets} {t.leaderboard.ticketsLabel}
+      <div className="mx-auto hidden max-w-[1220px] px-4 py-6 md:block">
+        <div className="flex items-start justify-center gap-4 lg:gap-5">
+          <div className="pt-14 lg:pt-16">{renderBubble(featuredTeams[1], 1)}</div>
+          <div className="pt-0">{renderBubble(featuredTeams[0], 0)}</div>
+          <div className="pt-14 lg:pt-16">{renderBubble(featuredTeams[2], 2)}</div>
+        </div>
+
+        <div className="mt-2 flex flex-col items-center">
+          {desktopRows.map((rowTeams, rowIndex) => {
+            const baseIndex = desktopRows.slice(0, rowIndex).reduce((sum, row) => sum + row.length, 0);
+            return (
+              <div
+                key={`desktop-row-${rowIndex}`}
+                className={`flex items-start justify-center gap-[6px] ${rowIndex > 0 ? "-mt-1" : ""}`}
+                style={{ transform: `translateX(${desktopRowShifts[rowIndex % desktopRowShifts.length]}px)` }}
+              >
+                {rowTeams.map((team, localIdx) => {
+                  const idx = baseIndex + localIdx;
+                  return (
+                    <div
+                      key={team.name}
+                      className="relative"
+                      style={{ marginTop: `${desktopOffsets[idx % desktopOffsets.length]}px` }}
+                    >
+                      {renderBubble(team, idx + 3)}
+                    </div>
+                  );
+                })}
               </div>
-            )}
-            <div className="mt-2 text-[11px] font-semibold opacity-90">
-              {index === 0 ? t.leaderboard.leading : t.leaderboard.growing}
-            </div>
-          </div>
-        ))}
+            );
+          })}
+        </div>
       </div>
 
-      <div className="grid grid-cols-2 gap-5 md:hidden">
-        {teamLeaderboard.map((team, index) => (
-          <div
-            key={team.name}
-            className={`flex aspect-square flex-col items-center justify-center rounded-full p-4 text-center text-white shadow-xl ${mobileColors[index % mobileColors.length]}`}
-          >
-            <div className="max-w-[82%] px-1 text-center text-sm font-black leading-[1.12] [overflow-wrap:anywhere]">
-              {team.name}
-            </div>
-            {parseInt(team.tickets, 10) >= 10 && (
-              <div className="mt-2 whitespace-nowrap rounded-full bg-white/20 px-3 py-1 text-xs font-black">
-                {team.tickets} {t.leaderboard.ticketsLabel}
+      <div className="px-2 py-3 md:hidden">
+        <div className="flex flex-wrap items-center justify-center gap-x-1 gap-y-1">
+          <div className="flex basis-full justify-center">{renderBubble(featuredTeams[0], 0, true)}</div>
+          <div className="flex basis-[48%] justify-end pt-1">{renderBubble(featuredTeams[1], 1, true)}</div>
+          <div className="flex basis-[48%] justify-start pt-3">{renderBubble(featuredTeams[2], 2, true)}</div>
+        </div>
+
+        <div className="mt-2 flex flex-col items-center">
+          {mobileRows.map((rowTeams, rowIndex) => {
+            const baseIndex = mobileRows.slice(0, rowIndex).reduce((sum, row) => sum + row.length, 0);
+            return (
+              <div
+                key={`mobile-row-${rowIndex}`}
+                className={`flex items-start justify-center gap-[5px] ${rowIndex > 0 ? "-mt-1" : ""}`}
+                style={{ transform: `translateX(${mobileRowShifts[rowIndex % mobileRowShifts.length]}px)` }}
+              >
+                {rowTeams.map((team, localIdx) => {
+                  const idx = baseIndex + localIdx;
+                  return (
+                    <div
+                      key={team.name}
+                      className="relative"
+                      style={{ marginTop: `${mobileOffsets[idx % mobileOffsets.length]}px` }}
+                    >
+                      {renderBubble(team, idx + 3, true)}
+                    </div>
+                  );
+                })}
               </div>
-            )}
-            <div className="mt-1 text-[10px] font-semibold opacity-90">
-              {index === 0 ? t.leaderboard.leading : t.leaderboard.growing}
-            </div>
-          </div>
-        ))}
+            );
+          })}
+        </div>
       </div>
     </>
   );
@@ -1127,34 +1218,30 @@ export default function TaiwanFanNightWebsite() {
           <div className="mx-auto max-w-7xl">
             <SectionTitle eyebrow={t.tickets.eyebrow} title={t.tickets.title} description={t.tickets.description} />
             <div className="mx-auto mb-10 max-w-3xl rounded-3xl border border-emerald-200 bg-emerald-50 p-5 text-center shadow-sm"><p className="text-xl font-black text-emerald-900">{t.tickets.under3Title}</p><p className="mt-2 text-sm leading-7 text-emerald-800">{t.tickets.under3Text}</p></div>
-            <div className="grid items-start gap-6 lg:grid-cols-2">
+            <div className="mx-auto max-w-4xl">
               <Card className="border-emerald-200 p-8 shadow-lg">
-                <div className="mb-6 flex items-center justify-between gap-4"><div><p className="text-sm font-bold text-emerald-700">{t.tickets.dealSubtitle}</p><h3 className="mt-1 text-3xl font-black text-slate-950">{t.tickets.dealTitle}</h3></div><div className="rounded-[2rem] bg-emerald-700 px-8 py-6 text-center text-white shadow-lg ring-4 ring-emerald-100"><p className="text-7xl font-black leading-none md:text-8xl">$47</p><p className="mt-2 text-sm font-semibold uppercase tracking-wide">per ticket</p></div></div>
+                <div className="mb-6 flex items-center justify-between gap-4"><div><p className="text-sm font-bold text-emerald-700">{t.tickets.dealSubtitle}</p><h3 className="mt-1 text-3xl font-black text-slate-950">{t.tickets.dealTitle}</h3></div><div className="rounded-[2.25rem] bg-emerald-700 px-10 py-8 text-center text-white shadow-xl ring-4 ring-emerald-100 md:px-12 md:py-10"><p className="text-[5.5rem] font-black leading-none md:text-[9.5rem] lg:text-[11rem]">$50</p><p className="mt-3 text-xl font-semibold uppercase tracking-[0.18em] md:text-2xl lg:text-3xl">per ticket</p></div></div>
                 <ul className="space-y-4 text-slate-700">{t.tickets.benefits.map((item) => <li key={item} className="flex gap-3"><span className="mt-1 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-emerald-100 text-xs font-bold text-emerald-800">✓</span><span>{item}</span></li>)}</ul>
-                <div className="mt-7 rounded-2xl bg-amber-50 p-4 text-sm leading-7 text-amber-900">{t.tickets.dealNote}</div>
+                <div className="mt-6 rounded-2xl border border-emerald-200 bg-emerald-50 p-4 text-sm font-semibold leading-7 text-emerald-900">
+                  {lang === "zh"
+                    ? "原本 6/1 後預計改販售一般團體優惠票；因加上官方手續費後實際為 $48.16，我們改為繼續提供 $50 含限量 Jersey 的票券。"
+                    : "The original plan was to switch to traditional group tickets after 6/1. Since official fees brought that ticket to $48.16, we are continuing with a $50 ticket that includes the limited-edition jersey."}
+                </div>
+                <div className="mt-7 rounded-2xl bg-amber-50 p-5 text-sm leading-7 text-amber-900">
+                  <p className="mb-2 text-base font-black text-amber-950">{lang === "zh" ? "票價規劃更新" : "Ticket Plan Update"}</p>
+                  <p>{t.tickets.dealNote}</p>
+                </div>
                 <div className="mt-4 rounded-3xl border border-amber-200 bg-amber-50 p-6 text-sm leading-7 text-amber-950 shadow-sm">
                   <p className="text-xl font-black text-slate-950">{t.tickets.seatingTitle}</p>
                   {t.tickets.seating.map((p) => <p key={p} className="mt-3">{p}</p>)}
                 </div>
               </Card>
-              <Card className="self-start p-8">
-                <p className="text-sm font-bold text-slate-500">{t.tickets.afterSubtitle}</p>
-                <h3 className="mt-1 text-3xl font-black text-slate-950">{t.tickets.afterTitle}</h3>
-                <p className="mt-5 text-lg leading-8 text-slate-600">{t.tickets.afterText}</p>
-                <div className="mt-6 rounded-3xl bg-slate-50 p-6"><p className="text-sm font-semibold text-slate-500">{lang === "zh" ? "票價" : "Price"}</p><p className="mt-1 text-4xl font-black text-slate-950">{t.tickets.afterPrice}</p></div>
-                <p className="mt-6 text-sm leading-7 text-slate-600">{t.tickets.afterNote}</p>
-                <p className="mt-3 rounded-2xl bg-amber-50 p-4 text-sm font-semibold leading-7 text-amber-900">{t.tickets.afterWarning}</p>
-                <p className="mt-4 rounded-2xl bg-slate-50 p-4 text-sm leading-7 text-slate-700">{t.tickets.officialPrice}</p>
-              </Card>
             </div>
             <div className="mt-8 grid gap-6 lg:grid-cols-2 lg:items-start">
               <div className="rounded-3xl border border-sky-200 bg-gradient-to-br from-sky-50 via-white to-emerald-50 p-6 text-sm leading-7 text-slate-700 shadow-sm md:p-8">
-                <p className="text-2xl font-black text-slate-950">{t.tickets.priceTitle}</p>
-                <div className="mt-4 rounded-2xl border border-emerald-300 bg-white p-5 shadow-sm"><p className="text-lg font-black text-emerald-800">{t.tickets.priceHighlight}</p><p className="mt-3">{t.tickets.priceText}</p></div>
-                <p className="mt-4 font-bold text-slate-950">{t.tickets.includesTitle}</p>
-                <ul className="mt-3 space-y-2">{t.tickets.includes.map((item) => <li key={item} className="flex gap-3"><span className="mt-1 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-emerald-100 text-xs font-black text-emerald-800">✓</span><span>{item}</span></li>)}</ul>
+                <p className="text-2xl font-black text-slate-950">{lang === "zh" ? "為什麼這張票值得？" : "Why This Ticket Is Worth It"}</p>
                 <p className="mt-4">{t.tickets.valueText}</p>
-                <p className="mt-4 rounded-2xl bg-emerald-700 p-4 text-base font-black leading-7 text-white">{t.tickets.valuePunch}</p>
+                <p className="mt-5 rounded-2xl bg-emerald-700 p-4 text-base font-black leading-7 text-white">{t.tickets.valuePunch}</p>
               </div>
               <div className="rounded-3xl border border-sky-200 bg-sky-50 p-6 text-sm leading-7 text-sky-900 shadow-sm md:p-8">
                 <div className="mb-3 flex h-11 w-11 items-center justify-center rounded-2xl bg-white text-2xl shadow-sm">🎟️</div>
@@ -1163,7 +1250,28 @@ export default function TaiwanFanNightWebsite() {
                 <p className="mt-3">{t.tickets.eText2}</p>
               </div>
             </div>
-            <Card className="mt-8 overflow-hidden border-slate-200 bg-white p-0 shadow-lg"><div className="grid gap-0 lg:grid-cols-[1.05fr_0.95fr] lg:items-center"><div className="bg-gradient-to-br from-emerald-700 to-sky-700 p-8 text-white md:p-10"><p className="text-sm font-semibold uppercase tracking-[0.25em] text-white/75">Red Sox Giveaway</p><h3 className="mt-3 text-3xl font-black">{t.tickets.giveawayTitle}</h3><p className="mt-4 leading-7 text-white/90">{t.tickets.giveawayText}</p><p className="mt-4 rounded-2xl bg-white/15 p-4 text-sm leading-7 text-white/90">{t.tickets.giveawayNote}</p></div><div className="bg-emerald-900/5 p-5"><img src={jerseyImage} alt="Red Sox × Bruins co-branding Baseball Jersey" className="h-auto w-full rounded-3xl object-cover shadow-md" /></div></div></Card>
+            <Card className="mt-8 overflow-hidden border border-emerald-200 bg-white p-0 shadow-xl">
+              <div className="grid gap-0 lg:grid-cols-[0.9fr_1.1fr] lg:items-stretch">
+                <div className="bg-gradient-to-br from-white via-emerald-50/70 to-sky-50/80 p-8 md:p-10">
+                  <div className="inline-flex items-center gap-2 rounded-full border border-emerald-200 bg-white px-4 py-2 text-xs font-bold uppercase tracking-[0.22em] text-emerald-700 shadow-sm">
+                    <span className="text-base">🎁</span>
+                    <span>{lang === "zh" ? "官方現場贈品" : "Official Game-Day Giveaway"}</span>
+                  </div>
+                  <h3 className="mt-5 text-4xl font-black leading-tight text-slate-950 md:text-5xl lg:text-6xl">Red Sox × Bruins Limited-Edition Jersey</h3>
+                  <p className="mt-3 text-lg font-bold text-emerald-700">{t.tickets.giveawayTitle}</p>
+                  <p className="mt-4 max-w-2xl text-base leading-8 text-slate-700">{t.tickets.giveawayText}</p>
+                  <div className="mt-6 rounded-3xl border border-amber-200 bg-amber-50 px-5 py-4 text-sm leading-7 text-amber-950 shadow-sm">
+                    <p className="font-bold text-amber-900">{lang === "zh" ? "領取提醒" : "Pickup Note"}</p>
+                    <p className="mt-1">{t.tickets.giveawayNote}</p>
+                  </div>
+                </div>
+                <div className="flex items-center justify-center bg-gradient-to-br from-emerald-100/70 via-white to-sky-100/70 p-4 md:p-5">
+                  <div className="w-full max-w-[640px] rounded-[2rem] border border-white/80 bg-white p-3 shadow-2xl ring-1 ring-slate-100">
+                    <img src={jerseyImage} alt="Red Sox × Bruins co-branding Baseball Jersey" className="h-auto w-full rounded-[1.5rem] object-cover scale-[1.06]" />
+                  </div>
+                </div>
+              </div>
+            </Card>
           </div>
         </section>
 
@@ -1181,7 +1289,7 @@ export default function TaiwanFanNightWebsite() {
           <div className="mx-auto max-w-7xl">
             <SectionTitle eyebrow={t.leaderboard.eyebrow} title={t.leaderboard.title} description={t.leaderboard.description} />
             <Card className="overflow-hidden border-emerald-200 bg-white p-0 shadow-lg">
-              <div className="bg-gradient-to-br from-emerald-700 to-sky-700 p-8 text-center text-white md:p-10"><p className="text-sm font-semibold uppercase tracking-[0.25em] text-white/75">Current Teams</p><h3 className="mt-3 text-3xl font-black">{t.leaderboard.headerTitle}</h3><p className="mx-auto mt-4 max-w-3xl leading-7 text-white/90">{t.leaderboard.headerText}</p><div className="mt-8 flex w-full justify-center"><div className="inline-flex items-center justify-center rounded-full bg-amber-300 px-8 py-4 text-center text-xl font-black text-emerald-950 shadow-xl ring-4 ring-white/20 md:text-2xl">{lang === "zh" ? `目前 TEAM TAIWAN 總共有 ${teamLeaderboard.length} 隊` : `TEAM TAIWAN currently has ${teamLeaderboard.length} teams`}</div></div></div>
+              <div className="bg-gradient-to-br from-emerald-700 to-sky-700 p-8 text-center text-white md:p-10"><p className="text-sm font-semibold uppercase tracking-[0.25em] text-white/75">Current Teams</p><h3 className="mt-3 text-3xl font-black">{t.leaderboard.headerTitle}</h3><p className="mx-auto mt-4 max-w-3xl leading-7 text-white/90">{t.leaderboard.headerText}</p><div className="mt-7 flex w-full justify-center"><div className="inline-flex rounded-full border border-white/15 bg-white/12 px-8 py-4 shadow-lg backdrop-blur-sm"><span className="text-3xl font-black tracking-wide text-white md:text-5xl">{lang === "zh" ? "千人大隊集結" : "1,000-Person Team Taiwan Rally"}</span></div></div><div className="mt-8 flex w-full justify-center"><div className="inline-flex items-center justify-center rounded-full bg-amber-300 px-8 py-4 text-center text-xl font-black text-emerald-950 shadow-xl ring-4 ring-white/20 md:text-2xl">{lang === "zh" ? `目前 TEAM TAIWAN 總共有 ${teamLeaderboard.length} 隊` : `TEAM TAIWAN currently has ${teamLeaderboard.length} teams`}</div></div></div>
               <div className="p-6 md:p-8"><div className="rounded-[2rem] border border-emerald-100 bg-gradient-to-br from-emerald-50 via-white to-sky-50 p-6 md:p-10"><BubbleLeaderboard t={t} /></div><div className="mt-8 rounded-3xl border border-emerald-200 bg-emerald-50 p-6 text-center"><h4 className="text-2xl font-black text-slate-950">{t.leaderboard.joinTitle}</h4><p className="mx-auto mt-3 max-w-2xl leading-7 text-slate-600">{t.leaderboard.joinText}</p><div className="mt-6 flex justify-center"><a href={zeffyPaymentLink} target="_blank" rel="noreferrer" className="rounded-full bg-emerald-700 px-6 py-3 text-center font-bold text-white transition hover:bg-emerald-800">{t.leaderboard.joinButton}</a></div></div></div>
             </Card>
           </div>
