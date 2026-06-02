@@ -1222,7 +1222,15 @@ export default function TaiwanFanNightWebsite() {
               <Card className="border-emerald-200 p-8 shadow-lg">
                 <div className="mb-6 flex items-center justify-between gap-4"><div><p className="text-sm font-bold text-emerald-700">{t.tickets.dealSubtitle}</p><h3 className="mt-1 text-3xl font-black text-slate-950">{t.tickets.dealTitle}</h3></div><div className="rounded-[2.25rem] bg-emerald-700 px-10 py-8 text-center text-white shadow-xl ring-4 ring-emerald-100 md:px-12 md:py-10"><p className="text-[5.5rem] font-black leading-none md:text-[9.5rem] lg:text-[11rem]">$50</p><p className="mt-3 text-xl font-semibold uppercase tracking-[0.18em] md:text-2xl lg:text-3xl">per ticket</p></div></div>
                 <ul className="space-y-4 text-slate-700">{t.tickets.benefits.map((item) => <li key={item} className="flex gap-3"><span className="mt-1 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-emerald-100 text-xs font-bold text-emerald-800">✓</span><span>{item}</span></li>)}</ul>
-                <div className="mt-7 rounded-2xl bg-amber-50 p-4 text-sm leading-7 text-amber-900">{t.tickets.dealNote}</div>
+                <div className="mt-6 rounded-2xl border border-emerald-200 bg-emerald-50 p-4 text-sm font-semibold leading-7 text-emerald-900">
+                  {lang === "zh"
+                    ? "原本 6/1 後預計改販售一般團體優惠票；因加上官方手續費後實際為 $48.16，我們改為繼續提供 $50 含限量 Jersey 的票券。"
+                    : "The original plan was to switch to traditional group tickets after 6/1. Since official fees brought that ticket to $48.16, we are continuing with a $50 ticket that includes the limited-edition jersey."}
+                </div>
+                <div className="mt-7 rounded-2xl bg-amber-50 p-5 text-sm leading-7 text-amber-900">
+                  <p className="mb-2 text-base font-black text-amber-950">{lang === "zh" ? "票價規劃更新" : "Ticket Plan Update"}</p>
+                  <p>{t.tickets.dealNote}</p>
+                </div>
                 <div className="mt-4 rounded-3xl border border-amber-200 bg-amber-50 p-6 text-sm leading-7 text-amber-950 shadow-sm">
                   <p className="text-xl font-black text-slate-950">{t.tickets.seatingTitle}</p>
                   {t.tickets.seating.map((p) => <p key={p} className="mt-3">{p}</p>)}
