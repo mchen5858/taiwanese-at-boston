@@ -570,12 +570,23 @@ export default function TshirtFinalistsPage() {
                 ? "請記住你喜歡作品的投票編號。正式投票時，將以編號作為投票選項。"
                 : "Please remember the voting number of your favorite design. The official vote will use these numbers as the voting options."}
             </p>
-            <a
-              href="/"
-              className="mt-8 inline-flex rounded-full bg-white px-7 py-3 text-sm font-black text-emerald-800 shadow-md transition hover:bg-emerald-50"
-            >
-              {isZh ? "回到 912 活動首頁" : "Back to 912 Home"}
-            </a>
+            <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
+              <a
+                href="https://forms.gle/iaqhpRvM77jqDfL96"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex rounded-full bg-amber-300 px-8 py-4 text-lg font-black text-emerald-950 shadow-xl transition hover:-translate-y-0.5 hover:bg-amber-200"
+              >
+                {isZh ? "前往 Google Form 投票" : "Vote via Google Form"}
+              </a>
+
+              <a
+                href="/"
+                className="inline-flex rounded-full bg-white px-7 py-4 text-sm font-black text-emerald-800 shadow-md transition hover:bg-emerald-50"
+              >
+                {isZh ? "回到 912 活動首頁" : "Back to 912 Home"}
+              </a>
+            </div>
           </div>
         </div>
       </section>
