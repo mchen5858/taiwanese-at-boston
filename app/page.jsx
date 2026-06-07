@@ -100,11 +100,10 @@ const content = {
       ["tickets", "票價優惠"],
       ["teams", "組隊方式"],
       ["leaderboard", "集氣榜"],
-      ["payment", "付款方式"],
-      ["raffle", "抽獎活動"],
       ["shirt-design", "衣服設計"],
+      ["raffle", "抽獎活動"],
       ["faq", "注意事項"],
-      ["contact", "聯絡我們"],
+      ["support", "支持與聯絡"],
     ],
     headerBuy: "立即前往 Zeffy 購票",
     hero: {
@@ -276,7 +275,7 @@ const content = {
       prizes: ["🎟 912 球票（很多張）", "👕 鄭宗哲簽名 Taiwanese @ Boston 主題 T-shirt（不只一件唷）"],
       eventTitle: "912 台灣集結活動大抽獎",
       eventText: "所有購票參加 912 Taiwan Fan Night at Fenway 的朋友，都可以參加活動大抽獎。",
-      eventPrize: "⚾ 鄭宗哲簽名球（不只一顆喔！）",
+      eventPrize: "⚾ 鄭宗哲簽名球（不只一顆喔！）及鄭宗哲簽名 Taiwanese @ Boston 主題 T-shirt（不只一件唷）",
     },
     shirt: {
       eyebrow: "T-shirt Design Contest",
@@ -459,11 +458,10 @@ const content = {
       ["tickets", "Tickets"],
       ["teams", "Teams"],
       ["leaderboard", "Leaderboard"],
-      ["payment", "Payment"],
-      ["raffle", "Raffle"],
       ["shirt-design", "T-shirt Design"],
+      ["raffle", "Raffle"],
       ["faq", "FAQ"],
-      ["contact", "Contact"],
+      ["support", "Support / Contact"],
     ],
     headerBuy: "Buy Tickets on Zeffy",
     hero: {
@@ -1204,8 +1202,7 @@ export default function TaiwanFanNightWebsite() {
             </Card>
           </div>
         </section>
-
-        <section id="mission" className="bg-white px-4 py-16 md:px-8 md:py-24">
+<section id="mission" className="bg-white px-4 py-16 md:px-8 md:py-24">
           <div className="mx-auto max-w-7xl">
             <SectionTitle eyebrow={t.mission.eyebrow} title={t.mission.title} description={t.mission.description} />
             <div className="grid gap-6 lg:grid-cols-3">
@@ -1295,30 +1292,39 @@ export default function TaiwanFanNightWebsite() {
           </div>
         </section>
 
-        <section id="payment" className="px-4 py-16 md:px-8 md:py-24">
-          <div className="mx-auto max-w-7xl">
-            <SectionTitle eyebrow={t.payment.eyebrow} title={t.payment.title} description={t.payment.description} />
-            <div className="grid gap-6 lg:grid-cols-3">
-              <Card className="relative overflow-hidden border-emerald-300 bg-gradient-to-br from-emerald-700 to-sky-700 p-7 text-white shadow-xl ring-4 ring-emerald-100 transition hover:-translate-y-1 hover:shadow-2xl lg:col-span-2"><div className="mb-5 flex h-14 w-14 items-center justify-center rounded-2xl bg-white/15 text-3xl shadow-sm">🎟️</div><p className="text-sm font-semibold uppercase tracking-[0.25em] text-white/75">{t.payment.main}</p><h3 className="mt-2 text-3xl font-black">{t.payment.zeffyTitle}</h3><p className="mt-4 leading-7 text-white/95">{t.payment.zeffyText}</p><div className="mt-6 grid gap-5 md:grid-cols-[auto_1fr] md:items-center"><div className="rounded-3xl bg-white p-4 shadow-sm"><img src={zeffyQrCode} alt="Zeffy 購票 QR Code" className="h-36 w-36 object-contain" /></div><div><p className="mb-3 text-sm leading-6 text-white/90">{t.payment.scan}</p><a href={zeffyPaymentLink} target="_blank" rel="noreferrer" className="inline-flex rounded-full bg-white px-6 py-3 font-bold text-emerald-800 transition hover:bg-emerald-50">{t.headerBuy}</a></div></div></Card>
-              <Card className="relative overflow-hidden border-sky-200 bg-white p-7 shadow-lg transition hover:-translate-y-1 hover:shadow-xl"><div className="mb-5 flex h-14 w-14 items-center justify-center rounded-2xl bg-sky-50 text-3xl text-sky-700 shadow-sm">💙</div><p className="text-sm font-semibold uppercase tracking-[0.25em] text-sky-700">Support</p><h3 className="mt-2 text-3xl font-black text-slate-950">{t.payment.goTitle}</h3><p className="mt-5 leading-7 text-slate-700">{t.payment.goText}</p><a href={goFundMeLink} target="_blank" rel="noreferrer" className="mt-6 inline-flex rounded-full bg-sky-600 px-6 py-3 font-bold text-white transition hover:bg-sky-700">{t.payment.goButton}</a></Card>
-              <Card className="relative overflow-hidden border-amber-200 bg-white p-7 shadow-lg transition hover:-translate-y-1 hover:shadow-xl"><div className="mb-5 flex h-14 w-14 items-center justify-center rounded-2xl bg-amber-50 text-3xl text-amber-700 shadow-sm">⚠️</div><p className="text-sm font-semibold uppercase tracking-[0.25em] text-amber-700">Reminder</p><h3 className="mt-2 text-3xl font-black text-slate-950">{t.payment.reminderTitle}</h3><div className="mt-5 rounded-3xl bg-amber-50 p-5 text-amber-950"><p className="font-bold">{t.payment.reminderLead}</p><p className="mt-2 leading-7">{t.payment.reminderText}</p><div className="mt-4 rounded-2xl border border-amber-200 bg-white/70 p-4 text-sm leading-7"><p className="font-bold">{t.payment.listTitle}</p><p className="mt-2">{t.payment.listText}</p></div></div></Card>
-            </div>
-          </div>
-        </section>
-
-        <section id="raffle" className="bg-white px-4 py-16 md:px-8 md:py-24">
-          <div className="mx-auto max-w-7xl">
-            <SectionTitle eyebrow={t.raffle.eyebrow} title={t.raffle.title} description={t.raffle.description} />
-            <div className="grid gap-6 lg:grid-cols-2">
-              <Card className="border-emerald-200 bg-emerald-50/70 p-8"><div className="mb-5 flex h-14 w-14 items-center justify-center rounded-2xl bg-white text-3xl shadow-sm">🎁</div><h3 className="text-2xl font-black text-slate-950">{t.raffle.lineTitle}</h3><p className="mt-4 leading-7 text-slate-700">{t.raffle.lineText}</p><div className="mt-6 flex flex-col gap-3 sm:flex-row"><a href={officialLineGroup} target="_blank" rel="noreferrer" className="rounded-full bg-emerald-700 px-5 py-3 text-center text-sm font-bold text-white transition hover:bg-emerald-800">{t.hero.buttons.line}</a><a href={googleFormLink} target="_blank" rel="noreferrer" className="rounded-full border border-emerald-200 bg-white px-5 py-3 text-center text-sm font-bold text-emerald-800 transition hover:bg-emerald-50">{t.hero.buttons.form}</a></div><div className="mt-6 space-y-3 text-slate-700">{t.raffle.prizes.map((prize) => <p key={prize} className="rounded-2xl bg-white p-4 font-semibold">{prize}</p>)}</div></Card>
-              <Card className="p-8"><div className="mb-5 flex h-14 w-14 items-center justify-center rounded-2xl bg-slate-50 text-3xl shadow-sm">🏆</div><h3 className="text-2xl font-black text-slate-950">{t.raffle.eventTitle}</h3><p className="mt-4 leading-7 text-slate-700">{t.raffle.eventText}</p><div className="mt-6 rounded-2xl bg-sky-50 p-5 font-semibold text-sky-900">{t.raffle.eventPrize}</div></Card>
-            </div>
-          </div>
-        </section>
-
-        <section id="shirt-design" className="px-4 py-16 md:px-8 md:py-24">
+        
+        
+        
+<section id="shirt-design" className="px-4 py-16 md:px-8 md:py-24">
           <div className="mx-auto max-w-7xl">
             <SectionTitle eyebrow={t.shirt.eyebrow} title={t.shirt.title} description={t.shirt.description} />
+
+            <a
+              href="/tshirt-finalists"
+              className="mb-10 block overflow-hidden rounded-[2.5rem] border border-amber-300 bg-gradient-to-r from-amber-300 via-yellow-200 to-emerald-200 p-1 shadow-2xl transition hover:-translate-y-1 hover:shadow-[0_28px_70px_rgba(15,118,110,0.25)]"
+            >
+              <div className="rounded-[2.25rem] bg-white/55 p-7 backdrop-blur-sm md:p-10">
+                <div className="flex flex-col items-center justify-between gap-6 text-center md:flex-row md:text-left">
+                  <div>
+                    <p className="text-sm font-black uppercase tracking-[0.32em] text-emerald-900">
+                      {lang === "zh" ? "NEW｜作品公布" : "NEW｜Finalists"}
+                    </p>
+                    <h2 className="mt-3 text-4xl font-black leading-tight text-slate-950 md:text-6xl">
+                      {lang === "zh" ? "入圍作品公布" : "T-shirt Finalists"}
+                    </h2>
+                    <p className="mt-4 max-w-3xl text-base font-semibold leading-8 text-slate-700 md:text-lg">
+                      {lang === "zh"
+                        ? "查看 912 Team Taiwan T-shirt 入圍作品，支持你最喜歡的設計。"
+                        : "View the 912 Team Taiwan T-shirt finalist designs and support your favorite."}
+                    </p>
+                  </div>
+                  <div className="shrink-0 rounded-full bg-emerald-800 px-8 py-4 text-lg font-black text-white shadow-xl transition hover:bg-emerald-900 md:text-xl">
+                    {lang === "zh" ? "前往入圍作品 →" : "View Finalists →"}
+                  </div>
+                </div>
+              </div>
+            </a>
+
 
             <Card className="overflow-hidden border-emerald-200 bg-white p-0 shadow-lg">
               <div className="grid gap-0 lg:grid-cols-[0.95fr_1.05fr] lg:items-stretch">
@@ -1344,12 +1350,7 @@ export default function TaiwanFanNightWebsite() {
             </Card>
 
             <div className="mt-8">
-              <Card className="border-sky-200 bg-white p-7 shadow-lg">
-                <p className="text-sm font-semibold uppercase tracking-[0.25em] text-sky-700">Submission</p>
-                <h3 className="mt-2 text-3xl font-black text-slate-950">{t.shirt.submissionTitle}</h3>
-                <p className="mt-4 leading-7 text-slate-700">{t.shirt.submissionText}</p>
-                <a href={tshirtSubmissionFormLink} target="_blank" rel="noreferrer" className="mt-6 inline-flex rounded-full bg-sky-600 px-6 py-3 font-bold text-white shadow-lg transition hover:bg-sky-700">{t.shirt.submitNow}</a>
-              </Card>
+              
             </div>
 
             <Card className="mt-8 overflow-hidden border-slate-200 bg-white p-0 shadow-xl">
@@ -1377,7 +1378,7 @@ export default function TaiwanFanNightWebsite() {
 
             <div className="mt-8 grid gap-6 lg:grid-cols-[0.8fr_1.2fr]">
               <Card className="p-7 shadow-lg">
-                <h3 className="text-2xl font-black text-slate-950">{t.shirt.timelineTitle}</h3>
+<h3 className="text-2xl font-black text-slate-950">{t.shirt.timelineTitle}</h3>
                 <div className="mt-5 space-y-4 text-sm leading-7 text-slate-700">
                   {t.shirt.timeline.map(([label, date]) => (
                     <p key={label}><strong>{label}：</strong>{date}</p>
@@ -1413,6 +1414,74 @@ export default function TaiwanFanNightWebsite() {
           </div>
         </section>
 
+
+        <section id="raffle" className="px-4 py-16 md:px-8 md:py-24">
+          <div className="mx-auto max-w-7xl">
+            <SectionTitle eyebrow={t.raffle.eyebrow} title={t.raffle.title} description={t.raffle.description} />
+
+            <Card className="mb-8 border-emerald-200 bg-gradient-to-br from-emerald-50 via-white to-sky-50 p-8 shadow-lg md:p-10">
+              <p className="text-sm font-black uppercase tracking-[0.28em] text-emerald-700">
+                {lang === "zh" ? "抽獎結果已公布" : "Raffle Results Announced"}
+              </p>
+              <h3 className="mt-3 text-3xl font-black text-slate-950 md:text-4xl">
+                {lang === "zh" ? "5/2–5/31｜官方 LINE 群抽獎結果" : "5/2–5/31｜Official LINE Group Raffle Results"}
+              </h3>
+              <p className="mt-4 leading-8 text-slate-700">
+                {lang === "zh"
+                  ? "以下得獎號碼皆由 1–427 中隨機抽出，且沒有重複。"
+                  : "The winning numbers below were randomly selected from 1–427 with no duplicates."}
+              </p>
+
+              <div className="mt-8 grid gap-5 lg:grid-cols-3">
+                <div className="rounded-[2rem] border border-rose-100 bg-white p-6 shadow-sm">
+                  <p className="text-2xl font-black text-slate-950">🎟️ 912 球票得獎人</p>
+                  <p className="mt-1 text-sm font-bold text-slate-500">三位</p>
+                  <div className="mt-5 flex flex-wrap gap-3">
+                    {["74", "124", "334"].map((num) => (
+                      <span key={num} className="rounded-full bg-rose-100 px-5 py-3 text-2xl font-black text-rose-900">{num}</span>
+                    ))}
+                  </div>
+                </div>
+
+                <div className="rounded-[2rem] border border-emerald-100 bg-white p-6 shadow-sm">
+                  <p className="text-2xl font-black text-slate-950">👕 鄭宗哲簽名 Taiwanese @ Boston 主題 T-shirt</p>
+                  <p className="mt-1 text-sm font-bold text-slate-500">三位</p>
+                  <div className="mt-5 flex flex-wrap gap-3">
+                    {["230", "288", "245"].map((num) => (
+                      <span key={num} className="rounded-full bg-emerald-100 px-5 py-3 text-2xl font-black text-emerald-900">{num}</span>
+                    ))}
+                  </div>
+                </div>
+
+                <div className="rounded-[2rem] border border-sky-100 bg-white p-6 shadow-sm">
+                  <p className="text-2xl font-black text-slate-950">⚾ 鄭宗哲簽名球得獎人</p>
+                  <p className="mt-1 text-sm font-bold text-slate-500">一位</p>
+                  <div className="mt-5 flex flex-wrap gap-3">
+                    {["182"].map((num) => (
+                      <span key={num} className="rounded-full bg-sky-100 px-5 py-3 text-2xl font-black text-sky-900">{num}</span>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </Card>
+
+            <Card className="p-8">
+              <div className="mb-5 flex h-14 w-14 items-center justify-center rounded-2xl bg-slate-50 text-3xl shadow-sm">🏆</div>
+              <h3 className="text-2xl font-black text-slate-950">{t.raffle.eventTitle}</h3>
+              <p className="mt-4 leading-7 text-slate-700">
+                {lang === "zh"
+                  ? "912 台灣集結活動大抽獎將在 912 前一週舉行。所有購票參加 912 Taiwan Fan Night at Fenway 的朋友，都可以參加抽獎。"
+                  : "The 912 Taiwan Rally Grand Raffle will be held one week before 9/12. Everyone who purchases a ticket for 912 Taiwan Fan Night at Fenway is eligible to participate."}
+              </p>
+              <div className="mt-6 rounded-2xl bg-sky-50 p-5 font-semibold text-sky-900">
+                {lang === "zh"
+                  ? "⚾ 鄭宗哲簽名球（不只一顆喔！）及鄭宗哲簽名 Taiwanese @ Boston 主題 T-shirt（不只一件唷）"
+                  : "⚾ Cheng Tsung-Che signed baseballs — more than one — and signed Taiwanese @ Boston themed T-shirts — more than one!"}
+              </div>
+            </Card>
+          </div>
+        </section>
+
         <section id="faq" className="bg-white px-4 py-16 md:px-8 md:py-24">
           <div className="mx-auto max-w-5xl">
             <SectionTitle eyebrow={t.faq.eyebrow} title={t.faq.title} description={t.faq.description} />
@@ -1441,30 +1510,26 @@ export default function TaiwanFanNightWebsite() {
           </div>
         </section>
 
-        <section id="contact" className="px-4 py-16 md:px-8 md:py-24">
-          <div className="mx-auto max-w-7xl">
-            <SectionTitle eyebrow={t.contact.eyebrow} title={t.contact.title} description={t.contact.description} />
-            <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
-              {t.contact.cards.map(([title, body, button, link]) => (
-                <Card key={title} className="h-full">
-                  <h3 className="text-xl font-black text-slate-950">{title}</h3>
-                  <p className="mt-4 text-sm leading-7 text-slate-600">{body}</p>
-                  <a href={link} target="_blank" rel="noreferrer" className="mt-5 inline-flex rounded-full bg-emerald-700 px-4 py-2 text-sm font-bold text-white transition hover:bg-emerald-800">{button}</a>
-                </Card>
-              ))}
-            </div>
-            <Card className="mt-8 border-emerald-200 bg-emerald-50 text-center">
-              <p className="text-sm font-semibold uppercase tracking-[0.25em] text-emerald-700">{t.contact.organizerTitle}</p>
-              <h3 className="mt-2 text-2xl font-black text-slate-950">{t.contact.organizer}</h3>
-            </Card>
-          </div>
-        </section>
-
+        
         <section id="support" className="bg-white px-4 py-16 md:px-8 md:py-24">
           <div className="mx-auto max-w-7xl">
             <SectionTitle eyebrow={t.btcfdonate.eyebrow} title={t.btcfdonate.title} description={t.btcfdonate.description} />
 
-            <div className="grid gap-6 lg:grid-cols-3">
+            <div className="grid gap-6 lg:grid-cols-4">
+              <Card className="border-sky-200 bg-gradient-to-br from-sky-700 to-emerald-700 p-8 text-white shadow-2xl ring-4 ring-sky-100">
+                <div className="mb-8 flex h-14 w-14 items-center justify-center rounded-2xl bg-white/15 text-3xl">💙</div>
+                <h3 className="text-3xl font-black">{t.btcfdonate.goTitle}</h3>
+                <p className="mt-6 text-sm font-semibold leading-7 text-white/90">{t.btcfdonate.goText}</p>
+                <a
+                  href={goFundMeLink}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="mt-8 inline-flex rounded-full bg-white px-6 py-3 text-sm font-black text-sky-800 shadow-md transition hover:bg-sky-50"
+                >
+                  {t.btcfdonate.goButton}
+                </a>
+              </Card>
+
               <Card className="border-emerald-200 bg-gradient-to-br from-emerald-700 to-sky-700 p-8 text-white shadow-2xl ring-4 ring-emerald-100">
                 <div className="mb-8 flex h-14 w-14 items-center justify-center rounded-2xl bg-white/15 text-3xl">💳</div>
                 <h3 className="text-3xl font-black">{t.btcfdonate.zelleTitle}</h3>
@@ -1506,7 +1571,27 @@ export default function TaiwanFanNightWebsite() {
               {t.btcfdonate.receiptNote}
             </div>
           </div>
-        </section>
+        
+<div id="contact" className="mt-12">
+          <div className="mx-auto max-w-7xl">
+            <SectionTitle eyebrow={t.contact.eyebrow} title={t.contact.title} description={t.contact.description} />
+            <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+              {t.contact.cards.map(([title, body, button, link]) => (
+                <Card key={title} className="h-full">
+                  <h3 className="text-xl font-black text-slate-950">{title}</h3>
+                  <p className="mt-4 text-sm leading-7 text-slate-600">{body}</p>
+                  <a href={link} target="_blank" rel="noreferrer" className="mt-5 inline-flex rounded-full bg-emerald-700 px-4 py-2 text-sm font-bold text-white transition hover:bg-emerald-800">{button}</a>
+                </Card>
+              ))}
+            </div>
+            <Card className="mt-8 border-emerald-200 bg-emerald-50 text-center">
+              <p className="text-sm font-semibold uppercase tracking-[0.25em] text-emerald-700">{t.contact.organizerTitle}</p>
+              <h3 className="mt-2 text-2xl font-black text-slate-950">{t.contact.organizer}</h3>
+            </Card>
+          </div>
+        </div>
+
+</section>
       </main>
 
       <footer className="border-t border-slate-200 bg-slate-950 px-4 py-12 text-white md:px-8">
