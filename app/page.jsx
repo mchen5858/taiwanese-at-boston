@@ -14,6 +14,7 @@ const goFundMeLink = "https://giving.gofundme.com/campaign/805027/landing";
 const organizerLine = "https://line.me/ti/p/xbvkW3pO20";
 const volunteerFormLink = "https://forms.gle/1KrTH1ETd9quXNMJ6";
 const tshirtSubmissionFormLink = "https://forms.gle/g7EmFkHFmpt1t1RA7";
+const tshirtResultsLink = "/tshirt-results";
 
 const coHosts = [
   "波克萊台灣商會",
@@ -1298,6 +1299,33 @@ export default function TaiwanFanNightWebsite() {
 <section id="shirt-design" className="px-4 py-16 md:px-8 md:py-24">
           <div className="mx-auto max-w-7xl">
             <SectionTitle eyebrow={t.shirt.eyebrow} title={t.shirt.title} description={t.shirt.description} />
+
+            <a
+              id="tshirt-results"
+              href={tshirtResultsLink}
+              className="mb-10 block overflow-hidden rounded-[2.5rem] border border-rose-300 bg-gradient-to-r from-rose-200 via-amber-200 to-emerald-200 p-1 shadow-2xl transition hover:-translate-y-1 hover:shadow-[0_28px_70px_rgba(244,63,94,0.2)]"
+            >
+              <div className="rounded-[2.25rem] bg-white/70 p-7 backdrop-blur-sm md:p-10">
+                <div className="flex flex-col items-center justify-between gap-6 text-center md:flex-row md:text-left">
+                  <div>
+                    <p className="text-sm font-black uppercase tracking-[0.32em] text-rose-700">
+                      {lang === "zh" ? "NEW｜得獎公布" : "NEW｜Winners Announced"}
+                    </p>
+                    <h2 className="mt-3 text-4xl font-black leading-tight text-slate-950 md:text-6xl">
+                      {lang === "zh" ? "T-shirt 比賽結果公布" : "T-shirt Contest Results"}
+                    </h2>
+                    <p className="mt-4 max-w-3xl text-base font-semibold leading-8 text-slate-700 md:text-lg">
+                      {lang === "zh"
+                        ? "查看官方首獎、社群人氣獎，以及原投稿版本與官方製作版本說明。"
+                        : "View the Grand Prize, Community Favorite Award, and the official production version details."}
+                    </p>
+                  </div>
+                  <div className="shrink-0 rounded-full bg-rose-700 px-8 py-4 text-lg font-black text-white shadow-xl transition hover:bg-rose-800 md:text-xl">
+                    {lang === "zh" ? "查看得獎公布 →" : "View Results →"}
+                  </div>
+                </div>
+              </div>
+            </a>
 
             <a
               href="/tshirt-finalists"
