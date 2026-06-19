@@ -15,6 +15,7 @@ const organizerLine = "https://line.me/ti/p/xbvkW3pO20";
 const volunteerFormLink = "https://forms.gle/1KrTH1ETd9quXNMJ6";
 const tshirtSubmissionFormLink = "https://forms.gle/g7EmFkHFmpt1t1RA7";
 const tshirtResultsLink = "/tshirt-results";
+const tshirtSizeChangeLink = "/tshirt-size-change";
 
 const coHosts = [
   "波克萊台灣商會",
@@ -101,7 +102,7 @@ const content = {
       ["tickets", "票價優惠"],
       ["teams", "組隊方式"],
       ["leaderboard", "集氣榜"],
-      ["shirt-design", "衣服設計"],
+      ["shirt-design", "T-shirt 專區"],
       ["raffle", "抽獎活動"],
       ["faq", "注意事項"],
       ["support", "支持與聯絡"],
@@ -459,7 +460,7 @@ const content = {
       ["tickets", "Tickets"],
       ["teams", "Teams"],
       ["leaderboard", "Leaderboard"],
-      ["shirt-design", "T-shirt Design"],
+      ["shirt-design", "T-shirt Hub"],
       ["raffle", "Raffle"],
       ["faq", "FAQ"],
       ["support", "Support / Contact"],
@@ -1298,152 +1299,149 @@ export default function TaiwanFanNightWebsite() {
         
 <section id="shirt-design" className="px-4 py-16 md:px-8 md:py-24">
           <div className="mx-auto max-w-7xl">
-            <SectionTitle eyebrow={t.shirt.eyebrow} title={t.shirt.title} description={t.shirt.description} />
+            <SectionTitle
+              eyebrow={lang === "zh" ? "T-shirt Hub" : "T-shirt Hub"}
+              title={lang === "zh" ? "912 T-shirt 專區" : "912 T-shirt Hub"}
+              description={
+                lang === "zh"
+                  ? "設計比賽資訊、入圍作品、得獎公布、尺寸更改、加購與領取資訊，都整理在這裡。"
+                  : "Contest information, finalist designs, winner announcement, size changes, add-ons, and pickup information are organized here."
+              }
+            />
 
-            <a
-              id="tshirt-results"
-              href={tshirtResultsLink}
-              className="mb-10 block overflow-hidden rounded-[2.5rem] border border-rose-300 bg-gradient-to-r from-rose-200 via-amber-200 to-emerald-200 p-1 shadow-2xl transition hover:-translate-y-1 hover:shadow-[0_28px_70px_rgba(244,63,94,0.2)]"
-            >
-              <div className="rounded-[2.25rem] bg-white/70 p-7 backdrop-blur-sm md:p-10">
-                <div className="flex flex-col items-center justify-between gap-6 text-center md:flex-row md:text-left">
-                  <div>
-                    <p className="text-sm font-black uppercase tracking-[0.32em] text-rose-700">
-                      {lang === "zh" ? "NEW｜得獎公布" : "NEW｜Winners Announced"}
-                    </p>
-                    <h2 className="mt-3 text-4xl font-black leading-tight text-slate-950 md:text-6xl">
-                      {lang === "zh" ? "T-shirt 比賽結果公布" : "T-shirt Contest Results"}
-                    </h2>
-                    <p className="mt-4 max-w-3xl text-base font-semibold leading-8 text-slate-700 md:text-lg">
-                      {lang === "zh"
-                        ? "查看官方首獎、社群人氣獎，以及原投稿版本與官方製作版本說明。"
-                        : "View the Grand Prize, Community Favorite Award, and the official production version details."}
-                    </p>
-                  </div>
-                  <div className="shrink-0 rounded-full bg-rose-700 px-8 py-4 text-lg font-black text-white shadow-xl transition hover:bg-rose-800 md:text-xl">
-                    {lang === "zh" ? "查看得獎公布 →" : "View Results →"}
-                  </div>
+            <div className="mt-8 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+              <a
+                href="/tshirt-contest-info"
+                className="group relative flex h-full flex-col overflow-hidden rounded-[2rem] border border-sky-200 bg-gradient-to-b from-white via-white to-sky-50/70 p-7 shadow-[0_16px_40px_rgba(15,23,42,0.08)] transition duration-300 hover:-translate-y-1.5 hover:shadow-[0_24px_60px_rgba(14,116,144,0.18)]"
+              >
+                <div className="absolute inset-x-0 top-0 h-1.5 bg-gradient-to-r from-sky-400 via-cyan-300 to-emerald-300" />
+                <div className="flex items-start justify-between gap-4">
+                  <div className="flex h-16 w-16 items-center justify-center rounded-[1.35rem] bg-sky-100 text-3xl shadow-sm ring-1 ring-sky-200/60">📋</div>
+                  <span className="rounded-full bg-sky-100 px-3 py-1 text-xs font-black uppercase tracking-[0.18em] text-sky-700">Info</span>
+                </div>
+                <p className="mt-6 text-xs font-black uppercase tracking-[0.26em] text-sky-700">{lang === "zh" ? "Contest Info" : "Contest Info"}</p>
+                <h3 className="mt-3 text-3xl font-black leading-tight text-slate-950">{lang === "zh" ? "設計比賽資訊" : "Contest Info"}</h3>
+                <p className="mt-4 flex-1 text-[15px] leading-8 text-slate-600">
+                  {lang === "zh"
+                    ? "查看本次設計徵選的主題、時程、獎項、評選方式與比賽規則。"
+                    : "View the contest theme, timeline, prizes, judging method, and submission guidelines."}
+                </p>
+                <div className="mt-7 inline-flex items-center gap-2 text-sm font-black text-emerald-700">
+                  {lang === "zh" ? "查看資訊" : "View Info"}
+                  <span className="transition group-hover:translate-x-1">→</span>
+                </div>
+              </a>
+
+              <a
+                href="/tshirt-finalists"
+                className="group relative flex h-full flex-col overflow-hidden rounded-[2rem] border border-emerald-200 bg-gradient-to-b from-white via-white to-emerald-50/70 p-7 shadow-[0_16px_40px_rgba(15,23,42,0.08)] transition duration-300 hover:-translate-y-1.5 hover:shadow-[0_24px_60px_rgba(5,150,105,0.18)]"
+              >
+                <div className="absolute inset-x-0 top-0 h-1.5 bg-gradient-to-r from-emerald-400 via-lime-300 to-sky-300" />
+                <div className="flex items-start justify-between gap-4">
+                  <div className="flex h-16 w-16 items-center justify-center rounded-[1.35rem] bg-emerald-100 text-3xl shadow-sm ring-1 ring-emerald-200/60">🎨</div>
+                  <span className="rounded-full bg-emerald-100 px-3 py-1 text-xs font-black uppercase tracking-[0.18em] text-emerald-700">Top 8</span>
+                </div>
+                <p className="mt-6 text-xs font-black uppercase tracking-[0.26em] text-emerald-700">{lang === "zh" ? "Finalists" : "Finalists"}</p>
+                <h3 className="mt-3 text-3xl font-black leading-tight text-slate-950">{lang === "zh" ? "入圍作品" : "Finalist Designs"}</h3>
+                <p className="mt-4 flex-1 text-[15px] leading-8 text-slate-600">
+                  {lang === "zh"
+                    ? "查看本次 912 T-shirt 設計徵選的 8 件入圍作品與設計理念。"
+                    : "View the 8 finalist designs and design concepts from the 912 T-shirt contest."}
+                </p>
+                <div className="mt-7 inline-flex items-center gap-2 text-sm font-black text-emerald-700">
+                  {lang === "zh" ? "查看作品" : "View Finalists"}
+                  <span className="transition group-hover:translate-x-1">→</span>
+                </div>
+              </a>
+
+              <a
+                href={tshirtResultsLink}
+                className="group relative flex h-full flex-col overflow-hidden rounded-[2rem] border border-amber-200 bg-gradient-to-b from-white via-white to-amber-50/70 p-7 shadow-[0_16px_40px_rgba(15,23,42,0.08)] transition duration-300 hover:-translate-y-1.5 hover:shadow-[0_24px_60px_rgba(217,119,6,0.18)]"
+              >
+                <div className="absolute inset-x-0 top-0 h-1.5 bg-gradient-to-r from-amber-400 via-yellow-300 to-emerald-300" />
+                <div className="flex items-start justify-between gap-4">
+                  <div className="flex h-16 w-16 items-center justify-center rounded-[1.35rem] bg-amber-100 text-3xl shadow-sm ring-1 ring-amber-200/60">🏆</div>
+                  <span className="rounded-full bg-amber-100 px-3 py-1 text-xs font-black uppercase tracking-[0.18em] text-amber-700">Announced</span>
+                </div>
+                <p className="mt-6 text-xs font-black uppercase tracking-[0.26em] text-amber-700">{lang === "zh" ? "Results" : "Results"}</p>
+                <h3 className="mt-3 text-3xl font-black leading-tight text-slate-950">{lang === "zh" ? "得獎設計公布" : "Design Results"}</h3>
+                <p className="mt-4 flex-1 text-[15px] leading-8 text-slate-600">
+                  {lang === "zh"
+                    ? "查看官方首獎、社群人氣獎、特別表現獎，以及官方製作版本說明。"
+                    : "View the Grand Prize, Community Favorite Award, Special Recognition Award, and official production version details."}
+                </p>
+                <div className="mt-7 inline-flex items-center gap-2 text-sm font-black text-emerald-700">
+                  {lang === "zh" ? "查看公布" : "View Results"}
+                  <span className="transition group-hover:translate-x-1">→</span>
+                </div>
+              </a>
+
+              <a
+                href={tshirtSizeChangeLink}
+                className="group relative flex h-full flex-col overflow-hidden rounded-[2rem] border border-emerald-200 bg-gradient-to-b from-white via-white to-emerald-50/70 p-7 shadow-[0_16px_40px_rgba(15,23,42,0.08)] transition duration-300 hover:-translate-y-1.5 hover:shadow-[0_24px_60px_rgba(5,150,105,0.18)]"
+              >
+                <div className="absolute inset-x-0 top-0 h-1.5 bg-gradient-to-r from-emerald-400 via-sky-300 to-cyan-300" />
+                <div className="flex items-start justify-between gap-4">
+                  <div className="flex h-16 w-16 items-center justify-center rounded-[1.35rem] bg-emerald-100 text-3xl shadow-sm ring-1 ring-emerald-200/60">📏</div>
+                  <span className="rounded-full bg-amber-300 px-3 py-1 text-xs font-black uppercase tracking-[0.18em] text-emerald-950">6/28</span>
+                </div>
+                <p className="mt-6 text-xs font-black uppercase tracking-[0.26em] text-emerald-700">{lang === "zh" ? "Size Change" : "Size Change"}</p>
+                <h3 className="mt-3 text-3xl font-black leading-tight text-slate-950">{lang === "zh" ? "尺寸查詢與更改" : "Size Check & Change"}</h3>
+                <p className="mt-4 flex-1 text-[15px] leading-8 text-slate-600">
+                  {lang === "zh"
+                    ? "輸入 email 查詢目前尺寸，查看 size chart，並於 6/28 前提交更改需求。"
+                    : "Enter your email to check your current size, review the size chart, and submit changes by 6/28."}
+                </p>
+                <div className="mt-7 inline-flex items-center gap-2 text-sm font-black text-emerald-700">
+                  {lang === "zh" ? "前往改尺寸" : "Change Size"}
+                  <span className="transition group-hover:translate-x-1">→</span>
+                </div>
+              </a>
+
+              <a
+                href="/tshirt-add-on"
+                className="group relative flex h-full flex-col overflow-hidden rounded-[2rem] border border-sky-200 bg-gradient-to-b from-white via-white to-sky-50/70 p-7 shadow-[0_16px_40px_rgba(15,23,42,0.08)] transition duration-300 hover:-translate-y-1.5 hover:shadow-[0_24px_60px_rgba(14,116,144,0.18)]"
+              >
+                <div className="absolute inset-x-0 top-0 h-1.5 bg-gradient-to-r from-sky-300 via-cyan-200 to-amber-300" />
+                <div className="flex items-start justify-between gap-4">
+                  <div className="flex h-16 w-16 items-center justify-center rounded-[1.35rem] bg-sky-100 text-3xl shadow-sm ring-1 ring-sky-200/60">🛒</div>
+                  <span className="rounded-full bg-amber-300 px-3 py-1 text-xs font-black uppercase tracking-[0.18em] text-emerald-950">7/1</span>
+                </div>
+                <p className="mt-6 text-xs font-black uppercase tracking-[0.26em] text-sky-700">{lang === "zh" ? "Add-on" : "Add-on"}</p>
+                <h3 className="mt-3 text-3xl font-black leading-tight text-slate-950">{lang === "zh" ? "加購專區" : "Add-on Shop"}</h3>
+                <p className="mt-4 flex-1 text-[15px] leading-8 text-slate-600">
+                  {lang === "zh"
+                    ? "白色官方版、黑色投稿原創版與 Toddler 幼兒版資訊，都整理在這裡。"
+                    : "White official version, black original version, and toddler add-on information are all here."}
+                </p>
+                <div className="mt-7 inline-flex items-center gap-2 text-sm font-black text-emerald-700">
+                  {lang === "zh" ? "查看加購資訊" : "View Add-ons"}
+                  <span className="transition group-hover:translate-x-1">→</span>
+                </div>
+              </a>
+
+              <div className="relative flex h-full flex-col overflow-hidden rounded-[2rem] border border-slate-200 bg-gradient-to-b from-white via-white to-slate-50/80 p-7 shadow-[0_16px_40px_rgba(15,23,42,0.08)]">
+                <div className="absolute inset-x-0 top-0 h-1.5 bg-gradient-to-r from-slate-200 via-sky-100 to-emerald-100" />
+                <div className="flex items-start justify-between gap-4">
+                  <div className="flex h-16 w-16 items-center justify-center rounded-[1.35rem] bg-slate-100 text-3xl shadow-sm ring-1 ring-slate-200/60">📦</div>
+                  <span className="rounded-full bg-slate-100 px-3 py-1 text-xs font-black uppercase tracking-[0.18em] text-slate-500">Soon</span>
+                </div>
+                <p className="mt-6 text-xs font-black uppercase tracking-[0.26em] text-slate-500">{lang === "zh" ? "Pickup" : "Pickup"}</p>
+                <h3 className="mt-3 text-3xl font-black leading-tight text-slate-950">{lang === "zh" ? "領取與發放資訊" : "Pickup & Distribution"}</h3>
+                <p className="mt-4 flex-1 text-[15px] leading-8 text-slate-600">
+                  {lang === "zh"
+                    ? "T-shirt 領取時間、地點、隊長代領與其他發放方式，將會在之後公布。"
+                    : "T-shirt pickup dates, locations, team-leader pickup, and distribution details will be announced later."}
+                </p>
+                <div className="mt-7 inline-flex items-center gap-2 text-sm font-black text-slate-400">
+                  {lang === "zh" ? "即將公布" : "Coming Soon"}
                 </div>
               </div>
-            </a>
-
-            <a
-              href="/tshirt-finalists"
-              className="mb-10 block overflow-hidden rounded-[2.5rem] border border-amber-300 bg-gradient-to-r from-amber-300 via-yellow-200 to-emerald-200 p-1 shadow-2xl transition hover:-translate-y-1 hover:shadow-[0_28px_70px_rgba(15,118,110,0.25)]"
-            >
-              <div className="rounded-[2.25rem] bg-white/55 p-7 backdrop-blur-sm md:p-10">
-                <div className="flex flex-col items-center justify-between gap-6 text-center md:flex-row md:text-left">
-                  <div>
-                    <p className="text-sm font-black uppercase tracking-[0.32em] text-emerald-900">
-                      {lang === "zh" ? "NEW｜作品公布" : "NEW｜Finalists"}
-                    </p>
-                    <h2 className="mt-3 text-4xl font-black leading-tight text-slate-950 md:text-6xl">
-                      {lang === "zh" ? "入圍作品公布" : "T-shirt Finalists"}
-                    </h2>
-                    <p className="mt-4 max-w-3xl text-base font-semibold leading-8 text-slate-700 md:text-lg">
-                      {lang === "zh"
-                        ? "查看 912 Team Taiwan T-shirt 入圍作品，支持你最喜歡的設計。"
-                        : "View the 912 Team Taiwan T-shirt finalist designs and support your favorite."}
-                    </p>
-                  </div>
-                  <div className="shrink-0 rounded-full bg-emerald-800 px-8 py-4 text-lg font-black text-white shadow-xl transition hover:bg-emerald-900 md:text-xl">
-                    {lang === "zh" ? "前往入圍作品 →" : "View Finalists →"}
-                  </div>
-                </div>
-              </div>
-            </a>
-
-
-            <Card className="overflow-hidden border-emerald-200 bg-white p-0 shadow-lg">
-              <div className="grid gap-0 lg:grid-cols-[0.95fr_1.05fr] lg:items-stretch">
-                <div className="bg-gradient-to-br from-emerald-700 to-sky-700 p-8 text-white md:p-10">
-                  <p className="text-sm font-semibold uppercase tracking-[0.25em] text-white/75">Official Contest</p>
-                  <h3 className="mt-3 text-4xl font-black">{t.shirt.heroTitle}</h3>
-                  <p className="mt-5 leading-7 text-white/90">{t.shirt.intro}</p>
-                  <div className="mt-8 grid gap-4 sm:grid-cols-2">
-                    {[[t.shirt.deadlineLabel, t.shirt.deadline], [t.shirt.finalistLabel, t.shirt.finalist], [t.shirt.voteLabel, t.shirt.vote], [t.shirt.winnerLabel, t.shirt.winner]].map(([label, value]) => (
-                      <div key={label} className="rounded-2xl bg-white/15 p-4">
-                        <p className="text-sm font-bold text-white/75">{label}</p>
-                        <p className="mt-1 text-2xl font-black">{value}</p>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-                <div className="p-8 md:p-10">
-                  <div className="grid gap-5 md:grid-cols-2">
-                    {t.shirt.cards.map(([icon, title, body]) => <InfoCard key={title} icon={icon} title={title}>{body}</InfoCard>)}
-                  </div>
-                </div>
-              </div>
-            </Card>
-
-            <div className="mt-8">
-              
-            </div>
-
-            <Card className="mt-8 overflow-hidden border-slate-200 bg-white p-0 shadow-xl">
-              <div className="grid gap-0 lg:grid-cols-[1.25fr_0.85fr]">
-                <div className="bg-gradient-to-br from-emerald-700 to-sky-700 p-10 text-center text-white">
-                  <p className="text-lg font-black">🥇 {t.shirt.prizeTitle}</p>
-                  <p className="mt-5 text-7xl font-black md:text-8xl">{t.shirt.prizeAmount}</p>
-                  <p className="mt-5 text-lg font-bold">{t.shirt.prizeSponsor}</p>
-                  <div className="mx-auto mt-7 max-w-md rounded-2xl bg-white/15 p-5 text-left font-semibold leading-8">
-                    {t.shirt.prizeItems.map((item) => <p key={item}>・ {item}</p>)}
-                  </div>
-                </div>
-                <div className="grid gap-4 bg-slate-50 p-7">
-                  <div className="rounded-3xl bg-white p-6 shadow-sm">
-                    <h4 className="text-2xl font-black text-rose-700">💗 {t.shirt.popularityTitle}</h4>
-                    <p className="mt-4 leading-7 text-slate-700">・ {t.shirt.popularityPrize}</p>
-                  </div>
-                  <div className="rounded-3xl bg-white p-6 shadow-sm">
-                    <h4 className="text-2xl font-black text-slate-950">✨ {t.shirt.finalistTitle}</h4>
-                    <p className="mt-4 leading-7 text-slate-700">{t.shirt.finalistText}</p>
-                  </div>
-                </div>
-              </div>
-            </Card>
-
-            <div className="mt-8 grid gap-6 lg:grid-cols-[0.8fr_1.2fr]">
-              <Card className="p-7 shadow-lg">
-<h3 className="text-2xl font-black text-slate-950">{t.shirt.timelineTitle}</h3>
-                <div className="mt-5 space-y-4 text-sm leading-7 text-slate-700">
-                  {t.shirt.timeline.map(([label, date]) => (
-                    <p key={label}><strong>{label}：</strong>{date}</p>
-                  ))}
-                </div>
-              </Card>
-              <Card className="p-7 shadow-lg">
-                <h3 className="text-2xl font-black text-slate-950">{t.shirt.judgingTitle}</h3>
-                <div className="mt-5 space-y-4 text-sm leading-7 text-slate-700">
-                  {t.shirt.judging.map((item) => <p key={item}><strong>{item}</strong></p>)}
-                  <p>{t.shirt.judgingText}</p>
-                </div>
-              </Card>
-            </div>
-
-            <Card className="mt-8 border-emerald-100 bg-white p-7 shadow-lg">
-              <h3 className="text-2xl font-black text-slate-950">{t.shirt.rulesTitle}</h3>
-              <div className="mt-5 grid gap-6 lg:grid-cols-2">
-                <ul className="space-y-3 text-sm leading-7 text-slate-700">
-                  {t.shirt.rules.map((rule) => <li key={rule} className="flex gap-3"><span>•</span><span>{rule}</span></li>)}
-                </ul>
-                <div className="rounded-3xl bg-emerald-50 p-6 text-sm leading-7 text-emerald-950">
-                  {t.shirt.licenseText}
-                </div>
-              </div>
-            </Card>
-
-            <div className="mt-10 rounded-[2rem] bg-gradient-to-br from-emerald-700 to-sky-700 p-8 text-center text-white shadow-xl md:p-10">
-              <h3 className="text-3xl font-black">{t.shirt.bannerTitle}</h3>
-              <p className="mx-auto mt-5 max-w-3xl leading-7 text-white/95">{t.shirt.bannerText}</p>
-              <p className="mt-6 text-sm font-bold leading-7 text-white/90">{t.shirt.hashtags}</p>
             </div>
           </div>
         </section>
 
-
-        <section id="raffle" className="px-4 py-16 md:px-8 md:py-24">
+<section id="raffle" className="px-4 py-16 md:px-8 md:py-24">
           <div className="mx-auto max-w-7xl">
             <SectionTitle eyebrow={t.raffle.eyebrow} title={t.raffle.title} description={t.raffle.description} />
 
