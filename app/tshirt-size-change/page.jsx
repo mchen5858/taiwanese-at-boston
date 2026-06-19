@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 
-const sizeChangeWebAppLink = "https://script.google.com/macros/s/AKfycbzbuIQiQC2_-4yr-X5Woqj5iepRuUqO66gvkqSBe141vrDOu8HGtBLI_dmRTpUj6WFS/exec";
+const sizeChangeWebAppLink = "https://script.google.com/macros/s/AKfycbzbuIQiQC2_-4yr-X5Woqj5iepRuUqO66gvkqSBe141vrDOu8HGtBLI_dmRTpUj6WFS/exec?v=2";
 
 const menRows = [
   ["S", "28″", "18″", "36″"],
