@@ -30,67 +30,80 @@ const coHosts = [
 const teamExamples = ["台灣No.1隊", "Fenway佔領隊", "珍奶續命隊", "Team Taiwan GO隊", "波士頓台味隊"];
 
 const teamLeaderboard = [
-  { name: "波士頓台灣媽媽親子會", tickets: "165+" },
-  { name: "我朋友說想湊個50人的隊", tickets: "145+" },
-  { name: "波克萊台灣商會", tickets: "140+" },
-  { name: "Boston FASCA", tickets: "45+" },
-  { name: "BTBC 波士頓台灣龍舟隊", tickets: "30+" },
-  { name: "我們也來組一隊", tickets: "25+" },
-  { name: "波士頓台灣人生技協會 (BTBA)", tickets: "25+" },
-  { name: "Taiwan Film Festival of Boston", tickets: "20+" },
-  { name: "Andover 貢茶", tickets: "15+" },
-  { name: "波士頓台灣世衞協進會", tickets: "15+" },
-  { name: "當偶們同在一起", tickets: "15+" },
-  { name: "羅德島台灣同好會", tickets: "14+" },
-  { name: "Tâioân Siothéng", tickets: "13+" },
-  { name: "The Boba Tea Party", tickets: "12+" },
-  { name: "Formosa Strong", tickets: "10+" },
-  { name: "NCCU, TCCNE & BTEAA", tickets: "10+" },
-  { name: "Red Sox Fernando Day", tickets: "10+" },
-  { name: "Tide One Pioneers (TOP) 台灣拓荒者船隊", tickets: "10+" },
-  { name: "加入就有朋友隊", tickets: "10+" },
-  { name: "就是愛台灣啦", tickets: "10+" },
-  { name: "TECO-BOSTON", tickets: "10+" },
-  { name: "Woo告台", tickets: "持續增加中" },
-  { name: "Lala Mountain", tickets: "持續增加中" },
-  { name: "Need好台", tickets: "持續增加中" },
-  { name: "Taiwanzonian-bos", tickets: "持續增加中" },
-  { name: "Taiwan熊讚", tickets: "持續增加中" },
-  { name: "從南到北 襪ㄧ下！", tickets: "持續增加中" },
-  { name: "襪哩咧", tickets: "持續增加中" },
-  { name: "0800092000", tickets: "持續增加中" },
-  { name: "Ellie 與她的夥伴們", tickets: "持續增加中" },
-  { name: "Taiwan 55688", tickets: "持續增加中" },
-  { name: "Taiwanese-ish 台灣味 🇹🇼", tickets: "持續增加中" },
-  { name: "拚明年總統來開球", tickets: "持續增加中" },
-  { name: "波士頓北一女校友會", tickets: "持續增加中" },
-  { name: "臺灣留學生聯合加油團", tickets: "持續增加中" },
-  { name: "花栗鼠吃雞排", tickets: "持續增加中" },
-  { name: "茅起來打", tickets: "持續增加中" },
-  { name: "Alexida", tickets: "持續增加中" },
-  { name: "MOCHI", tickets: "持續增加中" },
-  { name: "Taiwan Bon Bon", tickets: "持續增加中" },
-  { name: "Taiwan 襪Up！", tickets: "持續增加中" },
-  { name: "灣a紅襪", tickets: "持續增加中" },
-  { name: "襪賽！Taiwan", tickets: "持續增加中" },
-  { name: "金余", tickets: "持續增加中" },
-  { name: "North Shore TAIWANESE", tickets: "持續增加中" },
-  { name: "NTUB05BOS", tickets: "持續增加中" },
-  { name: "Shield", tickets: "持續增加中" },
-  { name: "台灣留學生聯合加油團", tickets: "持續增加中" },
-  { name: "大直隊", tickets: "持續增加中" },
-  { name: "從New Hampshire來的台灣人隊", tickets: "持續增加中" },
-  { name: "投我們就（隊）", tickets: "持續增加中" },
-  { name: "波城老華僑隊", tickets: "持續增加中" },
-  { name: "襪係臺灣郎", tickets: "持續增加中" },
-  { name: "飛天少女豬", tickets: "持續增加中" },
-  { name: "AmiLumiGoGoGo", tickets: "持續增加中" },
-  { name: "Snoopy 12", tickets: "持續增加中" },
-  { name: "台灣霹靂火鳳凰", tickets: "持續增加中" },
-  { name: "羅德島灰姑娘", tickets: "持續增加中" },
-  { name: "芬威要有TaiwanDay才隊", tickets: "持續增加中" },
-  { name: "Team KHH", tickets: "新隊伍" },
-  { name: "好棒 - Good Bat", tickets: "新隊伍" },
+  { name: "波士頓台灣媽媽親子會", tickets: "190" },
+  { name: "我朋友說想湊50個人的隊", tickets: "157" },
+  { name: "波克萊商會", tickets: "150" },
+  { name: "Boston FASCA", tickets: "47" },
+  { name: "波士頓台灣人生技協會 BTBA", tickets: "33" },
+  { name: "BTBC 波士頓台灣龍舟隊", tickets: "30" },
+  { name: "我們也來組一隊", tickets: "27" },
+  { name: "Formosa Strong", tickets: "20" },
+  { name: "Taiwan Film Festival of Boston", tickets: "19" },
+  { name: "波士頓台灣世衛協進會", tickets: "17" },
+  { name: "Andover 貢茶", tickets: "16" },
+  { name: "NCCU, TCCNE & BTEAA", tickets: "16" },
+  { name: "The Boba Tea Party", tickets: "16" },
+  { name: "當偶們同在一起", tickets: "16" },
+  { name: "加入就有朋友隊", tickets: "15" },
+  { name: "羅德島台灣同好會（RITA)", tickets: "14" },
+  { name: "Tâioân Siothéng", tickets: "13" },
+  { name: "Tide One Pioneers (TOP) 台灣拓荒者船隊", tickets: "12" },
+  { name: "從南到北 襪ㄧ下！", tickets: "12" },
+  { name: "Ellie 與她的夥伴們", tickets: "11" },
+  { name: "TECO", tickets: "11" },
+  { name: "就是愛台灣啦", tickets: "11" },
+  { name: "Club Move", tickets: "10" },
+  { name: "Home Run Yellow Penguins!", tickets: "10" },
+  { name: "Red Sox Fernando Day", tickets: "10" },
+  { name: "Woo告台", tickets: "9" },
+  { name: "台灣留學生聯合加油團", tickets: "9" },
+  { name: "Lala Mountain", tickets: "8" },
+  { name: "Need好台", tickets: "8" },
+  { name: "Taiwan Divas", tickets: "8" },
+  { name: "Taiwan 熊讚", tickets: "8" },
+  { name: "波士頓北一女校友會", tickets: "8" },
+  { name: "花栗鼠吃雞排", tickets: "8" },
+  { name: "0800092000", tickets: "7" },
+  { name: "Taiwanzonian-bos", tickets: "7" },
+  { name: "你說的都隊", tickets: "7" },
+  { name: "MA Formosa", tickets: "6" },
+  { name: "紅襪不脫隊", tickets: "6" },
+  { name: "襪哩咧", tickets: "6" },
+  { name: "Taiwan 55688", tickets: "5" },
+  { name: "Taiwan 襪up!", tickets: "5" },
+  { name: "Taiwanese-ish 台灣味 🇹🇼", tickets: "5" },
+  { name: "拚明年總統來開球", tickets: "5" },
+  { name: "茅起來打", tickets: "5" },
+  { name: "Alexida", tickets: "4" },
+  { name: "JASON WANG", tickets: "4" },
+  { name: "MOCHI", tickets: "4" },
+  { name: "Shield", tickets: "4" },
+  { name: "Taiwan Bon Bon", tickets: "4" },
+  { name: "台灣霹靂火鳳凰", tickets: "4" },
+  { name: "投我們就（隊）", tickets: "4" },
+  { name: "波城老華僑隊", tickets: "4" },
+  { name: "灣a紅襪", tickets: "4" },
+  { name: "紅襪Hello Kitty", tickets: "4" },
+  { name: "芬威要有TaiwanDay才隊", tickets: "4" },
+  { name: "萊khan👀磅賽", tickets: "4" },
+  { name: "襪係臺灣郎", tickets: "4" },
+  { name: "襪賽！Taiwan", tickets: "4" },
+  { name: "金余", tickets: "4" },
+  { name: "NTUB05BOS", tickets: "3" },
+  { name: "North Shore TAIWANESE", tickets: "3" },
+  { name: "Taiwan Champion", tickets: "3" },
+  { name: "Team KHH", tickets: "3" },
+  { name: "snoopy12", tickets: "3" },
+  { name: "台灣尚勇", tickets: "3" },
+  { name: "大直隊", tickets: "3" },
+  { name: "好棒 - Good Bat", tickets: "3" },
+  { name: "從New Hampshire來的台灣人隊", tickets: "3" },
+  { name: "飛天少女豬", tickets: "3" },
+  { name: "AmiLumiGoGoGo", tickets: "2" },
+  { name: "Boston Subtle Asian", tickets: "2" },
+  { name: "MT", tickets: "2" },
+  { name: "羅德島灰姑娘", tickets: "2" },
+  { name: "什麼都隊", tickets: "1" },
 ];
 
 const content = {
@@ -853,45 +866,47 @@ function InfoCard({ icon, title, children }) {
 
 function BubbleLeaderboard({ t }) {
   const bubbleColors = [
-    "bg-emerald-600 text-white ring-emerald-100",
-    "bg-rose-300 text-slate-900 ring-rose-100",
-    "bg-sky-600 text-white ring-sky-100",
-    "bg-blue-200 text-slate-900 ring-blue-100",
-    "bg-orange-500 text-white ring-orange-100",
-    "bg-teal-200 text-slate-900 ring-teal-100",
-    "bg-pink-500 text-white ring-pink-100",
-    "bg-red-200 text-slate-900 ring-red-100",
-    "bg-lime-500 text-white ring-lime-100",
-    "bg-violet-200 text-slate-900 ring-violet-100",
-    "bg-purple-600 text-white ring-purple-100",
-    "bg-amber-200 text-slate-900 ring-amber-100",
-    "bg-cyan-500 text-white ring-cyan-100",
-    "bg-indigo-200 text-slate-900 ring-indigo-100",
-    "bg-fuchsia-500 text-white ring-fuchsia-100",
-    "bg-yellow-200 text-slate-900 ring-yellow-100",
-    "bg-green-600 text-white ring-green-100",
-    "bg-orange-200 text-slate-900 ring-orange-100",
-    "bg-pink-300 text-slate-900 ring-pink-100",
-    "bg-sky-300 text-slate-900 ring-sky-100",
-    "bg-teal-600 text-white ring-teal-100",
-    "bg-rose-200 text-slate-900 ring-rose-100",
-    "bg-indigo-500 text-white ring-indigo-100",
-    "bg-emerald-200 text-slate-900 ring-emerald-100",
+    "bg-gradient-to-br from-emerald-500 to-emerald-700 text-white ring-emerald-200",
+    "bg-gradient-to-br from-rose-400 to-pink-500 text-white ring-rose-200",
+    "bg-gradient-to-br from-sky-500 to-blue-700 text-white ring-sky-200",
+    "bg-gradient-to-br from-amber-300 to-orange-400 text-slate-900 ring-amber-200",
+    "bg-gradient-to-br from-violet-500 to-purple-700 text-white ring-violet-200",
+    "bg-gradient-to-br from-teal-400 to-cyan-600 text-white ring-teal-200",
+    "bg-gradient-to-br from-fuchsia-500 to-pink-600 text-white ring-fuchsia-200",
+    "bg-gradient-to-br from-lime-300 to-green-500 text-slate-900 ring-lime-200",
+    "bg-gradient-to-br from-indigo-500 to-indigo-700 text-white ring-indigo-200",
+    "bg-gradient-to-br from-yellow-300 to-amber-500 text-slate-900 ring-yellow-200",
+    "bg-gradient-to-br from-red-400 to-rose-600 text-white ring-red-200",
+    "bg-gradient-to-br from-cyan-300 to-sky-500 text-slate-900 ring-cyan-200",
+    "bg-gradient-to-br from-orange-400 to-red-500 text-white ring-orange-200",
+    "bg-gradient-to-br from-purple-300 to-violet-500 text-slate-900 ring-purple-200",
+    "bg-gradient-to-br from-emerald-300 to-teal-500 text-slate-900 ring-emerald-200",
+    "bg-gradient-to-br from-blue-300 to-indigo-500 text-slate-900 ring-blue-200",
+    "bg-gradient-to-br from-pink-300 to-rose-500 text-slate-900 ring-pink-200",
+    "bg-gradient-to-br from-green-300 to-lime-500 text-slate-900 ring-green-200",
+    "bg-gradient-to-br from-sky-300 to-cyan-500 text-slate-900 ring-sky-200",
+    "bg-gradient-to-br from-amber-400 to-yellow-500 text-slate-900 ring-amber-200",
+    "bg-gradient-to-br from-teal-500 to-emerald-700 text-white ring-teal-200",
+    "bg-gradient-to-br from-rose-300 to-red-400 text-slate-900 ring-rose-200",
+    "bg-gradient-to-br from-indigo-300 to-blue-500 text-slate-900 ring-indigo-200",
+    "bg-gradient-to-br from-orange-300 to-amber-500 text-slate-900 ring-orange-200",
   ];
 
-  const desktopOffsets = [0, 10, 4, 14, 6, 16, 2, 12, 8, 18, 4, 10];
-  const mobileOffsets = [0, 7, 3, 9, 1, 6];
-  const desktopRowShifts = [-18, 22, -30, 14, -12, 28, -24, 10];
-  const mobileRowShifts = [-8, 6, -10, 8, -6, 4];
-  const desktopTargets = [1040, 1090, 980, 1070, 1000, 1085, 1010];
-  const mobileTargets = [360, 390, 340, 380, 355, 395];
+  const desktopOffsets = [0, 22, 8, 32, 14, 40, 4, 26, 16, 46, 10, 34, 20, 28, 2, 38];
+  const mobileOffsets = [0, 9, 3, 12, 5, 10, 2, 7];
+  const desktopRowShifts = [-68, 30, -92, 46, -36, 70, -58, 18, -82, 56, -28, 40];
+  const mobileRowShifts = [-12, 8, -16, 12, -8, 6, -10, 4];
+  const desktopTargets = [980, 1060, 940, 1100, 960, 1080, 930, 1120, 970, 1040];
+  const mobileTargets = [300, 330, 290, 325, 305, 335, 295, 320];
+  const desktopSizeJitter = [0, -16, 10, -22, 14, -8, 18, -14, 8, -12, 20, -6];
+  const mobileSizeJitter = [0, -8, 6, -10, 5, -4, 8, -6];
 
   const getTicketNumber = (tickets) => {
     const match = String(tickets).match(/\d+/);
     return match ? parseInt(match[0], 10) : 0;
   };
 
-  const getBubbleSize = (tickets, isMobile = false) => {
+  const getBaseBubbleSize = (tickets, isMobile = false) => {
     const count = getTicketNumber(tickets);
 
     if (isMobile) {
@@ -919,8 +934,20 @@ function BubbleLeaderboard({ t }) {
     return 122;
   };
 
-  const getBubbleStyle = (tickets, isMobile = false) => {
-    const size = getBubbleSize(tickets, isMobile);
+  const getBubbleSize = (tickets, isMobile = false, variationIndex = 0, isFeatured = false) => {
+    const base = getBaseBubbleSize(tickets, isMobile);
+    if (isFeatured) return base;
+
+    const jitter = isMobile
+      ? mobileSizeJitter[variationIndex % mobileSizeJitter.length]
+      : desktopSizeJitter[variationIndex % desktopSizeJitter.length];
+
+    const minSize = isMobile ? 94 : 112;
+    return Math.max(minSize, base + jitter);
+  };
+
+  const getBubbleStyle = (tickets, isMobile = false, variationIndex = 0, isFeatured = false) => {
+    const size = getBubbleSize(tickets, isMobile, variationIndex, isFeatured);
     return {
       width: `${size}px`,
       height: `${size}px`,
@@ -942,23 +969,31 @@ function BubbleLeaderboard({ t }) {
   const featuredTeams = teamLeaderboard.slice(0, 3);
   const remainingTeams = teamLeaderboard.slice(3);
 
-  const mixedRemainingTeams = [
-    ...remainingTeams.filter((_, index) => index % 4 === 0),
-    ...remainingTeams.filter((_, index) => index % 4 === 2),
-    ...remainingTeams.filter((_, index) => index % 4 === 1),
-    ...remainingTeams.filter((_, index) => index % 4 === 3),
-  ];
+  const largeTeams = remainingTeams.filter((team) => getTicketNumber(team.tickets) >= 15);
+  const mediumTeams = remainingTeams.filter((team) => getTicketNumber(team.tickets) >= 8 && getTicketNumber(team.tickets) < 15);
+  const smallTeams = remainingTeams.filter((team) => getTicketNumber(team.tickets) < 8);
+
+  const mixedRemainingTeams = [];
+  while (largeTeams.length || mediumTeams.length || smallTeams.length) {
+    if (mediumTeams.length) mixedRemainingTeams.push(mediumTeams.shift());
+    if (smallTeams.length) mixedRemainingTeams.push(smallTeams.shift());
+    if (largeTeams.length) mixedRemainingTeams.push(largeTeams.shift());
+    if (smallTeams.length) mixedRemainingTeams.push(smallTeams.shift());
+    if (mediumTeams.length) mixedRemainingTeams.push(mediumTeams.shift());
+    if (smallTeams.length) mixedRemainingTeams.push(smallTeams.shift());
+    if (largeTeams.length) mixedRemainingTeams.push(largeTeams.shift());
+  }
 
   const packRows = (teams, isMobile = false) => {
-    const gap = isMobile ? 8 : 10;
-    const minRowCount = isMobile ? 3 : 5;
+    const gap = isMobile ? 7 : 12;
+    const minRowCount = isMobile ? 3 : 4;
     const targets = isMobile ? mobileTargets : desktopTargets;
     const rows = [];
     let current = [];
     let width = 0;
 
-    teams.forEach((team) => {
-      const bubbleWidth = getBubbleSize(team.tickets, isMobile);
+    teams.forEach((team, index) => {
+      const bubbleWidth = getBubbleSize(team.tickets, isMobile, index, false);
       const target = targets[rows.length % targets.length];
       const projected = current.length === 0 ? bubbleWidth : width + gap + bubbleWidth;
 
@@ -976,32 +1011,31 @@ function BubbleLeaderboard({ t }) {
     return rows;
   };
 
-  const renderBubble = (team, index, isMobile = false, extraClass = "") => {
+  const renderBubble = (team, index, isMobile = false, extraClass = "", isFeatured = false) => {
     const count = getTicketNumber(team.tickets);
-    const isGrowing = Number.isNaN(parseInt(team.tickets, 10)) && team.tickets === t.leaderboard.growing;
 
     return (
       <div
         key={`${team.name}-${index}-${isMobile ? "m" : "d"}`}
         className={`flex shrink-0 flex-col items-center justify-center rounded-full p-4 text-center shadow-xl ${isMobile ? "ring-4" : "ring-8"} transition duration-300 hover:z-30 hover:scale-[1.03] ${bubbleColors[index % bubbleColors.length]} ${extraClass}`}
-        style={getBubbleStyle(team.tickets, isMobile)}
+        style={getBubbleStyle(team.tickets, isMobile, index, isFeatured)}
       >
         <div className={`max-w-[84%] px-2 text-center font-black leading-[1.12] [overflow-wrap:anywhere] ${getNameTextClass(team.tickets, isMobile)}`}>
           {team.name}
         </div>
         {count >= 10 && (
-          <div className={`mt-2 whitespace-nowrap rounded-full bg-white/55 px-3 py-1 font-black text-slate-800 ${isMobile ? "text-xs" : "text-sm"}`}>
+          <div className={`mt-2 whitespace-nowrap rounded-full bg-white/60 px-3 py-1 font-black text-slate-800 shadow-sm ${isMobile ? "text-xs" : "text-sm"}`}>
             {team.tickets} {t.leaderboard.ticketsLabel}
           </div>
         )}
-        {Number.isNaN(parseInt(team.tickets, 10)) && team.tickets !== t.leaderboard.growing && (
-          <div className={`mt-2 whitespace-nowrap rounded-full bg-white/55 px-3 py-1 font-black text-slate-700 ${isMobile ? "text-[10px]" : "text-[11px]"}`}>
-            {team.tickets}
+        {count > 0 && count < 10 && (
+          <div className={`mt-2 whitespace-nowrap rounded-full bg-white/60 px-3 py-1 font-black text-slate-800 shadow-sm ${isMobile ? "text-[10px]" : "text-[11px]"}`}>
+            {t.leaderboard.growing}
           </div>
         )}
-        {(team.name === featuredTeams[0]?.name || isGrowing) && (
+        {team.name === featuredTeams[0]?.name && (
           <div className={`mt-2 font-semibold text-slate-700 ${isMobile ? "text-[10px]" : "text-[11px]"}`}>
-            {team.name === featuredTeams[0]?.name ? t.leaderboard.leading : t.leaderboard.growing}
+            {t.leaderboard.leading}
           </div>
         )}
       </div>
@@ -1013,20 +1047,20 @@ function BubbleLeaderboard({ t }) {
 
   return (
     <>
-      <div className="mx-auto hidden max-w-[1220px] px-4 py-6 md:block">
-        <div className="flex items-start justify-center gap-4 lg:gap-5">
-          <div className="pt-14 lg:pt-16">{renderBubble(featuredTeams[1], 1)}</div>
-          <div className="pt-0">{renderBubble(featuredTeams[0], 0)}</div>
-          <div className="pt-14 lg:pt-16">{renderBubble(featuredTeams[2], 2)}</div>
+      <div className="mx-auto hidden max-w-[1380px] px-4 py-6 md:block">
+        <div className="flex items-start justify-center gap-8 lg:gap-10">
+          <div className="pt-16 lg:pt-18">{renderBubble(featuredTeams[1], 1, false, "", true)}</div>
+          <div className="pt-0">{renderBubble(featuredTeams[0], 0, false, "", true)}</div>
+          <div className="pt-16 lg:pt-18">{renderBubble(featuredTeams[2], 2, false, "", true)}</div>
         </div>
 
-        <div className="mt-2 flex flex-col items-center">
+        <div className="mt-6 flex flex-col items-center">
           {desktopRows.map((rowTeams, rowIndex) => {
             const baseIndex = desktopRows.slice(0, rowIndex).reduce((sum, row) => sum + row.length, 0);
             return (
               <div
                 key={`desktop-row-${rowIndex}`}
-                className={`flex items-start justify-center gap-[6px] ${rowIndex > 0 ? "-mt-1" : ""}`}
+                className={`flex items-start justify-center gap-[10px] ${rowIndex > 0 ? "mt-1" : ""}`}
                 style={{ transform: `translateX(${desktopRowShifts[rowIndex % desktopRowShifts.length]}px)` }}
               >
                 {rowTeams.map((team, localIdx) => {
@@ -1049,18 +1083,18 @@ function BubbleLeaderboard({ t }) {
 
       <div className="px-2 py-3 md:hidden">
         <div className="flex flex-wrap items-center justify-center gap-x-1 gap-y-1">
-          <div className="flex basis-full justify-center">{renderBubble(featuredTeams[0], 0, true)}</div>
-          <div className="flex basis-[48%] justify-end pt-1">{renderBubble(featuredTeams[1], 1, true)}</div>
-          <div className="flex basis-[48%] justify-start pt-3">{renderBubble(featuredTeams[2], 2, true)}</div>
+          <div className="flex basis-full justify-center">{renderBubble(featuredTeams[0], 0, true, "", true)}</div>
+          <div className="flex basis-[48%] justify-end pt-1">{renderBubble(featuredTeams[1], 1, true, "", true)}</div>
+          <div className="flex basis-[48%] justify-start pt-3">{renderBubble(featuredTeams[2], 2, true, "", true)}</div>
         </div>
 
-        <div className="mt-2 flex flex-col items-center">
+        <div className="mt-3 flex flex-col items-center">
           {mobileRows.map((rowTeams, rowIndex) => {
             const baseIndex = mobileRows.slice(0, rowIndex).reduce((sum, row) => sum + row.length, 0);
             return (
               <div
                 key={`mobile-row-${rowIndex}`}
-                className={`flex items-start justify-center gap-[5px] ${rowIndex > 0 ? "-mt-1" : ""}`}
+                className={`flex items-start justify-center gap-[4px] ${rowIndex > 0 ? "-mt-1" : ""}`}
                 style={{ transform: `translateX(${mobileRowShifts[rowIndex % mobileRowShifts.length]}px)` }}
               >
                 {rowTeams.map((team, localIdx) => {
@@ -1083,6 +1117,7 @@ function BubbleLeaderboard({ t }) {
     </>
   );
 }
+
 
 export default function TaiwanFanNightWebsite() {
   const [lang, setLang] = useState("zh");
@@ -1299,149 +1334,157 @@ export default function TaiwanFanNightWebsite() {
         
 <section id="shirt-design" className="px-4 py-16 md:px-8 md:py-24">
           <div className="mx-auto max-w-7xl">
-            <SectionTitle
-              eyebrow={lang === "zh" ? "T-shirt Hub" : "T-shirt Hub"}
-              title={lang === "zh" ? "912 T-shirt 專區" : "912 T-shirt Hub"}
-              description={
-                lang === "zh"
-                  ? "設計比賽資訊、入圍作品、得獎公布、尺寸更改、加購與領取資訊，都整理在這裡。"
-                  : "Contest information, finalist designs, winner announcement, size changes, add-ons, and pickup information are organized here."
-              }
-            />
+            <div className="overflow-hidden rounded-[2.5rem] border border-emerald-100 bg-gradient-to-br from-white via-emerald-50/35 to-sky-50/60 shadow-[0_24px_80px_rgba(15,23,42,0.08)]">
+              <div className="border-b border-emerald-100/80 px-6 py-10 md:px-10 md:py-12">
+                <div className="mx-auto max-w-4xl text-center">
+                  <p className="text-sm font-black uppercase tracking-[0.35em] text-emerald-700">T-shirt Hub</p>
+                  <h2 className="mt-4 text-4xl font-black tracking-tight text-slate-950 md:text-6xl">
+                    {lang === "zh" ? "912 T-shirt 專區" : "912 T-shirt Hub"}
+                  </h2>
+                  <p className="mx-auto mt-5 max-w-3xl text-base leading-8 text-slate-600 md:text-lg">
+                    {lang === "zh"
+                      ? "設計比賽資訊、入圍作品、得獎公布、尺寸更改、加購與領取資訊，都整理在這裡。"
+                      : "Contest information, finalist designs, winner announcement, size changes, add-ons, and pickup information are all organized here."}
+                  </p>
+                </div>
+              </div>
 
-            <div className="mt-8 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
-              <a
-                href="/tshirt-contest-info"
-                className="group relative flex h-full flex-col overflow-hidden rounded-[2rem] border border-sky-200 bg-gradient-to-b from-white via-white to-sky-50/70 p-7 shadow-[0_16px_40px_rgba(15,23,42,0.08)] transition duration-300 hover:-translate-y-1.5 hover:shadow-[0_24px_60px_rgba(14,116,144,0.18)]"
-              >
-                <div className="absolute inset-x-0 top-0 h-1.5 bg-gradient-to-r from-sky-400 via-cyan-300 to-emerald-300" />
-                <div className="flex items-start justify-between gap-4">
-                  <div className="flex h-16 w-16 items-center justify-center rounded-[1.35rem] bg-sky-100 text-3xl shadow-sm ring-1 ring-sky-200/60">📋</div>
-                  <span className="rounded-full bg-sky-100 px-3 py-1 text-xs font-black uppercase tracking-[0.18em] text-sky-700">Info</span>
-                </div>
-                <p className="mt-6 text-xs font-black uppercase tracking-[0.26em] text-sky-700">{lang === "zh" ? "Contest Info" : "Contest Info"}</p>
-                <h3 className="mt-3 text-3xl font-black leading-tight text-slate-950">{lang === "zh" ? "設計比賽資訊" : "Contest Info"}</h3>
-                <p className="mt-4 flex-1 text-[15px] leading-8 text-slate-600">
-                  {lang === "zh"
-                    ? "查看本次設計徵選的主題、時程、獎項、評選方式與比賽規則。"
-                    : "View the contest theme, timeline, prizes, judging method, and submission guidelines."}
-                </p>
-                <div className="mt-7 inline-flex items-center gap-2 text-sm font-black text-emerald-700">
-                  {lang === "zh" ? "查看資訊" : "View Info"}
-                  <span className="transition group-hover:translate-x-1">→</span>
-                </div>
-              </a>
+              <div className="p-6 md:p-10">
+                <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+                  <a
+                    href="/tshirt-contest-info"
+                    className="group relative flex h-full flex-col overflow-hidden rounded-[2rem] border border-sky-200 bg-white/95 p-7 shadow-[0_14px_40px_rgba(15,23,42,0.08)] transition duration-300 hover:-translate-y-1.5 hover:shadow-[0_22px_60px_rgba(14,116,144,0.18)]"
+                  >
+                    <div className="absolute inset-x-0 top-0 h-1.5 bg-gradient-to-r from-sky-400 via-cyan-300 to-emerald-300" />
+                    <div className="flex items-start justify-between gap-4">
+                      <div className="flex h-16 w-16 items-center justify-center rounded-[1.35rem] bg-sky-100 text-3xl shadow-sm ring-1 ring-sky-200/60">📋</div>
+                      <div className="rounded-full border border-sky-200 bg-sky-50 px-3 py-1 text-xs font-black uppercase tracking-[0.18em] text-sky-700">Info</div>
+                    </div>
+                    <p className="mt-6 text-xs font-black uppercase tracking-[0.28em] text-sky-700">{lang === "zh" ? "Contest Info" : "Contest Info"}</p>
+                    <h3 className="mt-3 text-3xl font-black leading-tight text-slate-950">{lang === "zh" ? "設計比賽資訊" : "Contest Info"}</h3>
+                    <p className="mt-4 flex-1 text-[15px] leading-8 text-slate-600">
+                      {lang === "zh"
+                        ? "查看本次設計徵選的主題、時程、獎項、評選方式與比賽規則。"
+                        : "View the contest theme, timeline, prizes, judging method, and submission guidelines."}
+                    </p>
+                    <div className="mt-7 inline-flex w-fit items-center gap-2 rounded-full bg-emerald-700 px-5 py-3 text-sm font-black text-white shadow-md transition group-hover:bg-emerald-800">
+                      {lang === "zh" ? "查看資訊" : "View Info"}
+                      <span className="transition group-hover:translate-x-1">→</span>
+                    </div>
+                  </a>
 
-              <a
-                href="/tshirt-finalists"
-                className="group relative flex h-full flex-col overflow-hidden rounded-[2rem] border border-emerald-200 bg-gradient-to-b from-white via-white to-emerald-50/70 p-7 shadow-[0_16px_40px_rgba(15,23,42,0.08)] transition duration-300 hover:-translate-y-1.5 hover:shadow-[0_24px_60px_rgba(5,150,105,0.18)]"
-              >
-                <div className="absolute inset-x-0 top-0 h-1.5 bg-gradient-to-r from-emerald-400 via-lime-300 to-sky-300" />
-                <div className="flex items-start justify-between gap-4">
-                  <div className="flex h-16 w-16 items-center justify-center rounded-[1.35rem] bg-emerald-100 text-3xl shadow-sm ring-1 ring-emerald-200/60">🎨</div>
-                  <span className="rounded-full bg-emerald-100 px-3 py-1 text-xs font-black uppercase tracking-[0.18em] text-emerald-700">Top 8</span>
-                </div>
-                <p className="mt-6 text-xs font-black uppercase tracking-[0.26em] text-emerald-700">{lang === "zh" ? "Finalists" : "Finalists"}</p>
-                <h3 className="mt-3 text-3xl font-black leading-tight text-slate-950">{lang === "zh" ? "入圍作品" : "Finalist Designs"}</h3>
-                <p className="mt-4 flex-1 text-[15px] leading-8 text-slate-600">
-                  {lang === "zh"
-                    ? "查看本次 912 T-shirt 設計徵選的 8 件入圍作品與設計理念。"
-                    : "View the 8 finalist designs and design concepts from the 912 T-shirt contest."}
-                </p>
-                <div className="mt-7 inline-flex items-center gap-2 text-sm font-black text-emerald-700">
-                  {lang === "zh" ? "查看作品" : "View Finalists"}
-                  <span className="transition group-hover:translate-x-1">→</span>
-                </div>
-              </a>
+                  <a
+                    href="/tshirt-finalists"
+                    className="group relative flex h-full flex-col overflow-hidden rounded-[2rem] border border-emerald-200 bg-white/95 p-7 shadow-[0_14px_40px_rgba(15,23,42,0.08)] transition duration-300 hover:-translate-y-1.5 hover:shadow-[0_22px_60px_rgba(5,150,105,0.18)]"
+                  >
+                    <div className="absolute inset-x-0 top-0 h-1.5 bg-gradient-to-r from-emerald-400 via-teal-300 to-yellow-300" />
+                    <div className="flex items-start justify-between gap-4">
+                      <div className="flex h-16 w-16 items-center justify-center rounded-[1.35rem] bg-emerald-100 text-3xl shadow-sm ring-1 ring-emerald-200/60">🎨</div>
+                      <div className="rounded-full border border-emerald-200 bg-emerald-50 px-3 py-1 text-xs font-black uppercase tracking-[0.18em] text-emerald-700">Top 8</div>
+                    </div>
+                    <p className="mt-6 text-xs font-black uppercase tracking-[0.28em] text-emerald-700">{lang === "zh" ? "Finalists" : "Finalists"}</p>
+                    <h3 className="mt-3 text-3xl font-black leading-tight text-slate-950">{lang === "zh" ? "入圍作品" : "Finalist Designs"}</h3>
+                    <p className="mt-4 flex-1 text-[15px] leading-8 text-slate-600">
+                      {lang === "zh"
+                        ? "查看本次 912 T-shirt 設計徵選的 8 件入圍作品與設計理念。"
+                        : "View the 8 finalist designs and design concepts from the 912 T-shirt contest."}
+                    </p>
+                    <div className="mt-7 inline-flex w-fit items-center gap-2 rounded-full bg-emerald-700 px-5 py-3 text-sm font-black text-white shadow-md transition group-hover:bg-emerald-800">
+                      {lang === "zh" ? "查看作品" : "View Finalists"}
+                      <span className="transition group-hover:translate-x-1">→</span>
+                    </div>
+                  </a>
 
-              <a
-                href={tshirtResultsLink}
-                className="group relative flex h-full flex-col overflow-hidden rounded-[2rem] border border-amber-200 bg-gradient-to-b from-white via-white to-amber-50/70 p-7 shadow-[0_16px_40px_rgba(15,23,42,0.08)] transition duration-300 hover:-translate-y-1.5 hover:shadow-[0_24px_60px_rgba(217,119,6,0.18)]"
-              >
-                <div className="absolute inset-x-0 top-0 h-1.5 bg-gradient-to-r from-amber-400 via-yellow-300 to-emerald-300" />
-                <div className="flex items-start justify-between gap-4">
-                  <div className="flex h-16 w-16 items-center justify-center rounded-[1.35rem] bg-amber-100 text-3xl shadow-sm ring-1 ring-amber-200/60">🏆</div>
-                  <span className="rounded-full bg-amber-100 px-3 py-1 text-xs font-black uppercase tracking-[0.18em] text-amber-700">Announced</span>
-                </div>
-                <p className="mt-6 text-xs font-black uppercase tracking-[0.26em] text-amber-700">{lang === "zh" ? "Results" : "Results"}</p>
-                <h3 className="mt-3 text-3xl font-black leading-tight text-slate-950">{lang === "zh" ? "得獎設計公布" : "Design Results"}</h3>
-                <p className="mt-4 flex-1 text-[15px] leading-8 text-slate-600">
-                  {lang === "zh"
-                    ? "查看官方首獎、社群人氣獎、特別表現獎，以及官方製作版本說明。"
-                    : "View the Grand Prize, Community Favorite Award, Special Recognition Award, and official production version details."}
-                </p>
-                <div className="mt-7 inline-flex items-center gap-2 text-sm font-black text-emerald-700">
-                  {lang === "zh" ? "查看公布" : "View Results"}
-                  <span className="transition group-hover:translate-x-1">→</span>
-                </div>
-              </a>
+                  <a
+                    href={tshirtResultsLink}
+                    className="group relative flex h-full flex-col overflow-hidden rounded-[2rem] border border-amber-200 bg-white/95 p-7 shadow-[0_14px_40px_rgba(15,23,42,0.08)] transition duration-300 hover:-translate-y-1.5 hover:shadow-[0_22px_60px_rgba(217,119,6,0.18)]"
+                  >
+                    <div className="absolute inset-x-0 top-0 h-1.5 bg-gradient-to-r from-amber-400 via-yellow-300 to-emerald-300" />
+                    <div className="flex items-start justify-between gap-4">
+                      <div className="flex h-16 w-16 items-center justify-center rounded-[1.35rem] bg-amber-100 text-3xl shadow-sm ring-1 ring-amber-200/60">🏆</div>
+                      <div className="rounded-full border border-amber-200 bg-amber-50 px-3 py-1 text-xs font-black uppercase tracking-[0.18em] text-amber-700">Announced</div>
+                    </div>
+                    <p className="mt-6 text-xs font-black uppercase tracking-[0.28em] text-amber-700">{lang === "zh" ? "Results" : "Results"}</p>
+                    <h3 className="mt-3 text-3xl font-black leading-tight text-slate-950">{lang === "zh" ? "得獎設計公布" : "Design Results"}</h3>
+                    <p className="mt-4 flex-1 text-[15px] leading-8 text-slate-600">
+                      {lang === "zh"
+                        ? "查看官方首獎、社群人氣獎、特別表現獎，以及官方製作版本說明。"
+                        : "View the Grand Prize, Community Favorite Award, Special Recognition Award, and official production version details."}
+                    </p>
+                    <div className="mt-7 inline-flex w-fit items-center gap-2 rounded-full bg-emerald-700 px-5 py-3 text-sm font-black text-white shadow-md transition group-hover:bg-emerald-800">
+                      {lang === "zh" ? "查看公布" : "View Results"}
+                      <span className="transition group-hover:translate-x-1">→</span>
+                    </div>
+                  </a>
 
-              <a
-                href={tshirtSizeChangeLink}
-                className="group relative flex h-full flex-col overflow-hidden rounded-[2rem] border border-emerald-200 bg-gradient-to-b from-white via-white to-emerald-50/70 p-7 shadow-[0_16px_40px_rgba(15,23,42,0.08)] transition duration-300 hover:-translate-y-1.5 hover:shadow-[0_24px_60px_rgba(5,150,105,0.18)]"
-              >
-                <div className="absolute inset-x-0 top-0 h-1.5 bg-gradient-to-r from-emerald-400 via-sky-300 to-cyan-300" />
-                <div className="flex items-start justify-between gap-4">
-                  <div className="flex h-16 w-16 items-center justify-center rounded-[1.35rem] bg-emerald-100 text-3xl shadow-sm ring-1 ring-emerald-200/60">📏</div>
-                  <span className="rounded-full bg-amber-300 px-3 py-1 text-xs font-black uppercase tracking-[0.18em] text-emerald-950">6/28</span>
-                </div>
-                <p className="mt-6 text-xs font-black uppercase tracking-[0.26em] text-emerald-700">{lang === "zh" ? "Size Change" : "Size Change"}</p>
-                <h3 className="mt-3 text-3xl font-black leading-tight text-slate-950">{lang === "zh" ? "尺寸查詢與更改" : "Size Check & Change"}</h3>
-                <p className="mt-4 flex-1 text-[15px] leading-8 text-slate-600">
-                  {lang === "zh"
-                    ? "輸入 email 查詢目前尺寸，查看 size chart，並於 6/28 前提交更改需求。"
-                    : "Enter your email to check your current size, review the size chart, and submit changes by 6/28."}
-                </p>
-                <div className="mt-7 inline-flex items-center gap-2 text-sm font-black text-emerald-700">
-                  {lang === "zh" ? "前往改尺寸" : "Change Size"}
-                  <span className="transition group-hover:translate-x-1">→</span>
-                </div>
-              </a>
+                  <a
+                    href={tshirtSizeChangeLink}
+                    className="group relative flex h-full flex-col overflow-hidden rounded-[2rem] border border-emerald-200 bg-white/95 p-7 shadow-[0_14px_40px_rgba(15,23,42,0.08)] transition duration-300 hover:-translate-y-1.5 hover:shadow-[0_22px_60px_rgba(5,150,105,0.18)]"
+                  >
+                    <div className="absolute inset-x-0 top-0 h-1.5 bg-gradient-to-r from-emerald-400 via-cyan-300 to-sky-300" />
+                    <div className="flex items-start justify-between gap-4">
+                      <div className="flex h-16 w-16 items-center justify-center rounded-[1.35rem] bg-emerald-100 text-3xl shadow-sm ring-1 ring-emerald-200/60">📏</div>
+                      <div className="rounded-full bg-amber-300 px-3 py-1 text-xs font-black uppercase tracking-[0.18em] text-emerald-950">6/28</div>
+                    </div>
+                    <p className="mt-6 text-xs font-black uppercase tracking-[0.28em] text-emerald-700">{lang === "zh" ? "Size Change" : "Size Change"}</p>
+                    <h3 className="mt-3 text-3xl font-black leading-tight text-slate-950">{lang === "zh" ? "尺寸查詢與更改" : "Size Check & Change"}</h3>
+                    <p className="mt-4 flex-1 text-[15px] leading-8 text-slate-600">
+                      {lang === "zh"
+                        ? "輸入 email 查詢目前尺寸，查看 size chart，並於 6/28 前提交更改需求。"
+                        : "Enter your email to check your current size, review the size chart, and submit changes by 6/28."}
+                    </p>
+                    <div className="mt-7 inline-flex w-fit items-center gap-2 rounded-full bg-emerald-700 px-5 py-3 text-sm font-black text-white shadow-md transition group-hover:bg-emerald-800">
+                      {lang === "zh" ? "前往改尺寸" : "Change Size"}
+                      <span className="transition group-hover:translate-x-1">→</span>
+                    </div>
+                  </a>
 
-              <a
-                href="/tshirt-add-on"
-                className="group relative flex h-full flex-col overflow-hidden rounded-[2rem] border border-sky-200 bg-gradient-to-b from-white via-white to-sky-50/70 p-7 shadow-[0_16px_40px_rgba(15,23,42,0.08)] transition duration-300 hover:-translate-y-1.5 hover:shadow-[0_24px_60px_rgba(14,116,144,0.18)]"
-              >
-                <div className="absolute inset-x-0 top-0 h-1.5 bg-gradient-to-r from-sky-300 via-cyan-200 to-amber-300" />
-                <div className="flex items-start justify-between gap-4">
-                  <div className="flex h-16 w-16 items-center justify-center rounded-[1.35rem] bg-sky-100 text-3xl shadow-sm ring-1 ring-sky-200/60">🛒</div>
-                  <span className="rounded-full bg-amber-300 px-3 py-1 text-xs font-black uppercase tracking-[0.18em] text-emerald-950">7/1</span>
-                </div>
-                <p className="mt-6 text-xs font-black uppercase tracking-[0.26em] text-sky-700">{lang === "zh" ? "Add-on" : "Add-on"}</p>
-                <h3 className="mt-3 text-3xl font-black leading-tight text-slate-950">{lang === "zh" ? "加購專區" : "Add-on Shop"}</h3>
-                <p className="mt-4 flex-1 text-[15px] leading-8 text-slate-600">
-                  {lang === "zh"
-                    ? "白色官方版、黑色投稿原創版與 Toddler 幼兒版資訊，都整理在這裡。"
-                    : "White official version, black original version, and toddler add-on information are all here."}
-                </p>
-                <div className="mt-7 inline-flex items-center gap-2 text-sm font-black text-emerald-700">
-                  {lang === "zh" ? "查看加購資訊" : "View Add-ons"}
-                  <span className="transition group-hover:translate-x-1">→</span>
-                </div>
-              </a>
+                  <a
+                    href="/tshirt-add-on"
+                    className="group relative flex h-full flex-col overflow-hidden rounded-[2rem] border border-sky-200 bg-white/95 p-7 shadow-[0_14px_40px_rgba(15,23,42,0.08)] transition duration-300 hover:-translate-y-1.5 hover:shadow-[0_22px_60px_rgba(14,116,144,0.18)]"
+                  >
+                    <div className="absolute inset-x-0 top-0 h-1.5 bg-gradient-to-r from-sky-300 via-cyan-200 to-amber-300" />
+                    <div className="flex items-start justify-between gap-4">
+                      <div className="flex h-16 w-16 items-center justify-center rounded-[1.35rem] bg-sky-100 text-3xl shadow-sm ring-1 ring-sky-200/60">🛒</div>
+                      <div className="rounded-full bg-amber-300 px-3 py-1 text-xs font-black uppercase tracking-[0.18em] text-emerald-950">7/1</div>
+                    </div>
+                    <p className="mt-6 text-xs font-black uppercase tracking-[0.28em] text-sky-700">{lang === "zh" ? "Add-on" : "Add-on"}</p>
+                    <h3 className="mt-3 text-3xl font-black leading-tight text-slate-950">{lang === "zh" ? "加購專區" : "T-shirt Add-ons"}</h3>
+                    <p className="mt-4 flex-1 text-[15px] leading-8 text-slate-600">
+                      {lang === "zh"
+                        ? "限時開放加購預購。白色官方版、黑色投稿原創版與 Toddler 幼兒版資訊都在這裡。"
+                        : "Limited-time add-on preorder. Find the white official version, black original version, and toddler version here."}
+                    </p>
+                    <div className="mt-7 inline-flex w-fit items-center gap-2 rounded-full bg-emerald-700 px-5 py-3 text-sm font-black text-white shadow-md transition group-hover:bg-emerald-800">
+                      {lang === "zh" ? "查看加購資訊" : "View Add-ons"}
+                      <span className="transition group-hover:translate-x-1">→</span>
+                    </div>
+                  </a>
 
-              <div className="relative flex h-full flex-col overflow-hidden rounded-[2rem] border border-slate-200 bg-gradient-to-b from-white via-white to-slate-50/80 p-7 shadow-[0_16px_40px_rgba(15,23,42,0.08)]">
-                <div className="absolute inset-x-0 top-0 h-1.5 bg-gradient-to-r from-slate-200 via-sky-100 to-emerald-100" />
-                <div className="flex items-start justify-between gap-4">
-                  <div className="flex h-16 w-16 items-center justify-center rounded-[1.35rem] bg-slate-100 text-3xl shadow-sm ring-1 ring-slate-200/60">📦</div>
-                  <span className="rounded-full bg-slate-100 px-3 py-1 text-xs font-black uppercase tracking-[0.18em] text-slate-500">Soon</span>
-                </div>
-                <p className="mt-6 text-xs font-black uppercase tracking-[0.26em] text-slate-500">{lang === "zh" ? "Pickup" : "Pickup"}</p>
-                <h3 className="mt-3 text-3xl font-black leading-tight text-slate-950">{lang === "zh" ? "領取與發放資訊" : "Pickup & Distribution"}</h3>
-                <p className="mt-4 flex-1 text-[15px] leading-8 text-slate-600">
-                  {lang === "zh"
-                    ? "T-shirt 領取時間、地點、隊長代領與其他發放方式，將會在之後公布。"
-                    : "T-shirt pickup dates, locations, team-leader pickup, and distribution details will be announced later."}
-                </p>
-                <div className="mt-7 inline-flex items-center gap-2 text-sm font-black text-slate-400">
-                  {lang === "zh" ? "即將公布" : "Coming Soon"}
+                  <div className="relative flex h-full flex-col overflow-hidden rounded-[2rem] border border-slate-200 bg-gradient-to-b from-slate-50 to-white p-7 shadow-[0_14px_40px_rgba(15,23,42,0.06)]">
+                    <div className="absolute inset-x-0 top-0 h-1.5 bg-gradient-to-r from-slate-200 via-slate-100 to-emerald-100" />
+                    <div className="flex items-start justify-between gap-4">
+                      <div className="flex h-16 w-16 items-center justify-center rounded-[1.35rem] bg-slate-100 text-3xl shadow-sm ring-1 ring-slate-200/60">📦</div>
+                      <div className="rounded-full border border-slate-200 bg-white px-3 py-1 text-xs font-black uppercase tracking-[0.18em] text-slate-500">Soon</div>
+                    </div>
+                    <p className="mt-6 text-xs font-black uppercase tracking-[0.28em] text-slate-500">{lang === "zh" ? "Pickup" : "Pickup"}</p>
+                    <h3 className="mt-3 text-3xl font-black leading-tight text-slate-950">{lang === "zh" ? "領取與發放資訊" : "Pickup Info"}</h3>
+                    <p className="mt-4 flex-1 text-[15px] leading-8 text-slate-600">
+                      {lang === "zh"
+                        ? "T-shirt 領取時間、地點、隊長代領與其他發放方式，將會在之後公布。"
+                        : "Pickup time, location, team leader pickup, and other distribution details will be announced later."}
+                    </p>
+                    <div className="mt-7 inline-flex w-fit items-center gap-2 rounded-full bg-slate-200 px-5 py-3 text-sm font-black text-slate-500">
+                      {lang === "zh" ? "即將公布" : "Coming Soon"}
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </section>
 
-<section id="raffle" className="px-4 py-16 md:px-8 md:py-24">
+        <section id="raffle" className="px-4 py-16 md:px-8 md:py-24">
           <div className="mx-auto max-w-7xl">
             <SectionTitle eyebrow={t.raffle.eyebrow} title={t.raffle.title} description={t.raffle.description} />
 
