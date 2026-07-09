@@ -142,7 +142,7 @@ export default function TshirtSizeChangePage() {
           </p>
 
           <div className="mt-7 inline-flex rounded-2xl bg-white/10 px-5 py-3 text-base font-black text-white ring-1 ring-white/20 backdrop-blur">
-            {isZh ? "尺寸更改截止日期：6/28" : "Size change deadline: 6/28"}
+            {isZh ? "目前仍可更改尺寸" : "Size changes are still open"}
           </div>
           
         </div>
@@ -356,8 +356,8 @@ export default function TshirtSizeChangePage() {
           </h2>
           <p className="mt-4 max-w-3xl leading-8 text-white/85">
             {isZh
-              ? "請先確認尺寸表與注意事項，並於 6/28 前前往尺寸查詢與更改系統提交需求。"
-              : "Please review the size chart and notes, then submit your size change request by 6/28."}
+              ? "請先確認尺寸表與注意事項，並於 目前 前前往尺寸查詢與更改系統提交需求。"
+              : "Please review the size chart and notes, then submit your size change request by 目前."}
           </p>
 
           <div className="mt-8">

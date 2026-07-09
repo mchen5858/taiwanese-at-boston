@@ -1424,14 +1424,14 @@ export default function TaiwanFanNightWebsite() {
                     <div className="absolute inset-x-0 top-0 h-1.5 bg-gradient-to-r from-emerald-400 via-cyan-300 to-sky-300" />
                     <div className="flex items-start justify-between gap-4">
                       <div className="flex h-16 w-16 items-center justify-center rounded-[1.35rem] bg-emerald-100 text-3xl shadow-sm ring-1 ring-emerald-200/60">📏</div>
-                      <div className="rounded-full bg-amber-300 px-3 py-1 text-xs font-black uppercase tracking-[0.18em] text-emerald-950">6/28</div>
+                      <div className="rounded-full bg-amber-300 px-3 py-1 text-xs font-black uppercase tracking-[0.18em] text-emerald-950">{lang === "zh" ? "仍可更改" : "Open"}</div>
                     </div>
                     <p className="mt-6 text-xs font-black uppercase tracking-[0.28em] text-emerald-700">{lang === "zh" ? "Size Change" : "Size Change"}</p>
                     <h3 className="mt-3 text-3xl font-black leading-tight text-slate-950">{lang === "zh" ? "尺寸查詢與更改" : "Size Check & Change"}</h3>
                     <p className="mt-4 flex-1 text-[15px] leading-8 text-slate-600">
                       {lang === "zh"
-                        ? "輸入 email 查詢目前尺寸，查看 size chart，並於 6/28 前提交更改需求。"
-                        : "Enter your email to check your current size, review the size chart, and submit changes by 6/28."}
+                        ? "輸入 email 查詢目前尺寸、查看 size chart，並提交更改需求。"
+                        : "Enter your email to check your current size, review the size chart, and submit a size change request."}
                     </p>
                     <div className="mt-7 inline-flex w-fit items-center gap-2 rounded-full bg-emerald-700 px-5 py-3 text-sm font-black text-white shadow-md transition group-hover:bg-emerald-800">
                       {lang === "zh" ? "前往改尺寸" : "Change Size"}
@@ -1446,14 +1446,14 @@ export default function TaiwanFanNightWebsite() {
                     <div className="absolute inset-x-0 top-0 h-1.5 bg-gradient-to-r from-sky-300 via-cyan-200 to-amber-300" />
                     <div className="flex items-start justify-between gap-4">
                       <div className="flex h-16 w-16 items-center justify-center rounded-[1.35rem] bg-sky-100 text-3xl shadow-sm ring-1 ring-sky-200/60">🛒</div>
-                      <div className="rounded-full bg-amber-300 px-3 py-1 text-xs font-black uppercase tracking-[0.18em] text-emerald-950">7/1</div>
+                      <div className="rounded-full bg-amber-300 px-3 py-1 text-xs font-black uppercase tracking-[0.18em] text-emerald-950">{lang === "zh" ? "加購開放中" : "Add-ons Open"}</div>
                     </div>
                     <p className="mt-6 text-xs font-black uppercase tracking-[0.28em] text-sky-700">{lang === "zh" ? "Add-on" : "Add-on"}</p>
                     <h3 className="mt-3 text-3xl font-black leading-tight text-slate-950">{lang === "zh" ? "加購專區" : "T-shirt Add-ons"}</h3>
                     <p className="mt-4 flex-1 text-[15px] leading-8 text-slate-600">
                       {lang === "zh"
-                        ? "限時開放加購預購。白色官方版、黑色投稿原創版與 Toddler 幼兒版資訊都在這裡。"
-                        : "Limited-time add-on preorder. Find the white official version, black original version, and toddler version here."}
+                        ? "目前仍可加購白色官方版與黑色投稿原創版。"
+                        : "Add-on preorder is open for the white official version and black original version."}
                     </p>
                     <div className="mt-7 inline-flex w-fit items-center gap-2 rounded-full bg-emerald-700 px-5 py-3 text-sm font-black text-white shadow-md transition group-hover:bg-emerald-800">
                       {lang === "zh" ? "查看加購資訊" : "View Add-ons"}
