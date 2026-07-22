@@ -5,27 +5,27 @@ import React, { useState } from "react";
 const sizeChangeWebAppLink = "https://script.google.com/macros/s/AKfycbzbuIQiQC2_-4yr-X5Woqj5iepRuUqO66gvkqSBe141vrDOu8HGtBLI_dmRTpUj6WFS/exec?v=2";
 
 const menRows = [
-  ["S", "28″", "18″", "36″"],
-  ["M", "29″", "20″", "40″"],
-  ["L", "30″", "22″", "44″"],
-  ["XL", "31″", "24″", "48″"],
-  ["2XL", "33″", "26″", "52″"],
+  ["S", "28″", "18″"],
+  ["M", "29″", "20″"],
+  ["L", "30″", "22″"],
+  ["XL", "31″", "24″"],
+  ["2XL", "33″", "26″"],
 ];
 
 const ladiesRows = [
-  ["S", "25.5″", "17.25″", "34.5″", "13.25″"],
-  ["M", "26″", "19.25″", "38.5″", "14″"],
-  ["L", "27″", "21.25″", "42.5″", "14.75″"],
-  ["XL", "28″", "23.25″", "46.5″", "15.75″"],
-  ["2XL", "28.5″", "25.25″", "50.5″", "16.75″"],
+  ["S", "25.5″", "17.25″"],
+  ["M", "26″", "19.25″"],
+  ["L", "27″", "21.25″"],
+  ["XL", "28″", "23.25″"],
+  ["2XL", "28.5″", "25.25″"],
 ];
 
 const youthRows = [
-  ["YXS", "2–4", "18″", "13.5″", "27″", "4.375″"],
-  ["YS", "6–8", "20.5″", "15.5″", "31″", "5.375″"],
-  ["YM", "10–12", "23″", "17″", "34″", "5.875″"],
-  ["YL", "14–16", "25″", "18″", "36″", "6.5″"],
-  ["YXL", "18–20", "27″", "20″", "40″", "7.5″"],
+  ["YXS", "2–4", "18″", "13.5″"],
+  ["YS", "6–8", "20.5″", "15.5″"],
+  ["YM", "10–12", "23″", "17″"],
+  ["YL", "14–16", "25″", "18″"],
+  ["YXL", "18–20", "27″", "20″"],
 ];
 
 function SizeTable({ number, title, note, headers, rows }) {
@@ -149,78 +149,85 @@ export default function TshirtSizeChangePage() {
       </section>
 
       <section className="mx-auto max-w-6xl px-5 py-12 md:px-8 md:py-16">
-        <div className="mb-10 rounded-[2rem] border border-sky-200 bg-sky-50 p-6 shadow-sm md:p-8">
-          <div className="flex flex-col gap-4 md:flex-row md:items-start">
-            <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-sky-100 text-3xl shadow-sm">
-              ℹ️
+        <div className="mb-8 overflow-hidden rounded-[2rem] border border-slate-200 bg-white shadow-sm">
+          <div className="grid gap-0 md:grid-cols-2">
+            <div className="border-b border-slate-100 p-6 md:border-b-0 md:border-r md:p-7">
+              <div className="flex items-start gap-4">
+                <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl bg-emerald-100 text-2xl">
+                  ✅
+                </div>
+                <div>
+                  <p className="text-xs font-black uppercase tracking-[0.22em] text-emerald-700">
+                    {isZh ? "系統更新提醒" : "System Update Notice"}
+                  </p>
+                  <h2 className="mt-2 text-xl font-black leading-tight text-slate-950">
+                    {isZh ? "送出後會直接顯示新的 size" : "Updated size appears after submission"}
+                  </h2>
+                  <p className="mt-3 text-sm leading-7 text-slate-600">
+                    {isZh
+                      ? "尺寸更改送出後，系統會直接更新並顯示您最新選擇的 size。"
+                      : "After submitting your size change, the system will update and display your newly selected size directly."}
+                  </p>
+                </div>
+              </div>
             </div>
-            <div>
-              <p className="text-sm font-black uppercase tracking-[0.25em] text-sky-700">
-                {isZh ? "資料範圍提醒" : "Data Notice"}
-              </p>
-              <h2 className="mt-2 text-2xl font-black leading-tight text-slate-950 md:text-3xl">
-                {isZh ? "6/17 之後購票者不會出現在本系統" : "Purchases After 6/17 Will Not Appear in This System"}
-              </h2>
-              <p className="mt-4 leading-8 text-slate-700">
-                {isZh
-                  ? "如果您是在 6/17 之後購票，您的資料將不會出現在本尺寸查詢與更改系統裡。"
-                  : "If you purchased your ticket after 6/17, your information will not appear in this size check and change system."}
-              </p>
-            </div>
-          </div>
-        </div>
 
-        <div className="mb-10 rounded-[2rem] border-4 border-amber-400 bg-amber-50 p-6 shadow-xl md:p-8">
-          <div className="flex flex-col gap-5 md:flex-row md:items-start">
-            <div className="flex h-16 w-16 shrink-0 items-center justify-center rounded-2xl bg-amber-300 text-4xl font-black text-emerald-950 shadow-lg">
-              ⚠️
-            </div>
-            <div>
-              <p className="text-sm font-black uppercase tracking-[0.25em] text-amber-800">
-                {isZh ? "重要尺寸提醒" : "Important Size Notice"}
-              </p>
-              <h2 className="mt-2 text-3xl font-black leading-tight text-amber-800 md:text-4xl">
-                {isZh ? "男版 / 女版 Adult XS 不提供" : "Adult XS Is Not Available for Men / Unisex or Ladies"}
-              </h2>
-
-              <div className="mt-5 space-y-4 text-lg font-bold leading-8 text-slate-800">
-                {isZh ? (
-                  <>
-                    <p>
-                      我們決定將不提供 <strong>Men / Unisex 成人 XS</strong> 與 <strong>Ladies 成人 XS</strong>。
-                    </p>
-                    <p>
-                      所有原本選擇男版 XS 或女版 XS 的參加者，請重新選擇 <strong>Youth YXL</strong> 或 <strong>Youth YL</strong>。
-                    </p>
-                    <p>
-                      如果沒有重新選擇，主辦單位將自動更新為原本所選版型的 <strong>S</strong>：
-                    </p>
-                    <ul className="ml-5 list-disc space-y-2">
-                      <li>原本選 Men / Unisex XS → 自動更新為 Men / Unisex S</li>
-                      <li>原本選 Ladies XS → 自動更新為 Ladies S</li>
-                    </ul>
-                  </>
-                ) : (
-                  <>
-                    <p>
-                      We have decided that <strong>Men / Unisex Adult XS</strong> and <strong>Ladies Adult XS</strong> will not be offered.
-                    </p>
-                    <p>
-                      Anyone who originally selected Men / Unisex XS or Ladies XS should choose <strong>Youth YXL</strong> or <strong>Youth YL</strong> instead.
-                    </p>
-                    <p>
-                      If no new selection is submitted, the organizer will automatically update the size to the <strong>S</strong> size of the originally selected fit:
-                    </p>
-                    <ul className="ml-5 list-disc space-y-2">
-                      <li>Original Men / Unisex XS → automatically updated to Men / Unisex S</li>
-                      <li>Original Ladies XS → automatically updated to Ladies S</li>
-                    </ul>
-                  </>
-                )}
+            <div className="p-6 md:p-7">
+              <div className="flex items-start gap-4">
+                <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl bg-amber-100 text-2xl">
+                  📏
+                </div>
+                <div>
+                  <p className="text-xs font-black uppercase tracking-[0.22em] text-amber-700">
+                    {isZh ? "實際尺寸提醒" : "Actual Fit Notice"}
+                  </p>
+                  <h2 className="mt-2 text-xl font-black leading-tight text-slate-950">
+                    {isZh ? "實際衣服可能略小" : "Actual shirts may run smaller"}
+                  </h2>
+                  <p className="mt-3 text-sm leading-7 text-slate-600">
+                    {isZh
+                      ? "衣長與 Flat Chest 可能比 size chart 小約 1 吋；黑色款可能小 1–2 吋；Youth 可能小約 0.5 吋。尺寸剛好者建議選大一號。"
+                      : "Body length and flat chest width may be about 1 inch smaller than the size chart; black shirts may be 1–2 inches smaller; Youth may be about 0.5 inch smaller. If your size is close, we recommend sizing up."}
+                  </p>
+                </div>
               </div>
             </div>
           </div>
         </div>
+
+        <div className="mb-8 rounded-[1.75rem] border border-amber-200 bg-white p-5 shadow-sm md:p-6">
+          <div className="flex flex-col gap-4 md:flex-row md:items-start">
+            <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-amber-100 text-2xl">
+              ⚠️
+            </div>
+            <div>
+              <p className="text-xs font-black uppercase tracking-[0.22em] text-amber-700">
+                {isZh ? "重要尺寸提醒" : "Important Size Notice"}
+              </p>
+              <h2 className="mt-2 text-2xl font-black leading-tight text-amber-900 md:text-3xl">
+                {isZh ? "男版 / 女版 Adult XS 不提供" : "Adult XS is not available"}
+              </h2>
+              <div className="mt-4 space-y-3 text-sm font-bold leading-7 text-slate-800 md:text-base">
+                <p>
+                  {isZh
+                    ? "我們決定將不提供 Men / Unisex 成人 XS 與 Ladies 成人 XS。"
+                    : "We will not offer Men / Unisex Adult XS or Ladies Adult XS."}
+                </p>
+                <p>
+                  {isZh
+                    ? "所有原本選擇男版 XS 或女版 XS 的參加者，請重新選擇 Youth YXL 或 Youth YL。"
+                    : "If you originally selected Men XS or Ladies XS, please choose Youth YXL or Youth YL instead."}
+                </p>
+                <p>
+                  {isZh
+                    ? "如果沒有重新選擇，主辦單位將自動更新為原本所選版型的 S：Men / Unisex XS → Men / Unisex S；Ladies XS → Ladies S。"
+                    : "If no new selection is made, the organizer will automatically update your size to the same style in S: Men / Unisex XS → Men / Unisex S; Ladies XS → Ladies S."}
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
 
         <div className="grid gap-6 lg:grid-cols-3">
           <div className="rounded-[1.75rem] border border-emerald-200 bg-white p-6 shadow-sm">
@@ -254,8 +261,8 @@ export default function TshirtSizeChangePage() {
             </h2>
             <p className="mt-3 leading-7 text-slate-600">
               {isZh
-                ? "送出後主辦單位會收到更改需求，之後會統一人工整理。請不要重複提交。"
-                : "After submission, the organizer will receive your request and process updates manually. Please do not submit duplicate requests."}
+                ? "送出後系統會直接更新，並顯示您最新選擇的 size。"
+                : "After submission, the system will update and display your newly selected size directly."}
             </p>
           </div>
         </div>
@@ -273,7 +280,7 @@ export default function TshirtSizeChangePage() {
               number="1"
               title={isZh ? "Men / Unisex｜男版 / 中性版" : "Men / Unisex"}
               note={isZh ? "Adult XS not available 成人 XS 無提供" : "Adult XS not available"}
-              headers={isZh ? ["Size", "Body Length 衣長", "Flat Chest Width 平放胸寬", "Chest Around 約胸圍"] : ["Size", "Body Length", "Flat Chest Width", "Chest Around"]}
+              headers={isZh ? ["Size", "Body Length 衣長", "Flat Chest Width 平放胸寬"] : ["Size", "Body Length", "Flat Chest Width"]}
               rows={menRows}
             />
 
@@ -281,14 +288,14 @@ export default function TshirtSizeChangePage() {
               number="2"
               title={isZh ? "Ladies｜女版" : "Ladies"}
               note={isZh ? "Adult XS not available 成人 XS 無提供" : "Adult XS not available"}
-              headers={isZh ? ["Size", "Body Length 衣長", "Flat Chest Width 平放胸寬", "Chest Around 約胸圍", "Sleeve Length 袖長"] : ["Size", "Body Length", "Flat Chest Width", "Chest Around", "Sleeve Length"]}
+              headers={isZh ? ["Size", "Body Length 衣長", "Flat Chest Width 平放胸寬"] : ["Size", "Body Length", "Flat Chest Width"]}
               rows={ladiesRows}
             />
 
             <SizeTable
               number="3"
               title={isZh ? "Youth｜兒童版" : "Youth"}
-              headers={isZh ? ["Size", "Approx. Age / Body Size 參考年齡／體型", "Body Length 衣長", "Flat Chest Width 平放胸寬", "Chest Around 約胸圍", "Sleeve Length 袖長"] : ["Size", "Approx. Age / Body Size", "Body Length", "Flat Chest Width", "Chest Around", "Sleeve Length"]}
+              headers={isZh ? ["Size", "Approx. Age / Body Size 參考年齡／體型", "Body Length 衣長", "Flat Chest Width 平放胸寬"] : ["Size", "Approx. Age / Body Size", "Body Length", "Flat Chest Width"]}
               rows={youthRows}
             />
           </div>
@@ -326,27 +333,11 @@ export default function TshirtSizeChangePage() {
             <NoteItem number="7">
               {isZh ? "For the most accurate fit, please compare these measurements with a T-shirt you already own.｜建議以自己現有的 T-shirt 平量後對照，會最準確。" : "For the most accurate fit, please compare these measurements with a T-shirt you already own."}
             </NoteItem>
-          </div>
-        </div>
-
-        <div className="mt-12 rounded-[2rem] border border-amber-200 bg-amber-50 p-6 shadow-sm md:p-8">
-          <h2 className="text-3xl font-black text-slate-950">
-            {isZh ? "其他注意事項" : "Other Important Notes"}
-          </h2>
-          <div className="mt-5 space-y-4 leading-8 text-slate-700">
-            {isZh ? (
-              <>
-                <p>請只提交一次更改需求。重複提交可能會造成後續整理困難。</p>
-                <p>如果您幫家人或朋友一起購票，請確認每一筆資料對應到正確的人與尺寸。</p>
-                <p>尺寸更改需求送出後，主辦單位會依照實際訂製與庫存狀況盡量協助，但最終尺寸仍需以實際製作與供應為準。</p>
-              </>
-            ) : (
-              <>
-                <p>Please submit your change request only once. Duplicate submissions may make processing more difficult.</p>
-                <p>If you purchased tickets for family or friends, please make sure each record matches the correct person and size.</p>
-                <p>After a change request is submitted, the organizer will do its best to accommodate it based on production and availability. Final sizes are subject to actual production and supply.</p>
-              </>
-            )}
+            <NoteItem number="8">
+              {isZh
+                ? "實際衣服的衣長與 Flat Chest 平放胸寬可能會比 size chart 小約 1 吋左右；黑色款可能小 1–2 吋；Youth 尺寸可能小約 0.5 吋。若尺寸選擇非常剛好，建議往上一號。"
+                : "Actual body length and flat chest width may be about 1 inch smaller than the size chart; black shirts may be 1–2 inches smaller; Youth sizes may be about 0.5 inch smaller. If your size is very close, we recommend sizing up."}
+            </NoteItem>
           </div>
         </div>
 
@@ -356,8 +347,8 @@ export default function TshirtSizeChangePage() {
           </h2>
           <p className="mt-4 max-w-3xl leading-8 text-white/85">
             {isZh
-              ? "請先確認尺寸表與注意事項，並於 目前 前前往尺寸查詢與更改系統提交需求。"
-              : "Please review the size chart and notes, then submit your size change request by 目前."}
+              ? "請先確認尺寸表與提醒事項，再前往尺寸查詢與更改系統提交需求。"
+              : "Please review the size chart and notes, then go to the size check and change system to submit your request."}
           </p>
 
           <div className="mt-8">

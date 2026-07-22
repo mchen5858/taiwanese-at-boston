@@ -8,27 +8,27 @@ const whiteImage = "/tshirt-add-on/white-official-version.png";
 const blackImage = "/tshirt-add-on/black-original-version.png";
 
 const menRows = [
-  ["S", '28"', '18"', '36"'],
-  ["M", '29"', '20"', '40"'],
-  ["L", '30"', '22"', '44"'],
-  ["XL", '31"', '24"', '48"'],
-  ["2XL", '33"', '26"', '52"'],
+  ["S", "28″", "18″"],
+  ["M", "29″", "20″"],
+  ["L", "30″", "22″"],
+  ["XL", "31″", "24″"],
+  ["2XL", "33″", "26″"],
 ];
 
 const ladiesRows = [
-  ["S", '25.5"', '17.25"', '34.5"', '13.25"'],
-  ["M", '26"', '19.25"', '38.5"', '14"'],
-  ["L", '27"', '21.25"', '42.5"', '14.75"'],
-  ["XL", '28"', '23.25"', '46.5"', '15.75"'],
-  ["2XL", '28.5"', '25.25"', '50.5"', '16.75"'],
+  ["S", "25.5″", "17.25″"],
+  ["M", "26″", "19.25″"],
+  ["L", "27″", "21.25″"],
+  ["XL", "28″", "23.25″"],
+  ["2XL", "28.5″", "25.25″"],
 ];
 
 const youthRows = [
-  ["YXS", "2–4", '18"', '13.5"', '27"', '4.375"'],
-  ["YS", "6–8", '20.5"', '15.5"', '31"', '5.375"'],
-  ["YM", "10–12", '23"', '17"', '34"', '5.875"'],
-  ["YL", "14–16", '25"', '18"', '36"', '6.5"'],
-  ["YXL", "18–20", '27"', '20"', '40"', '7.5"'],
+  ["YXS", "2–4", "18″", "13.5″"],
+  ["YS", "6–8", "20.5″", "15.5″"],
+  ["YM", "10–12", "23″", "17″"],
+  ["YL", "14–16", "25″", "18″"],
+  ["YXL", "18–20", "27″", "20″"],
 ];
 
 function InfoCard({ title, children }) {
@@ -255,6 +255,34 @@ export default function TshirtAddOnPage() {
           </InfoCard>
         </div>
 
+        <div className="mt-10 rounded-[2rem] border border-amber-200 bg-amber-50 p-6 shadow-sm md:p-8">
+          <div className="flex flex-col gap-4 md:flex-row md:items-start">
+            <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-amber-100 text-3xl shadow-sm">
+              📏
+            </div>
+            <div>
+              <p className="text-sm font-black uppercase tracking-[0.25em] text-amber-700">
+                {isZh ? "實際尺寸提醒" : "Actual Fit Notice"}
+              </p>
+              <h2 className="mt-2 text-2xl font-black leading-tight text-slate-950 md:text-3xl">
+                {isZh ? "實際衣服可能會比 size chart 略小" : "Actual Shirts May Run Smaller Than the Size Chart"}
+              </h2>
+              <div className="mt-4 space-y-3 leading-8 text-slate-700">
+                <p>
+                  {isZh
+                    ? "實際衣服的衣長與 Flat Chest 平放胸寬可能會比 size chart 小約 1 吋左右；黑色款可能小 1–2 吋；Youth 尺寸可能小約 0.5 吋。"
+                    : "Actual body length and flat chest width may be about 1 inch smaller than the size chart; black shirts may be 1–2 inches smaller; Youth sizes may be about 0.5 inch smaller."}
+                </p>
+                <p className="font-black text-amber-900">
+                  {isZh
+                    ? "如果尺寸選擇非常剛好，建議往上一號。"
+                    : "If your selected size is very close, we recommend sizing up."}
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
         <div className="mt-10 rounded-[2rem] border border-emerald-200 bg-white p-6 shadow-sm md:p-8">
           <h2 className="text-3xl font-black text-slate-950">
             {isZh ? "款式與尺寸整理" : "Style and Size Summary"}
@@ -270,7 +298,7 @@ export default function TshirtAddOnPage() {
               number="1"
               title={isZh ? "Men / Unisex｜男版 / 中性版" : "Men / Unisex"}
               note={isZh ? "Adult XS not available 成人 XS 無提供" : "Adult XS not available"}
-              headers={isZh ? ["Size", "Body Length 衣長", "Flat Chest Width 平放胸寬", "Chest Around 約胸圍"] : ["Size", "Body Length", "Flat Chest Width", "Chest Around"]}
+              headers={isZh ? ["Size", "Body Length 衣長", "Flat Chest Width 平放胸寬"] : ["Size", "Body Length", "Flat Chest Width"]}
               rows={menRows}
             />
 
@@ -278,14 +306,14 @@ export default function TshirtAddOnPage() {
               number="2"
               title={isZh ? "Ladies｜女版" : "Ladies"}
               note={isZh ? "Adult XS not available 成人 XS 無提供" : "Adult XS not available"}
-              headers={isZh ? ["Size", "Body Length 衣長", "Flat Chest Width 平放胸寬", "Chest Around 約胸圍", "Sleeve Length 袖長"] : ["Size", "Body Length", "Flat Chest Width", "Chest Around", "Sleeve Length"]}
+              headers={isZh ? ["Size", "Body Length 衣長", "Flat Chest Width 平放胸寬"] : ["Size", "Body Length", "Flat Chest Width"]}
               rows={ladiesRows}
             />
 
             <SizeTable
               number="3"
               title={isZh ? "Youth｜兒童版" : "Youth"}
-              headers={isZh ? ["Size", "Approx. Age / Body Size 參考年齡／體型", "Body Length 衣長", "Flat Chest Width 平放胸寬", "Chest Around 約胸圍", "Sleeve Length 袖長"] : ["Size", "Approx. Age / Body Size", "Body Length", "Flat Chest Width", "Chest Around", "Sleeve Length"]}
+              headers={isZh ? ["Size", "Approx. Age / Body Size 參考年齡／體型", "Body Length 衣長", "Flat Chest Width 平放胸寬"] : ["Size", "Approx. Age / Body Size", "Body Length", "Flat Chest Width"]}
               rows={youthRows}
             />
           </div>
@@ -309,6 +337,11 @@ export default function TshirtAddOnPage() {
             <NoteItem number="5">{isZh ? "Youth 尺寸通常比成人尺寸更短，也更窄。" : "Youth sizes are generally shorter and narrower than adult sizes."}</NoteItem>
             <NoteItem number="6">{isZh ? "若介於兩個尺寸之間，或喜歡寬鬆穿著，建議選大一號。" : "If you are between sizes or prefer a looser fit, we recommend sizing up."}</NoteItem>
             <NoteItem number="7">{isZh ? "建議以自己現有的 T-shirt 平量後對照，會最準確。" : "For the most accurate fit, please compare these measurements with a T-shirt you already own."}</NoteItem>
+            <NoteItem number="8">
+              {isZh
+                ? "實際衣服的衣長與 Flat Chest 平放胸寬可能會比 size chart 小約 1 吋左右；黑色款可能小 1–2 吋；Youth 尺寸可能小約 0.5 吋。若尺寸選擇非常剛好，建議往上一號。"
+                : "Actual body length and flat chest width may be about 1 inch smaller than the size chart; black shirts may be 1–2 inches smaller; Youth sizes may be about 0.5 inch smaller. If your size is very close, we recommend sizing up."}
+            </NoteItem>
           </div>
         </div>
 

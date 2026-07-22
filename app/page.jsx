@@ -30,80 +30,97 @@ const coHosts = [
 const teamExamples = ["台灣No.1隊", "Fenway佔領隊", "珍奶續命隊", "Team Taiwan GO隊", "波士頓台味隊"];
 
 const teamLeaderboard = [
-  { name: "波士頓台灣媽媽親子會", tickets: "190" },
-  { name: "我朋友說想湊50個人的隊", tickets: "157" },
-  { name: "波克萊商會", tickets: "150" },
-  { name: "Boston FASCA", tickets: "47" },
-  { name: "波士頓台灣人生技協會 BTBA", tickets: "33" },
-  { name: "BTBC 波士頓台灣龍舟隊", tickets: "30" },
-  { name: "我們也來組一隊", tickets: "27" },
-  { name: "Formosa Strong", tickets: "20" },
-  { name: "Taiwan Film Festival of Boston", tickets: "19" },
-  { name: "波士頓台灣世衛協進會", tickets: "17" },
-  { name: "Andover 貢茶", tickets: "16" },
-  { name: "NCCU, TCCNE & BTEAA", tickets: "16" },
-  { name: "The Boba Tea Party", tickets: "16" },
-  { name: "當偶們同在一起", tickets: "16" },
-  { name: "加入就有朋友隊", tickets: "15" },
-  { name: "羅德島台灣同好會（RITA)", tickets: "14" },
-  { name: "Tâioân Siothéng", tickets: "13" },
-  { name: "Tide One Pioneers (TOP) 台灣拓荒者船隊", tickets: "12" },
-  { name: "從南到北 襪ㄧ下！", tickets: "12" },
-  { name: "Ellie 與她的夥伴們", tickets: "11" },
-  { name: "TECO", tickets: "11" },
-  { name: "就是愛台灣啦", tickets: "11" },
-  { name: "Club Move", tickets: "10" },
-  { name: "Home Run Yellow Penguins!", tickets: "10" },
-  { name: "Red Sox Fernando Day", tickets: "10" },
-  { name: "Woo告台", tickets: "9" },
-  { name: "台灣留學生聯合加油團", tickets: "9" },
-  { name: "Lala Mountain", tickets: "8" },
-  { name: "Need好台", tickets: "8" },
-  { name: "Taiwan Divas", tickets: "8" },
-  { name: "Taiwan 熊讚", tickets: "8" },
-  { name: "波士頓北一女校友會", tickets: "8" },
-  { name: "花栗鼠吃雞排", tickets: "8" },
-  { name: "0800092000", tickets: "7" },
-  { name: "Taiwanzonian-bos", tickets: "7" },
-  { name: "你說的都隊", tickets: "7" },
-  { name: "MA Formosa", tickets: "6" },
-  { name: "紅襪不脫隊", tickets: "6" },
-  { name: "襪哩咧", tickets: "6" },
-  { name: "Taiwan 55688", tickets: "5" },
-  { name: "Taiwan 襪up!", tickets: "5" },
-  { name: "Taiwanese-ish 台灣味 🇹🇼", tickets: "5" },
-  { name: "拚明年總統來開球", tickets: "5" },
-  { name: "茅起來打", tickets: "5" },
-  { name: "Alexida", tickets: "4" },
-  { name: "JASON WANG", tickets: "4" },
-  { name: "MOCHI", tickets: "4" },
-  { name: "Shield", tickets: "4" },
-  { name: "Taiwan Bon Bon", tickets: "4" },
-  { name: "台灣霹靂火鳳凰", tickets: "4" },
-  { name: "投我們就（隊）", tickets: "4" },
-  { name: "波城老華僑隊", tickets: "4" },
-  { name: "灣a紅襪", tickets: "4" },
-  { name: "紅襪Hello Kitty", tickets: "4" },
-  { name: "芬威要有TaiwanDay才隊", tickets: "4" },
-  { name: "萊khan👀磅賽", tickets: "4" },
-  { name: "襪係臺灣郎", tickets: "4" },
-  { name: "襪賽！Taiwan", tickets: "4" },
-  { name: "金余", tickets: "4" },
-  { name: "NTUB05BOS", tickets: "3" },
-  { name: "North Shore TAIWANESE", tickets: "3" },
-  { name: "Taiwan Champion", tickets: "3" },
-  { name: "Team KHH", tickets: "3" },
-  { name: "snoopy12", tickets: "3" },
-  { name: "台灣尚勇", tickets: "3" },
-  { name: "大直隊", tickets: "3" },
-  { name: "好棒 - Good Bat", tickets: "3" },
-  { name: "從New Hampshire來的台灣人隊", tickets: "3" },
-  { name: "飛天少女豬", tickets: "3" },
-  { name: "AmiLumiGoGoGo", tickets: "2" },
-  { name: "Boston Subtle Asian", tickets: "2" },
-  { name: "MT", tickets: "2" },
-  { name: "羅德島灰姑娘", tickets: "2" },
-  { name: "什麼都隊", tickets: "1" },
+  { id: "team-1", name: "波士頓台灣媽媽親子會", tickets: "204" },
+  { id: "team-2", name: "我朋友說想湊50個人的隊", tickets: "158" },
+  { id: "team-3", name: "波克萊商會", tickets: "148" },
+  { id: "team-4", name: "Boston FASCA", tickets: "47" },
+  { id: "team-5", name: "波士頓台灣人生技協會 BTBA", tickets: "34" },
+  { id: "team-6", name: "我們也來組一隊", tickets: "32" },
+  { id: "team-7", name: "BTBC 波士頓台灣龍舟隊", tickets: "30" },
+  { id: "team-8", name: "加入就有朋友隊", tickets: "28" },
+  { id: "team-9", name: "從南到北 襪ㄧ下！", tickets: "24" },
+  { id: "team-10", name: "Formosa Strong", tickets: "20" },
+  { id: "team-11", name: "NCCU, TCCNE & BTEAA", tickets: "19" },
+  { id: "team-12", name: "Taiwan Film Festival of Boston", tickets: "19" },
+  { id: "team-13", name: "波士頓台灣世衛協進會", tickets: "17" },
+  { id: "team-14", name: "Andover 貢茶", tickets: "16" },
+  { id: "team-15", name: "The Boba Tea Party", tickets: "16" },
+  { id: "team-16", name: "當偶們同在一起", tickets: "16" },
+  { id: "team-17", name: "羅德島台灣同好會（RITA)", tickets: "14" },
+  { id: "team-18", name: "Tâioân Siothéng", tickets: "13" },
+  { id: "team-19", name: "Tide One Pioneers (TOP) 台灣拓荒者船隊", tickets: "12" },
+  { id: "team-20", name: "Ellie 與她的夥伴們", tickets: "11" },
+  { id: "team-21", name: "Home Run Yellow Penguins!", tickets: "11" },
+  { id: "team-22", name: "TECO", tickets: "11" },
+  { id: "team-23", name: "就是愛台灣啦", tickets: "11" },
+  { id: "team-24", name: "Club Move", tickets: "10" },
+  { id: "team-25", name: "Red Sox Fernando Day", tickets: "10" },
+  { id: "team-26", name: "台灣留學生聯合加油團", tickets: "10" },
+  { id: "team-27", name: "襪賽！Taiwan", tickets: "10" },
+  { id: "team-28", name: "Woo告台", tickets: "9" },
+  { id: "team-29", name: "Lala Mountain", tickets: "8" },
+  { id: "team-30", name: "Need好台", tickets: "8" },
+  { id: "team-31", name: "Taiwan Divas", tickets: "8" },
+  { id: "team-32", name: "Taiwan 熊讚", tickets: "8" },
+  { id: "team-33", name: "波士頓北一女校友會", tickets: "8" },
+  { id: "team-34", name: "花栗鼠吃雞排", tickets: "8" },
+  { id: "team-35", name: "萊khan👀磅賽", tickets: "8" },
+  { id: "team-36", name: "陳冠宇說的都隊", tickets: "8" },
+  { id: "team-37", name: "0800092000", tickets: "7" },
+  { id: "team-38", name: "Taiwanzonian-bos", tickets: "7" },
+  { id: "team-39", name: "你說的都隊", tickets: "7" },
+  { id: "team-40", name: "襪哩咧", tickets: "7" },
+  { id: "team-41", name: "MA Formosa", tickets: "6" },
+  { id: "team-42", name: "呷飽末!", tickets: "6" },
+  { id: "team-43", name: "紅襪不脫隊", tickets: "6" },
+  { id: "team-44", name: "CFAW Boston", tickets: "5" },
+  { id: "team-45", name: "Sox without borders", tickets: "5" },
+  { id: "team-46", name: "Taiwan 55688", tickets: "5" },
+  { id: "team-47", name: "Taiwan 襪up!", tickets: "5" },
+  { id: "team-48", name: "Taiwanese-ish 台灣味 🇹🇼", tickets: "5" },
+  { id: "team-49", name: "拚明年總統來開球", tickets: "5" },
+  { id: "team-50", name: "茅起來打", tickets: "5" },
+  { id: "team-51", name: "Alexida", tickets: "4" },
+  { id: "team-52", name: "JASON WANG", tickets: "4" },
+  { id: "team-53", name: "MOCHI", tickets: "4" },
+  { id: "team-54", name: "Shield", tickets: "4" },
+  { id: "team-55", name: "Taiwan Bon Bon", tickets: "4" },
+  { id: "team-56", name: "Taiwanese Association of Boston", tickets: "4" },
+  { id: "team-57", name: "Taiwanese but One", tickets: "4" },
+  { id: "team-58", name: "中秋節快樂歡迎餵食蛋黃酥隊", tickets: "4" },
+  { id: "team-59", name: "台灣霹靂火鳳凰", tickets: "4" },
+  { id: "team-60", name: "四伯與燒餅", tickets: "4" },
+  { id: "team-61", name: "投我們就（隊）", tickets: "4" },
+  { id: "team-62", name: "波城老華僑隊", tickets: "4" },
+  { id: "team-63", name: "灣a紅襪", tickets: "4" },
+  { id: "team-64", name: "紅襪Hello Kitty", tickets: "4" },
+  { id: "team-65", name: "臺灣尚讚", tickets: "4" },
+  { id: "team-66", name: "芬威要有TaiwanDay才隊", tickets: "4" },
+  { id: "team-67", name: "襪係臺灣郎", tickets: "4" },
+  { id: "team-68", name: "要台灣人放棄諧音梗真的TAIWAN", tickets: "4" },
+  { id: "team-69", name: "要台灣人放棄諧音梗真的TAIWAN了", tickets: "4" },
+  { id: "team-70", name: "金余", tickets: "4" },
+  { id: "team-71", name: "龍三蝦明治 攏紅襪誇過來", tickets: "4" },
+  { id: "team-72", name: "Dragon Marsh", tickets: "3" },
+  { id: "team-73", name: "North Shore TAIWANESE", tickets: "3" },
+  { id: "team-74", name: "NTUB05BOS", tickets: "3" },
+  { id: "team-75", name: "snoopy12", tickets: "3" },
+  { id: "team-76", name: "Taiwan Champion", tickets: "3" },
+  { id: "team-77", name: "Team KHH", tickets: "3" },
+  { id: "team-78", name: "Zoe說的隊", tickets: "3" },
+  { id: "team-79", name: "台灣尚勇", tickets: "3" },
+  { id: "team-80", name: "大直隊", tickets: "3" },
+  { id: "team-81", name: "好棒 - Good Bat", tickets: "3" },
+  { id: "team-82", name: "從New Hampshire來的台灣人隊", tickets: "3" },
+  { id: "team-83", name: "飛天少女豬", tickets: "3" },
+  { id: "team-84", name: "AmiLumiGoGoGo", tickets: "2" },
+  { id: "team-85", name: "Boston Subtle Asian", tickets: "2" },
+  { id: "team-86", name: "CS", tickets: "2" },
+  { id: "team-87", name: "MT", tickets: "2" },
+  { id: "team-88", name: "Team Taiwan", tickets: "2" },
+  { id: "team-89", name: "羅德島灰姑娘", tickets: "2" },
+  { id: "team-90", name: "茄子呆頭鵝", tickets: "2" },
+  { id: "team-91", name: "什麼都隊", tickets: "1" },
 ];
 
 const content = {
@@ -257,7 +274,7 @@ const content = {
       joinTitle: "你的隊伍也可以一起集氣！",
       joinText:
         "3 人以上就可以組隊，自取隊名並加入 TEAM TAIWAN 集氣榜。目前透過 Zeffy 購票，每張票為 $50，並包含限量 Jersey。隊名請使用適當、尊重、友善的名稱；主辦單位保留隊名審核與調整之權利。",
-      joinButton: "立即組隊",
+      joinButton: "售票已結束",
     },
     payment: {
       eyebrow: "Payment",
@@ -489,7 +506,7 @@ const content = {
         deals: "View Ticket Deals",
         line: "Join Official LINE Group",
         donate: "💙 Support on GoFundMe",
-        buy: "Buy Tickets",
+        buy: "Sold Out",
         form: "No LINE? Join by Google Form",
       },
       stats: [
@@ -1016,7 +1033,7 @@ function BubbleLeaderboard({ t }) {
 
     return (
       <div
-        key={`${team.name}-${index}-${isMobile ? "m" : "d"}`}
+        key={`${team.id || team.name}-${index}-${isMobile ? "m" : "d"}`}
         className={`flex shrink-0 flex-col items-center justify-center rounded-full p-4 text-center shadow-xl ${isMobile ? "ring-4" : "ring-8"} transition duration-300 hover:z-30 hover:scale-[1.03] ${bubbleColors[index % bubbleColors.length]} ${extraClass}`}
         style={getBubbleStyle(team.tickets, isMobile, index, isFeatured)}
       >
@@ -1067,7 +1084,7 @@ function BubbleLeaderboard({ t }) {
                   const idx = baseIndex + localIdx;
                   return (
                     <div
-                      key={team.name}
+                      key={`${team.id || team.name}-${idx}`}
                       className="relative"
                       style={{ marginTop: `${desktopOffsets[idx % desktopOffsets.length]}px` }}
                     >
@@ -1101,7 +1118,7 @@ function BubbleLeaderboard({ t }) {
                   const idx = baseIndex + localIdx;
                   return (
                     <div
-                      key={team.name}
+                      key={`${team.id || team.name}-${idx}`}
                       className="relative"
                       style={{ marginTop: `${mobileOffsets[idx % mobileOffsets.length]}px` }}
                     >
@@ -1163,7 +1180,7 @@ export default function TaiwanFanNightWebsite() {
             >
               {t.langLabel}
             </button>
-            <Button onClick={() => window.open(zeffyPaymentLink, "_blank")} variant="purchase">{t.headerBuy}</Button>
+            <span className="rounded-full bg-slate-200 px-6 py-3 text-center font-black text-slate-600 shadow-sm">{t.headerBuy}</span>
           </div>
 
           <button className="text-2xl lg:hidden" onClick={() => setOpenMenu(!openMenu)} aria-label="Open menu">
@@ -1179,7 +1196,7 @@ export default function TaiwanFanNightWebsite() {
             >
               {t.langLabel}
             </button>
-            <Button onClick={() => window.open(zeffyPaymentLink, "_blank")} variant="purchase">{t.headerBuy}</Button>
+            <span className="rounded-full bg-slate-200 px-6 py-3 text-center font-black text-slate-600 shadow-sm">{t.headerBuy}</span>
             <div className="mt-3 grid grid-cols-2 gap-2">
               {navItems.map((item) => (
                 <button
@@ -1204,16 +1221,37 @@ export default function TaiwanFanNightWebsite() {
                 <span className="block">{t.hero.title1}</span>
                 <span className="mt-4 flex items-center gap-4 text-emerald-700 md:mt-5">{t.hero.title2} <span className="text-5xl md:text-6xl lg:text-7xl">⚾</span></span>
               </h1>
-              <div className="mt-6 max-w-3xl space-y-5 text-lg leading-8 text-slate-600 md:text-xl">
+              
+<div className="mt-6 max-w-3xl space-y-5 text-lg leading-8 text-slate-600 md:text-xl">
                 {t.hero.description.split("\n\n").map((paragraph) => (
                   <p key={paragraph}>{paragraph}</p>
                 ))}
+              </div>
+              <div className="mt-8 overflow-hidden rounded-[2.5rem] border-2 border-amber-300 bg-gradient-to-br from-amber-100 via-white to-emerald-50 px-7 py-7 shadow-[0_22px_60px_rgba(217,119,6,0.22)] md:px-9 md:py-8">
+                <div className="flex flex-col gap-5 md:flex-row md:items-center">
+                  <div className="flex h-20 w-20 shrink-0 items-center justify-center rounded-[1.75rem] bg-amber-300 text-5xl shadow-lg ring-4 ring-white">
+                    🎟️
+                  </div>
+                  <div>
+                    <p className="text-sm font-black uppercase tracking-[0.32em] text-amber-700">
+                      Ticket Sales Closed
+                    </p>
+                    <h2 className="mt-2 text-4xl font-black leading-tight text-slate-950 md:text-5xl">
+                      {lang === "zh" ? "912 全部售票已結束" : "912 Tickets Are Sold Out"}
+                    </h2>
+                    <p className="mt-3 text-lg font-bold leading-8 text-slate-700 md:text-xl">
+                      {lang === "zh"
+                        ? "感謝大家熱情支持！目前 912 Taiwan Fans Night 票券已全部售完。"
+                        : "Thank you for your support! All tickets for 912 Taiwan Fans Night are now sold out."}
+                    </p>
+                  </div>
+                </div>
               </div>
               <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
                 <Button onClick={() => scrollToSection("tickets")}>{t.hero.buttons.deals}</Button>
                 <Button onClick={() => window.open(officialLineGroup, "_blank")}>{t.hero.buttons.line}</Button>
                 <button onClick={() => window.open(goFundMeLink, "_blank")} className="rounded-full bg-amber-400 px-6 py-3 font-bold text-slate-950 shadow-md ring-2 ring-amber-100 transition hover:bg-amber-500 active:scale-95">{t.hero.buttons.donate}</button>
-                <Button onClick={() => window.open(zeffyPaymentLink, "_blank")} variant="purchase">{t.hero.buttons.buy}</Button>
+                <span className="rounded-full bg-slate-200 px-6 py-3 text-center font-black text-slate-600 shadow-sm">{t.hero.buttons.buy}</span>
                 <Button onClick={() => window.open(googleFormLink, "_blank")} variant="outline">{t.hero.buttons.form}</Button>
               </div>
               <div className="mt-10 grid grid-cols-2 gap-3 md:grid-cols-4">
@@ -1224,6 +1262,22 @@ export default function TaiwanFanNightWebsite() {
               </div>
             </div>
             <Card className="border-emerald-100 bg-white/95 p-7 shadow-xl md:p-8">
+              <div className="rounded-[2rem] border border-emerald-200 bg-white/95 p-6 text-center shadow-xl shadow-emerald-900/10 backdrop-blur">
+                <p className="text-xs font-black uppercase tracking-[0.25em] text-emerald-700">
+                  {lang === "zh" ? "台灣集結人數" : "Taiwan Community Count"}
+                </p>
+                <div className="mt-2 text-6xl font-black leading-none text-emerald-700 md:text-7xl">
+                  1,300
+                </div>
+                <p className="mt-2 text-lg font-black text-slate-950">
+                  {lang === "zh" ? "人一起 Light Up Fenway" : "people lighting up Fenway"}
+                </p>
+                <p className="mt-1 text-sm font-bold text-slate-600">
+                  {lang === "zh" ? "912 票券已全部售完" : "912 tickets are sold out"}
+                </p>
+              </div>
+
+
               <div className="mb-6 flex justify-center rounded-3xl border border-emerald-100 bg-gradient-to-br from-white to-emerald-50 p-4 shadow-sm"><img src={eventLogo} alt="912 Fenway 台灣集結 Logo" className="h-auto w-full max-w-[360px] object-contain" /></div>
               <div className="mb-6 flex justify-center rounded-2xl border border-slate-200 bg-white p-3 shadow-sm"><img src={hostLogo} alt="BTCC & BTCF Logo" className="h-auto w-full max-w-[220px] object-contain" /></div>
               <div className="mb-6 rounded-3xl bg-gradient-to-br from-emerald-700 to-sky-700 p-7 text-white">
@@ -1250,7 +1304,7 @@ export default function TaiwanFanNightWebsite() {
 
         <section id="tickets" className="px-4 py-16 md:px-8 md:py-24">
           <div className="mx-auto max-w-7xl">
-            <SectionTitle eyebrow={t.tickets.eyebrow} title={t.tickets.title} description={t.tickets.description} />
+            <SectionTitle eyebrow={t.tickets.eyebrow} title={lang === "zh" ? "售票已全部結束" : "Ticket Sales Have Ended"} description={lang === "zh" ? "912 Taiwan Fans Night 票券已全部售完，感謝大家支持。" : "All 912 Taiwan Fans Night tickets are now sold out. Thank you for your support."} />
             <div className="mx-auto mb-10 max-w-3xl rounded-3xl border border-emerald-200 bg-emerald-50 p-5 text-center shadow-sm"><p className="text-xl font-black text-emerald-900">{t.tickets.under3Title}</p><p className="mt-2 text-sm leading-7 text-emerald-800">{t.tickets.under3Text}</p></div>
             <div className="mx-auto max-w-4xl">
               <Card className="border-emerald-200 p-8 shadow-lg">
@@ -1313,7 +1367,7 @@ export default function TaiwanFanNightWebsite() {
           <div className="mx-auto max-w-7xl">
             <SectionTitle eyebrow={t.teams.eyebrow} title={t.teams.title} description={t.teams.description} />
             <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">{t.teams.steps.map(([icon, title, body]) => <InfoCard key={title} icon={icon} title={title}>{body}</InfoCard>)}</div>
-            <Card className="mt-8 border-emerald-200 bg-emerald-50 p-6 md:p-8"><div className="grid gap-6 lg:grid-cols-[1fr_auto] lg:items-center"><div><p className="text-sm font-semibold uppercase tracking-[0.25em] text-emerald-700">Zeffy Team Name</p><h3 className="mt-2 text-2xl font-black text-slate-950">{t.teams.teamNameTitle}</h3><p className="mt-4 leading-7 text-slate-700">{t.teams.teamNameText1}</p><p className="mt-3 leading-7 text-slate-700">{t.teams.teamNameText2}</p><p className="mt-3 text-sm leading-7 text-slate-600">{t.teams.teamNameText3}</p></div><a href={zeffyPaymentLink} target="_blank" rel="noreferrer" className="rounded-full bg-sky-600 px-6 py-3 text-center font-bold text-white shadow-md ring-2 ring-sky-100 transition hover:bg-sky-700">{t.headerBuy}</a></div></Card>
+            <Card className="mt-8 border-emerald-200 bg-emerald-50 p-6 md:p-8"><div className="grid gap-6 lg:grid-cols-[1fr_auto] lg:items-center"><div><p className="text-sm font-semibold uppercase tracking-[0.25em] text-emerald-700">Zeffy Team Name</p><h3 className="mt-2 text-2xl font-black text-slate-950">{t.teams.teamNameTitle}</h3><p className="mt-4 leading-7 text-slate-700">{t.teams.teamNameText1}</p><p className="mt-3 leading-7 text-slate-700">{t.teams.teamNameText2}</p><p className="mt-3 text-sm leading-7 text-slate-600">{t.teams.teamNameText3}</p></div><span className="rounded-full bg-slate-200 px-6 py-3 text-center font-black text-slate-600 shadow-sm">{t.headerBuy}</span></div></Card>
             <div className="mt-10 rounded-[2rem] bg-gradient-to-br from-emerald-700 to-sky-700 p-8 text-white shadow-lg"><div className="grid gap-8 lg:grid-cols-[0.8fr_1.2fr] lg:items-center"><div><p className="text-sm font-semibold uppercase tracking-[0.25em] text-white/75">Team Name Ideas</p><h3 className="mt-3 text-3xl font-black">{t.teams.exampleTitle}</h3><p className="mt-4 text-sm leading-7 text-white/85">{t.teams.exampleText}</p><p className="mt-3 text-sm leading-7 text-white/85">{t.teams.nameReminder}</p></div><div><p className="mb-4 text-sm font-bold uppercase tracking-wide text-white/80">{t.teams.examplesLabel}</p><div className="flex flex-wrap gap-3">{teamExamples.map((name) => <span key={name} className="rounded-full bg-white/15 px-4 py-2 text-sm font-semibold backdrop-blur">{name}</span>)}</div></div></div></div>
             <Card className="mt-8 overflow-hidden border-sky-200 bg-gradient-to-br from-sky-50 via-white to-emerald-50 p-0 shadow-lg"><div className="grid gap-0 lg:grid-cols-[0.72fr_1.28fr] lg:items-stretch"><div className="flex flex-col justify-center bg-gradient-to-br from-sky-600 to-teal-600 p-8 text-white md:p-10"><p className="text-sm font-semibold uppercase tracking-[0.25em] text-white/80">{t.teams.friendTeamEyebrow}</p><h3 className="mt-3 text-3xl font-black leading-tight">{t.teams.friendTeamTitle}</h3><p className="mt-5 rounded-2xl bg-white/15 p-4 text-base font-bold leading-7 text-white">{t.teams.friendTeamPunch}</p></div><div className="p-6 md:p-8"><p className="text-lg font-black leading-7 text-slate-950">{t.teams.friendTeamIntro}</p><p className="mt-4 leading-7 text-slate-700">{t.teams.friendTeamText}</p><div className="mt-5 grid gap-4 md:grid-cols-2"><div className="rounded-2xl bg-white p-4 text-sm leading-7 text-slate-700 shadow-sm ring-1 ring-sky-100">{t.teams.friendTeamTransfer}</div><div className="rounded-2xl bg-white p-4 text-sm font-bold leading-7 text-sky-900 shadow-sm ring-1 ring-sky-100">{t.teams.friendTeamGift}</div></div></div></div></Card>
           </div>
@@ -1324,7 +1378,7 @@ export default function TaiwanFanNightWebsite() {
             <SectionTitle eyebrow={t.leaderboard.eyebrow} title={t.leaderboard.title} description={t.leaderboard.description} />
             <Card className="overflow-hidden border-emerald-200 bg-white p-0 shadow-lg">
               <div className="bg-gradient-to-br from-emerald-700 to-sky-700 p-8 text-center text-white md:p-10"><p className="text-sm font-semibold uppercase tracking-[0.25em] text-white/75">Current Teams</p><h3 className="mt-3 text-3xl font-black">{t.leaderboard.headerTitle}</h3><p className="mx-auto mt-4 max-w-3xl leading-7 text-white/90">{t.leaderboard.headerText}</p><div className="mt-7 flex w-full justify-center"><div className="inline-flex rounded-full border border-white/15 bg-white/12 px-8 py-4 shadow-lg backdrop-blur-sm"><span className="text-3xl font-black tracking-wide text-white md:text-5xl">{lang === "zh" ? "千人大隊集結" : "1,000-Person Team Taiwan Rally"}</span></div></div><div className="mt-8 flex w-full justify-center"><div className="inline-flex items-center justify-center rounded-full bg-amber-300 px-8 py-4 text-center text-xl font-black text-emerald-950 shadow-xl ring-4 ring-white/20 md:text-2xl">{lang === "zh" ? `目前 TEAM TAIWAN 總共有 ${teamLeaderboard.length} 隊` : `TEAM TAIWAN currently has ${teamLeaderboard.length} teams`}</div></div></div>
-              <div className="p-6 md:p-8"><div className="rounded-[2rem] border border-emerald-100 bg-gradient-to-br from-emerald-50 via-white to-sky-50 p-6 md:p-10"><BubbleLeaderboard t={t} /></div><div className="mt-8 rounded-3xl border border-emerald-200 bg-emerald-50 p-6 text-center"><h4 className="text-2xl font-black text-slate-950">{t.leaderboard.joinTitle}</h4><p className="mx-auto mt-3 max-w-2xl leading-7 text-slate-600">{t.leaderboard.joinText}</p><div className="mt-6 flex justify-center"><a href={zeffyPaymentLink} target="_blank" rel="noreferrer" className="rounded-full bg-emerald-700 px-6 py-3 text-center font-bold text-white transition hover:bg-emerald-800">{t.leaderboard.joinButton}</a></div></div></div>
+              <div className="p-6 md:p-8"><div className="rounded-[2rem] border border-emerald-100 bg-gradient-to-br from-emerald-50 via-white to-sky-50 p-6 md:p-10"><BubbleLeaderboard t={t} /></div><div className="mt-8 rounded-3xl border border-emerald-200 bg-emerald-50 p-6 text-center"><h4 className="text-2xl font-black text-slate-950">{t.leaderboard.joinTitle}</h4><p className="mx-auto mt-3 max-w-2xl leading-7 text-slate-600">{t.leaderboard.joinText}</p><div className="mt-6 flex justify-center"><span className="rounded-full bg-slate-200 px-6 py-3 text-center font-black text-slate-600">{t.leaderboard.joinButton}</span></div></div></div>
             </Card>
           </div>
         </section>
