@@ -19,7 +19,7 @@ const tshirtSizeChangeLink = "/tshirt-size-change";
 
 const coHosts = [
   "波克萊台灣商會",
-  "新英格蘭地區臺灣同學聯合會",
+  "新英格蘭地區臺灣同聯合會",
   "波士頓臺灣影展",
   "波士頓台灣人生技協會",
   "波士頓台灣媽媽親子會",
