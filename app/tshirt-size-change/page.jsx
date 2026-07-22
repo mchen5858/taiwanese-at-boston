@@ -149,6 +149,27 @@ export default function TshirtSizeChangePage() {
       </section>
 
       <section className="mx-auto max-w-6xl px-5 py-12 md:px-8 md:py-16">
+        <div className="mb-8 rounded-[1.75rem] border border-sky-200 bg-sky-50 p-5 shadow-sm md:p-6">
+          <div className="flex flex-col gap-4 md:flex-row md:items-start">
+            <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-sky-100 text-2xl">
+              🔎
+            </div>
+            <div>
+              <p className="text-xs font-black uppercase tracking-[0.22em] text-sky-700">
+                {isZh ? "查詢方式提醒" : "Lookup Notice"}
+              </p>
+              <h2 className="mt-2 text-xl font-black leading-tight text-slate-950 md:text-2xl">
+                {isZh ? "只需要輸入 email 即可查詢所有衣服" : "Enter your email to view all shirts"}
+              </h2>
+              <p className="mt-3 text-sm leading-7 text-slate-600 md:text-base">
+                {isZh
+                  ? "買球票附贈的 912 活動衣服，以及另外加購的衣服，都會一起出現在尺寸查詢與更改系統裡。您只需要輸入購票或加購時使用的 email，即可查看並更改相關尺寸。"
+                  : "The 912 event shirt included with your game ticket and any add-on shirts you purchased will all appear in the size check and change system. Simply enter the email used for your ticket purchase or add-on order to view and update the related sizes."}
+              </p>
+            </div>
+          </div>
+        </div>
+
         <div className="mb-8 overflow-hidden rounded-[2rem] border border-slate-200 bg-white shadow-sm">
           <div className="grid gap-0 md:grid-cols-2">
             <div className="border-b border-slate-100 p-6 md:border-b-0 md:border-r md:p-7">
