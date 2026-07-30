@@ -133,6 +133,7 @@ const content = {
       ["teams", "組隊方式"],
       ["leaderboard", "集氣榜"],
       ["shirt-design", "T-shirt 專區"],
+      ["seat-map", "座位圖"],
       ["raffle", "抽獎活動"],
       ["faq", "注意事項"],
       ["support", "支持與聯絡"],
@@ -150,6 +151,7 @@ const content = {
         donate: "💙 支持活動 GoFundMe",
         buy: "立即前往購票",
         form: "沒有 LINE？用 Google Form 加入",
+        seatMap: "查看全部座位圖",
       },
       stats: [
         ["比賽日期", "9/12/26"],
@@ -491,6 +493,7 @@ const content = {
       ["teams", "Teams"],
       ["leaderboard", "Leaderboard"],
       ["shirt-design", "T-shirt Hub"],
+      ["seat-map", "Seat Map"],
       ["raffle", "Raffle"],
       ["faq", "FAQ"],
       ["support", "Support / Contact"],
@@ -508,6 +511,7 @@ const content = {
         donate: "💙 Support on GoFundMe",
         buy: "Sold Out",
         form: "No LINE? Join by Google Form",
+        seatMap: "View Full Seat Map",
       },
       stats: [
         ["Game Date", "9/12/26"],
@@ -842,6 +846,10 @@ const content = {
 };
 
 function scrollToSection(id) {
+    if (id === "seat-map") {
+      window.location.href = "/seat-map";
+      return;
+    }
   const el = document.getElementById(id);
   if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
 }
@@ -1252,6 +1260,7 @@ export default function TaiwanFanNightWebsite() {
                 <Button onClick={() => window.open(officialLineGroup, "_blank")}>{t.hero.buttons.line}</Button>
                 <button onClick={() => window.open(goFundMeLink, "_blank")} className="rounded-full bg-amber-400 px-6 py-3 font-bold text-slate-950 shadow-md ring-2 ring-amber-100 transition hover:bg-amber-500 active:scale-95">{t.hero.buttons.donate}</button>
                 <span className="rounded-full bg-slate-200 px-6 py-3 text-center font-black text-slate-600 shadow-sm">{t.hero.buttons.buy}</span>
+                <Button onClick={() => (window.location.href = "/seat-map")} variant="outline">{t.hero.buttons.seatMap}</Button>
                 <Button onClick={() => window.open(googleFormLink, "_blank")} variant="outline">{t.hero.buttons.form}</Button>
               </div>
               <div className="mt-10 grid grid-cols-2 gap-3 md:grid-cols-4">
