@@ -1898,36 +1898,6 @@ export default function SeatMapPage() {
           </div>
         </div>
 
-        <div className="mt-4 rounded-[1.5rem] border border-slate-200 bg-white/95 p-4 shadow-sm backdrop-blur md:p-5">
-          <div className="flex flex-wrap items-center gap-2 md:gap-3">
-            <a
-              href="/"
-              className="inline-flex items-center justify-center rounded-full bg-emerald-800 px-4 py-2.5 text-xs font-black text-white shadow-sm transition hover:bg-emerald-700"
-            >
-              回首頁
-            </a>
-            <button type="button" onClick={clearAll} className="rounded-full bg-slate-100 px-4 py-2.5 text-xs font-black text-slate-800 shadow-sm transition hover:bg-slate-200">
-              全部變白
-            </button>
-            <button type="button" onClick={selectAll} className="rounded-full bg-slate-950 px-4 py-2.5 text-xs font-black text-white shadow-sm transition hover:bg-slate-800">
-              全部變黑
-            </button>
-            <button type="button" onClick={invertAll} className="rounded-full bg-amber-400 px-4 py-2.5 text-xs font-black text-slate-950 shadow-sm transition hover:bg-amber-300">
-              黑白反轉
-            </button>
-            <button
-              type="button"
-              onClick={() => setShowSeatNumbers((current) => !current)}
-              className="rounded-full bg-sky-100 px-4 py-2.5 text-xs font-black text-sky-900 shadow-sm transition hover:bg-sky-200"
-            >
-              {showSeatNumbers ? "拿掉座位數字" : "顯示座位數字"}
-            </button>
-            <button type="button" onClick={exportToPng} className="rounded-full bg-emerald-100 px-4 py-2.5 text-xs font-black text-emerald-900 shadow-sm transition hover:bg-emerald-200">
-              匯出 PNG
-            </button>
-          </div>
-        </div>
-
         <section className="mt-4 rounded-[1.75rem] border border-emerald-200 bg-white p-5 shadow-sm md:p-7">
           <div className="mx-auto max-w-5xl">
             <p className="text-xs font-black uppercase tracking-[0.25em] text-emerald-700">
@@ -2077,6 +2047,40 @@ export default function SeatMapPage() {
                 </span>
               ))}
             </div>
+          </div>
+        </div>
+
+<div className="mt-4 rounded-[1.5rem] border border-slate-200 bg-white/95 p-4 shadow-sm backdrop-blur md:p-5">
+          <div className="mb-3">
+            <p className="text-xs font-black uppercase tracking-[0.22em] text-emerald-700">Seat Map Controls</p>
+            <h2 className="mt-1 text-xl font-black text-slate-950">排字位置圖操作選項</h2>
+          </div>
+          <div className="flex flex-wrap items-center gap-2 md:gap-3">
+            <a
+              href="/"
+              className="inline-flex items-center justify-center rounded-full bg-emerald-800 px-4 py-2.5 text-xs font-black text-white shadow-sm transition hover:bg-emerald-700"
+            >
+              回首頁
+            </a>
+            <button type="button" onClick={clearAll} className="rounded-full bg-slate-100 px-4 py-2.5 text-xs font-black text-slate-800 shadow-sm transition hover:bg-slate-200">
+              全部變白
+            </button>
+            <button type="button" onClick={selectAll} className="rounded-full bg-slate-950 px-4 py-2.5 text-xs font-black text-white shadow-sm transition hover:bg-slate-800">
+              全部變黑
+            </button>
+            <button type="button" onClick={invertAll} className="rounded-full bg-amber-400 px-4 py-2.5 text-xs font-black text-slate-950 shadow-sm transition hover:bg-amber-300">
+              黑白反轉
+            </button>
+            <button
+              type="button"
+              onClick={() => setShowSeatNumbers((current) => !current)}
+              className="rounded-full bg-sky-100 px-4 py-2.5 text-xs font-black text-sky-900 shadow-sm transition hover:bg-sky-200"
+            >
+              {showSeatNumbers ? "拿掉座位數字" : "顯示座位數字"}
+            </button>
+            <button type="button" onClick={exportToPng} className="rounded-full bg-emerald-100 px-4 py-2.5 text-xs font-black text-emerald-900 shadow-sm transition hover:bg-emerald-200">
+              匯出 PNG
+            </button>
           </div>
         </div>
 
