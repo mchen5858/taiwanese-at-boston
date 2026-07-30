@@ -1709,7 +1709,7 @@ export default function SeatMapPage() {
     setLastSeat(null);
   }
 
-  function exportToPng() {
+  async function exportToPng() {
     const seatSize = 18;
     const seatGap = 6;
     const rowGap = 6;
@@ -1830,13 +1830,38 @@ export default function SeatMapPage() {
 
     drawRowLabels(width - rightRowsWidth + 10, 'left');
 
-    const link = document.createElement('a');
-    link.href = canvas.toDataURL('image/png');
-    link.download = `912-seat-map-${new Date().toISOString().slice(0,19).replace(/[:T]/g,'-')}.png`;
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-    setSaveMessage('已匯出 PNG 圖片');
+    const fileName = `912-seat-map-${new Date().toISOString().slice(0,19).replace(/[:T]/g,'-')}.png`;
+
+    canvas.toBlob(async (blob) => {
+      if (!blob) return;
+
+      const file = new File([blob], fileName, { type: "image/png" });
+
+      try {
+        if (navigator.canShare && navigator.canShare({ files: [file] }) && navigator.share) {
+          await navigator.share({
+            files: [file],
+            title: "912 Seat Map",
+            text: "912 Taiwan Fans Night seat map",
+          });
+          setSaveMessage("已開啟手機分享／儲存 PNG");
+          return;
+        }
+      } catch (error) {
+        console.error("Mobile share failed, falling back to download", error);
+      }
+
+      const url = URL.createObjectURL(blob);
+      const link = document.createElement("a");
+      link.href = url;
+      link.download = fileName;
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+
+      window.setTimeout(() => URL.revokeObjectURL(url), 1000);
+      setSaveMessage("已匯出 PNG 圖片");
+    }, "image/png");
   }
 
   const selectedBySection = sectionOrder.map((section) => {
@@ -1925,7 +1950,7 @@ export default function SeatMapPage() {
         <div className="mt-4 rounded-2xl border border-slate-200 bg-white p-4 shadow-sm">
           <div className="flex flex-col gap-3 lg:flex-row lg:items-center lg:justify-between">
             <p className="text-sm leading-7 text-slate-600">
-              點一下圓圈會切換黑 / 白。按住白色座位拖曳，掃過的座位會變黑；按住黑色座位拖曳，掃過的座位會變白。也可以切換是否顯示座位上的數字。
+              點一下圓圈會切換黑 / 白。按住白色座位拖曳，掃過的座位會變黑；按住黑色座位拖曳，掃過的座位會變白。也可以切換是否顯示座位上的數字。手機匯出 PNG 時會優先開啟分享／儲存選單。
               {saveMessage ? <span className="ml-2 font-bold text-emerald-700">{saveMessage}</span> : null}
             </p>
             <div className="flex flex-wrap gap-2">
