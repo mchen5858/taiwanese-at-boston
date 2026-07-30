@@ -1928,6 +1928,123 @@ export default function SeatMapPage() {
           </div>
         </div>
 
+        <section className="mt-4 rounded-[1.75rem] border border-emerald-200 bg-white p-5 shadow-sm md:p-7">
+          <div className="mx-auto max-w-5xl">
+            <p className="text-xs font-black uppercase tracking-[0.25em] text-emerald-700">
+              排字活動說明
+            </p>
+            <h2 className="mt-2 text-2xl font-black leading-tight text-slate-950 md:text-3xl">
+              一起用黑白兩色，讓台灣在 Fenway 被看見
+            </h2>
+
+            <div className="mt-5 space-y-5 text-base leading-8 text-slate-700">
+              <p>
+                大家好，再次感謝大家對 9/12 活動的支持！這次共有超過 1,300 位朋友購票參加，而且在距離活動還有一個半月時，我們就已經提前結束售票。相信大家和我們抱持著同樣的想法：希望用最實際的行動，讓紅襪球團看見台灣社群強大的團結力與凝聚力！
+              </p>
+
+              <p>
+                我也非常高興地向大家報告，我們已經成功達成了第一階段的目標——紅襪官方已經注意到台灣社群所展現出的力量！
+              </p>
+
+              <div className="rounded-[1.5rem] border border-amber-200 bg-amber-50 p-5">
+                <p className="text-xl font-black leading-tight text-amber-900 md:text-2xl">
+                  接下來，我們希望一起挑戰下一個目標：
+                </p>
+                <p className="mt-3 text-3xl font-black leading-tight text-emerald-800 md:text-5xl">
+                  Light Up Taiwan, Let Taiwan Be Seen!
+                </p>
+                <p className="mt-2 text-xl font-black text-slate-900 md:text-2xl">
+                  點亮台灣，讓台灣被看見！
+                </p>
+              </div>
+
+              <p>
+                我們計畫利用現場的實際座位，以及黑色、白色兩種衣服，在觀眾席上排出大型文字。目前初步希望排出兩組文字：
+              </p>
+
+              <div className="grid gap-3 md:grid-cols-2">
+                <div className="rounded-[1.25rem] border border-slate-200 bg-slate-50 p-5">
+                  <p className="text-xs font-black uppercase tracking-[0.22em] text-slate-500">第一組</p>
+                  <p className="mt-2 text-3xl font-black text-slate-950">TAIWAN</p>
+                </div>
+                <div className="rounded-[1.25rem] border border-slate-200 bg-slate-50 p-5">
+                  <p className="text-xs font-black uppercase tracking-[0.22em] text-slate-500">第二組</p>
+                  <p className="mt-2 text-xl font-black text-slate-950">目前尚未決定，歡迎大家一起提供創意！</p>
+                </div>
+              </div>
+
+              <p>
+                我們希望邀請大家利用這份實際的 Seat Map（座位圖），一起動動腦，嘗試使用黑、白兩種顏色，排出清楚、簡單，而且從遠方也能辨識的文字。
+              </p>
+
+              <div className="grid gap-4 md:grid-cols-2">
+                <div className="rounded-[1.5rem] border border-slate-200 bg-white p-5 shadow-sm">
+                  <h3 className="text-xl font-black text-slate-950">白色衣服</h3>
+                  <p className="mt-3">
+                    白色衣服是我們這次特別製作的 9/12 活動衣服。我們預計會在八月中旬至八月底之間，陸續公布衣服的發放時間與地點，讓大家提前前往領取。也希望大家在活動當天，可以直接穿著白色活動衣進場。
+                  </p>
+                </div>
+                <div className="rounded-[1.5rem] border border-slate-200 bg-slate-950 p-5 text-white shadow-sm">
+                  <h3 className="text-xl font-black">黑色衣服</h3>
+                  <p className="mt-3 text-slate-200">
+                    黑色衣服則是大家進入球場時，由紅襪球團發送的 Red Sox × Bruins Jersey。因此，活動當天每一位參加者都會有一件白色活動衣服，以及一件黑色 Bruins Jersey。
+                  </p>
+                </div>
+              </div>
+
+              <p>
+                我們會運用這兩種不同顏色的衣服，配合實際的座位位置，完成現場的排字活動。
+              </p>
+
+              <div className="rounded-[1.5rem] border border-sky-200 bg-sky-50 p-5">
+                <h3 className="text-xl font-black text-slate-950">排字方式</h3>
+                <div className="mt-3 space-y-3">
+                  <p>
+                    我們預計會選擇比賽中的兩個指定時間進行排字。在其中一個時間，部分座位的朋友會穿白色活動衣，其他座位的朋友則穿黑色 Bruins Jersey，共同排出第一組文字。
+                  </p>
+                  <p>
+                    到了第二個指定時間，大家可能會依照安排更換衣服顏色，再排出第二組不同的文字。實際的排字時間、每個座位應該穿白色或黑色衣服，以及現場如何配合，我們之後都會再提供清楚的說明。
+                  </p>
+                </div>
+              </div>
+
+              <p>
+                老實說，這是一個非常困難的挑戰。因為我們的座位區並不是一個完整、方正的長方形，每一區及每一排的座位數量也不完全相同，因此排字的難度會比一般想像中高很多。
+              </p>
+
+              <p>
+                最後呈現出來的效果會如何，目前我們也無法完全確定。但是我仍然覺得，這是一件非常值得大家一起嘗試的事情！
+              </p>
+
+              <div className="rounded-[1.5rem] border border-emerald-200 bg-emerald-50 p-5">
+                <h3 className="text-xl font-black text-emerald-900">希望大家一起嘗試排出：</h3>
+                <ol className="mt-3 list-decimal space-y-2 pl-5 font-bold text-slate-800">
+                  <li>TAIWAN</li>
+                  <li>另外一組你認為最適合的文字</li>
+                </ol>
+                <p className="mt-4">
+                  第二組文字不需要太長，最重要的是：字體簡單、線條清楚，而且從遠方也能看得出來。
+                </p>
+              </div>
+
+              <p>
+                完成後，歡迎將你的設計與想法提供給我們參考。我們會綜合大家的創意，以及現場實際執行的可行性，選出最適合的排字方案。
+              </p>
+
+              <div className="rounded-[1.5rem] bg-gradient-to-r from-emerald-900 to-sky-900 p-6 text-white">
+                <p className="text-2xl font-black leading-tight md:text-4xl">
+                  讓我們一起用台灣社群的力量點亮球場，讓更多人看見台灣！
+                </p>
+                <p className="mt-4 text-xl font-black leading-relaxed text-amber-300 md:text-3xl">
+                  Light Up Taiwan.<br />
+                  Let Taiwan Be Seen.<br />
+                  Together We Shine.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
         <div className="mt-4 grid gap-3 md:grid-cols-4">
           <div className="rounded-2xl border border-emerald-200 bg-white p-4 shadow-sm">
             <p className="text-[10px] font-black uppercase tracking-[0.22em] text-emerald-700">Total Seats</p>
