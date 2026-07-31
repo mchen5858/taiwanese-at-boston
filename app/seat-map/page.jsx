@@ -1652,6 +1652,7 @@ export default function SeatMapPage() {
   const [lastSeat, setLastSeat] = useState(null);
   const [saveMessage, setSaveMessage] = useState("");
   const [showSeatNumbers, setShowSeatNumbers] = useState(true);
+  const [isZh, setIsZh] = useState(true);
 
   useEffect(() => {
     if (!saveMessage) return;
@@ -1844,7 +1845,7 @@ export default function SeatMapPage() {
             title: "912 Seat Map",
             text: "912 Taiwan Fans Night seat map",
           });
-          setSaveMessage("已開啟手機分享／儲存 PNG");
+          setSaveMessage(isZh ? "已開啟手機分享／儲存 PNG" : "Opened mobile share/save menu");
           return;
         }
       } catch (error) {
@@ -1860,7 +1861,7 @@ export default function SeatMapPage() {
       document.body.removeChild(link);
 
       window.setTimeout(() => URL.revokeObjectURL(url), 1000);
-      setSaveMessage("已匯出 PNG 圖片");
+      setSaveMessage(isZh ? "已匯出 PNG 圖片" : "PNG image exported");
     }, "image/png");
   }
 
@@ -1884,9 +1885,7 @@ export default function SeatMapPage() {
       <section className="mx-auto max-w-[1900px] px-3 py-6 md:px-5 md:py-8">
         <div className="rounded-[1.75rem] bg-gradient-to-r from-emerald-900 via-emerald-800 to-sky-800 p-5 text-white shadow-xl md:p-6">
           <div>
-            <p className="text-xs font-black uppercase tracking-[0.3em] text-emerald-100">
-              912 Interactive Seat Map
-            </p>
+            <p className="text-xs font-black uppercase tracking-[0.3em] text-emerald-100">{isZh ? "912 互動座位圖" : "912 Interactive Seat Map"}</p>
             <h1 className="mt-3 max-w-6xl tracking-tight">
               <span className="block text-3xl font-black leading-tight text-white md:text-5xl">
                 Light Up Taiwan, Let Taiwan Be Seen.
@@ -1895,9 +1894,33 @@ export default function SeatMapPage() {
                 Together We Shine
               </span>
             </h1>
+            <div className="mt-5 flex flex-wrap justify-end gap-2">
+              <a
+                href="/"
+                className="rounded-full bg-white/15 px-5 py-2.5 text-sm font-black text-white shadow-sm ring-1 ring-white/20 transition hover:bg-white/20"
+              >
+                {isZh ? "回到 912 首頁" : "Back to 912 Home"}
+              </a>
+              <button
+                type="button"
+                onClick={() => setIsZh(true)}
+                className={`rounded-full px-5 py-2.5 text-sm font-black shadow-sm transition ${isZh ? "bg-amber-300 text-slate-950" : "bg-white/15 text-white ring-1 ring-white/20 hover:bg-white/20"}`}
+              >
+                中文
+              </button>
+              <button
+                type="button"
+                onClick={() => setIsZh(false)}
+                className={`rounded-full px-5 py-2.5 text-sm font-black shadow-sm transition ${!isZh ? "bg-amber-300 text-slate-950" : "bg-white/15 text-white ring-1 ring-white/20 hover:bg-white/20"}`}
+              >
+                English
+              </button>
+            </div>
+
           </div>
         </div>
 
+        {isZh ? (
         <section className="mt-4 rounded-[1.75rem] border border-emerald-200 bg-white p-5 shadow-sm md:p-7">
           <div className="mx-auto max-w-5xl">
             <p className="text-xs font-black uppercase tracking-[0.25em] text-emerald-700">
@@ -1954,9 +1977,9 @@ export default function SeatMapPage() {
                     白色衣服是我們這次特別製作的 9/12 活動衣服。我們預計會在八月中旬至八月底之間，陸續公布衣服的發放時間與地點，讓大家提前前往領取。也希望大家在活動當天，可以直接穿著白色活動衣進場。
                   </p>
                 </div>
-                <div className="rounded-[1.5rem] border border-slate-200 bg-slate-950 p-5 text-white shadow-sm">
-                  <h3 className="text-xl font-black">黑色衣服</h3>
-                  <p className="mt-3 text-slate-200">
+                <div className="rounded-[1.5rem] border border-slate-200 bg-white p-5 text-slate-900 shadow-sm">
+                  <h3 className="text-xl font-black text-slate-950">黑色衣服</h3>
+                  <p className="mt-3 text-slate-700">
                     黑色衣服則是大家進入球場時，由紅襪球團發送的 Red Sox × Bruins Jersey。因此，活動當天每一位參加者都會有一件白色活動衣服，以及一件黑色 Bruins Jersey。
                   </p>
                 </div>
@@ -2008,28 +2031,150 @@ export default function SeatMapPage() {
                 <p className="mt-4 text-xl font-black leading-relaxed text-amber-300 md:text-3xl">
                   Light Up Taiwan.<br />
                   Let Taiwan Be Seen.<br />
+                  {isZh ? "Together We Shine" : "Together We Shine"}.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+        ) : (
+        <section className="mt-4 rounded-[1.75rem] border border-emerald-200 bg-white p-5 shadow-sm md:p-7">
+          <div className="mx-auto max-w-5xl">
+            <p className="text-xs font-black uppercase tracking-[0.25em] text-emerald-700">
+              Lettering activity overview
+            </p>
+            <h2 className="mt-2 text-2xl font-black leading-tight text-slate-950 md:text-3xl">
+              Let’s use black and white to let Taiwan be seen at Fenway
+            </h2>
+
+            <div className="mt-5 space-y-5 text-base leading-8 text-slate-700">
+              <p>
+                Hello everyone, and thank you again for supporting the 9/12 event. This time, more than 1,300 friends purchased tickets, and ticket sales closed early with more than a month and a half still remaining before the event.
+              </p>
+
+              <p>
+                We believe everyone shares the same goal: to use real action to show the Red Sox organization the unity and strength of the Taiwanese community.
+              </p>
+
+              <p>
+                We are also very happy to share that we have successfully reached our first-stage goal — the Red Sox organization has already noticed the strength shown by the Taiwanese community.
+              </p>
+
+              <div className="rounded-[1.5rem] border border-amber-200 bg-amber-50 p-5">
+                <p className="text-xl font-black leading-tight text-amber-900 md:text-2xl">
+                  Next, we hope to challenge the next goal together:
+                </p>
+                <p className="mt-3 text-3xl font-black leading-tight text-emerald-800 md:text-5xl">
+                  Light Up Taiwan, Let Taiwan Be Seen!
+                </p>
+                <p className="mt-2 text-xl font-black text-slate-900 md:text-2xl">
+                  Let Taiwan be seen.
+                </p>
+              </div>
+
+              <p>
+                We plan to use the actual seats at Fenway, along with black and white shirts, to create large lettering in the stands. Our initial goal is to create two designs:
+              </p>
+
+              <div className="grid gap-3 md:grid-cols-2">
+                <div className="rounded-[1.25rem] border border-slate-200 bg-slate-50 p-5">
+                  <p className="text-xs font-black uppercase tracking-[0.22em] text-slate-500">First design</p>
+                  <p className="mt-2 text-3xl font-black text-slate-950">TAIWAN</p>
+                </div>
+                <div className="rounded-[1.25rem] border border-slate-200 bg-slate-50 p-5">
+                  <p className="text-xs font-black uppercase tracking-[0.22em] text-slate-500">Second design</p>
+                  <p className="mt-2 text-xl font-black text-slate-950">Still open — we welcome everyone’s ideas.</p>
+                </div>
+              </div>
+
+              <p>
+                We invite everyone to use this actual Seat Map to brainstorm and try using black and white seats to create letters that are clear, simple, and recognizable from a distance.
+              </p>
+
+              <div className="grid gap-4 md:grid-cols-2">
+                <div className="rounded-[1.5rem] border border-slate-200 bg-white p-5 shadow-sm">
+                  <h3 className="text-xl font-black text-slate-950">White shirt</h3>
+                  <p className="mt-3">
+                    The white shirt is the special 9/12 event shirt made for this activity. Pickup time and locations will be announced between mid-August and the end of August so everyone can pick up the shirt in advance. We hope attendees can wear the white event shirt directly to Fenway on event day.
+                  </p>
+                </div>
+                <div className="rounded-[1.5rem] border border-slate-200 bg-white p-5 text-slate-900 shadow-sm">
+                  <h3 className="text-xl font-black text-slate-950">Black shirt</h3>
+                  <p className="mt-3 text-slate-700">
+                    The black shirt is the Red Sox × Bruins Jersey distributed by the Red Sox when attendees enter the ballpark. Each attendee will have one white event shirt and one black Bruins Jersey.
+                  </p>
+                </div>
+              </div>
+
+              <p>
+                We will use these two shirt colors together with the actual seat locations to complete the live lettering activity.
+              </p>
+
+              <div className="rounded-[1.5rem] border border-sky-200 bg-sky-50 p-5">
+                <h3 className="text-xl font-black text-slate-950">How the lettering will work</h3>
+                <div className="mt-3 space-y-3">
+                  <p>
+                    We plan to choose two specific moments during the game for the lettering activity. During one moment, some seats will wear the white event shirt, while others will wear the black Bruins Jersey, together forming the first design.
+                  </p>
+                  <p>
+                    During the second moment, attendees may change shirt colors according to the arrangement to create a second design. The exact timing, which color each seat should wear, and how everyone should participate will be announced later.
+                  </p>
+                </div>
+              </div>
+
+              <p>
+                Honestly, this is a very difficult challenge. Our seating area is not a complete rectangle, and each section and row has a different number of seats. This makes the lettering much harder than it may seem.
+              </p>
+
+              <p>
+                We cannot fully predict the final result yet, but we still believe this is something worth trying together.
+              </p>
+
+              <div className="rounded-[1.5rem] border border-emerald-200 bg-emerald-50 p-5">
+                <h3 className="text-xl font-black text-emerald-900">We hope everyone can try designing:</h3>
+                <ol className="mt-3 list-decimal space-y-2 pl-5 font-bold text-slate-800">
+                  <li>TAIWAN</li>
+                  <li>Another word or phrase you think would work best</li>
+                </ol>
+                <p className="mt-4">
+                  The second phrase does not need to be long. The most important things are simple letter shapes, clear lines, and readability from far away.
+                </p>
+              </div>
+
+              <p>
+                After completing your design, please share the exported image and your idea with us. We will consider everyone’s creativity, the actual seat layout, readability from a distance, and feasibility for live execution.
+              </p>
+
+              <div className="rounded-[1.5rem] bg-gradient-to-r from-emerald-900 to-sky-900 p-6 text-white">
+                <p className="text-2xl font-black leading-tight md:text-4xl">
+                  Let’s use the strength of the Taiwanese community to light up the ballpark and let more people see Taiwan.
+                </p>
+                <p className="mt-4 text-xl font-black leading-relaxed text-amber-300 md:text-3xl">
+                  Light Up Taiwan.<br />
+                  Let Taiwan Be Seen.<br />
                   Together We Shine.
                 </p>
               </div>
             </div>
           </div>
         </section>
+        )}
 
         <div className="mt-4 grid gap-3 md:grid-cols-4">
           <div className="rounded-2xl border border-emerald-200 bg-white p-4 shadow-sm">
-            <p className="text-[10px] font-black uppercase tracking-[0.22em] text-emerald-700">Total Seats</p>
+            <p className="text-[10px] font-black uppercase tracking-[0.22em] text-emerald-700">{isZh ? "全部座位" : "Total seats"}</p>
             <p className="mt-1 text-3xl font-black text-slate-950">{totalSeats}</p>
           </div>
           <div className="rounded-2xl border border-slate-200 bg-white p-4 shadow-sm">
-            <p className="text-[10px] font-black uppercase tracking-[0.22em] text-slate-600">Black Seats</p>
+            <p className="text-[10px] font-black uppercase tracking-[0.22em] text-slate-600">{isZh ? "黑色座位" : "Black seats"}</p>
             <p className="mt-1 text-3xl font-black text-slate-950">{selectedCount}</p>
           </div>
           <div className="rounded-2xl border border-slate-200 bg-white p-4 shadow-sm">
-            <p className="text-[10px] font-black uppercase tracking-[0.22em] text-slate-600">White Seats</p>
+            <p className="text-[10px] font-black uppercase tracking-[0.22em] text-slate-600">{isZh ? "白色座位" : "White seats"}</p>
             <p className="mt-1 text-3xl font-black text-slate-950">{totalSeats - selectedCount}</p>
           </div>
           <div className="rounded-2xl border border-sky-200 bg-white p-4 shadow-sm">
-            <p className="text-[10px] font-black uppercase tracking-[0.22em] text-sky-700">Last Seat</p>
+            <p className="text-[10px] font-black uppercase tracking-[0.22em] text-sky-700">{isZh ? "最後操作座位" : "Last seat"}</p>
             <p className="mt-1 text-lg font-black text-slate-950">{lastSeat || "—"}</p>
           </div>
         </div>
@@ -2037,7 +2182,7 @@ export default function SeatMapPage() {
         <div className="mt-4 rounded-2xl border border-slate-200 bg-white p-4 shadow-sm">
           <div className="flex flex-col gap-3 lg:flex-row lg:items-center lg:justify-between">
             <p className="text-sm leading-7 text-slate-600">
-              點一下圓圈會切換黑 / 白。按住白色座位拖曳，掃過的座位會變黑；按住黑色座位拖曳，掃過的座位會變白。也可以切換是否顯示座位上的數字。手機匯出 PNG 時會優先開啟分享／儲存選單。
+              {isZh ? "點一下圓圈會切換黑 / 白。按住白色座位拖曳，掃過的座位會變黑；按住黑色座位拖曳，掃過的座位會變白。也可以切換是否顯示座位上的數字。手機匯出 PNG 時會優先開啟分享／儲存選單。" : "Click a circle to switch it between black and white. Drag across seats to paint multiple seats. You can also toggle seat numbers. On mobile, PNG export will open the share/save menu when available."}
               {saveMessage ? <span className="ml-2 font-bold text-emerald-700">{saveMessage}</span> : null}
             </p>
             <div className="flex flex-wrap gap-2">
@@ -2047,40 +2192,6 @@ export default function SeatMapPage() {
                 </span>
               ))}
             </div>
-          </div>
-        </div>
-
-<div className="mt-4 rounded-[1.5rem] border border-slate-200 bg-white/95 p-4 shadow-sm backdrop-blur md:p-5">
-          <div className="mb-3">
-            <p className="text-xs font-black uppercase tracking-[0.22em] text-emerald-700">Seat Map Controls</p>
-            <h2 className="mt-1 text-xl font-black text-slate-950">排字位置圖操作選項</h2>
-          </div>
-          <div className="flex flex-wrap items-center gap-2 md:gap-3">
-            <a
-              href="/"
-              className="inline-flex items-center justify-center rounded-full bg-emerald-800 px-4 py-2.5 text-xs font-black text-white shadow-sm transition hover:bg-emerald-700"
-            >
-              回首頁
-            </a>
-            <button type="button" onClick={clearAll} className="rounded-full bg-slate-100 px-4 py-2.5 text-xs font-black text-slate-800 shadow-sm transition hover:bg-slate-200">
-              全部變白
-            </button>
-            <button type="button" onClick={selectAll} className="rounded-full bg-slate-950 px-4 py-2.5 text-xs font-black text-white shadow-sm transition hover:bg-slate-800">
-              全部變黑
-            </button>
-            <button type="button" onClick={invertAll} className="rounded-full bg-amber-400 px-4 py-2.5 text-xs font-black text-slate-950 shadow-sm transition hover:bg-amber-300">
-              黑白反轉
-            </button>
-            <button
-              type="button"
-              onClick={() => setShowSeatNumbers((current) => !current)}
-              className="rounded-full bg-sky-100 px-4 py-2.5 text-xs font-black text-sky-900 shadow-sm transition hover:bg-sky-200"
-            >
-              {showSeatNumbers ? "拿掉座位數字" : "顯示座位數字"}
-            </button>
-            <button type="button" onClick={exportToPng} className="rounded-full bg-emerald-100 px-4 py-2.5 text-xs font-black text-emerald-900 shadow-sm transition hover:bg-emerald-200">
-              匯出 PNG
-            </button>
           </div>
         </div>
 
@@ -2112,13 +2223,9 @@ export default function SeatMapPage() {
               <p className="text-xs font-black uppercase tracking-[0.22em] text-emerald-700">
                 Actual Seat Reference
               </p>
-              <h2 className="mt-1 text-2xl font-black text-slate-950">
-                實際座位區參考圖
-              </h2>
+              <h2 className="mt-1 text-2xl font-black text-slate-950">{isZh ? "實際座位區參考圖" : "Actual seat reference"}</h2>
             </div>
-            <p className="text-sm font-bold text-slate-500">
-              L39 / L41 / L42 / L43 實景位置參考
-            </p>
+            <p className="text-sm font-bold text-slate-500">{isZh ? "L39 / L41 / L42 / L43 實景位置參考" : "Actual view reference for L39 / L41 / L42 / L43"}</p>
           </div>
 
           <div className="overflow-hidden rounded-[1.25rem] border border-slate-200 bg-slate-50">
@@ -2131,7 +2238,7 @@ export default function SeatMapPage() {
         </div>
 
         <div className="mt-4 rounded-2xl border border-emerald-200 bg-emerald-50 p-4 text-sm leading-7 text-emerald-900">
-          <strong>備註：</strong>排好座位後，可直接按上方「匯出 PNG」把目前的黑白座位圖存成圖片。
+          <strong>{isZh ? "備註：" : "Note:"}</strong>{isZh ? "排好座位後，可直接按上方「匯出 PNG」把目前的黑白座位圖存成圖片。" : "After creating your design, click Export PNG to save the current black-and-white seat map as an image."}
         </div>
       </section>
     </main>
