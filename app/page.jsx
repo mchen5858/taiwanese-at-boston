@@ -129,10 +129,9 @@ const content = {
     title: "912台灣集結",
     nav: [
       ["home", "首頁"],
-      ["tickets", "票價優惠"],
-      ["teams", "組隊方式"],
       ["leaderboard", "集氣榜"],
       ["shirt-design", "T-shirt 專區"],
+      ["912-guide", "懶人包"],
       ["seat-map", "座位圖"],
       ["raffle", "抽獎活動"],
       ["faq", "注意事項"],
@@ -147,7 +146,7 @@ const content = {
         "Taiwan Fan Night at Fenway 不只是一場看棒球的活動。\n\n這是一場由波士頓台灣人與支持台灣的朋友們共同發起的社群集結行動。\n\n9/12，我們要一起走進 Fenway Park，在這座美國最具歷史代表性的球場之一，讓 Red Sox 看見波士頓台灣人的凝聚力，為 2027 Red Sox Taiwan Day 鋪路，也用行動支持波士頓在地公益。\n\n多年來，美國許多職業球隊都曾舉辦過 Taiwan Day，但即使波士頓擁有越來越多台灣家庭、學生與專業人士，Fenway Park 至今仍未舉辦過正式的 Red Sox Taiwan Day。\n\n因此，我們發起了這次 Taiwan Fan Night at Fenway。\n\n我們希望透過實際的參與與行動，讓紅襪看見：波士頓的台灣社群不是零散的個人，而是一個有規模、有熱情、有文化、有凝聚力，也願意一起行動的 community。\n\n每一張票、每一位到場的人，都是一份支持；每一個穿上 Taiwan 主題衣服、帶著家人朋友走進球場的人，都是在幫台灣被看見。\n\n這次活動由波克萊台灣商會基金會發起。原本只是一個小小的想法，卻在短時間內迅速獲得許多台灣家庭、學生、專業人士、僑團與社群的支持，慢慢形成一股屬於波士頓台灣人的集結力量。\n\n這不只是一次棒球活動。它更代表著社群、文化、友誼、認同與團結。\n\n我們希望，這場活動不只是在 2026 年 9 月 12 日當天留下美好回憶，更能成為未來正式 Red Sox Taiwan Day 的起點。今天我們一起坐滿一區，明天就更有機會讓 Fenway Park 正式為台灣亮起來。\n\n更重要的是，我們希望讓在波士頓長大的下一代台灣孩子們看見：台灣人的文化與身份，是值得被驕傲看見的；而當我們願意一起站出來，就可以創造改變。\n\n9/12，讓我們一起走進 Fenway。讓台灣在波士頓被看見。讓這一天，成為 Red Sox Taiwan Day 的開始。\n\nTaiwanese in Boston, Strong Together.",
       buttons: {
         deals: "查看組隊優惠",
-        line: "加入官方 LINE 群",
+        line: "加入",
         donate: "💙 支持活動 GoFundMe",
         buy: "立即前往購票",
         form: "沒有 LINE？用 Google Form 加入",
@@ -157,7 +156,7 @@ const content = {
         ["比賽日期", "9/12/26"],
         ["比賽時間", "4:15 PM"],
         ["對戰組合", "Royals vs Red Sox"],
-        ["座位區域", "Bleacher 41, 42, & 43"],
+        ["座位區域", "Bleacher L39, L41, L42, & L43"],
       ],
       missionTitle: "讓 Fenway 看見台灣",
       missionEyebrow: "活動目的",
@@ -213,7 +212,7 @@ const content = {
         "原本活動規劃中，5/31 前購買的票券為 $47，包含 Red Sox × Bruins 限量聯名 Jersey；6/1 之後則預計改販售一般團體優惠票。不過，在收到紅襪提供的一般團體優惠票連結後，我們發現一般團體票雖然票面價格為 $41，但加上官方售票手續費後，每張票實際價格為 $48.16。因此，經過與紅襪銷售部門討論後，我們決定不販售一般團體優惠票，而是繼續提供包含限量 Jersey 的票券。",
       seatingTitle: "🎟 座位提醒 Seating Notice",
       seating: [
-        "填寫相同 Team Name 的朋友，主辦單位會盡量安排坐在一起或附近。所有參與者都會安排在 Fenway Park — Bleacher 41, 42, & 43 區，一起為台灣應援。",
+        "填寫相同 Team Name 的朋友，主辦單位會盡量安排坐在一起或附近。所有參與者都會安排在 Fenway Park — Bleacher L39, L41, L42, & L43 區，一起為台灣應援。",
       ],
       valueText:
         "如果您只是想單純看一場球賽，市場上也許有機會找到更便宜的票。但如果您想和上百位台灣人一起坐在同一區、一起穿上台灣、一起讓 Red Sox 看見台灣，這份價值是其他票無法取代的。",
@@ -303,9 +302,9 @@ const content = {
       eyebrow: "Raffle",
       title: "抽獎活動",
       description:
-        "抽獎分成兩個活動：5/2–5/31 加入「912台灣集結」官方 LINE 群抽獎活動，以及 912 台灣集結活動大抽獎（所有購票參加者皆可參加）。",
-      lineTitle: "5/2–5/31｜加入官方 LINE 群抽獎活動",
-      lineText: "只要在 5/31 前加入 912 台灣集結官方 LINE 群，或填寫 912 台灣集結 Google Form，就有機會參加抽獎，並收到最新活動資訊。",
+        "抽獎分成兩個活動：5/2–5/31 加入「912台灣集結」抽獎活動，以及 912 台灣集結活動大抽獎（所有購票參加者皆可參加）。",
+      lineTitle: "5/2–5/31｜加入抽獎活動",
+      lineText: "只要在 5/31 前加入 912 台灣集結，或填寫 912 台灣集結 Google Form，就有機會參加抽獎，並收到最新活動資訊。",
       prizes: ["🎟 912 球票（很多張）", "👕 鄭宗哲簽名 Taiwanese @ Boston 主題 T-shirt（不只一件唷）"],
       eventTitle: "912 台灣集結活動大抽獎",
       eventText: "所有購票參加 912 Taiwan Fan Night at Fenway 的朋友，都可以參加活動大抽獎。",
@@ -381,7 +380,7 @@ const content = {
         {
           category: "📍 活動與座位安排",
           items: [
-            ["🎟 座位提醒 Seating Notice", "填寫相同 Team Name 的朋友，主辦單位會盡量安排坐在一起或附近。所有參與者都會安排在 Fenway Park — Bleacher 41, 42, & 43 區，一起為台灣應援。"],
+            ["🎟 座位提醒 Seating Notice", "填寫相同 Team Name 的朋友，主辦單位會盡量安排坐在一起或附近。所有參與者都會安排在 Fenway Park — Bleacher L39, L41, L42, & L43 區，一起為台灣應援。"],
             ["座位可以自己選嗎？", "本活動為團體購票，座位將由主辦單位統一安排，無法自行選位。"],
             ["我跟朋友分開買票，可以坐一起嗎？", "可以。請在購票時填寫相同的 Team Name，主辦單位會依照 Team Name 盡量安排在附近的位置。"],
           ],
@@ -439,7 +438,6 @@ const content = {
       title: "聯絡我們",
       description: "如果有任何問題，歡迎透過 LINE、Google Form 或主辦單位聯絡方式與我們聯繫。",
       cards: [
-        ["官方 LINE 群", "加入 912 台灣集結官方 LINE 群，接收最新活動公告、抽獎資訊、組隊更新與當天注意事項。", "加入 LINE 群", officialLineGroup],
         ["Google Form", "沒有 LINE 的朋友，也可以填寫 Google Form，讓主辦單位透過 Email 聯絡並提供後續通知。", "填寫 Google Form", googleFormLink],
         ["主辦單位 LINE", "若有個別問題、隊伍修正、活動合作或志工相關問題，可以透過主辦單位 LINE 聯絡。", "聯絡主辦單位", organizerLine],
         ["志工報名", "歡迎願意協助活動宣傳、現場集合、T-shirt 發放、社群動員與活動支援的朋友加入志工行列。", "志工報名", volunteerFormLink],
@@ -451,7 +449,7 @@ const content = {
       tagline: "Taiwanese in Boston, Strong Together.",
       organizedBy: "主辦單位",
       links: "快速連結",
-      line: "官方 LINE 群",
+      line: "",
       gofundme: "GoFundMe 贊助",
       tickets: "Zeffy 購票",
       contact: "聯絡主辦單位",
@@ -489,10 +487,9 @@ const content = {
     title: "912 Taiwan Fan Night at Fenway",
     nav: [
       ["home", "Home"],
-      ["tickets", "Tickets"],
-      ["teams", "Teams"],
       ["leaderboard", "Leaderboard"],
       ["shirt-design", "T-shirt Hub"],
+      ["912-guide", "Guide"],
       ["seat-map", "Seat Map"],
       ["raffle", "Raffle"],
       ["faq", "FAQ"],
@@ -517,7 +514,7 @@ const content = {
         ["Game Date", "9/12/26"],
         ["Game Time", "4:15 PM"],
         ["Matchup", "Royals vs Red Sox"],
-        ["Seating Area", "Bleacher 41, 42, & 43"],
+        ["Seating Area", "Bleacher L39, L41, L42, & L43"],
       ],
       missionTitle: "Let Fenway See Taiwan",
       missionEyebrow: "Mission",
@@ -573,7 +570,7 @@ const content = {
         "Our original plan was to offer $47 tickets with the Red Sox × Bruins jersey before 5/31, then switch to traditional group tickets after 6/1. However, after receiving the Red Sox group ticket link, we found that the $41 traditional group ticket becomes $48.16 per ticket after official ticketing fees. After discussing with the Red Sox sales team, we decided not to sell the traditional group tickets and instead continue offering tickets that include the limited-edition jersey.",
       seatingTitle: "🎟 Seating Notice",
       seating: [
-        "Participants who enter the same Team Name will be seated together or near one another as much as possible. All participants will be seated in Fenway Park — Bleacher 41, 42, and 43 — to cheer for Taiwan together.",
+        "Participants who enter the same Team Name will be seated together or near one another as much as possible. All participants will be seated in Fenway Park — Bleacher L39, L41, L42, and L43 — to cheer for Taiwan together.",
       ],
       valueText:
         "If you only want to watch a baseball game, you may be able to find other tickets elsewhere. But if you want to sit together with hundreds of Taiwanese fans, wear Taiwan together, and help the Red Sox see Taiwan, that shared meaning cannot be replaced by any ordinary ticket.",
@@ -741,7 +738,7 @@ const content = {
         {
           category: "📍 Event & Seating",
           items: [
-            ["🎟 Seating Notice", "Participants who enter the same Team Name will be seated together or near one another as much as possible. All participants will be seated in Fenway Park — Bleacher 41, 42, and 43 — to cheer for Taiwan together."],
+            ["🎟 Seating Notice", "Participants who enter the same Team Name will be seated together or near one another as much as possible. All participants will be seated in Fenway Park — Bleacher L39, L41, L42, and L43 — to cheer for Taiwan together."],
             ["Can I choose my own seat?", "No. This is a group ticket event. Seats will be assigned by the organizer and cannot be individually selected."],
             ["If my friends and I buy separately, can we sit together?", "Yes. Please enter the same Team Name when purchasing. The organizer will do its best to seat participants with the same Team Name near each other."],
           ],
@@ -799,7 +796,6 @@ const content = {
       title: "Contact Us",
       description: "If you have questions, please contact us through LINE, Google Form, or organizer contact links.",
       cards: [
-        ["Official LINE Group", "Join the official 912 Taiwan Fan Night LINE group for event announcements, raffle updates, team updates, and game-day reminders.", "Join LINE Group", officialLineGroup],
         ["Google Form", "Participants without LINE may complete the Google Form so the organizer can contact them by email and provide future updates.", "Fill Out Google Form", googleFormLink],
         ["Organizer LINE", "For individual questions, team name corrections, event collaboration, or volunteer-related questions, you may contact the organizer through LINE.", "Contact Organizer", organizerLine],
         ["Volunteer Sign-Up", "We welcome volunteers to help with promotion, gathering logistics, T-shirt distribution, community outreach, and event support.", "Volunteer Sign-Up", volunteerFormLink],
@@ -850,6 +846,10 @@ function scrollToSection(id) {
       window.location.href = "/seat-map";
       return;
     }
+    if (id === "912-guide") {
+      window.location.href = "/912-guide";
+      return;
+    }
   const el = document.getElementById(id);
   if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
 }
@@ -862,6 +862,15 @@ function Button({ children, onClick, variant = "solid" }) {
       : variant === "purchase"
       ? "bg-sky-600 text-white shadow-md ring-2 ring-sky-100 hover:bg-sky-700"
       : "bg-emerald-700 text-white hover:bg-emerald-800";
+                <div className="mt-4 max-w-[220px] rounded-2xl border border-slate-200 bg-white p-3 shadow-sm">
+                  <img
+                    src="/organizer-line-qr.jpg"
+                    alt="主辦單位 LINE QR Code"
+                    className="h-auto w-full rounded-xl"
+                  />
+                  <p className="mt-2 text-center text-xs font-bold text-slate-500">掃描 QR Code 聯絡主辦單位</p>
+                </div>
+
   return <button onClick={onClick} className={`${base} ${styles}`}>{children}</button>;
 }
 
@@ -1297,7 +1306,7 @@ export default function TaiwanFanNightWebsite() {
               <div className="grid gap-4">
                 <div className="flex gap-4"><span className="text-xl">🏛️</span><div><p className="font-bold">{t.hero.organizedBy}</p><p className="text-sm leading-relaxed text-slate-600">波克萊台灣商會基金會（BTCF）<br />波克萊台灣商會（BTCC）</p><p className="mt-3 font-bold">{t.hero.coHosts}</p><p className="text-sm leading-relaxed text-slate-600">{coHosts.join(" × ")}</p></div></div>
                 <div className="flex gap-4"><span className="text-xl">📅</span><div><p className="font-bold">{t.hero.date}</p><p className="text-sm text-slate-600">2026 年 9 月 12 日｜4:15 PM</p></div></div>
-                <div className="flex gap-4"><span className="text-xl">📍</span><div><p className="font-bold">{t.hero.location}</p><p className="text-sm text-slate-600">Fenway Park｜Bleacher 41, 42, & 43</p></div></div>
+                <div className="flex gap-4"><span className="text-xl">📍</span><div><p className="font-bold">{t.hero.location}</p><p className="text-sm text-slate-600">Fenway Park｜Bleacher L39, L41, L42, & L43</p></div></div>
               </div>
             </Card>
           </div>
@@ -1556,7 +1565,7 @@ export default function TaiwanFanNightWebsite() {
                 {lang === "zh" ? "抽獎結果已公布" : "Raffle Results Announced"}
               </p>
               <h3 className="mt-3 text-3xl font-black text-slate-950 md:text-4xl">
-                {lang === "zh" ? "5/2–5/31｜官方 LINE 群抽獎結果" : "5/2–5/31｜Official LINE Group Raffle Results"}
+                {lang === "zh" ? "5/2–5/31｜抽獎結果" : "5/2–5/31｜Official LINE Group Raffle Results"}
               </h3>
               <p className="mt-4 leading-8 text-slate-700">
                 {lang === "zh"
