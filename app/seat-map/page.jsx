@@ -1920,6 +1920,122 @@ export default function SeatMapPage() {
           </div>
         </div>
 
+        <div className="mt-4 rounded-2xl border border-emerald-200 bg-emerald-50 p-4 text-sm font-bold leading-7 text-emerald-900">
+          {isZh ? "歡迎大家一起來玩玩這個排字小遊戲！可以用黑白按鈕與座位圓點，試著排出最清楚、最有創意的台灣應援文字。" : "Try this fun lettering design game! Use the black/white buttons and seat circles to create the clearest and most creative Taiwan cheer message."}
+        </div>
+
+        <div className="mt-4 grid gap-3 md:grid-cols-4">
+          <div className="rounded-2xl border border-emerald-200 bg-white p-4 shadow-sm">
+            <p className="text-[10px] font-black uppercase tracking-[0.22em] text-emerald-700">{isZh ? "全部座位" : "Total seats"}</p>
+            <p className="mt-1 text-3xl font-black text-slate-950">{totalSeats}</p>
+          </div>
+          <div className="rounded-2xl border border-slate-200 bg-white p-4 shadow-sm">
+            <p className="text-[10px] font-black uppercase tracking-[0.22em] text-slate-600">{isZh ? "黑色座位" : "Black seats"}</p>
+            <p className="mt-1 text-3xl font-black text-slate-950">{selectedCount}</p>
+          </div>
+          <div className="rounded-2xl border border-slate-200 bg-white p-4 shadow-sm">
+            <p className="text-[10px] font-black uppercase tracking-[0.22em] text-slate-600">{isZh ? "白色座位" : "White seats"}</p>
+            <p className="mt-1 text-3xl font-black text-slate-950">{totalSeats - selectedCount}</p>
+          </div>
+          <div className="rounded-2xl border border-sky-200 bg-white p-4 shadow-sm">
+            <p className="text-[10px] font-black uppercase tracking-[0.22em] text-sky-700">{isZh ? "最後操作座位" : "Last seat"}</p>
+            <p className="mt-1 text-lg font-black text-slate-950">{lastSeat || "—"}</p>
+          </div>
+        </div>
+
+        <div className="mt-4 rounded-2xl border border-slate-200 bg-white p-4 shadow-sm">
+          <div className="flex flex-col gap-3 lg:flex-row lg:items-center lg:justify-between">
+            <p className="text-sm leading-7 text-slate-600">
+              {isZh ? "點一下圓圈會切換黑 / 白。按住白色座位拖曳，掃過的座位會變黑；按住黑色座位拖曳，掃過的座位會變白。也可以切換是否顯示座位上的數字。手機匯出 PNG 時會優先開啟分享／儲存選單。" : "Click a circle to switch it between black and white. Drag across seats to paint multiple seats. You can also toggle seat numbers. On mobile, PNG export will open the share/save menu when available."}
+              {saveMessage ? <span className="ml-2 font-bold text-emerald-700">{saveMessage}</span> : null}
+            </p>
+            <div className="flex flex-wrap gap-2">
+              {selectedBySection.map(([section, count]) => (
+                <span key={section} className="rounded-full bg-slate-100 px-3 py-1.5 text-xs font-black text-slate-700">
+                  {section}：{count} 黑
+                </span>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        <div className="mt-4 rounded-[1.5rem] border border-slate-200 bg-white/95 p-4 shadow-sm backdrop-blur md:p-5">
+          <div className="mb-3 flex flex-col gap-1 md:flex-row md:items-end md:justify-between">
+            <div>
+              <p className="text-xs font-black uppercase tracking-[0.22em] text-emerald-700">
+                Seat Map Controls
+              </p>
+              <h2 className="mt-1 text-xl font-black text-slate-950">
+                {isZh ? "排字位置圖操作工具" : "Seat map tools"}
+              </h2>
+            </div>
+          </div>
+
+          <div className="flex flex-wrap items-center gap-2 md:gap-3">
+            <button
+              type="button"
+              onClick={clearAll}
+              className="rounded-full bg-slate-100 px-4 py-2.5 text-xs font-black text-slate-800 shadow-sm transition hover:bg-slate-200"
+            >
+              {isZh ? "全部變白" : "All white"}
+            </button>
+
+            <button
+              type="button"
+              onClick={selectAll}
+              className="rounded-full bg-slate-950 px-4 py-2.5 text-xs font-black text-white shadow-sm transition hover:bg-slate-800"
+            >
+              {isZh ? "全部變黑" : "All black"}
+            </button>
+
+            <button
+              type="button"
+              onClick={invertAll}
+              className="rounded-full bg-amber-400 px-4 py-2.5 text-xs font-black text-slate-950 shadow-sm transition hover:bg-amber-300"
+            >
+              {isZh ? "黑白反轉" : "Invert"}
+            </button>
+
+            <button
+              type="button"
+              onClick={() => setShowSeatNumbers((current) => !current)}
+              className="rounded-full bg-sky-100 px-4 py-2.5 text-xs font-black text-sky-900 shadow-sm transition hover:bg-sky-200"
+            >
+              {showSeatNumbers ? (isZh ? "拿掉座位數字" : "Hide numbers") : (isZh ? "顯示座位數字" : "Show numbers")}
+            </button>
+
+            <button
+              type="button"
+              onClick={exportToPng}
+              className="rounded-full bg-emerald-100 px-4 py-2.5 text-xs font-black text-emerald-900 shadow-sm transition hover:bg-emerald-200"
+            >
+              {isZh ? "匯出 PNG" : "Export PNG"}
+            </button>
+          </div>
+        </div>
+
+        <div className="mt-4 rounded-[1.5rem] border border-slate-200 bg-slate-100 p-3 shadow-inner">
+          <div className="flex w-full items-start gap-3 overflow-x-auto xl:overflow-x-visible">
+            <RowLabels align="right" />
+
+            <div className="flex shrink-0 items-start gap-3 xl:shrink xl:scale-[0.98] xl:origin-top-left 2xl:scale-100">
+              {sectionOrder.map((section) => (
+                <SectionBlock
+                  key={section}
+                  section={section}
+                  selectedSeats={selectedSeats}
+                  paintMode={paintMode}
+                  onPaintStart={handlePaintStart}
+                  onPaintEnter={handlePaintEnter}
+                  showSeatNumbers={showSeatNumbers}
+                />
+              ))}
+            </div>
+
+            <RowLabels align="left" />
+          </div>
+        </div>
+
         {isZh ? (
         <section className="mt-4 rounded-[1.75rem] border border-emerald-200 bg-white p-5 shadow-sm md:p-7">
           <div className="mx-auto max-w-5xl">
@@ -2159,63 +2275,6 @@ export default function SeatMapPage() {
           </div>
         </section>
         )}
-
-        <div className="mt-4 grid gap-3 md:grid-cols-4">
-          <div className="rounded-2xl border border-emerald-200 bg-white p-4 shadow-sm">
-            <p className="text-[10px] font-black uppercase tracking-[0.22em] text-emerald-700">{isZh ? "全部座位" : "Total seats"}</p>
-            <p className="mt-1 text-3xl font-black text-slate-950">{totalSeats}</p>
-          </div>
-          <div className="rounded-2xl border border-slate-200 bg-white p-4 shadow-sm">
-            <p className="text-[10px] font-black uppercase tracking-[0.22em] text-slate-600">{isZh ? "黑色座位" : "Black seats"}</p>
-            <p className="mt-1 text-3xl font-black text-slate-950">{selectedCount}</p>
-          </div>
-          <div className="rounded-2xl border border-slate-200 bg-white p-4 shadow-sm">
-            <p className="text-[10px] font-black uppercase tracking-[0.22em] text-slate-600">{isZh ? "白色座位" : "White seats"}</p>
-            <p className="mt-1 text-3xl font-black text-slate-950">{totalSeats - selectedCount}</p>
-          </div>
-          <div className="rounded-2xl border border-sky-200 bg-white p-4 shadow-sm">
-            <p className="text-[10px] font-black uppercase tracking-[0.22em] text-sky-700">{isZh ? "最後操作座位" : "Last seat"}</p>
-            <p className="mt-1 text-lg font-black text-slate-950">{lastSeat || "—"}</p>
-          </div>
-        </div>
-
-        <div className="mt-4 rounded-2xl border border-slate-200 bg-white p-4 shadow-sm">
-          <div className="flex flex-col gap-3 lg:flex-row lg:items-center lg:justify-between">
-            <p className="text-sm leading-7 text-slate-600">
-              {isZh ? "點一下圓圈會切換黑 / 白。按住白色座位拖曳，掃過的座位會變黑；按住黑色座位拖曳，掃過的座位會變白。也可以切換是否顯示座位上的數字。手機匯出 PNG 時會優先開啟分享／儲存選單。" : "Click a circle to switch it between black and white. Drag across seats to paint multiple seats. You can also toggle seat numbers. On mobile, PNG export will open the share/save menu when available."}
-              {saveMessage ? <span className="ml-2 font-bold text-emerald-700">{saveMessage}</span> : null}
-            </p>
-            <div className="flex flex-wrap gap-2">
-              {selectedBySection.map(([section, count]) => (
-                <span key={section} className="rounded-full bg-slate-100 px-3 py-1.5 text-xs font-black text-slate-700">
-                  {section}：{count} 黑
-                </span>
-              ))}
-            </div>
-          </div>
-        </div>
-
-        <div className="mt-4 rounded-[1.5rem] border border-slate-200 bg-slate-100 p-3 shadow-inner">
-          <div className="flex w-full items-start gap-3 overflow-x-auto xl:overflow-x-visible">
-            <RowLabels align="right" />
-
-            <div className="flex shrink-0 items-start gap-3 xl:shrink xl:scale-[0.98] xl:origin-top-left 2xl:scale-100">
-              {sectionOrder.map((section) => (
-                <SectionBlock
-                  key={section}
-                  section={section}
-                  selectedSeats={selectedSeats}
-                  paintMode={paintMode}
-                  onPaintStart={handlePaintStart}
-                  onPaintEnter={handlePaintEnter}
-                  showSeatNumbers={showSeatNumbers}
-                />
-              ))}
-            </div>
-
-            <RowLabels align="left" />
-          </div>
-        </div>
 
         <div className="mt-4 rounded-[1.5rem] border border-slate-200 bg-white p-4 shadow-sm">
           <div className="mb-3 flex flex-col gap-2 md:flex-row md:items-end md:justify-between">
