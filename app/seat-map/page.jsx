@@ -1534,6 +1534,1221 @@ function buildAllSeatIds() {
   return ids;
 }
 
+
+// Official 9/12 shirt-color patterns.
+// First uploaded map = after the top of the 3rd inning (TAIWAN).
+// Second uploaded map = after the top of the 6th inning (RED SOX).
+// Only black seats are listed here; every other valid seat is white.
+const inning3BlackSeats = {
+  "L39": {
+    "46": [
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19
+    ],
+    "45": [
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18
+    ],
+    "44": [
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17
+    ],
+    "43": [
+      11,
+      12,
+      13
+    ],
+    "42": [
+      10,
+      11,
+      12
+    ],
+    "41": [
+      10,
+      11,
+      12
+    ],
+    "40": [
+      9,
+      10,
+      11
+    ],
+    "39": [
+      8,
+      9,
+      10
+    ],
+    "38": [
+      8,
+      9,
+      10
+    ],
+    "37": [
+      7,
+      8,
+      9
+    ],
+    "36": [
+      7,
+      8,
+      9
+    ]
+  },
+  "L41": {
+    "46": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21
+    ],
+    "45": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21
+    ],
+    "44": [
+      2,
+      3,
+      4,
+      8,
+      9,
+      10,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21
+    ],
+    "43": [
+      2,
+      3,
+      4,
+      8,
+      9,
+      10,
+      17,
+      18,
+      19
+    ],
+    "42": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      17,
+      18,
+      19
+    ],
+    "41": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      17,
+      18,
+      19
+    ],
+    "40": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      17,
+      18,
+      19
+    ],
+    "39": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      17,
+      18,
+      19
+    ],
+    "38": [
+      2,
+      3,
+      4,
+      8,
+      9,
+      10,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21
+    ],
+    "37": [
+      2,
+      3,
+      4,
+      8,
+      9,
+      10,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21
+    ],
+    "36": [
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21
+    ]
+  },
+  "L42": {
+    "46": [
+      2,
+      3,
+      4,
+      12,
+      13,
+      14,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25
+    ],
+    "45": [
+      2,
+      3,
+      4,
+      7,
+      8,
+      9,
+      12,
+      13,
+      14,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25
+    ],
+    "44": [
+      2,
+      3,
+      4,
+      7,
+      8,
+      9,
+      12,
+      13,
+      14,
+      17,
+      18,
+      19,
+      23,
+      24,
+      25
+    ],
+    "43": [
+      2,
+      3,
+      4,
+      7,
+      8,
+      9,
+      12,
+      13,
+      14,
+      17,
+      18,
+      19,
+      23,
+      24,
+      25
+    ],
+    "42": [
+      2,
+      3,
+      4,
+      7,
+      8,
+      9,
+      12,
+      13,
+      14,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25
+    ],
+    "41": [
+      2,
+      3,
+      4,
+      7,
+      8,
+      9,
+      12,
+      13,
+      14,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25
+    ],
+    "40": [
+      2,
+      3,
+      4,
+      7,
+      8,
+      9,
+      12,
+      13,
+      14,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25
+    ],
+    "39": [
+      2,
+      3,
+      4,
+      7,
+      8,
+      9,
+      12,
+      13,
+      14,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25
+    ],
+    "38": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      17,
+      18,
+      19,
+      23,
+      24,
+      25
+    ],
+    "37": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      17,
+      18,
+      19,
+      23,
+      24,
+      25
+    ],
+    "36": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      17,
+      18,
+      19,
+      23,
+      24,
+      25
+    ]
+  },
+  "L43": {
+    "44": [
+      2,
+      3,
+      4,
+      9,
+      10,
+      11
+    ],
+    "43": [
+      2,
+      3,
+      4,
+      9,
+      10,
+      11
+    ],
+    "42": [
+      2,
+      3,
+      4,
+      5,
+      9,
+      10,
+      11
+    ],
+    "41": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      9,
+      10,
+      11
+    ],
+    "40": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      9,
+      10,
+      11
+    ],
+    "39": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    "38": [
+      2,
+      3,
+      4,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    "37": [
+      2,
+      3,
+      4,
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    "36": [
+      2,
+      3,
+      4,
+      8,
+      9,
+      10,
+      11
+    ],
+    "35": [
+      2,
+      3,
+      4,
+      9,
+      10,
+      11
+    ],
+    "34": [
+      2,
+      3,
+      4,
+      9,
+      10,
+      11
+    ]
+  }
+};
+
+const inning6BlackSeats = {
+  "L39": {
+    "46": [
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19
+    ],
+    "45": [
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19
+    ],
+    "44": [
+      8,
+      9,
+      10,
+      11,
+      16,
+      17,
+      18
+    ],
+    "43": [
+      8,
+      9,
+      10,
+      11,
+      16,
+      17,
+      18
+    ],
+    "42": [
+      7,
+      8,
+      9,
+      10,
+      15,
+      16,
+      17
+    ],
+    "41": [
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17
+    ],
+    "40": [
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15
+    ],
+    "39": [
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14
+    ],
+    "38": [
+      5,
+      6,
+      7,
+      8,
+      11,
+      12,
+      13,
+      14,
+      15
+    ],
+    "37": [
+      4,
+      5,
+      6,
+      7,
+      11,
+      12,
+      13,
+      14,
+      15
+    ],
+    "36": [
+      4,
+      5,
+      6,
+      7,
+      12,
+      13,
+      14,
+      15
+    ]
+  },
+  "L41": {
+    "46": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20
+    ],
+    "45": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21
+    ],
+    "44": [
+      2,
+      3,
+      4,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22
+    ],
+    "43": [
+      2,
+      3,
+      4,
+      14,
+      15,
+      16,
+      20,
+      21,
+      22
+    ],
+    "42": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      14,
+      15,
+      16,
+      20,
+      21,
+      22
+    ],
+    "41": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      14,
+      15,
+      16,
+      20,
+      21,
+      22
+    ],
+    "40": [
+      2,
+      3,
+      4,
+      14,
+      15,
+      16,
+      20,
+      21,
+      22
+    ],
+    "39": [
+      2,
+      3,
+      4,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22
+    ],
+    "38": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21
+    ],
+    "37": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20
+    ]
+  },
+  "L42": {
+    "46": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24
+    ],
+    "45": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24
+    ],
+    "44": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24
+    ],
+    "43": [
+      2,
+      3,
+      4,
+      5,
+      15,
+      16,
+      17,
+      22,
+      23,
+      24
+    ],
+    "42": [
+      2,
+      3,
+      4,
+      5,
+      15,
+      16,
+      17,
+      22,
+      23,
+      24
+    ],
+    "41": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      15,
+      16,
+      17,
+      22,
+      23,
+      24
+    ],
+    "40": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      15,
+      16,
+      17,
+      22,
+      23,
+      24
+    ],
+    "39": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      15,
+      16,
+      17,
+      22,
+      23,
+      24
+    ],
+    "38": [
+      8,
+      9,
+      10,
+      11,
+      15,
+      16,
+      17,
+      22,
+      23,
+      24
+    ],
+    "37": [
+      8,
+      9,
+      10,
+      11,
+      15,
+      16,
+      17,
+      22,
+      23,
+      24
+    ],
+    "36": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24
+    ],
+    "35": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24
+    ],
+    "34": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24
+    ]
+  },
+  "L43": {
+    "45": [
+      1,
+      2,
+      3,
+      10,
+      11,
+      12
+    ],
+    "44": [
+      1,
+      2,
+      3,
+      4,
+      9,
+      10,
+      11,
+      12
+    ],
+    "43": [
+      2,
+      3,
+      4,
+      5,
+      8,
+      9,
+      10,
+      11
+    ],
+    "42": [
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "41": [
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "40": [
+      5,
+      6,
+      7,
+      8
+    ],
+    "39": [
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "38": [
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "37": [
+      3,
+      4,
+      5,
+      6,
+      8,
+      9,
+      10,
+      11
+    ],
+    "36": [
+      2,
+      3,
+      4,
+      5,
+      9,
+      10,
+      11,
+      12
+    ],
+    "35": [
+      1,
+      2,
+      3,
+      4,
+      10,
+      11,
+      12
+    ],
+    "34": [
+      1,
+      2,
+      3,
+      11,
+      12
+    ]
+  }
+};
+
+function buildBlackSeatIdSet(pattern) {
+  const ids = new Set();
+  for (const [section, rows] of Object.entries(pattern)) {
+    for (const [row, seats] of Object.entries(rows)) {
+      for (const seat of seats) ids.add(seatId(section, row, seat));
+    }
+  }
+  return ids;
+}
+
+const inning3BlackSeatIds = buildBlackSeatIdSet(inning3BlackSeats);
+const inning6BlackSeatIds = buildBlackSeatIdSet(inning6BlackSeats);
+
+function getShirtColor(blackSeatIds, section, row, seat) {
+  return blackSeatIds.has(seatId(section, row, seat)) ? "black" : "white";
+}
+
 function getSeatForColumn(section, row, seats, columnNumber) {
   if (section === "L39" && seats.length > 0) {
     const rowKey = String(row);
@@ -1653,6 +2868,9 @@ export default function SeatMapPage() {
   const [saveMessage, setSaveMessage] = useState("");
   const [showSeatNumbers, setShowSeatNumbers] = useState(true);
   const [isZh, setIsZh] = useState(true);
+  const [lookupSection, setLookupSection] = useState("L39");
+  const [lookupRow, setLookupRow] = useState("47");
+  const [lookupSeat, setLookupSeat] = useState(3);
 
   useEffect(() => {
     if (!saveMessage) return;
@@ -1662,6 +2880,35 @@ export default function SeatMapPage() {
 
   const selectedCount = selectedSeats.size;
   const totalSeats = allSeatIds.length;
+
+  const lookupRows = useMemo(
+    () => Object.keys(sectionData[lookupSection]).sort((a, b) => Number(b) - Number(a)),
+    [lookupSection]
+  );
+  const lookupSeats = sectionData[lookupSection]?.[String(lookupRow)] || [];
+  const lookupInning3 = getShirtColor(inning3BlackSeatIds, lookupSection, lookupRow, lookupSeat);
+  const lookupInning6 = getShirtColor(inning6BlackSeatIds, lookupSection, lookupRow, lookupSeat);
+
+  function changeLookupSection(section) {
+    const rows = Object.keys(sectionData[section]).sort((a, b) => Number(b) - Number(a));
+    const nextRow = rows[0];
+    const nextSeats = sectionData[section][nextRow] || [];
+    setLookupSection(section);
+    setLookupRow(nextRow);
+    setLookupSeat(nextSeats[0] || 1);
+  }
+
+  function changeLookupRow(row) {
+    const nextSeats = sectionData[lookupSection][String(row)] || [];
+    setLookupRow(String(row));
+    setLookupSeat(nextSeats[0] || 1);
+  }
+
+  function loadOfficialPattern(blackSeatIds, label) {
+    setSelectedSeats(new Set(blackSeatIds));
+    setLastSeat(null);
+    setSaveMessage(isZh ? `已載入${label}` : `${label} loaded`);
+  }
 
   function updateSeat(id, targetMode) {
     setSelectedSeats((current) => {
@@ -1919,122 +3166,211 @@ export default function SeatMapPage() {
 
           </div>
         </div>
+        <div className="mt-4 overflow-hidden rounded-[2rem] border border-rose-200 shadow-sm">
+          <div className="relative overflow-hidden rounded-[2rem] bg-gradient-to-br from-white via-rose-50 to-amber-50 p-6 md:p-8">
+            <div className="absolute -right-10 -top-10 h-32 w-32 rounded-full bg-rose-200/50 blur-3xl" />
+            <div className="absolute -left-8 bottom-0 h-28 w-28 rounded-full bg-amber-200/40 blur-3xl" />
 
-        <div className="mt-4 rounded-2xl border border-emerald-200 bg-emerald-50 p-4 text-sm font-bold leading-7 text-emerald-900">
-          {isZh ? "歡迎大家一起來玩玩這個排字小遊戲！可以用黑白按鈕與座位圓點，試著排出最清楚、最有創意的台灣應援文字。" : "Try this fun lettering design game! Use the black/white buttons and seat circles to create the clearest and most creative Taiwan cheer message."}
-        </div>
+            <div className="relative">
+              <div className="inline-flex rounded-full border border-rose-200 bg-white/90 px-4 py-1.5 text-[11px] font-black uppercase tracking-[0.32em] text-rose-700 shadow-sm">
+                Light Up Taiwan Challenge
+              </div>
 
-        <div className="mt-4 grid gap-3 md:grid-cols-4">
-          <div className="rounded-2xl border border-emerald-200 bg-white p-4 shadow-sm">
-            <p className="text-[10px] font-black uppercase tracking-[0.22em] text-emerald-700">{isZh ? "全部座位" : "Total seats"}</p>
-            <p className="mt-1 text-3xl font-black text-slate-950">{totalSeats}</p>
-          </div>
-          <div className="rounded-2xl border border-slate-200 bg-white p-4 shadow-sm">
-            <p className="text-[10px] font-black uppercase tracking-[0.22em] text-slate-600">{isZh ? "黑色座位" : "Black seats"}</p>
-            <p className="mt-1 text-3xl font-black text-slate-950">{selectedCount}</p>
-          </div>
-          <div className="rounded-2xl border border-slate-200 bg-white p-4 shadow-sm">
-            <p className="text-[10px] font-black uppercase tracking-[0.22em] text-slate-600">{isZh ? "白色座位" : "White seats"}</p>
-            <p className="mt-1 text-3xl font-black text-slate-950">{totalSeats - selectedCount}</p>
-          </div>
-          <div className="rounded-2xl border border-sky-200 bg-white p-4 shadow-sm">
-            <p className="text-[10px] font-black uppercase tracking-[0.22em] text-sky-700">{isZh ? "最後操作座位" : "Last seat"}</p>
-            <p className="mt-1 text-lg font-black text-slate-950">{lastSeat || "—"}</p>
-          </div>
-        </div>
-
-        <div className="mt-4 rounded-2xl border border-slate-200 bg-white p-4 shadow-sm">
-          <div className="flex flex-col gap-3 lg:flex-row lg:items-center lg:justify-between">
-            <p className="text-sm leading-7 text-slate-600">
-              {isZh ? "點一下圓圈會切換黑 / 白。按住白色座位拖曳，掃過的座位會變黑；按住黑色座位拖曳，掃過的座位會變白。也可以切換是否顯示座位上的數字。手機匯出 PNG 時會優先開啟分享／儲存選單。" : "Click a circle to switch it between black and white. Drag across seats to paint multiple seats. You can also toggle seat numbers. On mobile, PNG export will open the share/save menu when available."}
-              {saveMessage ? <span className="ml-2 font-bold text-emerald-700">{saveMessage}</span> : null}
-            </p>
-            <div className="flex flex-wrap gap-2">
-              {selectedBySection.map(([section, count]) => (
-                <span key={section} className="rounded-full bg-slate-100 px-3 py-1.5 text-xs font-black text-slate-700">
-                  {section}：{count} 黑
+              <h2 className="mt-4 text-3xl font-black leading-tight text-slate-950 md:text-5xl">
+                <span className="inline-block rounded-2xl bg-white px-4 py-2 shadow-sm ring-1 ring-rose-100">
+                  輕鬆參與
                 </span>
-              ))}
+                <span className="mx-2 text-rose-500">・</span>
+                <span className="inline-block rounded-2xl bg-amber-100/90 px-4 py-2 shadow-sm ring-1 ring-amber-200">
+                  開心一起玩！
+                </span>
+              </h2>
+
+              <div className="mt-6 grid gap-4 md:grid-cols-[1.4fr_0.9fr]">
+                <div className="space-y-4 text-base font-bold leading-8 text-slate-700 md:text-lg">
+                  <p>
+                    <strong className="text-slate-950">這次的排字其實是一個不小的挑戰。</strong>
+                  </p>
+                  <p>
+                    因為我們的座位區並不是完整、方正的長方形，而且每一區、每一排的座位數量都不完全相同，所以實際排字的難度會比想像中高很多，最後呈現出來的效果，我們也無法百分之百預測。
+                  </p>
+                  <p>
+                    但既然有這麼多朋友難得一起聚在 Fenway，我們還是很想和大家一起試試看！
+                  </p>
+                  <p>
+                    其實，<strong className="text-rose-700">9/12 活動最主要的目標已經達成了</strong>——我們已經讓紅襪球團看見台灣社群的熱情、團結與凝聚力。這次的排字活動並不是一定要完成的任務，而更像是一個大家一起參與的小遊戲、小挑戰。
+                  </p>
+                  <p>
+                    我們只是希望趁著這麼多人難得聚在一起，一起做一件有趣的事情，留下一個屬於大家、也屬於 9/12 的共同回憶。
+                  </p>
+                </div>
+
+                <div className="rounded-[1.75rem] border border-amber-200 bg-white/85 p-5 shadow-sm backdrop-blur-sm">
+                  <p className="text-sm font-black uppercase tracking-[0.24em] text-amber-700">
+                    Friendly Reminder
+                  </p>
+                  <p className="mt-4 text-xl font-black leading-8 text-amber-950 md:text-2xl">
+                    所以真的不用有任何壓力，成功了當然很棒；就算最後沒有百分之百完美，也完全沒關係。
+                  </p>
+                  <p className="mt-4 text-base font-black text-slate-700">
+                    最重要的是——
+                  </p>
+                  <div className="mt-3 rounded-2xl bg-gradient-to-r from-rose-600 to-pink-600 px-5 py-4 text-white shadow-sm">
+                    <p className="text-2xl font-black leading-9">
+                      大家一起參與、一起合作、一起玩得開心！ ❤️🇹🇼
+                    </p>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
 
-        <div className="mt-4 rounded-[1.5rem] border border-slate-200 bg-white/95 p-4 shadow-sm backdrop-blur md:p-5">
-          <div className="mb-3 flex flex-col gap-1 md:flex-row md:items-end md:justify-between">
-            <div>
-              <p className="text-xs font-black uppercase tracking-[0.22em] text-emerald-700">
-                Seat Map Controls
+        <section className="mt-4 rounded-[1.75rem] border border-sky-200 bg-white p-5 shadow-sm md:p-7">
+          <div className="mx-auto max-w-5xl">
+            <p className="text-xs font-black uppercase tracking-[0.25em] text-sky-700">
+              {isZh ? "找到我的座位與換衣顏色" : "Find My Seat & Shirt Color"}
+            </p>
+            <h2 className="mt-2 text-2xl font-black leading-tight text-slate-950 md:text-3xl">
+              {isZh ? "輸入座位，立即查看第 3 局與第 6 局要穿什麼顏色" : "Enter your seat to see what color to wear in the 3rd and 6th innings"}
+            </h2>
+
+            <div className="mt-5 grid gap-3 md:grid-cols-3">
+              <label className="block">
+                <span className="mb-1.5 block text-xs font-black uppercase tracking-[0.18em] text-slate-500">Section</span>
+                <select
+                  value={lookupSection}
+                  onChange={(event) => changeLookupSection(event.target.value)}
+                  className="w-full rounded-xl border border-slate-300 bg-white px-4 py-3 text-base font-black text-slate-950 outline-none ring-sky-500 transition focus:ring-2"
+                >
+                  {sectionOrder.map((section) => (
+                    <option key={section} value={section}>{section}</option>
+                  ))}
+                </select>
+              </label>
+
+              <label className="block">
+                <span className="mb-1.5 block text-xs font-black uppercase tracking-[0.18em] text-slate-500">Row</span>
+                <select
+                  value={lookupRow}
+                  onChange={(event) => changeLookupRow(event.target.value)}
+                  className="w-full rounded-xl border border-slate-300 bg-white px-4 py-3 text-base font-black text-slate-950 outline-none ring-sky-500 transition focus:ring-2"
+                >
+                  {lookupRows.map((row) => (
+                    <option key={row} value={row}>{row}</option>
+                  ))}
+                </select>
+              </label>
+
+              <label className="block">
+                <span className="mb-1.5 block text-xs font-black uppercase tracking-[0.18em] text-slate-500">Seat</span>
+                <select
+                  value={lookupSeat}
+                  onChange={(event) => setLookupSeat(Number(event.target.value))}
+                  className="w-full rounded-xl border border-slate-300 bg-white px-4 py-3 text-base font-black text-slate-950 outline-none ring-sky-500 transition focus:ring-2"
+                >
+                  {lookupSeats.map((seat) => (
+                    <option key={seat} value={seat}>{seat}</option>
+                  ))}
+                </select>
+              </label>
+            </div>
+
+            <div className="mt-5 rounded-[1.5rem] bg-slate-950 p-5 text-white shadow-lg">
+              <p className="text-sm font-black text-slate-300">
+                {lookupSection} · Row {lookupRow} · Seat {lookupSeat}
               </p>
-              <h2 className="mt-1 text-xl font-black text-slate-950">
-                {isZh ? "排字位置圖操作工具" : "Seat map tools"}
+              <div className="mt-4 grid gap-3 md:grid-cols-2">
+                {[
+                  { inning: 3, title: "TAIWAN", color: lookupInning3 },
+                  { inning: 6, title: "RED SOX", color: lookupInning6 },
+                ].map((item) => {
+                  const isBlack = item.color === "black";
+                  return (
+                    <div key={item.inning} className={`rounded-[1.25rem] border p-5 ${isBlack ? "border-slate-600 bg-slate-900" : "border-slate-200 bg-white text-slate-950"}`}>
+                      <p className={`text-xs font-black uppercase tracking-[0.2em] ${isBlack ? "text-slate-300" : "text-slate-500"}`}>
+                        {isZh ? `第 ${item.inning} 局上結束後` : `After the top of the ${item.inning}${item.inning === 3 ? "rd" : "th"} inning`} · {item.title}
+                      </p>
+                      <div className="mt-3 flex items-center gap-3">
+                        <span className={`h-11 w-11 shrink-0 rounded-full border-2 ${isBlack ? "border-white bg-black" : "border-slate-400 bg-white"}`} />
+                        <div>
+                          <p className="text-2xl font-black">
+                            {isZh ? (isBlack ? "穿黑色" : "穿白色") : (isBlack ? "WEAR BLACK" : "WEAR WHITE")}
+                          </p>
+                          <p className={`mt-1 text-sm font-bold ${isBlack ? "text-slate-300" : "text-slate-600"}`}>
+                            {isZh
+                              ? (isBlack ? "Red Sox × Bruins Jersey" : "9/12 白色活動 T-shirt")
+                              : (isBlack ? "Red Sox × Bruins Jersey" : "9/12 white event T-shirt")}
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  );
+                })}
+              </div>
+              <p className="mt-4 text-xs font-bold leading-6 text-slate-300">
+                {isZh ? "" : "Please follow event staff instructions and change shirts at the designated time."}
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section className="mt-4 rounded-[1.75rem] border border-amber-200 bg-white p-5 shadow-sm md:p-7">
+          <div className="mb-4 flex flex-col gap-2 md:flex-row md:items-end md:justify-between">
+            <div>
+              <p className="text-xs font-black uppercase tracking-[0.22em] text-amber-700">
+                {isZh ? "正式排字參考圖" : "Official Pattern Reference"}
+              </p>
+              <h2 className="mt-1 text-2xl font-black text-slate-950 md:text-3xl">
+                {isZh ? "第 3 局與第 6 局排字參考" : "3rd & 6th Inning Pattern Reference"}
               </h2>
             </div>
+            <p className="text-sm font-bold text-slate-500">
+              {isZh ? "黑色圓點＝穿黑色 Bruins Jersey；白色圓點＝穿白色 9/12 活動 T-shirt" : "Black dot = black Bruins Jersey; white dot = white 9/12 event T-shirt"}
+            </p>
           </div>
 
-          <div className="flex flex-wrap items-center gap-2 md:gap-3">
-            <button
-              type="button"
-              onClick={clearAll}
-              className="rounded-full bg-slate-100 px-4 py-2.5 text-xs font-black text-slate-800 shadow-sm transition hover:bg-slate-200"
-            >
-              {isZh ? "全部變白" : "All white"}
-            </button>
-
-            <button
-              type="button"
-              onClick={selectAll}
-              className="rounded-full bg-slate-950 px-4 py-2.5 text-xs font-black text-white shadow-sm transition hover:bg-slate-800"
-            >
-              {isZh ? "全部變黑" : "All black"}
-            </button>
-
-            <button
-              type="button"
-              onClick={invertAll}
-              className="rounded-full bg-amber-400 px-4 py-2.5 text-xs font-black text-slate-950 shadow-sm transition hover:bg-amber-300"
-            >
-              {isZh ? "黑白反轉" : "Invert"}
-            </button>
-
-            <button
-              type="button"
-              onClick={() => setShowSeatNumbers((current) => !current)}
-              className="rounded-full bg-sky-100 px-4 py-2.5 text-xs font-black text-sky-900 shadow-sm transition hover:bg-sky-200"
-            >
-              {showSeatNumbers ? (isZh ? "拿掉座位數字" : "Hide numbers") : (isZh ? "顯示座位數字" : "Show numbers")}
-            </button>
-
-            <button
-              type="button"
-              onClick={exportToPng}
-              className="rounded-full bg-emerald-100 px-4 py-2.5 text-xs font-black text-emerald-900 shadow-sm transition hover:bg-emerald-200"
-            >
-              {isZh ? "匯出 PNG" : "Export PNG"}
-            </button>
-          </div>
-        </div>
-
-        <div className="mt-4 rounded-[1.5rem] border border-slate-200 bg-slate-100 p-3 shadow-inner">
-          <div className="flex w-full items-start gap-3 overflow-x-auto xl:overflow-x-visible">
-            <RowLabels align="right" />
-
-            <div className="flex shrink-0 items-start gap-3 xl:shrink xl:scale-[0.98] xl:origin-top-left 2xl:scale-100">
-              {sectionOrder.map((section) => (
-                <SectionBlock
-                  key={section}
-                  section={section}
-                  selectedSeats={selectedSeats}
-                  paintMode={paintMode}
-                  onPaintStart={handlePaintStart}
-                  onPaintEnter={handlePaintEnter}
-                  showSeatNumbers={showSeatNumbers}
+          <div className="grid gap-5 xl:grid-cols-2">
+            <article className="overflow-hidden rounded-[1.5rem] border border-slate-200 bg-slate-50 shadow-sm">
+              <div className="border-b border-slate-200 bg-white p-4">
+                <p className="text-xs font-black uppercase tracking-[0.2em] text-rose-700">
+                  {isZh ? "第 3 局上結束後" : "After the top of the 3rd inning"}
+                </p>
+                <h3 className="mt-1 text-2xl font-black text-slate-950">TAIWAN</h3>
+              </div>
+              <a href="/912-seat-map-inning-3.png" target="_blank" rel="noreferrer" className="block bg-white">
+                <img
+                  src="/912-seat-map-inning-3.png"
+                  alt="912 Taiwan Fans Night third inning TAIWAN seat pattern reference"
+                  className="h-auto w-full"
                 />
-              ))}
-            </div>
+              </a>
+              <p className="px-4 py-3 text-xs font-bold leading-6 text-slate-500">
+                {isZh ? "點圖片可開啟原尺寸參考圖。" : "Click the image to open the full-size reference."}
+              </p>
+            </article>
 
-            <RowLabels align="left" />
+            <article className="overflow-hidden rounded-[1.5rem] border border-slate-200 bg-slate-50 shadow-sm">
+              <div className="border-b border-slate-200 bg-white p-4">
+                <p className="text-xs font-black uppercase tracking-[0.2em] text-indigo-700">
+                  {isZh ? "第 6 局上結束後" : "After the top of the 6th inning"}
+                </p>
+                <h3 className="mt-1 text-2xl font-black text-slate-950">RED SOX</h3>
+              </div>
+              <a href="/912-seat-map-inning-6.png" target="_blank" rel="noreferrer" className="block bg-white">
+                <img
+                  src="/912-seat-map-inning-6.png"
+                  alt="912 Taiwan Fans Night sixth inning RED SOX seat pattern reference"
+                  className="h-auto w-full"
+                />
+              </a>
+              <p className="px-4 py-3 text-xs font-bold leading-6 text-slate-500">
+                {isZh ? "點圖片可開啟原尺寸參考圖。" : "Click the image to open the full-size reference."}
+              </p>
+            </article>
           </div>
-        </div>
+        </section>
+
 
         {isZh ? (
         <section className="mt-4 rounded-[1.75rem] border border-emerald-200 bg-white p-5 shadow-sm md:p-7">
@@ -2048,16 +3384,20 @@ export default function SeatMapPage() {
 
             <div className="mt-5 space-y-5 text-base leading-8 text-slate-700">
               <p>
-                大家好，再次感謝大家對 9/12 活動的支持！這次共有超過 1,300 位朋友購票參加，而且在距離活動還有一個半月時，我們就已經提前結束售票。相信大家和我們抱持著同樣的想法：希望用最實際的行動，讓紅襪球團看見台灣社群強大的團結力與凝聚力！
+                大家好，再次感謝大家對 9/12 活動的支持！
               </p>
 
               <p>
-                我也非常高興地向大家報告，我們已經成功達成了第一階段的目標——紅襪官方已經注意到台灣社群所展現出的力量！
+                這次共有超過 <strong>1,300 位朋友</strong>購票參加，而且在距離活動還有一個半月時，我們就已經提前結束售票。相信大家和我們抱持著同樣的想法：希望用最實際的行動，讓紅襪球團看見台灣社群的團結與凝聚力。
+              </p>
+
+              <p>
+                我們也非常高興地向大家報告，第一階段的目標已經成功達成——<strong>紅襪官方已經注意到台灣社群所展現出的力量！</strong>
               </p>
 
               <div className="rounded-[1.5rem] border border-amber-200 bg-amber-50 p-5">
                 <p className="text-xl font-black leading-tight text-amber-900 md:text-2xl">
-                  接下來，我們希望一起挑戰下一個目標：
+                  接下來，我們想和大家一起挑戰下一個目標：
                 </p>
                 <p className="mt-3 text-3xl font-black leading-tight text-emerald-800 md:text-5xl">
                   Light Up Taiwan, Let Taiwan Be Seen!
@@ -2068,77 +3408,97 @@ export default function SeatMapPage() {
               </div>
 
               <p>
-                我們計畫利用現場的實際座位，以及黑色、白色兩種衣服，在觀眾席上排出大型文字。目前初步希望排出兩組文字：
+                這次我們希望利用現場的實際座位，以及黑色、白色兩種衣服，在 Fenway 觀眾席上一起排出大型文字。
               </p>
 
               <div className="grid gap-3 md:grid-cols-2">
                 <div className="rounded-[1.25rem] border border-slate-200 bg-slate-50 p-5">
-                  <p className="text-xs font-black uppercase tracking-[0.22em] text-slate-500">第一組</p>
+                  <p className="text-xs font-black uppercase tracking-[0.22em] text-slate-500">3 局上結束後</p>
                   <p className="mt-2 text-3xl font-black text-slate-950">TAIWAN</p>
                 </div>
                 <div className="rounded-[1.25rem] border border-slate-200 bg-slate-50 p-5">
-                  <p className="text-xs font-black uppercase tracking-[0.22em] text-slate-500">第二組</p>
-                  <p className="mt-2 text-xl font-black text-slate-950">目前尚未決定，歡迎大家一起提供創意！</p>
+                  <p className="text-xs font-black uppercase tracking-[0.22em] text-slate-500">6 局上結束後</p>
+                  <p className="mt-2 text-3xl font-black text-slate-950">RED SOX</p>
                 </div>
               </div>
 
-              <p>
-                我們希望邀請大家利用這份實際的 Seat Map（座位圖），一起動動腦，嘗試使用黑、白兩種顏色，排出清楚、簡單，而且從遠方也能辨識的文字。
-              </p>
-
-              <div className="grid gap-4 md:grid-cols-2">
-                <div className="rounded-[1.5rem] border border-slate-200 bg-white p-5 shadow-sm">
-                  <h3 className="text-xl font-black text-slate-950">白色衣服</h3>
-                  <p className="mt-3">
-                    白色衣服是我們這次特別製作的 9/12 活動衣服。我們預計會在八月中旬至八月底之間，陸續公布衣服的發放時間與地點，讓大家提前前往領取。也希望大家在活動當天，可以直接穿著白色活動衣進場。
-                  </p>
-                </div>
-                <div className="rounded-[1.5rem] border border-slate-200 bg-white p-5 text-slate-900 shadow-sm">
-                  <h3 className="text-xl font-black text-slate-950">黑色衣服</h3>
-                  <p className="mt-3 text-slate-700">
-                    黑色衣服則是大家進入球場時，由紅襪球團發送的 Red Sox × Bruins Jersey。因此，活動當天每一位參加者都會有一件白色活動衣服，以及一件黑色 Bruins Jersey。
-                  </p>
+              <div className="rounded-[1.5rem] border border-rose-200 bg-rose-50 p-5">
+                <p className="text-xl font-black text-rose-900">輕鬆參與，開心一起玩！</p>
+                <div className="mt-3 space-y-3 text-slate-700">
+                  <p>這次的排字其實是一個不小的挑戰。</p>
+                  <p>因為我們的座位區並不是完整、方正的長方形，而且每一區、每一排的座位數量都不完全相同，所以實際排字的難度會比想像中高很多，最後呈現出來的效果，我們也無法百分之百預測。</p>
+                  <p>但既然有這麼多朋友難得一起聚在 Fenway，我們還是很想和大家一起試試看！</p>
+                  <p>其實 9/12 活動最主要的目標已經達成了。這次排字更像是一個大家一起完成的小挑戰，希望留下屬於我們共同的回憶。</p>
+                  <p><strong>成功了當然很棒；就算沒有百分之百完美，也完全沒關係。</strong></p>
+                  <p className="font-black text-rose-900">一起參與、一起合作、一起玩得開心！ ❤️🇹🇼⚾</p>
                 </div>
               </div>
 
-              <p>
-                我們會運用這兩種不同顏色的衣服，配合實際的座位位置，完成現場的排字活動。
-              </p>
+              <div>
+                <h3 className="text-2xl font-black text-slate-950">黑白兩件衣服怎麼使用？</h3>
+                <div className="mt-4 grid gap-4 md:grid-cols-2">
+                  <div className="rounded-[1.5rem] border border-slate-200 bg-white p-5 shadow-sm">
+                    <h4 className="text-xl font-black text-slate-950">白色衣服</h4>
+                    <p className="mt-3">
+                      白色衣服是這次特別製作的 <strong>9/12 活動 T-shirt</strong>。我們會陸續公布衣服的發放時間與地點，讓大家可以在活動前提前領取。也希望大家在活動當天，可以直接穿著白色活動衣進場。
+                    </p>
+                  </div>
+                  <div className="rounded-[1.5rem] border border-slate-200 bg-white p-5 shadow-sm">
+                    <h4 className="text-xl font-black text-slate-950">黑色衣服</h4>
+                    <p className="mt-3">
+                      黑色衣服則是大家進入球場時，由紅襪球團發送的 <strong>Red Sox × Bruins Jersey</strong>。
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="rounded-[1.5rem] border border-slate-200 bg-slate-50 p-5">
+                <p className="font-black text-slate-950">因此，活動當天每一位參加者都會有：</p>
+                <ul className="mt-3 list-disc space-y-2 pl-5 font-bold text-slate-800">
+                  <li>一件白色 9/12 活動 T-shirt</li>
+                  <li>一件黑色 Red Sox × Bruins Jersey</li>
+                </ul>
+                <p className="mt-4">我們會利用這兩種不同顏色的衣服，配合每個人的實際座位位置，一起完成排字。</p>
+              </div>
 
               <div className="rounded-[1.5rem] border border-sky-200 bg-sky-50 p-5">
-                <h3 className="text-xl font-black text-slate-950">排字方式</h3>
-                <div className="mt-3 space-y-3">
-                  <p>
-                    我們預計會選擇比賽中的兩個指定時間進行排字。在其中一個時間，部分座位的朋友會穿白色活動衣，其他座位的朋友則穿黑色 Bruins Jersey，共同排出第一組文字。
-                  </p>
-                  <p>
-                    到了第二個指定時間，大家可能會依照安排更換衣服顏色，再排出第二組不同的文字。實際的排字時間、每個座位應該穿白色或黑色衣服，以及現場如何配合，我們之後都會再提供清楚的說明。
-                  </p>
+                <h3 className="text-2xl font-black text-slate-950">排字方式</h3>
+                <p className="mt-3">我們會在比賽中的兩個指定時間進行排字。</p>
+
+                <div className="mt-4 grid gap-4 md:grid-cols-2">
+                  <div className="rounded-[1.25rem] border border-sky-200 bg-white p-4">
+                    <p className="text-sm font-black text-sky-700">第 3 局</p>
+                    <p className="mt-1 text-2xl font-black text-slate-950">TAIWAN</p>
+                    <p className="mt-2">大家依照自己的座位安排，穿上指定的黑色或白色衣服，一起排出第一組文字。</p>
+                  </div>
+                  <div className="rounded-[1.25rem] border border-sky-200 bg-white p-4">
+                    <p className="text-sm font-black text-sky-700">第 6 局</p>
+                    <p className="mt-1 text-2xl font-black text-slate-950">RED SOX</p>
+                    <p className="mt-2">到了第二個指定時間，部分朋友可能需要更換衣服顏色，再一起排出第二組文字。</p>
+                  </div>
                 </div>
-              </div>
 
-              <p>
-                老實說，這是一個非常困難的挑戰。因為我們的座位區並不是一個完整、方正的長方形，每一區及每一排的座位數量也不完全相同，因此排字的難度會比一般想像中高很多。
-              </p>
-
-              <p>
-                最後呈現出來的效果會如何，目前我們也無法完全確定。但是我仍然覺得，這是一件非常值得大家一起嘗試的事情！
-              </p>
-
-              <div className="rounded-[1.5rem] border border-emerald-200 bg-emerald-50 p-5">
-                <h3 className="text-xl font-black text-emerald-900">希望大家一起嘗試排出：</h3>
-                <ol className="mt-3 list-decimal space-y-2 pl-5 font-bold text-slate-800">
-                  <li>TAIWAN</li>
-                  <li>另外一組你認為最適合的文字</li>
-                </ol>
                 <p className="mt-4">
-                  第二組文字不需要太長，最重要的是：字體簡單、線條清楚，而且從遠方也能看得出來。
+                  每個座位在第 3 局與第 6 局應該穿什麼顏色，都可以直接使用網站上的 <strong>「找到我的座位與換衣顏色」</strong>。
+                </p>
+                <p className="mt-3">
+                  輸入自己的 <strong>Section、Row、Seat</strong>，系統就會直接告訴你第 3 局與第 6 局應該穿黑色還是白色。
                 </p>
               </div>
 
-              <p>
-                完成後，歡迎將你的設計與想法提供給我們參考。我們會綜合大家的創意，以及現場實際執行的可行性，選出最適合的排字方案。
-              </p>
+              <div className="rounded-[1.5rem] border border-emerald-200 bg-emerald-50 p-5">
+                <h3 className="text-xl font-black text-emerald-900">我們希望一起完成</h3>
+                <div className="mt-4 grid gap-3 md:grid-cols-2">
+                  <div>
+                    <p className="text-sm font-black text-slate-600">3 局上結束後</p>
+                    <p className="mt-1 text-3xl font-black text-slate-950">TAIWAN</p>
+                  </div>
+                  <div>
+                    <p className="text-sm font-black text-slate-600">6 局上結束後</p>
+                    <p className="mt-1 text-3xl font-black text-slate-950">RED SOX</p>
+                  </div>
+                </div>
+              </div>
 
               <div className="rounded-[1.5rem] bg-gradient-to-r from-emerald-900 to-sky-900 p-6 text-white">
                 <p className="text-2xl font-black leading-tight md:text-4xl">
@@ -2147,7 +3507,7 @@ export default function SeatMapPage() {
                 <p className="mt-4 text-xl font-black leading-relaxed text-amber-300 md:text-3xl">
                   Light Up Taiwan.<br />
                   Let Taiwan Be Seen.<br />
-                  {isZh ? "Together We Shine" : "Together We Shine"}.
+                  Together We Shine. 🇹🇼⚾
                 </p>
               </div>
             </div>
@@ -2194,12 +3554,12 @@ export default function SeatMapPage() {
 
               <div className="grid gap-3 md:grid-cols-2">
                 <div className="rounded-[1.25rem] border border-slate-200 bg-slate-50 p-5">
-                  <p className="text-xs font-black uppercase tracking-[0.22em] text-slate-500">First design</p>
+                  <p className="text-xs font-black uppercase tracking-[0.22em] text-slate-500">After the top of the 3rd inning</p>
                   <p className="mt-2 text-3xl font-black text-slate-950">TAIWAN</p>
                 </div>
                 <div className="rounded-[1.25rem] border border-slate-200 bg-slate-50 p-5">
-                  <p className="text-xs font-black uppercase tracking-[0.22em] text-slate-500">Second design</p>
-                  <p className="mt-2 text-xl font-black text-slate-950">Still open — we welcome everyone’s ideas.</p>
+                  <p className="text-xs font-black uppercase tracking-[0.22em] text-slate-500">After the top of the 6th inning</p>
+                  <p className="mt-2 text-xl font-black text-slate-950">RED SOX</p>
                 </div>
               </div>
 
@@ -2250,10 +3610,10 @@ export default function SeatMapPage() {
                 <h3 className="text-xl font-black text-emerald-900">We hope everyone can try designing:</h3>
                 <ol className="mt-3 list-decimal space-y-2 pl-5 font-bold text-slate-800">
                   <li>TAIWAN</li>
-                  <li>Another word or phrase you think would work best</li>
+                  <li>RED SOX</li>
                 </ol>
                 <p className="mt-4">
-                  The second phrase does not need to be long. The most important things are simple letter shapes, clear lines, and readability from far away.
+                  The second design is now RED SOX. The most important things are simple letter shapes, clear lines, and readability from far away.
                 </p>
               </div>
 
@@ -2276,6 +3636,112 @@ export default function SeatMapPage() {
         </section>
         )}
 
+        <div className="mt-10 rounded-[2rem] border border-sky-200 bg-gradient-to-r from-sky-50 via-white to-emerald-50 p-6 shadow-sm md:p-8">
+          <p className="text-xs font-black uppercase tracking-[0.28em] text-sky-700">
+            排字小遊戲
+          </p>
+          <h2 className="mt-2 text-3xl font-black leading-tight text-slate-950 md:text-4xl">
+            你也可以自己來玩玩排字小遊戲
+          </h2>
+          <p className="mt-4 max-w-4xl text-base font-bold leading-8 text-slate-700 md:text-lg">
+            想試試看不同的排字效果嗎？可以使用下面的工具，把座位切換成黑色或白色，自己排出想像中的應援文字。這裡是互動小遊戲，不會影響正式排字安排。
+          </p>
+        </div>
+
+        <div className="mt-4 grid gap-3 md:grid-cols-4">
+          <div className="rounded-2xl border border-emerald-200 bg-white p-4 shadow-sm">
+            <p className="text-[10px] font-black uppercase tracking-[0.22em] text-emerald-700">{isZh ? "全部座位" : "Total seats"}</p>
+            <p className="mt-1 text-3xl font-black text-slate-950">{totalSeats}</p>
+          </div>
+          <div className="rounded-2xl border border-slate-200 bg-white p-4 shadow-sm">
+            <p className="text-[10px] font-black uppercase tracking-[0.22em] text-slate-600">{isZh ? "黑色座位" : "Black seats"}</p>
+            <p className="mt-1 text-3xl font-black text-slate-950">{selectedCount}</p>
+          </div>
+          <div className="rounded-2xl border border-slate-200 bg-white p-4 shadow-sm">
+            <p className="text-[10px] font-black uppercase tracking-[0.22em] text-slate-600">{isZh ? "白色座位" : "White seats"}</p>
+            <p className="mt-1 text-3xl font-black text-slate-950">{totalSeats - selectedCount}</p>
+          </div>
+          <div className="rounded-2xl border border-sky-200 bg-white p-4 shadow-sm">
+            <p className="text-[10px] font-black uppercase tracking-[0.22em] text-sky-700">{isZh ? "最後操作座位" : "Last seat"}</p>
+            <p className="mt-1 text-lg font-black text-slate-950">{lastSeat || "—"}</p>
+          </div>
+        </div>
+
+        <div className="mt-4 rounded-2xl border border-slate-200 bg-white p-4 shadow-sm">
+          <div className="flex flex-col gap-3 lg:flex-row lg:items-center lg:justify-between">
+            <p className="text-sm leading-7 text-slate-600">
+              {isZh ? "點一下圓圈會切換黑 / 白。按住白色座位拖曳，掃過的座位會變黑；按住黑色座位拖曳，掃過的座位會變白。也可以切換是否顯示座位上的數字。手機匯出 PNG 時會優先開啟分享／儲存選單。" : "Click a circle to switch it between black and white. Drag across seats to paint multiple seats. You can also toggle seat numbers. On mobile, PNG export will open the share/save menu when available."}
+              {saveMessage ? <span className="ml-2 font-bold text-emerald-700">{saveMessage}</span> : null}
+            </p>
+            <div className="flex flex-wrap gap-2">
+              {selectedBySection.map(([section, count]) => (
+                <span key={section} className="rounded-full bg-slate-100 px-3 py-1.5 text-xs font-black text-slate-700">
+                  {section}：{count} 黑
+                </span>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        <div className="mt-4 flex flex-wrap items-center gap-2 rounded-[1.5rem] border border-slate-200 bg-white p-3 shadow-sm">
+          <button
+            type="button"
+            onClick={() => loadOfficialPattern(inning3BlackSeatIds, isZh ? "第 3 局 TAIWAN 排字" : "3rd inning TAIWAN pattern")}
+            className="rounded-full bg-rose-100 px-4 py-2.5 text-xs font-black text-rose-900 shadow-sm transition hover:bg-rose-200"
+          >
+            {isZh ? "載入第 3 局 TAIWAN" : "Load 3rd inning TAIWAN"}
+          </button>
+          <button
+            type="button"
+            onClick={() => loadOfficialPattern(inning6BlackSeatIds, isZh ? "第 6 局 RED SOX 排字" : "6th inning RED SOX pattern")}
+            className="rounded-full bg-indigo-100 px-4 py-2.5 text-xs font-black text-indigo-900 shadow-sm transition hover:bg-indigo-200"
+          >
+            {isZh ? "載入第 6 局 RED SOX" : "Load 6th inning RED SOX"}
+          </button>
+          <button type="button" onClick={clearAll} className="rounded-full bg-slate-100 px-4 py-2.5 text-xs font-black text-slate-800 shadow-sm transition hover:bg-slate-200">
+            全部變白
+          </button>
+          <button type="button" onClick={selectAll} className="rounded-full bg-slate-950 px-4 py-2.5 text-xs font-black text-white shadow-sm transition hover:bg-slate-800">
+            全部變黑
+          </button>
+          <button type="button" onClick={invertAll} className="rounded-full bg-amber-400 px-4 py-2.5 text-xs font-black text-slate-950 shadow-sm transition hover:bg-amber-300">
+            黑白反轉
+          </button>
+          <button
+            type="button"
+            onClick={() => setShowSeatNumbers((current) => !current)}
+            className="rounded-full bg-sky-100 px-4 py-2.5 text-xs font-black text-sky-900 shadow-sm transition hover:bg-sky-200"
+          >
+            {showSeatNumbers ? "拿掉座位數字" : "顯示座位數字"}
+          </button>
+          <button type="button" onClick={exportToPng} className="rounded-full bg-emerald-100 px-4 py-2.5 text-xs font-black text-emerald-900 shadow-sm transition hover:bg-emerald-200">
+            匯出 PNG
+          </button>
+        </div>
+
+
+        <div className="mt-4 rounded-[1.5rem] border border-slate-200 bg-slate-100 p-3 shadow-inner">
+          <div className="flex w-full items-start gap-3 overflow-x-auto xl:overflow-x-visible">
+            <RowLabels align="right" />
+
+            <div className="flex shrink-0 items-start gap-3 xl:shrink xl:scale-[0.98] xl:origin-top-left 2xl:scale-100">
+              {sectionOrder.map((section) => (
+                <SectionBlock
+                  key={section}
+                  section={section}
+                  selectedSeats={selectedSeats}
+                  paintMode={paintMode}
+                  onPaintStart={handlePaintStart}
+                  onPaintEnter={handlePaintEnter}
+                  showSeatNumbers={showSeatNumbers}
+                />
+              ))}
+            </div>
+
+            <RowLabels align="left" />
+          </div>
+        </div>
+
         <div className="mt-4 rounded-[1.5rem] border border-slate-200 bg-white p-4 shadow-sm">
           <div className="mb-3 flex flex-col gap-2 md:flex-row md:items-end md:justify-between">
             <div>
@@ -2291,7 +3757,7 @@ export default function SeatMapPage() {
             <img
               src="/fenway-seat-reference-912.png"
               alt="Fenway Park actual seat reference for sections L39, L41, L42, and L43"
-              className="h-auto w-full"
+              className="mx-auto max-h-[520px] w-full max-w-5xl object-contain rounded-[1.25rem]"
             />
           </div>
         </div>

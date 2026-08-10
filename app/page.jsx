@@ -6,6 +6,7 @@ const hostLogo = "/btcc-btcf-logo.jpg";
 const eventLogo = "/912-fenway-logo.png";
 const jerseyImage = "/red-sox-bruins-jersey.jpg";
 const zeffyQrCode = "/zeffy-qr-code.png";
+const mcphsCommunitySponsorLogo = "/MCPHS-Logo.jpg";
 
 const officialLineGroup = "https://line.me/ti/g/uyAcZJRn75";
 const googleFormLink = "https://forms.gle/27V7wtAEBxRbboL79";
@@ -1310,6 +1311,33 @@ export default function TaiwanFanNightWebsite() {
               </div>
             </Card>
           </div>
+
+          <div className="relative mx-auto mt-10 max-w-7xl">
+            <Card className="overflow-hidden border-rose-200 bg-white p-0 shadow-xl ring-4 ring-rose-50">
+              <div className="grid gap-0 lg:grid-cols-[0.95fr_1.05fr] lg:items-center">
+                <div className="bg-gradient-to-br from-rose-50 via-white to-emerald-50 p-6 md:p-8">
+                  <p className="text-sm font-black uppercase tracking-[0.25em] text-rose-700">
+                    Community Sponsor
+                  </p>
+                  <h2 className="mt-3 text-2xl font-black tracking-tight text-slate-950 md:text-4xl">
+                    {lang === "zh" ? "感謝 MCPHS 支持 912 Taiwan Fan Night" : "Thank you, MCPHS, for supporting 912 Taiwan Fan Night"}
+                  </h2>
+                  <p className="mt-4 text-base font-bold leading-8 text-slate-700 md:text-lg">
+                    {lang === "zh"
+                      ? "Massachusetts College of Pharmacy and Health Sciences（MCPHS）是我們的 Community Sponsor。感謝 MCPHS 支持波士頓台灣社群，一起讓台灣在 Fenway 被看見。"
+                      : "Massachusetts College of Pharmacy and Health Sciences (MCPHS) is our Community Sponsor. Thank you for supporting the Taiwanese community in Boston and helping Taiwan be seen at Fenway."}
+                  </p>
+                </div>
+                <div className="flex items-center justify-center bg-white p-6 md:p-8">
+                  <img
+                    src={mcphsCommunitySponsorLogo}
+                    alt="Massachusetts College of Pharmacy and Health Sciences logo"
+                    className="h-auto w-full max-w-2xl object-contain"
+                  />
+                </div>
+              </div>
+            </Card>
+          </div>
         </section>
 <section id="mission" className="bg-white px-4 py-16 md:px-8 md:py-24">
           <div className="mx-auto max-w-7xl">
@@ -1384,14 +1412,13 @@ export default function TaiwanFanNightWebsite() {
         <section id="teams" className="bg-white px-4 py-16 md:px-8 md:py-24">
           <div className="mx-auto max-w-7xl">
             <SectionTitle eyebrow={t.teams.eyebrow} title={t.teams.title} description={t.teams.description} />
-            <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">{t.teams.steps.map(([icon, title, body]) => <InfoCard key={title} icon={icon} title={title}>{body}</InfoCard>)}</div>
+            <div className="mx-auto grid max-w-5xl gap-6 md:grid-cols-3">{t.teams.steps.map(([icon, title, body]) => <InfoCard key={title} icon={icon} title={title}>{body}</InfoCard>)}</div>
             <Card className="mt-8 border-emerald-200 bg-emerald-50 p-6 md:p-8"><div className="grid gap-6 lg:grid-cols-[1fr_auto] lg:items-center"><div><p className="text-sm font-semibold uppercase tracking-[0.25em] text-emerald-700">Zeffy Team Name</p><h3 className="mt-2 text-2xl font-black text-slate-950">{t.teams.teamNameTitle}</h3><p className="mt-4 leading-7 text-slate-700">{t.teams.teamNameText1}</p><p className="mt-3 leading-7 text-slate-700">{t.teams.teamNameText2}</p><p className="mt-3 text-sm leading-7 text-slate-600">{t.teams.teamNameText3}</p></div><span className="rounded-full bg-slate-200 px-6 py-3 text-center font-black text-slate-600 shadow-sm">{t.headerBuy}</span></div></Card>
             <div className="mt-10 rounded-[2rem] bg-gradient-to-br from-emerald-700 to-sky-700 p-8 text-white shadow-lg"><div className="grid gap-8 lg:grid-cols-[0.8fr_1.2fr] lg:items-center"><div><p className="text-sm font-semibold uppercase tracking-[0.25em] text-white/75">Team Name Ideas</p><h3 className="mt-3 text-3xl font-black">{t.teams.exampleTitle}</h3><p className="mt-4 text-sm leading-7 text-white/85">{t.teams.exampleText}</p><p className="mt-3 text-sm leading-7 text-white/85">{t.teams.nameReminder}</p></div><div><p className="mb-4 text-sm font-bold uppercase tracking-wide text-white/80">{t.teams.examplesLabel}</p><div className="flex flex-wrap gap-3">{teamExamples.map((name) => <span key={name} className="rounded-full bg-white/15 px-4 py-2 text-sm font-semibold backdrop-blur">{name}</span>)}</div></div></div></div>
             <Card className="mt-8 overflow-hidden border-sky-200 bg-gradient-to-br from-sky-50 via-white to-emerald-50 p-0 shadow-lg"><div className="grid gap-0 lg:grid-cols-[0.72fr_1.28fr] lg:items-stretch"><div className="flex flex-col justify-center bg-gradient-to-br from-sky-600 to-teal-600 p-8 text-white md:p-10"><p className="text-sm font-semibold uppercase tracking-[0.25em] text-white/80">{t.teams.friendTeamEyebrow}</p><h3 className="mt-3 text-3xl font-black leading-tight">{t.teams.friendTeamTitle}</h3><p className="mt-5 rounded-2xl bg-white/15 p-4 text-base font-bold leading-7 text-white">{t.teams.friendTeamPunch}</p></div><div className="p-6 md:p-8"><p className="text-lg font-black leading-7 text-slate-950">{t.teams.friendTeamIntro}</p><p className="mt-4 leading-7 text-slate-700">{t.teams.friendTeamText}</p><div className="mt-5 grid gap-4 md:grid-cols-2"><div className="rounded-2xl bg-white p-4 text-sm leading-7 text-slate-700 shadow-sm ring-1 ring-sky-100">{t.teams.friendTeamTransfer}</div><div className="rounded-2xl bg-white p-4 text-sm font-bold leading-7 text-sky-900 shadow-sm ring-1 ring-sky-100">{t.teams.friendTeamGift}</div></div></div></div></Card>
           </div>
         </section>
-
-        <section id="leaderboard" className="px-4 py-16 md:px-8 md:py-24">
+<section id="leaderboard" className="px-4 py-16 md:px-8 md:py-24">
           <div className="mx-auto max-w-7xl">
             <SectionTitle eyebrow={t.leaderboard.eyebrow} title={t.leaderboard.title} description={t.leaderboard.description} />
             <Card className="overflow-hidden border-emerald-200 bg-white p-0 shadow-lg">
@@ -1656,7 +1683,7 @@ export default function TaiwanFanNightWebsite() {
           <div className="mx-auto max-w-7xl">
             <SectionTitle eyebrow={t.btcfdonate.eyebrow} title={t.btcfdonate.title} description={t.btcfdonate.description} />
 
-            <div className="grid gap-6 lg:grid-cols-4">
+            <div className="mx-auto grid max-w-5xl gap-6 md:grid-cols-3">
               <Card className="border-sky-200 bg-gradient-to-br from-sky-700 to-emerald-700 p-8 text-white shadow-2xl ring-4 ring-sky-100">
                 <div className="mb-8 flex h-14 w-14 items-center justify-center rounded-2xl bg-white/15 text-3xl">💙</div>
                 <h3 className="text-3xl font-black">{t.btcfdonate.goTitle}</h3>
@@ -1716,7 +1743,7 @@ export default function TaiwanFanNightWebsite() {
 <div id="contact" className="mt-12">
           <div className="mx-auto max-w-7xl">
             <SectionTitle eyebrow={t.contact.eyebrow} title={t.contact.title} description={t.contact.description} />
-            <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+            <div className="mx-auto grid max-w-5xl gap-6 md:grid-cols-3">
               {t.contact.cards.map(([title, body, button, link]) => (
                 <Card key={title} className="h-full">
                   <h3 className="text-xl font-black text-slate-950">{title}</h3>
