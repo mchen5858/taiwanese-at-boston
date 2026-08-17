@@ -3331,6 +3331,7 @@ function GuideZh({ isZh, setIsZh }) {
                 <ul className="mt-3 list-disc space-y-2 pl-5">
                   <li>可本人領取，也可以請朋友代領。</li>
                   <li>活動衣服不提供郵寄。</li>
+                  <li><strong>另外加購的活動衣服</strong>也請依照下方公布的相同發放地點與時間領取喔！</li>
                   <li>建議大家活動當天先穿著白色活動 T-shirt 到 Fenway。</li>
                 </ul>
               </Card>
@@ -3828,6 +3829,9 @@ function GuideEn({ isZh, setIsZh }) {
               <Card className="border-slate-200 bg-white">
                 <h3 className="text-xl font-black text-slate-950">⚪ White 9/12 event T-shirt</h3>
                 <p className="mt-3">Please pick up the white event T-shirt in advance at one of the sessions below.</p>
+                <p className="mt-3 font-bold text-slate-700">
+                  <strong>Any additional event shirts purchased separately</strong> should also be picked up at the same distribution locations and times listed below.
+                </p>
               </Card>
 
             </div>
