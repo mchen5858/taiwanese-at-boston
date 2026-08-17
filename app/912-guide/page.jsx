@@ -3397,7 +3397,7 @@ function GuideZh({ isZh, setIsZh }) {
                   <p className="text-sm font-bold text-slate-600">10:30 AM – 4:30 PM｜Conference Room</p>
                 </div>
                 <div className="rounded-2xl bg-white p-4 ring-1 ring-emerald-200">
-                  <p className="font-black text-slate-950">9/9 Wed｜Danvers 診所</p>
+                  <p className="font-black text-slate-950">9/9 Wed｜Tai Chi Acupuncture & Wellness Center</p>
                   <p className="text-sm font-bold text-slate-600">4:00 PM – 7:00 PM｜Parking lot</p>
                 </div>
                 <div className="rounded-2xl bg-white p-4 ring-1 ring-emerald-200">
@@ -3884,7 +3884,7 @@ function GuideEn({ isZh, setIsZh }) {
                 <div className="rounded-2xl bg-white p-4 ring-1 ring-emerald-200"><p className="font-black">8/28 Fri｜Newton OCAC Center</p><p className="text-sm font-bold text-slate-600">10:30 AM – 4:30 PM｜Small Classroom</p></div>
                 <div className="rounded-2xl bg-white p-4 ring-1 ring-emerald-200"><p className="font-black">8/29 Sat｜University Park Common</p><p className="text-sm font-bold text-slate-600">10:30 AM – 4:30 PM｜Outdoor</p></div>
                 <div className="rounded-2xl bg-white p-4 ring-1 ring-emerald-200"><p className="font-black">8/30 Sun｜Northeastern Crossing</p><p className="text-sm font-bold text-slate-600">10:30 AM – 4:30 PM｜Conference Room</p></div>
-                <div className="rounded-2xl bg-white p-4 ring-1 ring-emerald-200"><p className="font-black">9/9 Wed｜Danvers clinic</p><p className="text-sm font-bold text-slate-600">4:00 PM – 7:00 PM｜Parking lot</p></div>
+                <div className="rounded-2xl bg-white p-4 ring-1 ring-emerald-200"><p className="font-black">9/9 Wed｜Tai Chi Acupuncture & Wellness Center</p><p className="text-sm font-bold text-slate-600">4:00 PM – 7:00 PM｜Parking lot</p></div>
                 <div className="rounded-2xl bg-white p-4 ring-1 ring-emerald-200"><p className="font-black">9/10 Thu｜Cafe Zing</p><p className="text-sm font-bold text-slate-600">3:00 PM – 6:00 PM｜Near Porter Station</p></div>
                 <div className="rounded-2xl bg-white p-4 ring-1 ring-emerald-200"><p className="font-black">9/11 Fri｜Newton OCAC Center</p><p className="text-sm font-bold text-slate-600">10:30 AM – 4:30 PM｜Small Classroom</p></div>
               </div>
