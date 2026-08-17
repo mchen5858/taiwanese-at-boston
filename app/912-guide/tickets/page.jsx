@@ -230,6 +230,21 @@ export default function TicketGuidePage() {
             </div>
           </Section>
         </div>
+
+        <div className="mt-10 flex flex-wrap justify-center gap-3 border-t border-slate-200 pt-6">
+          <a
+            href="/"
+            className="rounded-full bg-slate-800 px-5 py-3 text-sm font-black text-white shadow-sm transition hover:-translate-y-0.5 hover:bg-slate-700"
+          >
+            回到 912 首頁
+          </a>
+          <a
+            href="/912-guide"
+            className="rounded-full bg-amber-300 px-5 py-3 text-sm font-black text-slate-950 shadow-sm transition hover:-translate-y-0.5 hover:bg-amber-200"
+          >
+            回到懶人包
+          </a>
+        </div>
       </section>
     </main>
   );

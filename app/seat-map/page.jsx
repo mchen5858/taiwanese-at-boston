@@ -3110,6 +3110,12 @@ export default function SeatMapPage() {
               >
                 {isZh ? "回到 912 首頁" : "Back to 912 Home"}
               </a>
+              <a
+                href="/912-guide"
+                className="rounded-full bg-white/15 px-5 py-2.5 text-sm font-black text-white shadow-sm ring-1 ring-white/20 transition hover:bg-white/20"
+              >
+                {isZh ? "回到懶人包" : "Back to Guide"}
+              </a>
               <button
                 type="button"
                 onClick={() => setIsZh(true)}
@@ -3203,6 +3209,52 @@ export default function SeatMapPage() {
                     ? "❤️ 輕鬆參與、開心一起玩！排字是一個大家共同完成的小挑戰，不需要有壓力；成功很棒，就算沒有百分之百完美也完全沒關係。"
                     : "❤️ Relax and have fun! This is a community challenge, not a high-pressure task. If it works beautifully, great—and if it is not 100% perfect, that is completely okay."}
                 </p>
+              </div>
+
+              <div className="mt-5 border-l-4 border-emerald-300 pl-4">
+                {isZh ? (
+                  <>
+                    <p className="font-black leading-8 text-slate-950">
+                      這次的排字活動，並不是每一位朋友都需要換衣服。
+                    </p>
+                    <p className="mt-2 leading-8 text-slate-700">
+                      有些座位需要在指定的時間換上不同顏色，有些座位則只需要維持原本的顏色就可以了。
+                      但其實，<strong>無論你需不需要換衣服，你都是這幅畫裡非常重要的一部分。</strong>
+                    </p>
+                    <p className="mt-2 leading-8 text-slate-700">
+                      我們每一個人的座位，就像是一個小小的拼圖。單看一個位置，也許看不出什麼，但當一千多位朋友一起坐在自己的位置、一起配合的時候，
+                      才有機會把完整的 <strong>TAIWAN</strong> 呈現在 Fenway。
+                    </p>
+                    <p className="mt-2 leading-8 text-slate-700">
+                      所以這次最重要的，不是「我需不需要換衣服」，而是<strong>我們大家都在，一起完成這件事。</strong>
+                      也許最後不一定會百分之百完美，但只要大家願意一起參與、一起配合，那一刻本身，就已經會是一個很特別、很值得我們記住的畫面。
+                    </p>
+                    <p className="mt-3 font-black leading-8 text-emerald-900">
+                      每一個人都很重要，少了任何一個位置，都可能讓畫面少了一小塊。只有大家一起，我們才能把 TAIWAN 完整地拼起來。❤️🇹🇼
+                    </p>
+                  </>
+                ) : (
+                  <>
+                    <p className="font-black leading-8 text-slate-950">
+                      Not everyone will need to change shirts during the lettering activity.
+                    </p>
+                    <p className="mt-2 leading-8 text-slate-700">
+                      Some seats will need to switch colors at the designated times, while others will simply stay in the same color.
+                      But whether or not you need to change shirts, <strong>you are an important part of the picture.</strong>
+                    </p>
+                    <p className="mt-2 leading-8 text-slate-700">
+                      Think of every seat as one small piece of a puzzle. One seat by itself may not look like much, but when more than a thousand of us sit in our assigned places and coordinate together,
+                      we have the chance to make <strong>TAIWAN</strong> appear across Fenway.
+                    </p>
+                    <p className="mt-2 leading-8 text-slate-700">
+                      The most important question is not “Do I need to change shirts?” It is that <strong>we are all there, completing this together.</strong>
+                      The final result may not be 100% perfect, but if everyone participates and works together, that moment itself will be something special and worth remembering.
+                    </p>
+                    <p className="mt-3 font-black leading-8 text-emerald-900">
+                      Every person matters. If even one piece is missing, the picture may lose a little part of itself. Only together can we complete TAIWAN. ❤️🇹🇼
+                    </p>
+                  </>
+                )}
               </div>
             </div>
           </div>
@@ -3502,6 +3554,21 @@ export default function SeatMapPage() {
         <div className="mt-4 rounded-2xl border border-emerald-200 bg-emerald-50 p-4 text-sm leading-7 text-emerald-900">
           <strong>{isZh ? "備註：" : "Note:"}</strong>{isZh ? "排好座位後，可直接按上方「匯出 PNG」把目前的黑白座位圖存成圖片。" : "After creating your design, click Export PNG to save the current black-and-white seat map as an image."}
         </div>
+          <div className="mt-8 flex flex-wrap justify-center gap-3 border-t border-slate-200 pt-6">
+            <a
+              href="/"
+              className="inline-flex rounded-full bg-sky-800 px-5 py-3 text-sm font-black text-white shadow-sm transition hover:-translate-y-0.5 hover:bg-sky-700"
+            >
+              {isZh ? "回到 912 首頁" : "Back to 912 Home"}
+            </a>
+            <a
+              href="/912-guide"
+              className="inline-flex rounded-full bg-sky-700 px-5 py-3 text-sm font-black text-white shadow-sm transition hover:-translate-y-0.5 hover:bg-sky-600"
+            >
+              {isZh ? "回到懶人包" : "Back to Guide"}
+            </a>
+          </div>
+
       </section>
     </main>
   );
