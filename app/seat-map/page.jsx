@@ -1537,7 +1537,7 @@ function buildAllSeatIds() {
 
 // Official 9/12 shirt-color patterns.
 // First uploaded map = after the top of the 3rd inning (TAIWAN).
-// Second uploaded map = after the top of the 6th inning (RED SOX).
+// Second uploaded map = after the top of the 6th inning (TW ❤️ SOX).
 // Only black seats are listed here; every other valid seat is white.
 const inning3BlackSeats = {
   "L39": {
@@ -2107,6 +2107,7 @@ const inning3BlackSeats = {
 const inning6BlackSeats = {
   "L39": {
     "46": [
+      9,
       10,
       11,
       12,
@@ -2116,9 +2117,11 @@ const inning6BlackSeats = {
       16,
       17,
       18,
-      19
+      19,
+      20
     ],
     "45": [
+      8,
       9,
       10,
       11,
@@ -2132,104 +2135,65 @@ const inning6BlackSeats = {
       19
     ],
     "44": [
+      7,
       8,
       9,
       10,
       11,
+      12,
+      13,
+      14,
+      15,
       16,
       17,
       18
     ],
     "43": [
-      8,
-      9,
-      10,
-      11,
-      16,
-      17,
-      18
-    ],
-    "42": [
-      7,
-      8,
-      9,
-      10,
-      15,
-      16,
-      17
-    ],
-    "41": [
-      7,
-      8,
-      9,
-      10,
-      11,
-      12,
-      13,
-      14,
-      15,
-      16,
-      17
-    ],
-    "40": [
-      6,
-      7,
-      8,
-      9,
-      10,
-      11,
-      12,
-      13,
-      14,
-      15
-    ],
-    "39": [
-      5,
-      6,
-      7,
-      8,
-      9,
-      10,
       11,
       12,
       13,
       14
     ],
-    "38": [
-      5,
-      6,
-      7,
-      8,
+    "42": [
+      10,
       11,
       12,
-      13,
-      14,
-      15
+      13
+    ],
+    "41": [
+      10,
+      11,
+      12,
+      13
+    ],
+    "40": [
+      9,
+      10,
+      11,
+      12
+    ],
+    "39": [
+      8,
+      9,
+      10,
+      11
+    ],
+    "38": [
+      8,
+      9,
+      10,
+      11
     ],
     "37": [
-      4,
-      5,
-      6,
       7,
-      11,
-      12,
-      13,
-      14,
-      15
-    ],
-    "36": [
-      4,
-      5,
-      6,
-      7,
-      12,
-      13,
-      14,
-      15
+      8,
+      9,
+      10
     ]
   },
   "L41": {
-    "46": [
+    "38": [
+      1,
       2,
       3,
       4,
@@ -2239,25 +2203,55 @@ const inning6BlackSeats = {
       8,
       9,
       10,
-      14,
-      15,
+      11,
+      12,
+      18
+    ],
+    "39": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      17,
+      18,
+      19
+    ],
+    "40": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
       16,
       17,
       18,
       19,
       20
     ],
-    "45": [
+    "41": [
+      1,
       2,
       3,
-      4,
-      5,
       6,
       7,
-      8,
-      9,
       10,
-      14,
+      11,
+      12,
       15,
       16,
       17,
@@ -2266,10 +2260,15 @@ const inning6BlackSeats = {
       20,
       21
     ],
-    "44": [
+    "42": [
+      1,
       2,
       3,
-      4,
+      6,
+      7,
+      10,
+      11,
+      12,
       14,
       15,
       16,
@@ -2281,65 +2280,14 @@ const inning6BlackSeats = {
       22
     ],
     "43": [
+      1,
       2,
       3,
-      4,
-      14,
-      15,
-      16,
-      20,
-      21,
-      22
-    ],
-    "42": [
-      2,
-      3,
-      4,
-      5,
       6,
       7,
-      8,
-      9,
       10,
-      14,
-      15,
-      16,
-      20,
-      21,
-      22
-    ],
-    "41": [
-      2,
-      3,
-      4,
-      5,
-      6,
-      7,
-      8,
-      9,
-      10,
-      14,
-      15,
-      16,
-      20,
-      21,
-      22
-    ],
-    "40": [
-      2,
-      3,
-      4,
-      14,
-      15,
-      16,
-      20,
-      21,
-      22
-    ],
-    "39": [
-      2,
-      3,
-      4,
+      11,
+      12,
       14,
       15,
       16,
@@ -2350,214 +2298,60 @@ const inning6BlackSeats = {
       21,
       22
     ],
-    "38": [
+    "44": [
+      1,
       2,
       3,
-      4,
-      5,
       6,
       7,
-      8,
-      9,
       10,
+      11,
+      12,
       14,
       15,
       16,
       17,
       18,
       19,
+      20,
+      21,
+      22
+    ],
+    "45": [
+      1,
+      2,
+      3,
+      6,
+      7,
+      10,
+      11,
+      12,
+      14,
+      15,
+      16,
+      17,
+      19,
+      20,
+      21,
+      22
+    ],
+    "46": [
+      1,
+      2,
+      3,
+      6,
+      7,
+      10,
+      11,
+      12,
+      15,
+      16,
       20,
       21
-    ],
-    "37": [
-      2,
-      3,
-      4,
-      5,
-      6,
-      7,
-      8,
-      9,
-      10,
-      14,
-      15,
-      16,
-      17,
-      18,
-      19,
-      20
     ]
   },
   "L42": {
-    "46": [
-      2,
-      3,
-      4,
-      5,
-      6,
-      7,
-      8,
-      9,
-      10,
-      11,
-      15,
-      16,
-      17,
-      18,
-      19,
-      20,
-      21,
-      22,
-      23,
-      24
-    ],
-    "45": [
-      2,
-      3,
-      4,
-      5,
-      6,
-      7,
-      8,
-      9,
-      10,
-      11,
-      15,
-      16,
-      17,
-      18,
-      19,
-      20,
-      21,
-      22,
-      23,
-      24
-    ],
-    "44": [
-      2,
-      3,
-      4,
-      5,
-      6,
-      7,
-      8,
-      9,
-      10,
-      11,
-      15,
-      16,
-      17,
-      18,
-      19,
-      20,
-      21,
-      22,
-      23,
-      24
-    ],
-    "43": [
-      2,
-      3,
-      4,
-      5,
-      15,
-      16,
-      17,
-      22,
-      23,
-      24
-    ],
-    "42": [
-      2,
-      3,
-      4,
-      5,
-      15,
-      16,
-      17,
-      22,
-      23,
-      24
-    ],
-    "41": [
-      2,
-      3,
-      4,
-      5,
-      6,
-      7,
-      8,
-      9,
-      10,
-      11,
-      15,
-      16,
-      17,
-      22,
-      23,
-      24
-    ],
-    "40": [
-      2,
-      3,
-      4,
-      5,
-      6,
-      7,
-      8,
-      9,
-      10,
-      11,
-      15,
-      16,
-      17,
-      22,
-      23,
-      24
-    ],
-    "39": [
-      2,
-      3,
-      4,
-      5,
-      6,
-      7,
-      8,
-      9,
-      10,
-      11,
-      15,
-      16,
-      17,
-      22,
-      23,
-      24
-    ],
-    "38": [
-      8,
-      9,
-      10,
-      11,
-      15,
-      16,
-      17,
-      22,
-      23,
-      24
-    ],
-    "37": [
-      8,
-      9,
-      10,
-      11,
-      15,
-      16,
-      17,
-      22,
-      23,
-      24
-    ],
-    "36": [
+    "34": [
       2,
       3,
       4,
@@ -2601,7 +2395,175 @@ const inning6BlackSeats = {
       23,
       24
     ],
-    "34": [
+    "36": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24
+    ],
+    "37": [
+      8,
+      9,
+      10,
+      11,
+      15,
+      16,
+      17,
+      22,
+      23,
+      24
+    ],
+    "38": [
+      8,
+      9,
+      10,
+      11,
+      15,
+      16,
+      17,
+      22,
+      23,
+      24
+    ],
+    "39": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      15,
+      16,
+      17,
+      22,
+      23,
+      24
+    ],
+    "40": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      15,
+      16,
+      17,
+      22,
+      23,
+      24
+    ],
+    "41": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      15,
+      16,
+      17,
+      22,
+      23,
+      24
+    ],
+    "42": [
+      2,
+      3,
+      4,
+      5,
+      15,
+      16,
+      17,
+      22,
+      23,
+      24
+    ],
+    "43": [
+      2,
+      3,
+      4,
+      5,
+      15,
+      16,
+      17,
+      22,
+      23,
+      24
+    ],
+    "44": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24
+    ],
+    "45": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24
+    ],
+    "46": [
       2,
       3,
       4,
@@ -3166,65 +3128,85 @@ export default function SeatMapPage() {
 
           </div>
         </div>
-        <div className="mt-4 overflow-hidden rounded-[2rem] border border-rose-200 shadow-sm">
-          <div className="relative overflow-hidden rounded-[2rem] bg-gradient-to-br from-white via-rose-50 to-amber-50 p-6 md:p-8">
-            <div className="absolute -right-10 -top-10 h-32 w-32 rounded-full bg-rose-200/50 blur-3xl" />
-            <div className="absolute -left-8 bottom-0 h-28 w-28 rounded-full bg-amber-200/40 blur-3xl" />
+        <section className="mt-4 overflow-hidden rounded-[2rem] border border-rose-200 bg-white shadow-sm">
+          <div className="bg-gradient-to-br from-white via-rose-50 to-amber-50 p-6 md:p-8">
+            <div className="mx-auto max-w-5xl">
+              <p className="text-xs font-black uppercase tracking-[0.28em] text-rose-700">
+                {isZh ? "Light Up Taiwan Challenge｜排字活動說明" : "Light Up Taiwan Challenge｜Lettering Activity"}
+              </p>
 
-            <div className="relative">
-              <div className="inline-flex rounded-full border border-rose-200 bg-white/90 px-4 py-1.5 text-[11px] font-black uppercase tracking-[0.32em] text-rose-700 shadow-sm">
-                Light Up Taiwan Challenge
-              </div>
-
-              <h2 className="mt-4 text-3xl font-black leading-tight text-slate-950 md:text-5xl">
-                <span className="inline-block rounded-2xl bg-white px-4 py-2 shadow-sm ring-1 ring-rose-100">
-                  輕鬆參與
-                </span>
-                <span className="mx-2 text-rose-500">・</span>
-                <span className="inline-block rounded-2xl bg-amber-100/90 px-4 py-2 shadow-sm ring-1 ring-amber-200">
-                  開心一起玩！
-                </span>
+              <h2 className="mt-3 text-3xl font-black leading-tight text-slate-950 md:text-5xl">
+                {isZh ? "一起用黑白兩色，讓台灣在 Fenway 被看見" : "Use black and white to let Taiwan be seen at Fenway"}
               </h2>
 
-              <div className="mt-6 grid gap-4 md:grid-cols-[1.4fr_0.9fr]">
-                <div className="space-y-4 text-base font-bold leading-8 text-slate-700 md:text-lg">
-                  <p>
-                    <strong className="text-slate-950">這次的排字其實是一個不小的挑戰。</strong>
-                  </p>
-                  <p>
-                    因為我們的座位區並不是完整、方正的長方形，而且每一區、每一排的座位數量都不完全相同，所以實際排字的難度會比想像中高很多，最後呈現出來的效果，我們也無法百分之百預測。
-                  </p>
-                  <p>
-                    但既然有這麼多朋友難得一起聚在 Fenway，我們還是很想和大家一起試試看！
-                  </p>
-                  <p>
-                    其實，<strong className="text-rose-700">9/12 活動最主要的目標已經達成了</strong>——我們已經讓紅襪球團看見台灣社群的熱情、團結與凝聚力。這次的排字活動並不是一定要完成的任務，而更像是一個大家一起參與的小遊戲、小挑戰。
-                  </p>
-                  <p>
-                    我們只是希望趁著這麼多人難得聚在一起，一起做一件有趣的事情，留下一個屬於大家、也屬於 9/12 的共同回憶。
-                  </p>
-                </div>
+              <div className="mt-5 rounded-[1.5rem] border border-amber-200 bg-amber-50 p-5">
+                <p className="text-xl font-black text-amber-900">
+                  {isZh
+                    ? "我們已經成功讓紅襪球團看見台灣社群的力量，接下來想和大家一起挑戰："
+                    : "The Red Sox have already seen the strength of our Taiwanese community. Next, we want to take on one more challenge together:"}
+                </p>
+                <p className="mt-2 text-3xl font-black leading-tight text-emerald-800 md:text-5xl">
+                  Light Up Taiwan, Let Taiwan Be Seen!
+                </p>
+                <p className="mt-1 text-right text-xl font-black text-slate-900">
+                  {isZh ? "點亮台灣，讓台灣被看見！" : "Let Taiwan be seen!"}
+                </p>
+              </div>
 
-                <div className="rounded-[1.75rem] border border-amber-200 bg-white/85 p-5 shadow-sm backdrop-blur-sm">
-                  <p className="text-sm font-black uppercase tracking-[0.24em] text-amber-700">
-                    Friendly Reminder
+              <p className="mt-5 text-base font-bold leading-8 text-slate-700 md:text-lg">
+                {isZh
+                  ? "我們會利用 Fenway 現場的實際座位，以及白色活動 T-shirt 和黑色 Red Sox × Bruins Jersey，在兩個指定時間一起完成排字。"
+                  : "We will use the actual Fenway seating layout, the white event T-shirt, and the black Red Sox × Bruins Jersey to create two lettering moments during the game."}
+              </p>
+
+              <div className="mt-4 grid gap-3 md:grid-cols-2">
+                <div className="rounded-[1.25rem] border border-rose-200 bg-white p-5 shadow-sm">
+                  <p className="text-xs font-black uppercase tracking-[0.22em] text-rose-700">
+                    {isZh ? "第 3 局上結束後" : "After the top of the 3rd inning"}
                   </p>
-                  <p className="mt-4 text-xl font-black leading-8 text-amber-950 md:text-2xl">
-                    所以真的不用有任何壓力，成功了當然很棒；就算最後沒有百分之百完美，也完全沒關係。
-                  </p>
-                  <p className="mt-4 text-base font-black text-slate-700">
-                    最重要的是——
-                  </p>
-                  <div className="mt-3 rounded-2xl bg-gradient-to-r from-rose-600 to-pink-600 px-5 py-4 text-white shadow-sm">
-                    <p className="text-2xl font-black leading-9">
-                      大家一起參與、一起合作、一起玩得開心！ ❤️🇹🇼
-                    </p>
-                  </div>
+                  <p className="mt-2 text-3xl font-black text-slate-950">TAIWAN</p>
                 </div>
+                <div className="rounded-[1.25rem] border border-indigo-200 bg-white p-5 shadow-sm">
+                  <p className="text-xs font-black uppercase tracking-[0.22em] text-indigo-700">
+                    {isZh ? "第 6 局上結束後" : "After the top of the 6th inning"}
+                  </p>
+                  <p className="mt-2 text-3xl font-black text-slate-950">TW ❤️ SOX</p>
+                </div>
+              </div>
+
+              <div className="mt-5 grid gap-4 md:grid-cols-2">
+                <div className="rounded-[1.5rem] border border-slate-200 bg-white p-5 shadow-sm">
+                  <p className="text-lg font-black text-slate-950">
+                    {isZh ? "⚪ 白色活動 T-shirt" : "⚪ White event T-shirt"}
+                  </p>
+                  <p className="mt-2 leading-7 text-slate-700">
+                    {isZh
+                      ? "白色衣服為活動 T-shirt，請提前領取並於活動當天穿到 Fenway。"
+                      : "The white event T-shirt should be picked up in advance and worn to Fenway on game day."}
+                  </p>
+                </div>
+                <div className="rounded-[1.5rem] border border-slate-200 bg-white p-5 shadow-sm">
+                  <p className="text-lg font-black text-slate-950">
+                    {isZh ? "⚫ 黑色 Red Sox × Bruins Jersey" : "⚫ Black Red Sox × Bruins Jersey"}
+                  </p>
+                  <p className="mt-2 leading-7 text-slate-700">
+                    {isZh
+                      ? "黑色 Jersey 由紅襪球團在進場後發放。排字時請依照自己的座位查詢結果切換黑色或白色。"
+                      : "The black Jersey is distributed by the Red Sox after entry. During the lettering moments, follow your seat lookup result to switch between black and white."}
+                  </p>
+                </div>
+              </div>
+
+              <div className="mt-5 rounded-[1.25rem] border border-rose-200 bg-rose-50 px-5 py-4">
+                <p className="font-black leading-7 text-rose-900">
+                  {isZh
+                    ? "❤️ 輕鬆參與、開心一起玩！排字是一個大家共同完成的小挑戰，不需要有壓力；成功很棒，就算沒有百分之百完美也完全沒關係。"
+                    : "❤️ Relax and have fun! This is a community challenge, not a high-pressure task. If it works beautifully, great—and if it is not 100% perfect, that is completely okay."}
+                </p>
               </div>
             </div>
           </div>
-        </div>
+        </section>
 
         <section className="mt-4 rounded-[1.75rem] border border-sky-200 bg-white p-5 shadow-sm md:p-7">
           <div className="mx-auto max-w-5xl">
@@ -3283,7 +3265,7 @@ export default function SeatMapPage() {
               <div className="mt-4 grid gap-3 md:grid-cols-2">
                 {[
                   { inning: 3, title: "TAIWAN", color: lookupInning3 },
-                  { inning: 6, title: "RED SOX", color: lookupInning6 },
+                  { inning: 6, title: "TW ❤️ SOX", color: lookupInning6 },
                 ].map((item) => {
                   const isBlack = item.color === "black";
                   return (
@@ -3315,7 +3297,7 @@ export default function SeatMapPage() {
           </div>
         </section>
 
-        <section className="mt-4 rounded-[1.75rem] border border-amber-200 bg-white p-5 shadow-sm md:p-7">
+        <section id="reference" className="mt-4 rounded-[1.75rem] border border-amber-200 bg-white p-5 shadow-sm md:p-7">
           <div className="mb-4 flex flex-col gap-2 md:flex-row md:items-end md:justify-between">
             <div>
               <p className="text-xs font-black uppercase tracking-[0.22em] text-amber-700">
@@ -3355,12 +3337,12 @@ export default function SeatMapPage() {
                 <p className="text-xs font-black uppercase tracking-[0.2em] text-indigo-700">
                   {isZh ? "第 6 局上結束後" : "After the top of the 6th inning"}
                 </p>
-                <h3 className="mt-1 text-2xl font-black text-slate-950">RED SOX</h3>
+                <h3 className="mt-1 text-2xl font-black text-slate-950">TW ❤️ SOX</h3>
               </div>
-              <a href="/912-seat-map-inning-6.png" target="_blank" rel="noreferrer" className="block bg-white">
+              <a href="/912-seat-map-inning-6.jpg" target="_blank" rel="noreferrer" className="block bg-white">
                 <img
-                  src="/912-seat-map-inning-6.png"
-                  alt="912 Taiwan Fans Night sixth inning RED SOX seat pattern reference"
+                  src="/912-seat-map-inning-6.jpg"
+                  alt="912 Taiwan Fans Night 912 Taiwan Fans Night sixth inning TW ❤️ SOX seat pattern reference"
                   className="h-auto w-full"
                 />
               </a>
@@ -3371,281 +3353,36 @@ export default function SeatMapPage() {
           </div>
         </section>
 
-
-        {isZh ? (
-        <section className="mt-4 rounded-[1.75rem] border border-emerald-200 bg-white p-5 shadow-sm md:p-7">
-          <div className="mx-auto max-w-5xl">
-            <p className="text-xs font-black uppercase tracking-[0.25em] text-emerald-700">
-              排字活動說明
-            </p>
-            <h2 className="mt-2 text-2xl font-black leading-tight text-slate-950 md:text-3xl">
-              一起用黑白兩色，讓台灣在 Fenway 被看見
-            </h2>
-
-            <div className="mt-5 space-y-5 text-base leading-8 text-slate-700">
-              <p>
-                大家好，再次感謝大家對 9/12 活動的支持！
-              </p>
-
-              <p>
-                這次共有超過 <strong>1,300 位朋友</strong>購票參加，而且在距離活動還有一個半月時，我們就已經提前結束售票。相信大家和我們抱持著同樣的想法：希望用最實際的行動，讓紅襪球團看見台灣社群的團結與凝聚力。
-              </p>
-
-              <p>
-                我們也非常高興地向大家報告，第一階段的目標已經成功達成——<strong>紅襪官方已經注意到台灣社群所展現出的力量！</strong>
-              </p>
-
-              <div className="rounded-[1.5rem] border border-amber-200 bg-amber-50 p-5">
-                <p className="text-xl font-black leading-tight text-amber-900 md:text-2xl">
-                  接下來，我們想和大家一起挑戰下一個目標：
-                </p>
-                <p className="mt-3 text-3xl font-black leading-tight text-emerald-800 md:text-5xl">
-                  Light Up Taiwan, Let Taiwan Be Seen!
-                </p>
-                <p className="mt-2 text-xl font-black text-slate-900 md:text-2xl">
-                  點亮台灣，讓台灣被看見！
-                </p>
+        <div className="mt-6 overflow-hidden rounded-[2rem] border border-violet-200 bg-white shadow-sm">
+            <div className="bg-gradient-to-r from-violet-50 via-fuchsia-50 to-rose-50 px-5 py-5 md:px-7">
+              <div className="flex flex-wrap items-center gap-3">
+                <span className="inline-flex items-center rounded-full bg-violet-700 px-4 py-2 text-base font-black uppercase tracking-[0.16em] text-white md:text-lg">
+                  🎮 GAME MODE
+                </span>
+                <span className="text-xl font-black text-violet-800 md:text-2xl">排字小遊戲</span>
               </div>
 
-              <p>
-                這次我們希望利用現場的實際座位，以及黑色、白色兩種衣服，在 Fenway 觀眾席上一起排出大型文字。
-              </p>
-
-              <div className="grid gap-3 md:grid-cols-2">
-                <div className="rounded-[1.25rem] border border-slate-200 bg-slate-50 p-5">
-                  <p className="text-xs font-black uppercase tracking-[0.22em] text-slate-500">3 局上結束後</p>
-                  <p className="mt-2 text-3xl font-black text-slate-950">TAIWAN</p>
+              <div className="mt-3 flex flex-col gap-3 md:flex-row md:items-end md:justify-between">
+                <div>
+                  <h2 className="text-2xl font-black tracking-tight text-slate-950 md:text-3xl">
+                    你也可以自己來玩玩排字小遊戲
+                  </h2>
+                  <p className="mt-2 max-w-3xl leading-7 text-slate-700">
+                    想試試看不同的排字效果嗎？把座位切換成黑色或白色，自己排出想像中的應援文字！
+                  </p>
                 </div>
-                <div className="rounded-[1.25rem] border border-slate-200 bg-slate-50 p-5">
-                  <p className="text-xs font-black uppercase tracking-[0.22em] text-slate-500">6 局上結束後</p>
-                  <p className="mt-2 text-3xl font-black text-slate-950">RED SOX</p>
+                <div className="shrink-0 rounded-2xl border border-violet-200 bg-white px-4 py-3 text-sm font-black text-violet-900 shadow-sm">
+                  ▶ 點座位開始玩
                 </div>
               </div>
 
-              <div className="rounded-[1.5rem] border border-rose-200 bg-rose-50 p-5">
-                <p className="text-xl font-black text-rose-900">輕鬆參與，開心一起玩！</p>
-                <div className="mt-3 space-y-3 text-slate-700">
-                  <p>這次的排字其實是一個不小的挑戰。</p>
-                  <p>因為我們的座位區並不是完整、方正的長方形，而且每一區、每一排的座位數量都不完全相同，所以實際排字的難度會比想像中高很多，最後呈現出來的效果，我們也無法百分之百預測。</p>
-                  <p>但既然有這麼多朋友難得一起聚在 Fenway，我們還是很想和大家一起試試看！</p>
-                  <p>其實 9/12 活動最主要的目標已經達成了。這次排字更像是一個大家一起完成的小挑戰，希望留下屬於我們共同的回憶。</p>
-                  <p><strong>成功了當然很棒；就算沒有百分之百完美，也完全沒關係。</strong></p>
-                  <p className="font-black text-rose-900">一起參與、一起合作、一起玩得開心！ ❤️🇹🇼⚾</p>
-                </div>
-              </div>
-
-              <div>
-                <h3 className="text-2xl font-black text-slate-950">黑白兩件衣服怎麼使用？</h3>
-                <div className="mt-4 grid gap-4 md:grid-cols-2">
-                  <div className="rounded-[1.5rem] border border-slate-200 bg-white p-5 shadow-sm">
-                    <h4 className="text-xl font-black text-slate-950">白色衣服</h4>
-                    <p className="mt-3">
-                      白色衣服是這次特別製作的 <strong>9/12 活動 T-shirt</strong>。我們會陸續公布衣服的發放時間與地點，讓大家可以在活動前提前領取。也希望大家在活動當天，可以直接穿著白色活動衣進場。
-                    </p>
-                  </div>
-                  <div className="rounded-[1.5rem] border border-slate-200 bg-white p-5 shadow-sm">
-                    <h4 className="text-xl font-black text-slate-950">黑色衣服</h4>
-                    <p className="mt-3">
-                      黑色衣服則是大家進入球場時，由紅襪球團發送的 <strong>Red Sox × Bruins Jersey</strong>。
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              <div className="rounded-[1.5rem] border border-slate-200 bg-slate-50 p-5">
-                <p className="font-black text-slate-950">因此，活動當天每一位參加者都會有：</p>
-                <ul className="mt-3 list-disc space-y-2 pl-5 font-bold text-slate-800">
-                  <li>一件白色 9/12 活動 T-shirt</li>
-                  <li>一件黑色 Red Sox × Bruins Jersey</li>
-                </ul>
-                <p className="mt-4">我們會利用這兩種不同顏色的衣服，配合每個人的實際座位位置，一起完成排字。</p>
-              </div>
-
-              <div className="rounded-[1.5rem] border border-sky-200 bg-sky-50 p-5">
-                <h3 className="text-2xl font-black text-slate-950">排字方式</h3>
-                <p className="mt-3">我們會在比賽中的兩個指定時間進行排字。</p>
-
-                <div className="mt-4 grid gap-4 md:grid-cols-2">
-                  <div className="rounded-[1.25rem] border border-sky-200 bg-white p-4">
-                    <p className="text-sm font-black text-sky-700">第 3 局</p>
-                    <p className="mt-1 text-2xl font-black text-slate-950">TAIWAN</p>
-                    <p className="mt-2">大家依照自己的座位安排，穿上指定的黑色或白色衣服，一起排出第一組文字。</p>
-                  </div>
-                  <div className="rounded-[1.25rem] border border-sky-200 bg-white p-4">
-                    <p className="text-sm font-black text-sky-700">第 6 局</p>
-                    <p className="mt-1 text-2xl font-black text-slate-950">RED SOX</p>
-                    <p className="mt-2">到了第二個指定時間，部分朋友可能需要更換衣服顏色，再一起排出第二組文字。</p>
-                  </div>
-                </div>
-
-                <p className="mt-4">
-                  每個座位在第 3 局與第 6 局應該穿什麼顏色，都可以直接使用網站上的 <strong>「找到我的座位與換衣顏色」</strong>。
-                </p>
-                <p className="mt-3">
-                  輸入自己的 <strong>Section、Row、Seat</strong>，系統就會直接告訴你第 3 局與第 6 局應該穿黑色還是白色。
-                </p>
-              </div>
-
-              <div className="rounded-[1.5rem] border border-emerald-200 bg-emerald-50 p-5">
-                <h3 className="text-xl font-black text-emerald-900">我們希望一起完成</h3>
-                <div className="mt-4 grid gap-3 md:grid-cols-2">
-                  <div>
-                    <p className="text-sm font-black text-slate-600">3 局上結束後</p>
-                    <p className="mt-1 text-3xl font-black text-slate-950">TAIWAN</p>
-                  </div>
-                  <div>
-                    <p className="text-sm font-black text-slate-600">6 局上結束後</p>
-                    <p className="mt-1 text-3xl font-black text-slate-950">RED SOX</p>
-                  </div>
-                </div>
-              </div>
-
-              <div className="rounded-[1.5rem] bg-gradient-to-r from-emerald-900 to-sky-900 p-6 text-white">
-                <p className="text-2xl font-black leading-tight md:text-4xl">
-                  讓我們一起用台灣社群的力量點亮球場，讓更多人看見台灣！
-                </p>
-                <p className="mt-4 text-xl font-black leading-relaxed text-amber-300 md:text-3xl">
-                  Light Up Taiwan.<br />
-                  Let Taiwan Be Seen.<br />
-                  Together We Shine. 🇹🇼⚾
+              <div className="mt-4 rounded-xl border border-amber-200 bg-amber-50 px-4 py-3">
+                <p className="text-sm font-bold leading-6 text-amber-950">
+                  💡 這裡是互動小遊戲，不會影響正式排字安排。
                 </p>
               </div>
             </div>
-          </div>
-        </section>
-        ) : (
-        <section className="mt-4 rounded-[1.75rem] border border-emerald-200 bg-white p-5 shadow-sm md:p-7">
-          <div className="mx-auto max-w-5xl">
-            <p className="text-xs font-black uppercase tracking-[0.25em] text-emerald-700">
-              Lettering activity overview
-            </p>
-            <h2 className="mt-2 text-2xl font-black leading-tight text-slate-950 md:text-3xl">
-              Let’s use black and white to let Taiwan be seen at Fenway
-            </h2>
 
-            <div className="mt-5 space-y-5 text-base leading-8 text-slate-700">
-              <p>
-                Hello everyone, and thank you again for supporting the 9/12 event. This time, more than 1,300 friends purchased tickets, and ticket sales closed early with more than a month and a half still remaining before the event.
-              </p>
-
-              <p>
-                We believe everyone shares the same goal: to use real action to show the Red Sox organization the unity and strength of the Taiwanese community.
-              </p>
-
-              <p>
-                We are also very happy to share that we have successfully reached our first-stage goal — the Red Sox organization has already noticed the strength shown by the Taiwanese community.
-              </p>
-
-              <div className="rounded-[1.5rem] border border-amber-200 bg-amber-50 p-5">
-                <p className="text-xl font-black leading-tight text-amber-900 md:text-2xl">
-                  Next, we hope to challenge the next goal together:
-                </p>
-                <p className="mt-3 text-3xl font-black leading-tight text-emerald-800 md:text-5xl">
-                  Light Up Taiwan, Let Taiwan Be Seen!
-                </p>
-                <p className="mt-2 text-xl font-black text-slate-900 md:text-2xl">
-                  Let Taiwan be seen.
-                </p>
-              </div>
-
-              <p>
-                We plan to use the actual seats at Fenway, along with black and white shirts, to create large lettering in the stands. Our initial goal is to create two designs:
-              </p>
-
-              <div className="grid gap-3 md:grid-cols-2">
-                <div className="rounded-[1.25rem] border border-slate-200 bg-slate-50 p-5">
-                  <p className="text-xs font-black uppercase tracking-[0.22em] text-slate-500">After the top of the 3rd inning</p>
-                  <p className="mt-2 text-3xl font-black text-slate-950">TAIWAN</p>
-                </div>
-                <div className="rounded-[1.25rem] border border-slate-200 bg-slate-50 p-5">
-                  <p className="text-xs font-black uppercase tracking-[0.22em] text-slate-500">After the top of the 6th inning</p>
-                  <p className="mt-2 text-xl font-black text-slate-950">RED SOX</p>
-                </div>
-              </div>
-
-              <p>
-                We invite everyone to use this actual Seat Map to brainstorm and try using black and white seats to create letters that are clear, simple, and recognizable from a distance.
-              </p>
-
-              <div className="grid gap-4 md:grid-cols-2">
-                <div className="rounded-[1.5rem] border border-slate-200 bg-white p-5 shadow-sm">
-                  <h3 className="text-xl font-black text-slate-950">White shirt</h3>
-                  <p className="mt-3">
-                    The white shirt is the special 9/12 event shirt made for this activity. Pickup time and locations will be announced between mid-August and the end of August so everyone can pick up the shirt in advance. We hope attendees can wear the white event shirt directly to Fenway on event day.
-                  </p>
-                </div>
-                <div className="rounded-[1.5rem] border border-slate-200 bg-white p-5 text-slate-900 shadow-sm">
-                  <h3 className="text-xl font-black text-slate-950">Black shirt</h3>
-                  <p className="mt-3 text-slate-700">
-                    The black shirt is the Red Sox × Bruins Jersey distributed by the Red Sox when attendees enter the ballpark. Each attendee will have one white event shirt and one black Bruins Jersey.
-                  </p>
-                </div>
-              </div>
-
-              <p>
-                We will use these two shirt colors together with the actual seat locations to complete the live lettering activity.
-              </p>
-
-              <div className="rounded-[1.5rem] border border-sky-200 bg-sky-50 p-5">
-                <h3 className="text-xl font-black text-slate-950">How the lettering will work</h3>
-                <div className="mt-3 space-y-3">
-                  <p>
-                    We plan to choose two specific moments during the game for the lettering activity. During one moment, some seats will wear the white event shirt, while others will wear the black Bruins Jersey, together forming the first design.
-                  </p>
-                  <p>
-                    During the second moment, attendees may change shirt colors according to the arrangement to create a second design. The exact timing, which color each seat should wear, and how everyone should participate will be announced later.
-                  </p>
-                </div>
-              </div>
-
-              <p>
-                Honestly, this is a very difficult challenge. Our seating area is not a complete rectangle, and each section and row has a different number of seats. This makes the lettering much harder than it may seem.
-              </p>
-
-              <p>
-                We cannot fully predict the final result yet, but we still believe this is something worth trying together.
-              </p>
-
-              <div className="rounded-[1.5rem] border border-emerald-200 bg-emerald-50 p-5">
-                <h3 className="text-xl font-black text-emerald-900">We hope everyone can try designing:</h3>
-                <ol className="mt-3 list-decimal space-y-2 pl-5 font-bold text-slate-800">
-                  <li>TAIWAN</li>
-                  <li>RED SOX</li>
-                </ol>
-                <p className="mt-4">
-                  The second design is now RED SOX. The most important things are simple letter shapes, clear lines, and readability from far away.
-                </p>
-              </div>
-
-              <p>
-                After completing your design, please share the exported image and your idea with us. We will consider everyone’s creativity, the actual seat layout, readability from a distance, and feasibility for live execution.
-              </p>
-
-              <div className="rounded-[1.5rem] bg-gradient-to-r from-emerald-900 to-sky-900 p-6 text-white">
-                <p className="text-2xl font-black leading-tight md:text-4xl">
-                  Let’s use the strength of the Taiwanese community to light up the ballpark and let more people see Taiwan.
-                </p>
-                <p className="mt-4 text-xl font-black leading-relaxed text-amber-300 md:text-3xl">
-                  Light Up Taiwan.<br />
-                  Let Taiwan Be Seen.<br />
-                  Together We Shine.
-                </p>
-              </div>
-            </div>
-          </div>
-        </section>
-        )}
-
-        <div className="mt-10 rounded-[2rem] border border-sky-200 bg-gradient-to-r from-sky-50 via-white to-emerald-50 p-6 shadow-sm md:p-8">
-          <p className="text-xs font-black uppercase tracking-[0.28em] text-sky-700">
-            排字小遊戲
-          </p>
-          <h2 className="mt-2 text-3xl font-black leading-tight text-slate-950 md:text-4xl">
-            你也可以自己來玩玩排字小遊戲
-          </h2>
-          <p className="mt-4 max-w-4xl text-base font-bold leading-8 text-slate-700 md:text-lg">
-            想試試看不同的排字效果嗎？可以使用下面的工具，把座位切換成黑色或白色，自己排出想像中的應援文字。這裡是互動小遊戲，不會影響正式排字安排。
-          </p>
         </div>
 
         <div className="mt-4 grid gap-3 md:grid-cols-4">
@@ -3693,10 +3430,10 @@ export default function SeatMapPage() {
           </button>
           <button
             type="button"
-            onClick={() => loadOfficialPattern(inning6BlackSeatIds, isZh ? "第 6 局 RED SOX 排字" : "6th inning RED SOX pattern")}
+            onClick={() => loadOfficialPattern(inning6BlackSeatIds, isZh ? "第 6 局 TW ❤️ SOX 排字" : "6th inning TW ❤️ SOX pattern")}
             className="rounded-full bg-indigo-100 px-4 py-2.5 text-xs font-black text-indigo-900 shadow-sm transition hover:bg-indigo-200"
           >
-            {isZh ? "載入第 6 局 RED SOX" : "Load 6th inning RED SOX"}
+            {isZh ? "載入第 6 局 TW ❤️ SOX" : "Load 6th inning TW ❤️ SOX"}
           </button>
           <button type="button" onClick={clearAll} className="rounded-full bg-slate-100 px-4 py-2.5 text-xs font-black text-slate-800 shadow-sm transition hover:bg-slate-200">
             全部變白
