@@ -3505,6 +3505,7 @@ function GuideZh({ isZh, setIsZh }) {
                   <li>領取時需使用／出示<strong>當天的電子票</strong>。</li>
                   <li>成人尺寸提供 <strong>S–XL</strong>。</li>
                   <li>偏好尺寸採 <strong>first-come, first-served</strong> 方式發放，尺寸依現場供應為準，建議提早進場領取。</li>
+                  <li><strong>請不要太晚才去領取：</strong>紅襪球團可能會在比賽開始幾局後結束 Jersey 發放，因此強烈建議大家進場後就先前往指定地點領取。</li>
                   <li>排字時會依照座位安排，在白色活動 T-shirt 與黑色 Jersey 之間配合切換。</li>
                 </ul>
               </Card>
@@ -3867,6 +3868,7 @@ function GuideEn({ isZh, setIsZh }) {
                   <li>Use/present your <strong>game-day digital ticket</strong> to claim the jersey.</li>
                   <li>Adult sizes <strong>S–XL</strong> are available.</li>
                   <li>Preferred sizes are distributed on a <strong>first-come, first-served</strong> basis and are subject to availability, so arriving early is recommended.</li>
+                  <li><strong>Please do not wait too long to pick up your Jersey:</strong> the Red Sox may end Jersey distribution a few innings after the game begins, so we strongly recommend picking it up soon after entering the ballpark.</li>
                   <li>During the lettering activity, participants will switch between the white event T-shirt and black Jersey based on seat assignment.</li>
                 </ul>
               </Card>
