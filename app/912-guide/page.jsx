@@ -3444,7 +3444,7 @@ function GuideZh({ isZh, setIsZh }) {
                       </a>
                     </p>
                     <p className="mt-3 rounded-2xl bg-slate-50 p-4 font-bold leading-7 text-slate-800 ring-1 ring-slate-200">
-                      小提醒：此地點為戶外，發放點會在公園正中間附近，靠近 Sidney St。
+                      小提醒：此地點為戶外，發放點會在公園正中間附近，靠近 Sidney St。交通可搭乘 MBTA Red Line（紅線）。
                     </p>
                   </div>
                 </div>
