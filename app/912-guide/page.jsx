@@ -3026,6 +3026,9 @@ function SeatColorLookupZh() {
           <p className="mt-3 font-black leading-8 text-emerald-900">
             每一個人都很重要，少了任何一個位置，都可能讓畫面少了一小塊。只有大家一起，我們才能把 TAIWAN 完整地拼起來。❤️🇹🇼
           </p>
+          <p className="mt-4 rounded-xl bg-amber-50 px-4 py-3 font-bold leading-7 text-amber-950 ring-1 ring-amber-200">
+            👕 換衣服小提醒：建議大家直接穿著白色活動 T-shirt 進場。如果你的座位在指定時間需要換成黑色，直接把黑色 Red Sox × Bruins Jersey 套在白色 T-shirt 外面即可，不需要把白色衣服脫掉，會更方便也更快速。
+          </p>
         </div>
       </div>
 
@@ -3102,6 +3105,9 @@ function SeatColorLookupEn() {
           </p>
           <p className="mt-3 font-black leading-8 text-emerald-900">
             Every person matters. If even one piece is missing, the picture may lose a little part of itself. Only together can we complete TAIWAN. ❤️🇹🇼
+          </p>
+          <p className="mt-4 rounded-xl bg-amber-50 px-4 py-3 font-bold leading-7 text-amber-950 ring-1 ring-amber-200">
+            👕 Shirt-change tip: We recommend entering Fenway already wearing your white event T-shirt. If your seat needs to switch to black at the designated time, simply put the black Red Sox × Bruins Jersey on over your white T-shirt. There is no need to take the white shirt off, which makes the change easier and faster.
           </p>
         </div>
       </div>
@@ -3397,7 +3403,7 @@ function GuideZh({ isZh, setIsZh }) {
                   <p className="text-sm font-bold text-slate-600">10:30 AM – 4:30 PM｜Conference Room</p>
                 </div>
                 <div className="rounded-2xl bg-white p-4 ring-1 ring-emerald-200">
-                  <p className="font-black text-slate-950">9/9 Wed｜Tai Chi Acupuncture & Wellness Center</p>
+                  <p className="font-black text-slate-950">9/9 Wed｜Tai Chi Acupuncture & Wellness Center – Danvers location</p>
                   <p className="text-sm font-bold text-slate-600">4:00 PM – 7:00 PM｜Parking lot</p>
                 </div>
                 <div className="rounded-2xl bg-white p-4 ring-1 ring-emerald-200">
