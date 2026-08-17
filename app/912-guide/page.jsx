@@ -3156,19 +3156,19 @@ function GuideZh({ isZh, setIsZh }) {
                 <p className="mt-1.5 text-2xl font-black text-slate-950">Fenway Park</p>
                 <p className="text-sm font-bold text-slate-600">4 Jersey St, Boston, MA 02215</p>
               </Card>
-              <Card className="!p-4 border-teal-200 bg-teal-50">
-                <div className="flex items-center gap-3">
-                  <img
-                    src={organizerLogo}
-                    alt="波克萊台灣商會基金會 Logo"
-                    className="h-12 w-12 shrink-0 rounded-lg bg-white object-contain p-1 ring-1 ring-teal-200"
-                    onError={(e) => { e.currentTarget.style.display = "none"; }}
-                  />
+              <Card className="!p-4 border-slate-200 bg-white">
+                <div className="flex items-center justify-between gap-4">
                   <div className="min-w-0">
                     <p className="text-xs font-black uppercase tracking-[0.16em] text-teal-700">Organizer</p>
                     <p className="mt-1 text-sm font-black leading-tight text-slate-950">波克萊台灣商會基金會</p>
                     <p className="mt-1 text-xs font-bold leading-snug text-slate-600">Brookline Taiwanese Chamber Foundation</p>
                   </div>
+                  <img
+                    src={organizerLogo}
+                    alt="波克萊台灣商會基金會 Logo"
+                    className="h-12 w-12 shrink-0 rounded-lg bg-white object-contain p-1 ring-1 ring-slate-200"
+                    onError={(e) => { e.currentTarget.style.display = "none"; }}
+                  />
                 </div>
               </Card>
             </div>
@@ -3251,7 +3251,7 @@ function GuideZh({ isZh, setIsZh }) {
                   <div className="pb-2">
                     <div className="rounded-2xl border border-amber-200 bg-amber-50 px-4 py-3 shadow-sm">
                       <p className="text-lg font-black text-amber-900">比賽開始</p>
-                      <p className="mt-1.5 leading-7">比賽正式開始。建議大家在開賽前先完成進場、安檢與 Jersey 領取，以免錯過開球。</p>
+                      <p className="mt-1.5 leading-7">比賽正式開始。建議大家在開賽前先完成進場、安檢與 Jersey 領取。</p>
                     </div>
                   </div>
                 </div>
@@ -3665,19 +3665,19 @@ function GuideEn({ isZh, setIsZh }) {
                 <p className="mt-1.5 text-2xl font-black text-slate-950">Fenway Park</p>
                 <p className="text-sm font-bold text-slate-600">4 Jersey St, Boston, MA 02215</p>
               </Card>
-              <Card className="!p-4 border-teal-200 bg-teal-50">
-                <div className="flex items-center gap-3">
-                  <img
-                    src={organizerLogo}
-                    alt="Brookline Taiwanese Chamber Foundation logo"
-                    className="h-12 w-12 shrink-0 rounded-lg bg-white object-contain p-1 ring-1 ring-teal-200"
-                    onError={(e) => { e.currentTarget.style.display = "none"; }}
-                  />
+              <Card className="!p-4 border-slate-200 bg-white">
+                <div className="flex items-center justify-between gap-4">
                   <div className="min-w-0">
                     <p className="text-xs font-black uppercase tracking-[0.16em] text-teal-700">Organizer</p>
                     <p className="mt-1 text-sm font-black leading-tight text-slate-950">Brookline Taiwanese Chamber Foundation</p>
                     <p className="mt-1 text-xs font-bold leading-snug text-slate-600">波克萊台灣商會基金會</p>
                   </div>
+                  <img
+                    src={organizerLogo}
+                    alt="Brookline Taiwanese Chamber Foundation logo"
+                    className="h-12 w-12 shrink-0 rounded-lg bg-white object-contain p-1 ring-1 ring-slate-200"
+                    onError={(e) => { e.currentTarget.style.display = "none"; }}
+                  />
                 </div>
               </Card>
             </div>
@@ -3760,7 +3760,7 @@ function GuideEn({ isZh, setIsZh }) {
                   <div className="pb-2">
                     <div className="rounded-2xl border border-amber-200 bg-amber-50 px-4 py-3 shadow-sm">
                       <p className="text-lg font-black text-amber-900">Game starts</p>
-                      <p className="mt-1.5 leading-7">First pitch begins. We recommend entering the ballpark, clearing security, and picking up your Jersey before the game starts.</p>
+                      <p className="mt-1.5 leading-7">The game begins. We recommend completing entry, security, and Jersey pickup before the game starts.</p>
                     </div>
                   </div>
                 </div>
