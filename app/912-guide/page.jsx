@@ -2868,10 +2868,10 @@ function GuideSeatColorLookup({ isZh }) {
   function ResultCard({ inning, title, isBlack }) {
     return (
       <div
-        className={`rounded-[1.35rem] border p-5 shadow-sm ${
+        className={`p-4 ${
           isBlack
-            ? "border-slate-700 bg-slate-950 text-white"
-            : "border-slate-200 bg-white text-slate-950"
+            ? "bg-slate-950 text-white"
+            : "bg-transparent text-slate-950"
         }`}
       >
         <p
@@ -2982,7 +2982,7 @@ function GuideSeatColorLookup({ isZh }) {
           {section} · Row {row} · Seat {seatNumber}
         </div>
 
-        <div className="mt-3 grid gap-3 md:grid-cols-2">
+        <div className="mt-3 overflow-hidden rounded-[1.25rem] border border-slate-200 bg-white md:grid md:grid-cols-2 md:divide-x md:divide-slate-200">
           <ResultCard inning={3} title="TAIWAN" isBlack={inning3IsBlack} />
           <ResultCard inning={6} title="TW ❤️ SOX" isBlack={inning6IsBlack} />
         </div>
@@ -2995,38 +2995,30 @@ function GuideSeatColorLookup({ isZh }) {
 function SeatColorLookupZh() {
   return (
     <Section id="06" title="排字活動說明＋座位／衣服顏色查詢">
-      <Card className="border-rose-200 bg-rose-50">
+      <div className="px-1">
         <p className="text-xl font-black text-rose-900">輕鬆參與，開心一起玩！</p>
-        <p className="mt-3">
-          這次的排字其實是一個不小的挑戰。因為我們的座位區並不是完整、方正的長方形，而且每一區、每一排的座位數量都不完全相同，所以實際排字的難度會比想像中高很多，最後呈現出來的效果，我們也無法百分之百預測。
+        <p className="mt-3 leading-8 text-slate-700">
+          這次的排字是一個大家一起完成的小挑戰。因為座位區並不是完整、方正的長方形，而且每一區、每一排的座位數量都不完全相同，所以最後呈現出來的效果，我們也無法百分之百預測。
         </p>
-        <p className="mt-3">
-          但既然有這麼多朋友難得一起聚在 Fenway，我們還是很想和大家一起試試看！其實，<strong>9/12 活動最主要的目標已經達成了</strong>——我們已經讓紅襪球團看見台灣社群的熱情、團結與凝聚力。這次的排字活動並不是一定要完成的任務，而更像是一個大家一起參與的小遊戲、小挑戰。
+        <p className="mt-3 leading-8 text-slate-700">
+          9/12 活動最主要的目標已經達成了——我們已經讓紅襪球團看見台灣社群的熱情、團結與凝聚力。這次排字更像是一個大家一起參與的小遊戲、小挑戰，希望留下屬於我們共同的回憶。
         </p>
-        <p className="mt-3">
-          我們只是希望趁著這麼多人難得聚在一起，一起做一件有趣的事情，留下一個屬於大家、也屬於 9/12 的共同回憶。
+        <p className="mt-3 font-black text-rose-800">
+          最重要的是——大家一起參與、一起合作、一起玩得開心！ ❤️ TW⚾
         </p>
-        <div className="mt-4 rounded-[1.25rem] border border-amber-200 bg-amber-50 p-4">
-          <p className="font-black text-amber-950">
-            所以真的不用有任何壓力，成功了當然很棒；就算最後沒有百分之百完美，也完全沒關係。
-          </p>
-          <p className="mt-2 text-xl font-black text-rose-700">
-            最重要的是——大家一起參與、一起合作、一起玩得開心！ ❤️🇹🇼
-          </p>
-        </div>
-      </Card>
+      </div>
 
-      <div className="grid gap-4 md:grid-cols-2">
-        <Card>
-          <p className="text-sm font-black uppercase tracking-[0.22em] text-emerald-700">第 1 組排字</p>
-          <p className="mt-2 text-lg text-slate-700">第 3 局上結束後</p>
-          <p className="mt-2 text-3xl font-black text-slate-950">TAIWAN</p>
-        </Card>
-        <Card>
-          <p className="text-sm font-black uppercase tracking-[0.22em] text-sky-700">第 2 組排字</p>
-          <p className="mt-2 text-lg text-slate-700">6 局上結束後</p>
-          <p className="mt-2 text-3xl font-black text-slate-950">TW ❤️ SOX</p>
-        </Card>
+      <div className="grid gap-4 border-y border-slate-200 py-4 md:grid-cols-2">
+        <div className="md:border-r md:border-slate-200 md:pr-6">
+          <p className="text-xs font-black uppercase tracking-[0.22em] text-rose-700">第 1 組排字</p>
+          <p className="mt-1 text-sm font-bold text-slate-500">第 3 局上結束後</p>
+          <p className="mt-1 text-3xl font-black text-slate-950">TAIWAN</p>
+        </div>
+        <div className="md:pl-2">
+          <p className="text-xs font-black uppercase tracking-[0.22em] text-indigo-700">第 2 組排字</p>
+          <p className="mt-1 text-sm font-bold text-slate-500">第 6 局上結束後</p>
+          <p className="mt-1 text-3xl font-black text-slate-950">TW ❤️ SOX</p>
+        </div>
       </div>
 
       <GuideSeatColorLookup isZh={true} />
@@ -3059,18 +3051,18 @@ function SeatColorLookupZh() {
 function SeatColorLookupEn() {
   return (
     <Section id="06" title="Lettering activity overview + seat / shirt color lookup">
-      <Card className="border-rose-200 bg-rose-50">
+      <div className="px-1">
         <p className="text-xl font-black text-rose-900">Relax, join in, and have fun!</p>
-        <p className="mt-3">
-          This lettering activity is honestly a real challenge. Our seating area is not a perfect rectangle, and the number of seats in each section and each row is not exactly the same, so the actual execution is much harder than it may look.
+        <p className="mt-3 leading-8 text-slate-700">
+          This lettering activity is a fun community challenge. Because our seating area is not a perfect rectangle and every section and row has a different number of seats, we cannot predict the final result with 100% certainty.
         </p>
-        <p className="mt-3">
-          Still, since so many of us will be gathering at Fenway, we really want to give it a try together. The main goal of the 9/12 event has already been achieved — the Red Sox have already seen the passion, unity, and strength of the Taiwanese community. This lettering activity is more like a fun community challenge we can do together.
+        <p className="mt-3 leading-8 text-slate-700">
+          The main goal of the 9/12 event has already been achieved—we have shown the Red Sox the energy, unity, and strength of the Taiwanese community. This lettering activity is simply a fun challenge we can complete together and remember.
         </p>
-        <p className="mt-3 font-black text-slate-900">
-          It would be great if it works beautifully, but it is completely okay if it is not 100% perfect. The most important thing is to participate, cooperate, and have fun together! ❤️🇹🇼
+        <p className="mt-3 font-black text-rose-800">
+          Most importantly: join in, work together, and have fun! ❤️ TW⚾
         </p>
-      </Card>
+      </div>
 
       <div className="grid gap-4 md:grid-cols-2">
         <Card>
@@ -3379,7 +3371,7 @@ function GuideZh({ isZh, setIsZh }) {
             <div className="space-y-4">
               <Card className="border-slate-200 bg-white">
                 <div className="grid gap-4 md:grid-cols-[190px_1fr] md:items-start">
-                  <div className="rounded-2xl bg-emerald-700 p-4 text-white">
+                  <div className="rounded-2xl bg-emerald-100 p-4 text-emerald-950 ring-1 ring-emerald-200">
                     <p className="text-2xl font-black">8/28</p>
                     <p className="font-black">Friday</p>
                     <p className="mt-3 text-sm font-bold">10:30 AM – 4:30 PM</p>
@@ -3387,7 +3379,7 @@ function GuideZh({ isZh, setIsZh }) {
                   <div>
                     <p className="text-xl font-black text-slate-950">Newton｜波士頓華僑文教服務中心 — 小教室</p>
                     <p className="mt-2 font-bold text-slate-700">地址：90 Lincoln St, Newton Highlands, MA 02461</p>
-                    <p className="mt-3 rounded-2xl bg-emerald-50 p-4 font-bold leading-7 text-emerald-950 ring-1 ring-emerald-200">
+                    <p className="mt-3 rounded-2xl bg-slate-50 p-4 font-bold leading-7 text-slate-800 ring-1 ring-slate-200">
                       小提醒：衣服會在小教室發放。此地點也可以領取大小台灣國旗，數量有限！感謝僑教中心的支持！
                     </p>
                   </div>
@@ -3396,7 +3388,7 @@ function GuideZh({ isZh, setIsZh }) {
 
               <Card className="border-slate-200 bg-white">
                 <div className="grid gap-4 md:grid-cols-[190px_1fr] md:items-start">
-                  <div className="rounded-2xl bg-sky-700 p-4 text-white">
+                  <div className="rounded-2xl bg-emerald-100 p-4 text-emerald-950 ring-1 ring-emerald-200">
                     <p className="text-2xl font-black">8/29</p>
                     <p className="font-black">Saturday</p>
                     <p className="mt-3 text-sm font-bold">10:30 AM – 4:30 PM</p>
@@ -3404,11 +3396,11 @@ function GuideZh({ isZh, setIsZh }) {
                   <div>
                     <p className="text-xl font-black text-slate-950">Cambridge｜University Park Common</p>
                     <p className="mt-2">
-                      <a href="https://maps.app.goo.gl/AZhuec9yh3nJjep59" target="_blank" rel="noreferrer" className="font-black text-sky-800 underline underline-offset-4">
+                      <a href="https://maps.app.goo.gl/AZhuec9yh3nJjep59" target="_blank" rel="noreferrer" className="font-black text-emerald-700 underline underline-offset-4">
                         Google Maps 地點連結
                       </a>
                     </p>
-                    <p className="mt-3 rounded-2xl bg-sky-50 p-4 font-bold leading-7 text-sky-950 ring-1 ring-sky-200">
+                    <p className="mt-3 rounded-2xl bg-slate-50 p-4 font-bold leading-7 text-slate-800 ring-1 ring-slate-200">
                       小提醒：此地點為戶外，發放點會在公園正中間附近，靠近 Sidney St。
                     </p>
                   </div>
@@ -3417,7 +3409,7 @@ function GuideZh({ isZh, setIsZh }) {
 
               <Card className="border-slate-200 bg-white">
                 <div className="grid gap-4 md:grid-cols-[190px_1fr] md:items-start">
-                  <div className="rounded-2xl bg-indigo-700 p-4 text-white">
+                  <div className="rounded-2xl bg-emerald-100 p-4 text-emerald-950 ring-1 ring-emerald-200">
                     <p className="text-2xl font-black">8/30</p>
                     <p className="font-black">Sunday</p>
                     <p className="mt-3 text-sm font-bold">10:30 AM – 4:30 PM</p>
@@ -3425,7 +3417,7 @@ function GuideZh({ isZh, setIsZh }) {
                   <div>
                     <p className="text-xl font-black text-slate-950">Boston｜Northeastern Crossing — Conference Room</p>
                     <p className="mt-2 font-bold text-slate-700">地址：1175 Tremont St, Boston, MA 02120</p>
-                    <p className="mt-3 rounded-2xl bg-indigo-50 p-4 font-bold leading-7 text-indigo-950 ring-1 ring-indigo-200">
+                    <p className="mt-3 rounded-2xl bg-slate-50 p-4 font-bold leading-7 text-slate-800 ring-1 ring-slate-200">
                       小提醒：MBTA Orange Line（橘線）Ruggles Station 附近。
                     </p>
                   </div>
@@ -3434,7 +3426,7 @@ function GuideZh({ isZh, setIsZh }) {
 
               <Card className="border-slate-200 bg-white">
                 <div className="grid gap-4 md:grid-cols-[190px_1fr] md:items-start">
-                  <div className="rounded-2xl bg-amber-600 p-4 text-white">
+                  <div className="rounded-2xl bg-emerald-100 p-4 text-emerald-950 ring-1 ring-emerald-200">
                     <p className="text-2xl font-black">9/9</p>
                     <p className="font-black">Wednesday</p>
                     <p className="mt-3 text-sm font-bold">4:00 PM – 7:00 PM</p>
@@ -3442,7 +3434,7 @@ function GuideZh({ isZh, setIsZh }) {
                   <div>
                     <p className="text-xl font-black text-slate-950">Danvers｜Tai Chi Acupuncture & Wellness Center</p>
                     <p className="mt-2 font-bold text-slate-700">地址：2 Orchard Ln, Danvers, MA 01923</p>
-                    <p className="mt-3 rounded-2xl bg-amber-50 p-4 font-bold leading-7 text-amber-950 ring-1 ring-amber-200">
+                    <p className="mt-3 rounded-2xl bg-slate-50 p-4 font-bold leading-7 text-slate-800 ring-1 ring-slate-200">
                       小提醒：此地點為戶外，會在 parking lot 發放。
                     </p>
                   </div>
@@ -3451,7 +3443,7 @@ function GuideZh({ isZh, setIsZh }) {
 
               <Card className="border-slate-200 bg-white">
                 <div className="grid gap-4 md:grid-cols-[190px_1fr] md:items-start">
-                  <div className="rounded-2xl bg-rose-700 p-4 text-white">
+                  <div className="rounded-2xl bg-emerald-100 p-4 text-emerald-950 ring-1 ring-emerald-200">
                     <p className="text-2xl font-black">9/10</p>
                     <p className="font-black">Thursday</p>
                     <p className="mt-3 text-sm font-bold">3:00 PM – 6:00 PM</p>
@@ -3460,10 +3452,10 @@ function GuideZh({ isZh, setIsZh }) {
                     <p className="text-xl font-black text-slate-950">Cambridge｜Cafe Zing</p>
                     <p className="mt-2 font-bold text-slate-700">地址：25 White St, Cambridge, MA 02140</p>
                     <div className="mt-3 space-y-3">
-                      <p className="rounded-2xl bg-rose-50 p-4 font-bold leading-7 text-rose-950 ring-1 ring-rose-200">
+                      <p className="rounded-2xl bg-slate-50 p-4 font-bold leading-7 text-slate-800 ring-1 ring-slate-200">
                         交通／停車：最近的是 MBTA Red Line（紅線）Porter Station。Cafe Zing 旁邊也有兩小時免費停車。
                       </p>
-                      <p className="rounded-2xl bg-white p-4 font-bold leading-7 text-slate-800 ring-1 ring-rose-200">
+                      <p className="rounded-2xl bg-rose-50 p-4 font-bold leading-7 text-rose-900 ring-1 ring-rose-200">
                         影展提醒：<strong>8th Taiwan Film Festival of Boston</strong> 當天晚上 7:00 PM 在 Somerville Theatre 上映 HERO! HITO!《冠軍之路》。兩個地點相差不到 1 mile，可以領完衣服後一起去看。
                       </p>
                       <a
@@ -3481,7 +3473,7 @@ function GuideZh({ isZh, setIsZh }) {
 
               <Card className="border-slate-200 bg-white">
                 <div className="grid gap-4 md:grid-cols-[190px_1fr] md:items-start">
-                  <div className="rounded-2xl bg-emerald-700 p-4 text-white">
+                  <div className="rounded-2xl bg-emerald-100 p-4 text-emerald-950 ring-1 ring-emerald-200">
                     <p className="text-2xl font-black">9/11</p>
                     <p className="font-black">Friday</p>
                     <p className="mt-3 text-sm font-bold">10:30 AM – 4:30 PM</p>
@@ -3489,7 +3481,7 @@ function GuideZh({ isZh, setIsZh }) {
                   <div>
                     <p className="text-xl font-black text-slate-950">Newton｜波士頓華僑文教服務中心 — 小教室</p>
                     <p className="mt-2 font-bold text-slate-700">地址：90 Lincoln St, Newton Highlands, MA 02461</p>
-                    <p className="mt-3 rounded-2xl bg-emerald-50 p-4 font-bold leading-7 text-emerald-950 ring-1 ring-emerald-200">
+                    <p className="mt-3 rounded-2xl bg-slate-50 p-4 font-bold leading-7 text-slate-800 ring-1 ring-slate-200">
                       小提醒：衣服會在小教室發放。此地點也可以領取大小台灣國旗，數量有限！感謝僑教中心的支持！
                     </p>
                   </div>
@@ -3853,7 +3845,7 @@ function GuideEn({ isZh, setIsZh }) {
 
             <div className="space-y-4">
               <Card><p className="text-xl font-black">8/28 Friday｜Newton OCAC Center</p><p className="mt-1 font-bold">10:30 AM – 4:30 PM｜90 Lincoln St, Newton Highlands, MA 02461</p><p className="mt-2 text-slate-700">Small classroom. Taiwan flags will be available while supplies last.</p></Card>
-              <Card><p className="text-xl font-black">8/29 Saturday｜University Park Common, Cambridge</p><p className="mt-1"><a href="https://maps.app.goo.gl/AZhuec9yh3nJjep59" target="_blank" rel="noreferrer" className="font-black text-sky-800 underline underline-offset-4">Google Maps location</a></p><p className="mt-2 text-slate-700">Outdoor pickup near the center of the park, close to Sidney St.</p></Card>
+              <Card><p className="text-xl font-black">8/29 Saturday｜University Park Common, Cambridge</p><p className="mt-1"><a href="https://maps.app.goo.gl/AZhuec9yh3nJjep59" target="_blank" rel="noreferrer" className="font-black text-emerald-700 underline underline-offset-4">Google Maps location</a></p><p className="mt-2 text-slate-700">Outdoor pickup near the center of the park, close to Sidney St.</p></Card>
               <Card><p className="text-xl font-black">8/30 Sunday｜Northeastern Crossing — Conference Room</p><p className="mt-1 font-bold">10:30 AM – 4:30 PM｜1175 Tremont St, Boston, MA 02120</p><p className="mt-2 text-slate-700">Near Ruggles Station on the MBTA Orange Line.</p></Card>
               <Card><p className="text-xl font-black">9/9 Wednesday｜Tai Chi Acupuncture & Wellness Center, Danvers</p><p className="mt-1 font-bold">4:00 PM – 7:00 PM｜2 Orchard Ln, Danvers, MA 01923</p><p className="mt-2 text-slate-700">Outdoor pickup in the parking lot.</p></Card>
               <Card><p className="text-xl font-black">9/10 Thursday｜Cafe Zing</p><p className="mt-1 font-bold">3:00 PM – 6:00 PM｜25 White St, Cambridge, MA 02140</p><p className="mt-2 text-slate-700">Near Porter Station on the MBTA Red Line. Two-hour free parking is available nearby.</p><p className="mt-2 text-slate-700">The <strong>8th Taiwan Film Festival of Boston</strong> will screen HERO! HITO! at Somerville Theatre at 7:00 PM that evening.</p><a href="https://www.zeffy.com/en-US/ticketing/8th-taiwan-film-festival-of-boston" target="_blank" rel="noreferrer" className="mt-3 inline-flex rounded-full bg-rose-700 px-5 py-3 text-sm font-black text-white">HERO! HITO! ticket link</a></Card>
