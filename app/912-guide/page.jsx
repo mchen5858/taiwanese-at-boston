@@ -3377,8 +3377,25 @@ function GuideZh({ isZh, setIsZh }) {
                   白色衣服是由 <strong>波克萊台灣商會基金會</strong> 所贈送的 <strong>9/12 活動 T-shirt</strong>，請依照下方公布的發放時間與地點提前領取。
                 </p>
                 <ul className="mt-3 list-disc space-y-2 pl-5">
-                  <li>可本人領取，也可以請朋友代領。</li>
-                  <li>活動衣服不提供郵寄。</li>
+                  <li className="list-none">
+                    <div className="rounded-xl border border-amber-300 bg-amber-50 px-4 py-3">
+                      <p className="font-black text-amber-950">👥 朋友代領請注意</p>
+                      <p className="mt-1 leading-7 text-slate-800">
+                        可本人領取，也可以請朋友代領。若請朋友代領，請準備購票人的
+                        <strong> 姓名、Email、件數與 Size</strong>，並需與主辦單位手上的購票資料
+                        <strong>核對一致後</strong>，才可完成代領。
+                      </p>
+                    </div>
+                  </li>
+                  <li className="list-none">
+                    <div className="rounded-xl border border-sky-300 bg-sky-50 px-4 py-3">
+                      <p className="font-black text-sky-950">📦 需要郵寄也可以</p>
+                      <p className="mt-1 leading-7 text-slate-800">
+                        如無法到現場領取，我們可以協助郵寄；<strong>郵資須由收件人自行負擔</strong>。
+                        有需要郵寄的朋友，請與主辦單位聯絡。
+                      </p>
+                    </div>
+                  </li>
                   <li><strong>另外加購的活動衣服</strong>也請依照下方公布的相同發放地點與時間領取喔！</li>
                   <li>建議大家活動當天先穿著白色活動 T-shirt 到 Fenway。</li>
                 </ul>
@@ -3871,7 +3888,14 @@ function GuideEn({ isZh, setIsZh }) {
           </Section>
 
           <Section id="03" title="Event shirt pickup">
-            <p>Please pick up the white 9/12 event T-shirt at one of the listed pickup sessions. You may pick it up yourself or ask a friend to pick it up for you. Event shirts will not be mailed.</p>
+            <p>Please pick up the white 9/12 event T-shirt at one of the listed pickup sessions. You may pick it up yourself or ask a friend to pick it up for you. <span className="block rounded-xl border border-sky-300 bg-sky-50 px-4 py-3">
+                        <strong className="block text-sky-950">📦 Mailing Available</strong>
+                        <span className="mt-1 block leading-7 text-slate-800">
+                          If you are unable to pick up your shirts in person, we can assist with mailing.
+                          <strong> Shipping costs must be paid by the recipient.</strong>
+                          Please contact the organizer if you need this option.
+                        </span>
+                      </span></p>
 
             <div className="grid gap-4">
               <Card className="border-slate-200 bg-white">
