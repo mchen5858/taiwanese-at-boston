@@ -3609,6 +3609,7 @@ function GuideZh({ isZh, setIsZh }) {
                   <li>請記得下載 <strong>MLB Ballpark App</strong>，才能正常接收與查看你的電子票。請注意，是 <strong>MLB Ballpark App</strong>，不是一般的 <strong>MLB App</strong>。</li>
                   <li>接收電子票的 Email 有可能會跑到 <strong>Spam / Junk folder</strong> 裡，請大家也記得檢查垃圾郵件匣。</li>
                   <li>進場看球時，請直接打開手機裡的 <strong>MLB Ballpark App</strong>，顯示 App 內的電子票入場。請不要只使用截圖，截圖可能無法順利掃描入場。</li>
+                  <li>如果票券上顯示 <strong>Barcode Unavailable</strong> 或 <strong>Barcode will display at a later time</strong>，通常不用擔心。這代表票已經在你的帳戶裡，只是條碼尚未開放顯示，接近比賽日時通常就會出現。</li>
                   <li>如果你的手機有開啟 <strong>VPN</strong>，有可能會無法正常看到電子票。若 App 裡看不到票，建議先關閉 VPN，重新開啟 <strong>MLB Ballpark App</strong> 後再查看。</li>
                 </ul>
               </div>
@@ -4064,6 +4065,7 @@ function GuideEn({ isZh, setIsZh }) {
                   <li>Please download the <strong>MLB Ballpark App</strong> so you can properly receive and view your tickets. Please note that this is the <strong>MLB Ballpark App</strong>, not the general <strong>MLB App</strong>.</li>
                   <li>The email for accepting your digital tickets may go to your <strong>Spam / Junk folder</strong>, so please remember to check there as well.</li>
                   <li>When entering the ballpark, please open the <strong>MLB Ballpark App</strong> on your phone and show the digital ticket inside the app. Please do not rely only on a screenshot, as screenshots may not scan properly at the gate.</li>
+                  <li>If your ticket shows <strong>Barcode Unavailable</strong> or <strong>Barcode will display at a later time</strong>, it is usually not a concern. This means the ticket is already in your account, but the barcode is not yet available. It will usually appear closer to game day.</li>
                   <li>If <strong>VPN</strong> is turned on on your phone, your digital tickets may not display properly. If you cannot see your tickets in the app, please turn off VPN, reopen the <strong>MLB Ballpark App</strong>, and check again.</li>
                 </ul>
               </div>
