@@ -3603,14 +3603,14 @@ function GuideZh({ isZh, setIsZh }) {
                 感謝我們的波克萊活動與志工群的協助，所有 912 電子票已經在 <strong>8 月 22 日</strong> 全部發送出去了。
                 請大家檢查自己的 Email，並接受你的電子票。
               </p>
-              <p className="mt-3 rounded-2xl bg-white p-4 font-bold leading-7 text-emerald-950 ring-1 ring-emerald-200">
-                友善提醒：請記得下載 <strong>MLB Ballpark App</strong>，才能正常接收與查看你的電子票。
-                請注意，是 <strong>MLB Ballpark App</strong>，不是一般的 <strong>MLB App</strong>。
-              </p>
-              <p className="mt-3 rounded-2xl bg-amber-50 p-4 font-bold leading-7 text-amber-950 ring-1 ring-amber-200">
-                友善提醒：進場看球時，請直接打開手機裡的 <strong>MLB Ballpark App</strong>，顯示 App 內的電子票入場。
-                請不要只使用截圖，截圖可能無法順利掃描入場。
-              </p>
+              <div className="mt-3 rounded-2xl bg-white p-4 font-bold leading-7 text-emerald-950 ring-1 ring-emerald-200">
+                <p className="font-black">友善提醒：電子票使用注意事項</p>
+                <ul className="mt-2 list-disc space-y-2 pl-5">
+                  <li>請記得下載 <strong>MLB Ballpark App</strong>，才能正常接收與查看你的電子票。請注意，是 <strong>MLB Ballpark App</strong>，不是一般的 <strong>MLB App</strong>。</li>
+                  <li>進場看球時，請直接打開手機裡的 <strong>MLB Ballpark App</strong>，顯示 App 內的電子票入場。請不要只使用截圖，截圖可能無法順利掃描入場。</li>
+                  <li>如果你的手機有開啟 <strong>VPN</strong>，有可能會無法正常看到電子票。若 App 裡看不到票，建議先關閉 VPN，重新開啟 <strong>MLB Ballpark App</strong> 後再查看。</li>
+                </ul>
+              </div>
               <div className="mt-5 grid gap-5 md:grid-cols-2">
                 <Card className="border-emerald-100 bg-slate-50">
                   <div className="grid gap-4 sm:grid-cols-[4rem_1fr]">
@@ -4057,14 +4057,14 @@ function GuideEn({ isZh, setIsZh }) {
                 With the help of our Brookline event team and volunteers, all 912 digital tickets were sent out on <strong>August 22</strong>.
                 Please check your email and accept your digital tickets.
               </p>
-              <p className="mt-3 rounded-2xl bg-white p-4 font-bold leading-7 text-emerald-950 ring-1 ring-emerald-200">
-                Friendly reminder: Please download the <strong>MLB Ballpark App</strong> so you can properly receive and view your tickets.
-                Please note that this is the <strong>MLB Ballpark App</strong>, not the general <strong>MLB App</strong>.
-              </p>
-              <p className="mt-3 rounded-2xl bg-amber-50 p-4 font-bold leading-7 text-amber-950 ring-1 ring-amber-200">
-                Friendly reminder: When entering the ballpark, please open the <strong>MLB Ballpark App</strong> on your phone and show the digital ticket inside the app.
-                Please do not rely only on a screenshot, as screenshots may not scan properly at the gate.
-              </p>
+              <div className="mt-3 rounded-2xl bg-white p-4 font-bold leading-7 text-emerald-950 ring-1 ring-emerald-200">
+                <p className="font-black">Friendly reminder: Digital ticket notes</p>
+                <ul className="mt-2 list-disc space-y-2 pl-5">
+                  <li>Please download the <strong>MLB Ballpark App</strong> so you can properly receive and view your tickets. Please note that this is the <strong>MLB Ballpark App</strong>, not the general <strong>MLB App</strong>.</li>
+                  <li>When entering the ballpark, please open the <strong>MLB Ballpark App</strong> on your phone and show the digital ticket inside the app. Please do not rely only on a screenshot, as screenshots may not scan properly at the gate.</li>
+                  <li>If <strong>VPN</strong> is turned on on your phone, your digital tickets may not display properly. If you cannot see your tickets in the app, please turn off VPN, reopen the <strong>MLB Ballpark App</strong>, and check again.</li>
+                </ul>
+              </div>
               <div className="mt-5 grid gap-5 md:grid-cols-2">
                 <Card className="border-emerald-100 bg-slate-50">
                   <div className="grid gap-4 sm:grid-cols-[4rem_1fr]">
