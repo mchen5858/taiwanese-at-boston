@@ -3607,6 +3607,10 @@ function GuideZh({ isZh, setIsZh }) {
                 友善提醒：請記得下載 <strong>MLB Ballpark App</strong>，才能正常接收與查看你的電子票。
                 請注意，是 <strong>MLB Ballpark App</strong>，不是一般的 <strong>MLB App</strong>。
               </p>
+              <p className="mt-3 rounded-2xl bg-amber-50 p-4 font-bold leading-7 text-amber-950 ring-1 ring-amber-200">
+                友善提醒：進場看球時，請直接打開手機裡的 <strong>MLB Ballpark App</strong>，顯示 App 內的電子票入場。
+                請不要只使用截圖，截圖可能無法順利掃描入場。
+              </p>
               <div className="mt-5 grid gap-5 md:grid-cols-2">
                 <Card className="border-emerald-100 bg-slate-50">
                   <div className="grid gap-4 sm:grid-cols-[4rem_1fr]">
@@ -4056,6 +4060,10 @@ function GuideEn({ isZh, setIsZh }) {
               <p className="mt-3 rounded-2xl bg-white p-4 font-bold leading-7 text-emerald-950 ring-1 ring-emerald-200">
                 Friendly reminder: Please download the <strong>MLB Ballpark App</strong> so you can properly receive and view your tickets.
                 Please note that this is the <strong>MLB Ballpark App</strong>, not the general <strong>MLB App</strong>.
+              </p>
+              <p className="mt-3 rounded-2xl bg-amber-50 p-4 font-bold leading-7 text-amber-950 ring-1 ring-amber-200">
+                Friendly reminder: When entering the ballpark, please open the <strong>MLB Ballpark App</strong> on your phone and show the digital ticket inside the app.
+                Please do not rely only on a screenshot, as screenshots may not scan properly at the gate.
               </p>
               <div className="mt-5 grid gap-5 md:grid-cols-2">
                 <Card className="border-emerald-100 bg-slate-50">
