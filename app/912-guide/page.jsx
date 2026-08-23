@@ -3412,12 +3412,16 @@ function GuideZh({ isZh, setIsZh }) {
                   <p className="text-sm font-bold text-slate-600">10:30 AM – 4:30 PM｜小教室</p>
                 </div>
                 <div className="rounded-2xl bg-white p-4 ring-1 ring-emerald-200">
-                  <p className="font-black text-slate-950">8/29 Sat｜Cambridge University Park</p>
-                  <p className="text-sm font-bold text-slate-600">10:30 AM – 4:30 PM｜戶外</p>
+                  <p className="font-black text-slate-950">8/29 Sat｜Formosa Bun & Dumpling Factory</p>
+                  <p className="text-sm font-bold text-slate-600">11:30 AM – 5:00 PM｜Green Line｜鄰近Newton Centre 站</p>
                 </div>
                 <div className="rounded-2xl bg-white p-4 ring-1 ring-emerald-200">
                   <p className="font-black text-slate-950">8/30 Sun｜Northeastern Crossing</p>
-                  <p className="text-sm font-bold text-slate-600">10:30 AM – 4:30 PM｜Conference Room</p>
+                  <p className="text-sm font-bold text-slate-600">11:30 AM – 5:00 PM｜Orange Line｜Conference Room</p>
+                </div>
+                <div className="rounded-2xl bg-white p-4 ring-1 ring-emerald-200">
+                  <p className="font-black text-slate-950">9/5 Sat｜Andover 貢茶</p>
+                  <p className="text-sm font-bold text-slate-600">2:00 PM – 6:00 PM｜2 Elm Ct, Andover, MA 01810</p>
                 </div>
                 <div className="rounded-2xl bg-white p-4 ring-1 ring-emerald-200">
                   <p className="font-black text-slate-950">9/9 Wed｜Tai Chi Acupuncture & Wellness Center – Danvers location</p>
@@ -3425,11 +3429,11 @@ function GuideZh({ isZh, setIsZh }) {
                 </div>
                 <div className="rounded-2xl bg-white p-4 ring-1 ring-emerald-200">
                   <p className="font-black text-slate-950">9/10 Thu｜Cafe Zing</p>
-                  <p className="text-sm font-bold text-slate-600">3:00 PM – 6:00 PM｜Porter Station 附近</p>
+                  <p className="text-sm font-bold text-slate-600">3:00 PM – 6:00 PM｜Red Line｜Porter Station 附近</p>
                 </div>
                 <div className="rounded-2xl bg-white p-4 ring-1 ring-emerald-200">
                   <p className="font-black text-slate-950">9/11 Fri｜Newton 僑教中心</p>
-                  <p className="text-sm font-bold text-slate-600">10:30 AM – 4:30 PM｜小教室</p>
+                  <p className="text-sm font-bold text-slate-600">11:30 AM – 5:00 PM｜小教室</p>
                 </div>
               </div>
             </Card>
@@ -3440,7 +3444,7 @@ function GuideZh({ isZh, setIsZh }) {
                   <div className="rounded-2xl bg-emerald-100 p-4 text-emerald-950 ring-1 ring-emerald-200">
                     <p className="text-2xl font-black">8/28</p>
                     <p className="font-black">Friday</p>
-                    <p className="mt-3 text-sm font-bold">10:30 AM – 4:30 PM</p>
+                    <p className="mt-3 text-sm font-bold">11:30 AM – 5:00 PM</p>
                   </div>
                   <div>
                     <p className="text-xl font-black text-slate-950">Newton｜波士頓華僑文教服務中心 — 小教室</p>
@@ -3457,17 +3461,13 @@ function GuideZh({ isZh, setIsZh }) {
                   <div className="rounded-2xl bg-emerald-100 p-4 text-emerald-950 ring-1 ring-emerald-200">
                     <p className="text-2xl font-black">8/29</p>
                     <p className="font-black">Saturday</p>
-                    <p className="mt-3 text-sm font-bold">10:30 AM – 4:30 PM</p>
+                    <p className="mt-3 text-sm font-bold">11:30 AM – 5:00 PM</p>
                   </div>
                   <div>
-                    <p className="text-xl font-black text-slate-950">Cambridge｜University Park Common</p>
-                    <p className="mt-2">
-                      <a href="https://maps.app.goo.gl/AZhuec9yh3nJjep59" target="_blank" rel="noreferrer" className="font-black text-emerald-700 underline underline-offset-4">
-                        Google Maps 地點連結
-                      </a>
-                    </p>
+                    <p className="text-xl font-black text-slate-950">Newton｜Formosa Bun & Dumpling Factory</p>
+                    <p className="mt-2 font-bold text-slate-700">地址：740A Beacon St, Newton Centre, MA 02459</p>
                     <p className="mt-3 rounded-2xl bg-slate-50 p-4 font-bold leading-7 text-slate-800 ring-1 ring-slate-200">
-                      小提醒：此地點為戶外，發放點會在公園正中間附近，靠近 Sidney St。交通可搭乘 MBTA Red Line（紅線）。
+                      小提醒：可搭乘 MBTA Green Line（綠線），鄰近 Newton Centre 站。歡迎大家順便來外帶喔!!
                     </p>
                   </div>
                 </div>
@@ -3484,8 +3484,27 @@ function GuideZh({ isZh, setIsZh }) {
                     <p className="text-xl font-black text-slate-950">Boston｜Northeastern Crossing — Conference Room</p>
                     <p className="mt-2 font-bold text-slate-700">地址：1175 Tremont St, Boston, MA 02120</p>
                     <p className="mt-3 rounded-2xl bg-slate-50 p-4 font-bold leading-7 text-slate-800 ring-1 ring-slate-200">
-                      小提醒：MBTA Orange Line（橘線）Ruggles Station 附近。
+                      小提醒：MBTA Orange Line（橘線），Ruggles Station 附近。
                     </p>
+                  </div>
+                </div>
+              </Card>
+
+              <Card className="border-slate-200 bg-white">
+                <div className="grid gap-4 md:grid-cols-[190px_1fr] md:items-start">
+                  <div className="rounded-2xl bg-emerald-100 p-4 text-emerald-950 ring-1 ring-emerald-200">
+                    <p className="text-2xl font-black">9/5</p>
+                    <p className="font-black">Saturday</p>
+                    <p className="mt-3 text-sm font-bold">2:00 PM – 6:00 PM</p>
+                  </div>
+                  <div>
+                    <p className="text-xl font-black text-slate-950">Andover｜貢茶</p>
+                    <p className="mt-3 font-bold text-slate-700">地址：2 Elm Ct, Andover, MA 01810</p>
+                    <div className="mt-4 rounded-2xl border border-slate-200 bg-slate-50 p-4">
+                      <p className="font-black leading-7 text-slate-800">
+                        小提醒：歡迎大家一起來支持台灣人所經營的 Andover 貢茶喔！
+                      </p>
+                    </div>
                   </div>
                 </div>
               </Card>
@@ -3578,13 +3597,57 @@ function GuideZh({ isZh, setIsZh }) {
             </div>
           </Section>
 
-          <Section id="05" title="電子票領取方式">
-            <div className="rounded-[1.25rem] border border-amber-300 bg-amber-50 px-5 py-4 shadow-sm">
-              <p className="text-lg font-black leading-8 text-amber-950">
-                🎟️ 電子票預計於 <strong className="text-rose-700">8 月 22 日開始發放</strong>，並在<strong className="text-rose-700">當天全部發送完畢</strong>。
+          <Section id="05" title="電子票領取方式"><Card className="border-emerald-200 bg-emerald-50">
+              <p className="text-xl font-black text-emerald-900">電子票已全部發送完成</p>
+              <p className="mt-3">
+                感謝我們的波克萊活動與志工群的協助，所有 912 電子票已經在 <strong>8 月 22 日</strong> 全部發送出去了。
+                請大家檢查自己的 Email，並接受你的電子票。
               </p>
-            </div>
-            <ol className="list-decimal space-y-3 pl-6 marker:font-black marker:text-slate-500">
+              <p className="mt-3 rounded-2xl bg-white p-4 font-bold leading-7 text-emerald-950 ring-1 ring-emerald-200">
+                友善提醒：請記得下載 <strong>MLB Ballpark App</strong>，才能正常接收與查看你的電子票。
+                請注意，是 <strong>MLB Ballpark App</strong>，不是一般的 <strong>MLB App</strong>。
+              </p>
+              <div className="mt-5 grid gap-5 md:grid-cols-2">
+                <Card className="border-emerald-100 bg-slate-50">
+                  <div className="grid gap-4 sm:grid-cols-[4rem_1fr]">
+                    <div className="text-4xl leading-none">✅</div>
+                    <div>
+                      <p className="text-2xl font-black text-emerald-900">請下載這個</p>
+                      <p className="mt-2 text-xl font-black text-slate-950">MLB Ballpark App</p>
+                      <p className="mt-2 font-bold leading-7 text-slate-600">綠色 Ballpark 圖示，App 名稱是 MLB Ballpark。</p>
+                      <div className="mx-auto mt-5 w-fit rounded-[1.5rem] border border-slate-200 bg-white p-4 text-center shadow-sm">
+                        <img
+                          src="/912-mlb-ballpark-app-icon.png"
+                          alt="MLB Ballpark App icon"
+                          className="h-44 w-44 rounded-2xl object-contain"
+                        />
+                        <p className="mt-4 text-sm font-black text-slate-700">正確：MLB Ballpark App</p>
+                      </div>
+                    </div>
+                  </div>
+                </Card>
+
+                <Card className="border-rose-100 bg-slate-50">
+                  <div className="grid gap-4 sm:grid-cols-[4rem_1fr]">
+                    <div className="text-4xl leading-none">❌</div>
+                    <div>
+                      <p className="text-2xl font-black text-rose-900">不要下載這個</p>
+                      <p className="mt-2 text-xl font-black text-slate-950">MLB App</p>
+                      <p className="mt-2 font-bold leading-7 text-slate-600">藍色 MLB 圖示，這不是電子票使用的 App。</p>
+                      <div className="mx-auto mt-5 w-fit rounded-[1.5rem] border border-slate-200 bg-white p-4 text-center shadow-sm">
+                        <img
+                          src="/912-mlb-app-icon.png"
+                          alt="MLB App icon"
+                          className="h-44 w-44 rounded-2xl object-contain"
+                        />
+                        <p className="mt-4 text-sm font-black text-slate-700">錯誤：MLB App</p>
+                      </div>
+                    </div>
+                  </div>
+                </Card>
+              </div>
+            </Card>
+<ol className="list-decimal space-y-3 pl-6 marker:font-black marker:text-slate-500">
               <li><strong>下載 MLB Ballpark App：</strong>請下載 <strong>MLB Ballpark App</strong>，不是一般的 MLB App。</li>
               <li><strong>註冊或登入 MLB 帳號：</strong>Email 請務必與 <strong>購買 912 活動票券時填寫的 Email</strong> 相同。若 Email 不相同，請務必聯絡主辦單位（波克萊基金會）協助更改 Email，避免後續無法順利收到或接受電子票。</li>
               <li><strong>收到轉票 Email：</strong>收到 Red Sox ticket email 後，請點選 <strong>Access Tickets</strong>。</li>
@@ -3602,6 +3665,29 @@ function GuideZh({ isZh, setIsZh }) {
                 如果有任何電子票相關問題，除了可以聯絡主辦單位之外，也可以在<strong>領取活動衣服時</strong>，請現場志工協助喔！
               </p>
             </Card>
+            <Card className="border-slate-200 bg-slate-50">
+              <p className="font-black text-slate-900">🎫 無法到場、想轉售票券？</p>
+              <p className="mt-2">
+                如果有人臨時無法去看比賽，願意將自己購買的票轉售，歡迎聯絡主辦單位，並加入 <strong>912 LINE 群</strong>。
+                目前 LINE 群裡還有不少朋友正在詢問是否有票可以購買，主辦單位也可以協助大家彼此聯繫。
+              </p>
+            </Card>
+            <Card className="overflow-hidden border-slate-200 bg-white">
+              <img
+                src="/912-ticket-volunteer-team.jpg"
+                alt="波克萊活動與志工群協助配置與發送 1325 張電子票"
+                className="w-full rounded-2xl object-cover"
+                onError={(e) => { e.currentTarget.style.display = "none"; }}
+              />
+              <div className="mt-4">
+                <p className="text-lg font-black text-slate-900">波克萊活動與志工群票務作業紀錄</p>
+                <p className="mt-2 leading-7 text-slate-700">
+                  感謝我們的波克萊活動與志工群協助配置並發送 <strong>1,325 張</strong> 912 電子票。
+                  這張照片記錄了大家一起整理、核對與發送票券的過程。
+                </p>
+              </div>
+            </Card>
+
           </Section>
           <SeatColorLookupZh />
 
@@ -3912,18 +3998,28 @@ function GuideEn({ isZh, setIsZh }) {
               <p className="text-lg font-black text-emerald-900">Quick pickup overview</p>
               <div className="mt-4 grid gap-3 md:grid-cols-2">
                 <div className="rounded-2xl bg-white p-4 ring-1 ring-emerald-200"><p className="font-black">8/28 Fri｜Newton OCAC Center</p><p className="text-sm font-bold text-slate-600">10:30 AM – 4:30 PM｜Small Classroom</p></div>
-                <div className="rounded-2xl bg-white p-4 ring-1 ring-emerald-200"><p className="font-black">8/29 Sat｜University Park Common</p><p className="text-sm font-bold text-slate-600">10:30 AM – 4:30 PM｜Outdoor</p></div>
-                <div className="rounded-2xl bg-white p-4 ring-1 ring-emerald-200"><p className="font-black">8/30 Sun｜Northeastern Crossing</p><p className="text-sm font-bold text-slate-600">10:30 AM – 4:30 PM｜Conference Room</p></div>
+                <div className="rounded-2xl bg-white p-4 ring-1 ring-emerald-200"><p className="font-black">8/29 Sat｜Formosa Bun & Dumpling Factory</p><p className="text-sm font-bold text-slate-600">11:30 AM – 5:00 PM｜Green Line｜Near Newton Centre Station</p></div>
+                <div className="rounded-2xl bg-white p-4 ring-1 ring-emerald-200"><p className="font-black">8/30 Sun｜Northeastern Crossing</p><p className="text-sm font-bold text-slate-600">10:30 AM – 4:30 PM｜Orange Line｜Conference Room</p></div>
+                <div className="rounded-2xl bg-white p-4 ring-1 ring-emerald-200"><p className="font-black">9/5 Sat｜Gong Cha Andover</p><p className="text-sm font-bold text-slate-600">2:00 PM – 6:00 PM｜2 Elm Ct, Andover, MA 01810</p></div>
                 <div className="rounded-2xl bg-white p-4 ring-1 ring-emerald-200"><p className="font-black">9/9 Wed｜Tai Chi Acupuncture & Wellness Center</p><p className="text-sm font-bold text-slate-600">4:00 PM – 7:00 PM｜Parking lot</p></div>
-                <div className="rounded-2xl bg-white p-4 ring-1 ring-emerald-200"><p className="font-black">9/10 Thu｜Cafe Zing</p><p className="text-sm font-bold text-slate-600">3:00 PM – 6:00 PM｜Near Porter Station</p></div>
+                <div className="rounded-2xl bg-white p-4 ring-1 ring-emerald-200"><p className="font-black">9/10 Thu｜Cafe Zing</p><p className="text-sm font-bold text-slate-600">3:00 PM – 6:00 PM｜Red Line｜Near Porter Station</p></div>
                 <div className="rounded-2xl bg-white p-4 ring-1 ring-emerald-200"><p className="font-black">9/11 Fri｜Newton OCAC Center</p><p className="text-sm font-bold text-slate-600">10:30 AM – 4:30 PM｜Small Classroom</p></div>
               </div>
             </Card>
 
             <div className="space-y-4">
               <Card><p className="text-xl font-black">8/28 Friday｜Newton OCAC Center</p><p className="mt-1 font-bold">10:30 AM – 4:30 PM｜90 Lincoln St, Newton Highlands, MA 02461</p><p className="mt-2 text-slate-700">Small classroom. Taiwan flags will be available while supplies last.</p></Card>
-              <Card><p className="text-xl font-black">8/29 Saturday｜University Park Common, Cambridge</p><p className="mt-1"><a href="https://maps.app.goo.gl/AZhuec9yh3nJjep59" target="_blank" rel="noreferrer" className="font-black text-emerald-700 underline underline-offset-4">Google Maps location</a></p><p className="mt-2 text-slate-700">Outdoor pickup near the center of the park, close to Sidney St.</p></Card>
+              <Card><p className="text-xl font-black">8/29 Saturday｜Formosa Bun & Dumpling Factory, Newton</p><p className="mt-1 font-bold">Address: 740A Beacon St, Newton Centre, MA 02459</p><p className="mt-2 text-slate-700">Near Newton Centre Station on the MBTA Green Line. Feel free to stop by and grab some takeout while you’re here!</p></Card>
               <Card><p className="text-xl font-black">8/30 Sunday｜Northeastern Crossing — Conference Room</p><p className="mt-1 font-bold">10:30 AM – 4:30 PM｜1175 Tremont St, Boston, MA 02120</p><p className="mt-2 text-slate-700">Near Ruggles Station on the MBTA Orange Line.</p></Card>
+              <Card>
+                <p className="text-xl font-black">9/5 Saturday｜Gong Cha Andover</p>
+                <p className="mt-1 font-bold">2:00 PM – 6:00 PM｜2 Elm Ct, Andover, MA 01810</p>
+                <div className="mt-4 rounded-2xl border border-slate-200 bg-slate-50 p-4">
+                  <p className="font-black leading-7 text-slate-800">
+                    Reminder: Come support this Taiwanese-owned Gong Cha location in Andover!
+                  </p>
+                </div>
+              </Card>
               <Card><p className="text-xl font-black">9/9 Wednesday｜Tai Chi Acupuncture & Wellness Center, Danvers</p><p className="mt-1 font-bold">4:00 PM – 7:00 PM｜2 Orchard Ln, Danvers, MA 01923</p><p className="mt-2 text-slate-700">Outdoor pickup in the parking lot.</p></Card>
               <Card><p className="text-xl font-black">9/10 Thursday｜Cafe Zing</p><p className="mt-1 font-bold">3:00 PM – 6:00 PM｜25 White St, Cambridge, MA 02140</p><p className="mt-2 text-slate-700">Near Porter Station on the MBTA Red Line. Two-hour free parking is available nearby.</p><p className="mt-2 text-slate-700">The <strong>8th Taiwan Film Festival of Boston</strong> will screen HERO! HITO! at Somerville Theatre at 7:00 PM that evening.</p><a href="https://www.zeffy.com/en-US/ticketing/8th-taiwan-film-festival-of-boston" target="_blank" rel="noreferrer" className="mt-3 inline-flex rounded-full bg-rose-700 px-5 py-3 text-sm font-black text-white">HERO! HITO! ticket link</a></Card>
               <Card><p className="text-xl font-black">9/11 Friday｜Newton OCAC Center</p><p className="mt-1 font-bold">10:30 AM – 4:30 PM｜90 Lincoln St, Newton Highlands, MA 02461</p><p className="mt-2 text-slate-700">Small classroom. Taiwan flags will be available while supplies last.</p></Card>
@@ -3951,13 +4047,57 @@ function GuideEn({ isZh, setIsZh }) {
             </div>
           </Section>
 
-          <Section id="05" title="Digital ticket instructions">
-            <div className="rounded-[1.25rem] border border-amber-300 bg-amber-50 px-5 py-4 shadow-sm">
-              <p className="text-lg font-black leading-8 text-amber-950">
-                🎟️ Digital tickets will <strong className="text-rose-700">begin distribution on August 22</strong> and will be <strong className="text-rose-700">fully sent by the end of the day</strong>.
+          <Section id="05" title="Digital ticket instructions"><Card className="border-emerald-200 bg-emerald-50">
+              <p className="text-xl font-black text-emerald-900">Digital tickets have all been sent</p>
+              <p className="mt-3">
+                With the help of our Brookline event team and volunteers, all 912 digital tickets were sent out on <strong>August 22</strong>.
+                Please check your email and accept your digital tickets.
               </p>
-            </div>
-            <ol className="list-decimal space-y-3 pl-6 marker:font-black marker:text-slate-500">
+              <p className="mt-3 rounded-2xl bg-white p-4 font-bold leading-7 text-emerald-950 ring-1 ring-emerald-200">
+                Friendly reminder: Please download the <strong>MLB Ballpark App</strong> so you can properly receive and view your tickets.
+                Please note that this is the <strong>MLB Ballpark App</strong>, not the general <strong>MLB App</strong>.
+              </p>
+              <div className="mt-5 grid gap-5 md:grid-cols-2">
+                <Card className="border-emerald-100 bg-slate-50">
+                  <div className="grid gap-4 sm:grid-cols-[4rem_1fr]">
+                    <div className="text-4xl leading-none">✅</div>
+                    <div>
+                      <p className="text-2xl font-black text-emerald-900">Download this one</p>
+                      <p className="mt-2 text-xl font-black text-slate-950">MLB Ballpark App</p>
+                      <p className="mt-2 font-bold leading-7 text-slate-600">Green Ballpark icon. The app name is MLB Ballpark.</p>
+                      <div className="mx-auto mt-5 w-fit rounded-[1.5rem] border border-slate-200 bg-white p-4 text-center shadow-sm">
+                        <img
+                          src="/912-mlb-ballpark-app-icon.png"
+                          alt="MLB Ballpark App icon"
+                          className="h-44 w-44 rounded-2xl object-contain"
+                        />
+                        <p className="mt-4 text-sm font-black text-slate-700">Correct: MLB Ballpark App</p>
+                      </div>
+                    </div>
+                  </div>
+                </Card>
+
+                <Card className="border-rose-100 bg-slate-50">
+                  <div className="grid gap-4 sm:grid-cols-[4rem_1fr]">
+                    <div className="text-4xl leading-none">❌</div>
+                    <div>
+                      <p className="text-2xl font-black text-rose-900">Do not download this one</p>
+                      <p className="mt-2 text-xl font-black text-slate-950">MLB App</p>
+                      <p className="mt-2 font-bold leading-7 text-slate-600">Blue MLB icon. This is not the app used for digital tickets.</p>
+                      <div className="mx-auto mt-5 w-fit rounded-[1.5rem] border border-slate-200 bg-white p-4 text-center shadow-sm">
+                        <img
+                          src="/912-mlb-app-icon.png"
+                          alt="MLB App icon"
+                          className="h-44 w-44 rounded-2xl object-contain"
+                        />
+                        <p className="mt-4 text-sm font-black text-slate-700">Wrong: MLB App</p>
+                      </div>
+                    </div>
+                  </div>
+                </Card>
+              </div>
+            </Card>
+<ol className="list-decimal space-y-3 pl-6 marker:font-black marker:text-slate-500">
               <li>Download the <strong>MLB Ballpark App</strong>, not the general MLB App.</li>
               <li>Your MLB account email must match the email used when purchasing 912 tickets. If it is different, please contact the organizers for help updating it.</li>
               <li>Open the Red Sox ticket email and tap <strong>Access Tickets</strong>.</li>
@@ -3975,6 +4115,29 @@ function GuideEn({ isZh, setIsZh }) {
                 If you have any digital ticket questions, you can contact the organizers. You can also ask one of our volunteers for help when you pick up your <strong>event T-shirt</strong>.
               </p>
             </Card>
+            <Card className="border-slate-200 bg-slate-50">
+              <p className="font-black text-slate-900">🎫 Can’t attend and want to resell your ticket?</p>
+              <p className="mt-2">
+                If you are no longer able to attend the game and would like to resell the ticket you purchased, please contact the organizer and join the <strong>912 LINE group</strong>.
+                There are still several people in the LINE group asking whether tickets are available, and the organizer can help connect interested buyers and sellers.
+              </p>
+            </Card>
+            <Card className="overflow-hidden border-slate-200 bg-white">
+              <img
+                src="/912-ticket-volunteer-team.jpg"
+                alt="Brookline event team and volunteers coordinating and sending 1325 digital tickets"
+                className="w-full rounded-2xl object-cover"
+                onError={(e) => { e.currentTarget.style.display = "none"; }}
+              />
+              <div className="mt-4">
+                <p className="text-lg font-black text-slate-900">Ticket distribution team in action</p>
+                <p className="mt-2 leading-7 text-slate-700">
+                  Thank you to our Brookline event team and volunteers for helping coordinate and send out <strong>1,325 digital tickets</strong> for 9/12.
+                  This photo captures the team working together to organize, verify, and distribute tickets.
+                </p>
+              </div>
+            </Card>
+
           </Section>
           <SeatColorLookupEn />
 

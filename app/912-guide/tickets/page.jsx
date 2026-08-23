@@ -69,7 +69,7 @@ export default function TicketGuidePage() {
                 </div>
                 <div className="mt-4">
                   <Screenshot
-                    src="/ticket-guide/correct-mlb-ballpark-app.jpg"
+                    src="/912-mlb-ballpark-app-icon.png"
                     alt="MLB Ballpark App screenshot"
                     caption="正確：MLB Ballpark App"
                   />
@@ -87,7 +87,7 @@ export default function TicketGuidePage() {
                 </div>
                 <div className="mt-4">
                   <Screenshot
-                    src="/ticket-guide/wrong-mlb-app.jpg"
+                    src="/912-mlb-app-icon.png"
                     alt="MLB App screenshot"
                     caption="錯誤：MLB App"
                   />
@@ -102,7 +102,7 @@ export default function TicketGuidePage() {
             </p>
 
             <Screenshot
-              src="/ticket-guide/ballpark-get-started.jpg"
+              src="/912-mlb-ballpark-app-icon.png"
               alt="MLB Ballpark Get Started screen"
               caption="打開 MLB Ballpark App 後，請點 Get Started"
             />
@@ -229,21 +229,6 @@ export default function TicketGuidePage() {
               <Card className="border-amber-200 bg-amber-50"><h3 className="text-xl font-black text-amber-900">建議轉票</h3><p className="mt-3">大家會分開到球場、有人可能晚到，或每個人想自己保管自己的票。</p></Card>
             </div>
           </Section>
-        </div>
-
-        <div className="mt-10 flex flex-wrap justify-center gap-3 border-t border-slate-200 pt-6">
-          <a
-            href="/"
-            className="rounded-full bg-slate-800 px-5 py-3 text-sm font-black text-white shadow-sm transition hover:-translate-y-0.5 hover:bg-slate-700"
-          >
-            回到 912 首頁
-          </a>
-          <a
-            href="/912-guide"
-            className="rounded-full bg-amber-300 px-5 py-3 text-sm font-black text-slate-950 shadow-sm transition hover:-translate-y-0.5 hover:bg-amber-200"
-          >
-            回到懶人包
-          </a>
         </div>
       </section>
     </main>

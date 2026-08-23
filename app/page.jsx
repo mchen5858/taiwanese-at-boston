@@ -1517,13 +1517,13 @@ export default function TaiwanFanNightWebsite() {
                   </a>
 
                   <a
-                    href={tshirtSizeChangeLink}
+                    href="#size-change-closed"
                     className="group relative flex h-full flex-col overflow-hidden rounded-[2rem] border border-emerald-200 bg-white/95 p-7 shadow-[0_14px_40px_rgba(15,23,42,0.08)] transition duration-300 hover:-translate-y-1.5 hover:shadow-[0_22px_60px_rgba(5,150,105,0.18)]"
                   >
                     <div className="absolute inset-x-0 top-0 h-1.5 bg-gradient-to-r from-emerald-400 via-cyan-300 to-sky-300" />
                     <div className="flex items-start justify-between gap-4">
                       <div className="flex h-16 w-16 items-center justify-center rounded-[1.35rem] bg-emerald-100 text-3xl shadow-sm ring-1 ring-emerald-200/60">📏</div>
-                      <div className="rounded-full bg-amber-300 px-3 py-1 text-xs font-black uppercase tracking-[0.18em] text-emerald-950">{lang === "zh" ? "仍可更改" : "Open"}</div>
+                      <div className="rounded-full bg-amber-300 px-3 py-1 text-xs font-black uppercase tracking-[0.18em] text-emerald-950">{lang === "zh" ? "已關閉" : "Open"}</div>
                     </div>
                     <p className="mt-6 text-xs font-black uppercase tracking-[0.28em] text-emerald-700">{lang === "zh" ? "Size Change" : "Size Change"}</p>
                     <h3 className="mt-3 text-3xl font-black leading-tight text-slate-950">{lang === "zh" ? "尺寸查詢與更改" : "Size Check & Change"}</h3>
@@ -1533,7 +1533,7 @@ export default function TaiwanFanNightWebsite() {
                         : "Enter your email to check your current size, review the size chart, and submit a size change request."}
                     </p>
                     <div className="mt-7 inline-flex w-fit items-center gap-2 rounded-full bg-emerald-700 px-5 py-3 text-sm font-black text-white shadow-md transition group-hover:bg-emerald-800">
-                      {lang === "zh" ? "前往改尺寸" : "Change Size"}
+                      {lang === "zh" ? "前往改尺寸" : "Size Change Closed"}
                       <span className="transition group-hover:translate-x-1">→</span>
                     </div>
                   </a>
@@ -1585,7 +1585,12 @@ export default function TaiwanFanNightWebsite() {
 
         <section id="raffle" className="px-4 py-16 md:px-8 md:py-24">
           <div className="mx-auto max-w-7xl">
-            <SectionTitle eyebrow={t.raffle.eyebrow} title={t.raffle.title} description={t.raffle.description} />
+            
+            <Card id="size-change-closed" className="mb-6 border-rose-200 bg-rose-50">
+              <p className="text-xl font-black text-rose-900">尺寸更改系統已關閉</p>
+              <p className="mt-2 font-bold leading-7 text-slate-700">尺寸更改系統目前已關閉，所有衣服尺寸資料已進入整理與製作流程，恕無法再接受尺寸更改。</p>
+            </Card>
+<SectionTitle eyebrow={t.raffle.eyebrow} title={t.raffle.title} description={t.raffle.description} />
 
             <Card className="mb-8 border-emerald-200 bg-gradient-to-br from-emerald-50 via-white to-sky-50 p-8 shadow-lg md:p-10">
               <p className="text-sm font-black uppercase tracking-[0.28em] text-emerald-700">
