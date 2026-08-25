@@ -3413,11 +3413,15 @@ function GuideZh({ isZh, setIsZh }) {
                 </div>
                 <div className="rounded-2xl bg-white p-4 ring-1 ring-emerald-200">
                   <p className="font-black text-slate-950">8/29 Sat｜Formosa Bun & Dumpling Factory</p>
-                  <p className="text-sm font-bold text-slate-600">11:30 AM – 5:00 PM｜Green Line｜鄰近Newton Centre 站</p>
+                  <p className="text-sm font-bold text-slate-600">11:30 AM – 4:30 PM｜Green Line｜鄰近Newton Centre 站</p>
                 </div>
                 <div className="rounded-2xl bg-white p-4 ring-1 ring-emerald-200">
                   <p className="font-black text-slate-950">8/30 Sun｜Northeastern Crossing</p>
-                  <p className="text-sm font-bold text-slate-600">11:30 AM – 5:00 PM｜Orange Line｜Conference Room</p>
+                  <p className="text-sm font-bold text-slate-600">11:30 AM – 4:30 PM｜Orange Line｜Conference Room</p>
+                </div>
+                <div className="rounded-2xl bg-white p-4 ring-1 ring-emerald-200">
+                  <p className="font-black text-slate-950">9/5 Sat｜Rhode Island Taiwan Day 羅德島台灣日</p>
+                  <p className="text-sm font-bold text-slate-600">10:15 AM – 12:00 PM｜TECO booth｜Festival Pier, Pawtucket, RI</p>
                 </div>
                 <div className="rounded-2xl bg-white p-4 ring-1 ring-emerald-200">
                   <p className="font-black text-slate-950">9/5 Sat｜Andover 貢茶</p>
@@ -3433,7 +3437,7 @@ function GuideZh({ isZh, setIsZh }) {
                 </div>
                 <div className="rounded-2xl bg-white p-4 ring-1 ring-emerald-200">
                   <p className="font-black text-slate-950">9/11 Fri｜Newton 僑教中心</p>
-                  <p className="text-sm font-bold text-slate-600">11:30 AM – 5:00 PM｜小教室</p>
+                  <p className="text-sm font-bold text-slate-600">11:30 AM – 4:30 PM｜小教室</p>
                 </div>
               </div>
             </Card>
@@ -3444,7 +3448,7 @@ function GuideZh({ isZh, setIsZh }) {
                   <div className="rounded-2xl bg-emerald-100 p-4 text-emerald-950 ring-1 ring-emerald-200">
                     <p className="text-2xl font-black">8/28</p>
                     <p className="font-black">Friday</p>
-                    <p className="mt-3 text-sm font-bold">11:30 AM – 5:00 PM</p>
+                    <p className="mt-3 text-sm font-bold">11:30 AM – 4:30 PM</p>
                   </div>
                   <div>
                     <p className="text-xl font-black text-slate-950">Newton｜波士頓華僑文教服務中心 — 小教室</p>
@@ -3461,7 +3465,7 @@ function GuideZh({ isZh, setIsZh }) {
                   <div className="rounded-2xl bg-emerald-100 p-4 text-emerald-950 ring-1 ring-emerald-200">
                     <p className="text-2xl font-black">8/29</p>
                     <p className="font-black">Saturday</p>
-                    <p className="mt-3 text-sm font-bold">11:30 AM – 5:00 PM</p>
+                    <p className="mt-3 text-sm font-bold">11:30 AM – 4:30 PM</p>
                   </div>
                   <div>
                     <p className="text-xl font-black text-slate-950">Newton｜Formosa Bun & Dumpling Factory</p>
@@ -3495,6 +3499,25 @@ function GuideZh({ isZh, setIsZh }) {
                   <div className="rounded-2xl bg-emerald-100 p-4 text-emerald-950 ring-1 ring-emerald-200">
                     <p className="text-2xl font-black">9/5</p>
                     <p className="font-black">Saturday</p>
+                    <p className="mt-3 text-sm font-bold">10:15 AM – 12:00 PM</p>
+                  </div>
+                  <div>
+                    <p className="text-xl font-black text-slate-950">Pawtucket｜羅德島台灣日</p>
+                    <p className="mt-3 font-bold text-slate-700">地址：Festival Pier, Pawtucket, Rhode Island</p>
+                    <div className="mt-4 rounded-2xl border border-slate-200 bg-slate-50 p-4">
+                      <p className="font-black leading-7 text-slate-800">
+                        小提醒：會在 <strong>TECO</strong> 的攤位發放活動衣服。
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </Card>
+
+              <Card className="border-slate-200 bg-white">
+                <div className="grid gap-4 md:grid-cols-[190px_1fr] md:items-start">
+                  <div className="rounded-2xl bg-emerald-100 p-4 text-emerald-950 ring-1 ring-emerald-200">
+                    <p className="text-2xl font-black">9/5</p>
+                    <p className="font-black">Saturday</p>
                     <p className="mt-3 text-sm font-bold">2:00 PM – 6:00 PM</p>
                   </div>
                   <div>
@@ -3508,7 +3531,6 @@ function GuideZh({ isZh, setIsZh }) {
                   </div>
                 </div>
               </Card>
-
               <Card className="border-slate-200 bg-white">
                 <div className="grid gap-4 md:grid-cols-[190px_1fr] md:items-start">
                   <div className="rounded-2xl bg-emerald-100 p-4 text-emerald-950 ring-1 ring-emerald-200">
@@ -4004,7 +4026,7 @@ function GuideEn({ isZh, setIsZh }) {
               <p className="text-lg font-black text-emerald-900">Quick pickup overview</p>
               <div className="mt-4 grid gap-3 md:grid-cols-2">
                 <div className="rounded-2xl bg-white p-4 ring-1 ring-emerald-200"><p className="font-black">8/28 Fri｜Newton OCAC Center</p><p className="text-sm font-bold text-slate-600">10:30 AM – 4:30 PM｜Small Classroom</p></div>
-                <div className="rounded-2xl bg-white p-4 ring-1 ring-emerald-200"><p className="font-black">8/29 Sat｜Formosa Bun & Dumpling Factory</p><p className="text-sm font-bold text-slate-600">11:30 AM – 5:00 PM｜Green Line｜Near Newton Centre Station</p></div>
+                <div className="rounded-2xl bg-white p-4 ring-1 ring-emerald-200"><p className="font-black">8/29 Sat｜Formosa Bun & Dumpling Factory</p><p className="text-sm font-bold text-slate-600">11:30 AM – 4:30 PM｜Green Line｜Near Newton Centre Station</p></div>
                 <div className="rounded-2xl bg-white p-4 ring-1 ring-emerald-200"><p className="font-black">8/30 Sun｜Northeastern Crossing</p><p className="text-sm font-bold text-slate-600">10:30 AM – 4:30 PM｜Orange Line｜Conference Room</p></div>
                 <div className="rounded-2xl bg-white p-4 ring-1 ring-emerald-200"><p className="font-black">9/5 Sat｜Gong Cha Andover</p><p className="text-sm font-bold text-slate-600">2:00 PM – 6:00 PM｜2 Elm Ct, Andover, MA 01810</p></div>
                 <div className="rounded-2xl bg-white p-4 ring-1 ring-emerald-200"><p className="font-black">9/9 Wed｜Tai Chi Acupuncture & Wellness Center</p><p className="text-sm font-bold text-slate-600">4:00 PM – 7:00 PM｜Parking lot</p></div>
