@@ -3287,6 +3287,30 @@ function GuideZh({ isZh, setIsZh }) {
                 </div>
                 <div className="grid grid-cols-[110px_24px_1fr] gap-3 md:grid-cols-[140px_28px_1fr] md:gap-4">
                   <div className="pt-2 text-right">
+                    <p className="text-base font-black leading-tight text-slate-950 md:text-lg">開賽前</p>
+                  </div>
+
+                  <div className="relative flex justify-center">
+                    <span className="relative z-10 mt-3 h-3.5 w-3.5 rounded-full bg-violet-500 ring-4 ring-white" />
+                    <span className="absolute bottom-[-10px] top-7 w-px bg-slate-300" />
+                  </div>
+
+                  <div className="pb-2">
+                    <div className="rounded-2xl border border-violet-200 bg-violet-50 px-4 py-3 shadow-sm">
+                      <p className="text-lg font-black text-violet-950">Leader of the Pack</p>
+                      <p className="mt-1.5 leading-7">
+                        這次 <strong>Leader of the Pack</strong> 將由 <strong>駐波士頓臺北經濟文化辦事處處長廖朝宏 Charles Liao</strong>
+                        及 <strong>波克萊台灣商會榮譽會長郭競儒 Jing Ruo Kuo</strong> 代表 <strong>TEAM TAIWAN</strong>，
+                        在開賽前接受 <strong>Boston Red Sox 的介紹與表揚（Recognition）</strong>。
+                      </p>
+                      <p className="mt-2 rounded-xl border border-violet-200 bg-white px-3 py-2 font-black leading-6 text-violet-950">
+                        到時候如果聽到 <strong>TEAM TAIWAN</strong>，希望大家一起大聲歡呼！
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div className="grid grid-cols-[110px_24px_1fr] gap-3 md:grid-cols-[140px_28px_1fr] md:gap-4">
+                  <div className="pt-2 text-right">
                     <p className="text-base font-black leading-tight text-slate-950 md:text-lg">4:15</p>
                     <p className="mt-0.5 text-xs font-bold text-slate-500">PM</p>
                   </div>
@@ -3339,7 +3363,33 @@ function GuideZh({ isZh, setIsZh }) {
                     </div>
                   </div>
                 </div>
-              </div>
+                              <div className="grid grid-cols-[110px_24px_1fr] gap-3 md:grid-cols-[140px_28px_1fr] md:gap-4">
+                  <div className="pt-2 text-right">
+                    <p className="text-base font-black leading-tight text-slate-950 md:text-lg">確切局數近日公布</p>
+                  </div>
+
+                  <div className="relative flex justify-center">
+                    <span className="relative z-10 mt-3 h-3.5 w-3.5 rounded-full bg-fuchsia-500 ring-4 ring-white" />
+                    <span className="absolute bottom-[-10px] top-7 w-px bg-slate-300" />
+                  </div>
+
+                  <div className="pb-2">
+                    <div className="rounded-2xl border border-fuchsia-200 bg-fuchsia-50 px-4 py-3 shadow-sm">
+                      <p className="text-lg font-black text-fuchsia-950">Complimentary Scoreboard Message</p>
+                      <p className="mt-1.5 leading-7">我們這次的球場大螢幕訊息是：</p>
+                      <div className="mt-3 rounded-xl border border-fuchsia-200 bg-white px-4 py-3 text-center font-black leading-8 text-slate-950">
+                        <p>TEAM TAIWAN</p>
+                        <p>LIGHT UP FENWAY</p>
+                        <p>Go TAIWAN! Go SOX!</p>
+                      </div>
+                      <p className="mt-3 leading-7 text-slate-700">
+                        這個大螢幕訊息會在比賽開始之後出現，目前還不知道會是在第幾局或哪一個時間點。等我們知道後會再補上。看到的時候也希望大家一起大聲歡呼！
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+</div>
             </div>
 
             <Card className="mt-4 border-emerald-200 bg-white">
@@ -3619,13 +3669,15 @@ function GuideZh({ isZh, setIsZh }) {
             </div>
           </Section>
 
-          <Section id="05" title="電子票領取方式"><Card className="border-emerald-200 bg-emerald-50">
+          <Section id="05" title="電子票領取方式">
+            <Card className="border-emerald-200 bg-emerald-50">
               <p className="text-xl font-black text-emerald-900">電子票已全部發送完成</p>
-              <p className="mt-3">
+              <p className="mt-3 leading-8">
                 感謝我們的波克萊活動與志工群的協助，所有 912 電子票已經在 <strong>8 月 22 日</strong> 全部發送出去了。
                 請大家檢查自己的 Email，並接受你的電子票。
               </p>
-              <div className="mt-3 rounded-2xl bg-white p-4 font-bold leading-7 text-emerald-950 ring-1 ring-emerald-200">
+
+              <div className="mt-4 rounded-2xl bg-white p-4 font-bold leading-7 text-emerald-950 ring-1 ring-emerald-200">
                 <p className="font-black">友善提醒：電子票使用注意事項</p>
                 <ul className="mt-2 list-disc space-y-2 pl-5">
                   <li>請記得下載 <strong>MLB Ballpark App</strong>，才能正常接收與查看你的電子票。請注意，是 <strong>MLB Ballpark App</strong>，不是一般的 <strong>MLB App</strong>。</li>
@@ -3635,47 +3687,65 @@ function GuideZh({ isZh, setIsZh }) {
                   <li>如果你的手機有開啟 <strong>VPN</strong>，有可能會無法正常看到電子票。若 App 裡看不到票，建議先關閉 VPN，重新開啟 <strong>MLB Ballpark App</strong> 後再查看。</li>
                 </ul>
               </div>
-              <div className="mt-5 grid gap-5 md:grid-cols-2">
-                <Card className="border-emerald-100 bg-slate-50">
-                  <div className="grid gap-4 sm:grid-cols-[4rem_1fr]">
-                    <div className="text-4xl leading-none">✅</div>
-                    <div>
-                      <p className="text-2xl font-black text-emerald-900">請下載這個</p>
-                      <p className="mt-2 text-xl font-black text-slate-950">MLB Ballpark App</p>
-                      <p className="mt-2 font-bold leading-7 text-slate-600">綠色 Ballpark 圖示，App 名稱是 MLB Ballpark。</p>
-                      <div className="mx-auto mt-5 w-fit rounded-[1.5rem] border border-slate-200 bg-white p-4 text-center shadow-sm">
-                        <img
-                          src="/912-mlb-ballpark-app-icon.png"
-                          alt="MLB Ballpark App icon"
-                          className="h-44 w-44 rounded-2xl object-contain"
-                        />
-                        <p className="mt-4 text-sm font-black text-slate-700">正確：MLB Ballpark App</p>
-                      </div>
-                    </div>
-                  </div>
-                </Card>
 
-                <Card className="border-rose-100 bg-slate-50">
-                  <div className="grid gap-4 sm:grid-cols-[4rem_1fr]">
-                    <div className="text-4xl leading-none">❌</div>
-                    <div>
-                      <p className="text-2xl font-black text-rose-900">不要下載這個</p>
-                      <p className="mt-2 text-xl font-black text-slate-950">MLB App</p>
-                      <p className="mt-2 font-bold leading-7 text-slate-600">藍色 MLB 圖示，這不是電子票使用的 App。</p>
-                      <div className="mx-auto mt-5 w-fit rounded-[1.5rem] border border-slate-200 bg-white p-4 text-center shadow-sm">
-                        <img
-                          src="/912-mlb-app-icon.png"
-                          alt="MLB App icon"
-                          className="h-44 w-44 rounded-2xl object-contain"
-                        />
-                        <p className="mt-4 text-sm font-black text-slate-700">錯誤：MLB App</p>
-                      </div>
-                    </div>
-                  </div>
-                </Card>
+              <div className="mt-4 rounded-2xl bg-amber-50 p-4 leading-8 text-amber-950 ring-1 ring-amber-200">
+                <p className="text-lg font-black">尚未領取電子票提醒</p>
+                <p className="mt-2">
+                  目前（8/27）還有約 <strong>120 張票</strong> 尚未領取。我們在 <strong>8/22 下午 6:00 左右</strong>，
+                  由 <strong>redsox.com</strong> 寄出電子票，Email 標題應該是：
+                </p>
+                <p className="mt-3 rounded-xl bg-white p-4 font-black leading-7 text-slate-950 ring-1 ring-amber-200">
+                  “You have just been forwarded Red Sox tickets for 2026-09-12”
+                </p>
+                <p className="mt-3">
+                  這封領票 Email <strong>不會過期</strong>。如果找不到，請先查看 <strong>Spam / Junk Folder</strong>。
+                  還是找不到的話，可以直接與我們聯絡，我們可以協助；也可以在領衣服的時候，
+                  請現場志工幫忙確認 <strong>MLB Ballpark App</strong> 與電子票。
+                </p>
               </div>
             </Card>
-<ol className="list-decimal space-y-3 pl-6 marker:font-black marker:text-slate-500">
+
+            <div className="mt-5 grid gap-5 md:grid-cols-2">
+              <Card className="border-emerald-100 bg-slate-50">
+                <div className="grid gap-4 sm:grid-cols-[4rem_1fr]">
+                  <div className="text-4xl leading-none">✅</div>
+                  <div>
+                    <p className="text-2xl font-black text-emerald-900">請下載這個</p>
+                    <p className="mt-2 text-xl font-black text-slate-950">MLB Ballpark App</p>
+                    <p className="mt-2 font-bold leading-7 text-slate-600">綠色 Ballpark 圖示，App 名稱是 MLB Ballpark。</p>
+                    <div className="mx-auto mt-5 w-fit rounded-[1.5rem] border border-slate-200 bg-white p-4 text-center shadow-sm">
+                      <img
+                        src="/912-mlb-ballpark-app-icon.png"
+                        alt="MLB Ballpark App icon"
+                        className="h-44 w-44 rounded-2xl object-contain"
+                      />
+                      <p className="mt-4 text-sm font-black text-slate-700">正確：MLB Ballpark App</p>
+                    </div>
+                  </div>
+                </div>
+              </Card>
+
+              <Card className="border-rose-100 bg-slate-50">
+                <div className="grid gap-4 sm:grid-cols-[4rem_1fr]">
+                  <div className="text-4xl leading-none">❌</div>
+                  <div>
+                    <p className="text-2xl font-black text-rose-900">不要下載這個</p>
+                    <p className="mt-2 text-xl font-black text-slate-950">MLB App</p>
+                    <p className="mt-2 font-bold leading-7 text-slate-600">藍色 MLB 圖示，這不是電子票使用的 App。</p>
+                    <div className="mx-auto mt-5 w-fit rounded-[1.5rem] border border-slate-200 bg-white p-4 text-center shadow-sm">
+                      <img
+                        src="/912-mlb-app-icon.png"
+                        alt="MLB App icon"
+                        className="h-44 w-44 rounded-2xl object-contain"
+                      />
+                      <p className="mt-4 text-sm font-black text-slate-700">錯誤：MLB App</p>
+                    </div>
+                  </div>
+                </div>
+              </Card>
+            </div>
+
+            <ol className="list-decimal space-y-3 pl-6 marker:font-black marker:text-slate-500">
               <li><strong>下載 MLB Ballpark App：</strong>請下載 <strong>MLB Ballpark App</strong>，不是一般的 MLB App。</li>
               <li><strong>註冊或登入 MLB 帳號：</strong>Email 請務必與 <strong>購買 912 活動票券時填寫的 Email</strong> 相同。若 Email 不相同，請務必聯絡主辦單位（波克萊基金會）協助更改 Email，避免後續無法順利收到或接受電子票。</li>
               <li><strong>收到轉票 Email：</strong>收到 Red Sox ticket email 後，請點選 <strong>Access Tickets</strong>。</li>
@@ -3715,11 +3785,38 @@ function GuideZh({ isZh, setIsZh }) {
                 </p>
               </div>
             </Card>
-
           </Section>
           <SeatColorLookupZh />
 
           <Section id="07" title="重要提醒">
+            <Card className="border-sky-200 bg-sky-50">
+              <p className="text-xl font-black text-sky-950">關於國旗、Banner 與 Sign</p>
+              <div className="mt-3 space-y-3 leading-8 text-slate-700">
+                <p>
+                  雖然這次 9/12 是由不同團體、不同城市、不同朋友一起組成，但到了 Fenway Park，
+                  我們希望大家都能以同一個名字站在一起——<strong>Team Taiwan</strong>！ 🇹🇼🇺🇸
+                </p>
+                <p>
+                  因此在活動前的全體大合照時，希望大家先不要拿出各自團體的 Banner。不是因為各團體不重要，
+                  而是我們希望這張最重要的大合照，可以呈現出上千人一起代表 <strong>Team Taiwan</strong> 的畫面，看起來更整齊、更有力量！
+                </p>
+                <p>
+                  各組織的 Banner 當然還是歡迎攜帶，也很鼓勵大家在自己團體拍照時使用。
+                </p>
+                <p>
+                  另外，也歡迎大家帶一些台灣國旗和美國國旗，一起呈現我們支持台灣、也支持 Red Sox 的氣氛。
+                  除了小國旗之外，請不要攜帶旗桿。
+                </p>
+                <p className="rounded-2xl bg-white p-4 font-bold leading-8 text-sky-950 ring-1 ring-sky-200">
+                  小提醒：紅襪規定可攜帶進場的 Signs／標語／看板最大為 <strong>24” × 18”</strong>（約 61 × 46 cm）。
+                  國旗如果沒有旗桿，就算超過 size，通常比較不會有問題；但尺寸較大的組織 Banner，
+                  在入場安檢時仍有可能被要求不能帶入，最後還是以現場工作人員的判斷為準。
+                </p>
+                <p className="font-black text-sky-950">
+                  9/12，讓我們一起用 <strong>Team Taiwan</strong> 的身分走進 Fenway！
+                </p>
+              </div>
+            </Card>
             <div className="grid gap-4 md:grid-cols-2">
               <Card className="border-indigo-200 bg-indigo-50">
                 <p className="text-lg font-black text-indigo-900">🎟️ 電子票與入場</p>
@@ -3927,6 +4024,29 @@ function GuideEn({ isZh, setIsZh }) {
                 </div>
                 <div className="grid grid-cols-[110px_24px_1fr] gap-3 md:grid-cols-[140px_28px_1fr] md:gap-4">
                   <div className="pt-2 text-right">
+                    <p className="text-base font-black leading-tight text-slate-950 md:text-lg">Pre-game</p>
+                  </div>
+
+                  <div className="relative flex justify-center">
+                    <span className="relative z-10 mt-3 h-3.5 w-3.5 rounded-full bg-violet-500 ring-4 ring-white" />
+                    <span className="absolute bottom-[-10px] top-7 w-px bg-slate-300" />
+                  </div>
+
+                  <div className="pb-2">
+                    <div className="rounded-2xl border border-violet-200 bg-violet-50 px-4 py-3 shadow-sm">
+                      <p className="text-lg font-black text-violet-950">Leader of the Pack</p>
+                      <p className="mt-1.5 leading-7">
+                        <strong>Director-General Charles Liao</strong> and <strong>Jing Ruo Kuo</strong> will represent <strong>TEAM TAIWAN</strong>
+                        as our <strong>Leader of the Pack</strong> and receive <strong>recognition from the Boston Red Sox</strong> before the game.
+                      </p>
+                      <p className="mt-2 rounded-xl border border-violet-200 bg-white px-3 py-2 font-black leading-6 text-violet-950">
+                        If you hear “<strong>TEAM TAIWAN</strong>,” please cheer loudly together!
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div className="grid grid-cols-[110px_24px_1fr] gap-3 md:grid-cols-[140px_28px_1fr] md:gap-4">
+                  <div className="pt-2 text-right">
                     <p className="text-base font-black leading-tight text-slate-950 md:text-lg">4:15</p>
                     <p className="mt-0.5 text-xs font-bold text-slate-500">PM</p>
                   </div>
@@ -3979,7 +4099,33 @@ function GuideEn({ isZh, setIsZh }) {
                     </div>
                   </div>
                 </div>
-              </div>
+                              <div className="grid grid-cols-[110px_24px_1fr] gap-3 md:grid-cols-[140px_28px_1fr] md:gap-4">
+                  <div className="pt-2 text-right">
+                    <p className="text-base font-black leading-tight text-slate-950 md:text-lg">Exact inning TBA</p>
+                  </div>
+
+                  <div className="relative flex justify-center">
+                    <span className="relative z-10 mt-3 h-3.5 w-3.5 rounded-full bg-fuchsia-500 ring-4 ring-white" />
+                    <span className="absolute bottom-[-10px] top-7 w-px bg-slate-300" />
+                  </div>
+
+                  <div className="pb-2">
+                    <div className="rounded-2xl border border-fuchsia-200 bg-fuchsia-50 px-4 py-3 shadow-sm">
+                      <p className="text-lg font-black text-fuchsia-950">Complimentary Scoreboard Message</p>
+                      <p className="mt-1.5 leading-7">Our scoreboard message for this event is:</p>
+                      <div className="mt-3 rounded-xl border border-fuchsia-200 bg-white px-4 py-3 text-center font-black leading-8 text-slate-950">
+                        <p>TEAM TAIWAN</p>
+                        <p>LIGHT UP FENWAY</p>
+                        <p>Go TAIWAN! Go SOX!</p>
+                      </div>
+                      <p className="mt-3 leading-7 text-slate-700">
+                        This scoreboard message will appear after the game starts, but we do not yet know which inning or exact timing. Once we know, we will share an update. When you see it, please cheer loudly together!
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+</div>
             </div>
 
             <Card className="mt-4 border-emerald-200 bg-white">
@@ -4075,13 +4221,15 @@ function GuideEn({ isZh, setIsZh }) {
             </div>
           </Section>
 
-          <Section id="05" title="Digital ticket instructions"><Card className="border-emerald-200 bg-emerald-50">
+          <Section id="05" title="Digital ticket instructions">
+            <Card className="border-emerald-200 bg-emerald-50">
               <p className="text-xl font-black text-emerald-900">Digital tickets have all been sent</p>
-              <p className="mt-3">
+              <p className="mt-3 leading-8">
                 With the help of our Brookline event team and volunteers, all 912 digital tickets were sent out on <strong>August 22</strong>.
                 Please check your email and accept your digital tickets.
               </p>
-              <div className="mt-3 rounded-2xl bg-white p-4 font-bold leading-7 text-emerald-950 ring-1 ring-emerald-200">
+
+              <div className="mt-4 rounded-2xl bg-white p-4 font-bold leading-7 text-emerald-950 ring-1 ring-emerald-200">
                 <p className="font-black">Friendly reminder: Digital ticket notes</p>
                 <ul className="mt-2 list-disc space-y-2 pl-5">
                   <li>Please download the <strong>MLB Ballpark App</strong> so you can properly receive and view your tickets. Please note that this is the <strong>MLB Ballpark App</strong>, not the general <strong>MLB App</strong>.</li>
@@ -4091,47 +4239,66 @@ function GuideEn({ isZh, setIsZh }) {
                   <li>If <strong>VPN</strong> is turned on on your phone, your digital tickets may not display properly. If you cannot see your tickets in the app, please turn off VPN, reopen the <strong>MLB Ballpark App</strong>, and check again.</li>
                 </ul>
               </div>
-              <div className="mt-5 grid gap-5 md:grid-cols-2">
-                <Card className="border-emerald-100 bg-slate-50">
-                  <div className="grid gap-4 sm:grid-cols-[4rem_1fr]">
-                    <div className="text-4xl leading-none">✅</div>
-                    <div>
-                      <p className="text-2xl font-black text-emerald-900">Download this one</p>
-                      <p className="mt-2 text-xl font-black text-slate-950">MLB Ballpark App</p>
-                      <p className="mt-2 font-bold leading-7 text-slate-600">Green Ballpark icon. The app name is MLB Ballpark.</p>
-                      <div className="mx-auto mt-5 w-fit rounded-[1.5rem] border border-slate-200 bg-white p-4 text-center shadow-sm">
-                        <img
-                          src="/912-mlb-ballpark-app-icon.png"
-                          alt="MLB Ballpark App icon"
-                          className="h-44 w-44 rounded-2xl object-contain"
-                        />
-                        <p className="mt-4 text-sm font-black text-slate-700">Correct: MLB Ballpark App</p>
-                      </div>
-                    </div>
-                  </div>
-                </Card>
 
-                <Card className="border-rose-100 bg-slate-50">
-                  <div className="grid gap-4 sm:grid-cols-[4rem_1fr]">
-                    <div className="text-4xl leading-none">❌</div>
-                    <div>
-                      <p className="text-2xl font-black text-rose-900">Do not download this one</p>
-                      <p className="mt-2 text-xl font-black text-slate-950">MLB App</p>
-                      <p className="mt-2 font-bold leading-7 text-slate-600">Blue MLB icon. This is not the app used for digital tickets.</p>
-                      <div className="mx-auto mt-5 w-fit rounded-[1.5rem] border border-slate-200 bg-white p-4 text-center shadow-sm">
-                        <img
-                          src="/912-mlb-app-icon.png"
-                          alt="MLB App icon"
-                          className="h-44 w-44 rounded-2xl object-contain"
-                        />
-                        <p className="mt-4 text-sm font-black text-slate-700">Wrong: MLB App</p>
-                      </div>
-                    </div>
-                  </div>
-                </Card>
+              <div className="mt-4 rounded-2xl bg-amber-50 p-4 leading-8 text-amber-950 ring-1 ring-amber-200">
+                <p className="text-lg font-black">Reminder for unclaimed digital tickets</p>
+                <p className="mt-2">
+                  As of 8/27, there are currently about <strong>120 tickets</strong> that have not yet been accepted.
+                  Around <strong>6:00 PM on August 22</strong>, digital tickets were sent from <strong>redsox.com</strong>.
+                  The email subject should be:
+                </p>
+                <p className="mt-3 rounded-xl bg-white p-4 font-black leading-7 text-slate-950 ring-1 ring-amber-200">
+                  “You have just been forwarded Red Sox tickets for 2026-09-12”
+                </p>
+                <p className="mt-3">
+                  This ticket acceptance email <strong>does not expire</strong>. If you cannot find it, please first check your
+                  <strong> Spam / Junk Folder</strong>. If you still cannot find it, please contact us and we can help.
+                  You can also ask an on-site volunteer for help checking your <strong>MLB Ballpark App</strong> and digital tickets when you pick up your event shirt.
+                </p>
               </div>
             </Card>
-<ol className="list-decimal space-y-3 pl-6 marker:font-black marker:text-slate-500">
+
+            <div className="mt-5 grid gap-5 md:grid-cols-2">
+              <Card className="border-emerald-100 bg-slate-50">
+                <div className="grid gap-4 sm:grid-cols-[4rem_1fr]">
+                  <div className="text-4xl leading-none">✅</div>
+                  <div>
+                    <p className="text-2xl font-black text-emerald-900">Download this one</p>
+                    <p className="mt-2 text-xl font-black text-slate-950">MLB Ballpark App</p>
+                    <p className="mt-2 font-bold leading-7 text-slate-600">Green Ballpark icon. The app name is MLB Ballpark.</p>
+                    <div className="mx-auto mt-5 w-fit rounded-[1.5rem] border border-slate-200 bg-white p-4 text-center shadow-sm">
+                      <img
+                        src="/912-mlb-ballpark-app-icon.png"
+                        alt="MLB Ballpark App icon"
+                        className="h-44 w-44 rounded-2xl object-contain"
+                      />
+                      <p className="mt-4 text-sm font-black text-slate-700">Correct: MLB Ballpark App</p>
+                    </div>
+                  </div>
+                </div>
+              </Card>
+
+              <Card className="border-rose-100 bg-slate-50">
+                <div className="grid gap-4 sm:grid-cols-[4rem_1fr]">
+                  <div className="text-4xl leading-none">❌</div>
+                  <div>
+                    <p className="text-2xl font-black text-rose-900">Do not download this one</p>
+                    <p className="mt-2 text-xl font-black text-slate-950">MLB App</p>
+                    <p className="mt-2 font-bold leading-7 text-slate-600">Blue MLB icon. This is not the app used for digital tickets.</p>
+                    <div className="mx-auto mt-5 w-fit rounded-[1.5rem] border border-slate-200 bg-white p-4 text-center shadow-sm">
+                      <img
+                        src="/912-mlb-app-icon.png"
+                        alt="MLB App icon"
+                        className="h-44 w-44 rounded-2xl object-contain"
+                      />
+                      <p className="mt-4 text-sm font-black text-slate-700">Wrong: MLB App</p>
+                    </div>
+                  </div>
+                </div>
+              </Card>
+            </div>
+
+            <ol className="list-decimal space-y-3 pl-6 marker:font-black marker:text-slate-500">
               <li>Download the <strong>MLB Ballpark App</strong>, not the general MLB App.</li>
               <li>Your MLB account email must match the email used when purchasing 912 tickets. If it is different, please contact the organizers for help updating it.</li>
               <li>Open the Red Sox ticket email and tap <strong>Access Tickets</strong>.</li>
@@ -4171,11 +4338,38 @@ function GuideEn({ isZh, setIsZh }) {
                 </p>
               </div>
             </Card>
-
           </Section>
           <SeatColorLookupEn />
 
           <Section id="07" title="Important reminders">
+            <Card className="border-sky-200 bg-sky-50">
+              <p className="text-xl font-black text-sky-950">About flags, banners, and signs</p>
+              <div className="mt-3 space-y-3 leading-8 text-slate-700">
+                <p>
+                  Even though 9/12 brings together different groups, cities, and friends, once we walk into Fenway Park,
+                  we hope everyone can stand together under one name: <strong>Team Taiwan</strong>! 🇹🇼🇺🇸
+                </p>
+                <p>
+                  For the large group photo before the event, please do not bring out individual organization banners yet.
+                  It is not because any group is unimportant. We simply hope this most important group photo can show more than a thousand people standing together as <strong>Team Taiwan</strong>, making the photo look more unified and powerful.
+                </p>
+                <p>
+                  Organization banners are still welcome, and we encourage groups to use them for their own group photos.
+                </p>
+                <p>
+                  You are also welcome to bring small Taiwan flags and U.S. flags to show our support for Taiwan and the Red Sox.
+                  Other than small handheld flags, please do not bring flag poles.
+                </p>
+                <p className="rounded-2xl bg-white p-4 font-bold leading-8 text-sky-950 ring-1 ring-sky-200">
+                  Reminder: Red Sox rules allow signs, posters, and boards up to <strong>24” × 18”</strong>（about 61 × 46 cm）.
+                  Flags without poles are usually less likely to be an issue even if they are larger, but larger organization banners may still be rejected during security screening.
+                  Final decisions are always subject to ballpark staff on site.
+                </p>
+                <p className="font-black text-sky-950">
+                  On 9/12, let’s walk into Fenway together as <strong>Team Taiwan</strong>!
+                </p>
+              </div>
+            </Card>
             <div className="grid gap-4 md:grid-cols-2">
               <Card className="border-indigo-200 bg-indigo-50">
                 <p className="text-lg font-black text-indigo-900">🎟️ Digital Ticket & Entry</p>
