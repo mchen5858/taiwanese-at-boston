@@ -3228,7 +3228,7 @@ function GuideZh({ isZh, setIsZh }) {
               <div className="space-y-2">
                 <div className="grid grid-cols-[110px_24px_1fr] gap-3 md:grid-cols-[140px_28px_1fr] md:gap-4">
                   <div className="pt-2 text-right">
-                    <p className="text-base font-black leading-tight text-slate-950 md:text-lg">2:45–3:15</p>
+                    <p className="text-base font-black leading-tight text-slate-950 md:text-lg">2:00</p>
                     <p className="mt-0.5 text-xs font-bold text-slate-500">PM</p>
                   </div>
 
@@ -3239,14 +3239,19 @@ function GuideZh({ isZh, setIsZh }) {
 
                   <div className="pb-2">
                     <div className="rounded-2xl border border-emerald-200 bg-emerald-50 px-4 py-3 shadow-sm">
-                      <p className="text-lg font-black text-emerald-900">Lansdowne Street 集合</p>
-                      <p className="mt-1.5 leading-7">請大家在芬威球場旁邊的 <strong>Lansdowne Street</strong> 集合。</p>
+                      <p className="text-lg font-black text-emerald-900">Lansdowne Street｜TEAM TAIWAN 集結</p>
+                      <p className="mt-1.5 leading-7">請大家在芬威球場旁邊的 <strong>Lansdowne Street</strong> 開始集結。</p>
+                      <div className="mt-2 rounded-xl border border-emerald-200 bg-white px-3 py-2">
+                        <p className="font-black leading-6 text-emerald-950">
+                          🐻 特別感謝 <strong>Keep Taiwan Free</strong> 將派出他們的台灣大黑熊來支援 912 活動，歡迎大家早一點來與台灣黑熊拍照喔！
+                        </p>
+                      </div>
                     </div>
                   </div>
                 </div>
                 <div className="grid grid-cols-[110px_24px_1fr] gap-3 md:grid-cols-[140px_28px_1fr] md:gap-4">
                   <div className="pt-2 text-right">
-                    <p className="text-base font-black leading-tight text-slate-950 md:text-lg">3:15</p>
+                    <p className="text-base font-black leading-tight text-slate-950 md:text-lg">2:30</p>
                     <p className="mt-0.5 text-xs font-bold text-slate-500">PM</p>
                   </div>
 
@@ -3258,18 +3263,19 @@ function GuideZh({ isZh, setIsZh }) {
                   <div className="pb-2">
                     <div className="rounded-2xl border border-sky-200 bg-sky-50 px-4 py-3 shadow-sm">
                       <p className="text-lg font-black text-sky-900">大合照</p>
-                      <p className="mt-1.5 leading-7">請大家準時集合，一起完成 912 Taiwan Fan Night 的 1300 人大合照。</p>
-                      <div className="mt-2 rounded-xl border border-rose-200 bg-rose-50 px-3 py-2">
-                      <p className="font-black leading-6 text-rose-900">
-                        🐻 特別感謝 <strong>Keep Taiwan Free</strong> 派出他們的台灣大黑熊來與大家一起合照！
-                      </p>
-                    </div>
+                      <p className="mt-1.5 leading-7">請大家準時集合，一起完成 912 Taiwan Fan Night 的 1300 人大合照。我們也會派出空拍機來幫大家紀錄喔！</p>
+                      <div className="mt-2 rounded-xl border border-amber-200 bg-amber-50 px-3 py-2">
+                        <p className="font-black leading-6 text-amber-950">
+                          小提醒：大合照已從原本的 <strong>3:15 PM</strong> 提早到 <strong>2:30 PM</strong>，請大家務必提早到場。
+                        </p>
+                      </div>
+
                     </div>
                   </div>
                 </div>
                 <div className="grid grid-cols-[110px_24px_1fr] gap-3 md:grid-cols-[140px_28px_1fr] md:gap-4">
                   <div className="pt-2 text-right">
-                    <p className="text-base font-black leading-tight text-slate-950 md:text-lg">3:20</p>
+                    <p className="text-base font-black leading-tight text-slate-950 md:text-lg">2:45</p>
                     <p className="mt-0.5 text-xs font-bold text-slate-500">PM</p>
                   </div>
 
@@ -3287,7 +3293,7 @@ function GuideZh({ isZh, setIsZh }) {
                 </div>
                 <div className="grid grid-cols-[110px_24px_1fr] gap-3 md:grid-cols-[140px_28px_1fr] md:gap-4">
                   <div className="pt-2 text-right">
-                    <p className="text-base font-black leading-tight text-slate-950 md:text-lg">開賽前</p>
+                    <p className="text-base font-black leading-tight text-slate-950 md:text-lg">約 3:20–3:45</p>
                   </div>
 
                   <div className="relative flex justify-center">
@@ -3301,7 +3307,7 @@ function GuideZh({ isZh, setIsZh }) {
                       <p className="mt-1.5 leading-7">
                         這次 <strong>Leader of the Pack</strong> 將由 <strong>駐波士頓臺北經濟文化辦事處處長廖朝宏 Charles Liao</strong>
                         及 <strong>波克萊台灣商會榮譽會長郭競儒 Jing Ruo Kuo</strong> 代表 <strong>TEAM TAIWAN</strong>，
-                        在開賽前接受 <strong>Boston Red Sox 的介紹與表揚（Recognition）</strong>。
+                        在開賽前接受 <strong>Boston Red Sox 的介紹與表揚（Recognition）</strong>。目前可能時間窗約為 <strong>3:20–3:45 PM</strong>，實際時間仍以球場當天安排為準。
                       </p>
                       <p className="mt-2 rounded-xl border border-violet-200 bg-white px-3 py-2 font-black leading-6 text-violet-950">
                         到時候如果聽到 <strong>TEAM TAIWAN</strong>，希望大家一起大聲歡呼！
@@ -3322,8 +3328,8 @@ function GuideZh({ isZh, setIsZh }) {
 
                   <div className="pb-2">
                     <div className="rounded-2xl border border-amber-200 bg-amber-50 px-4 py-3 shadow-sm">
-                      <p className="text-lg font-black text-amber-900">比賽開始</p>
-                      <p className="mt-1.5 leading-7">比賽正式開始。建議大家在開賽前先完成進場、安檢與 Jersey 領取。</p>
+                      <p className="text-lg font-black text-amber-900">First Pitch／比賽開始</p>
+                      <p className="mt-1.5 leading-7">4:15 PM First Pitch。建議大家在開賽前先完成進場、安檢與 Jersey 領取。</p>
                     </div>
                   </div>
                 </div>
@@ -3965,7 +3971,7 @@ function GuideEn({ isZh, setIsZh }) {
               <div className="space-y-2">
                 <div className="grid grid-cols-[110px_24px_1fr] gap-3 md:grid-cols-[140px_28px_1fr] md:gap-4">
                   <div className="pt-2 text-right">
-                    <p className="text-base font-black leading-tight text-slate-950 md:text-lg">2:45–3:15</p>
+                    <p className="text-base font-black leading-tight text-slate-950 md:text-lg">2:00</p>
                     <p className="mt-0.5 text-xs font-bold text-slate-500">PM</p>
                   </div>
 
@@ -3976,14 +3982,19 @@ function GuideEn({ isZh, setIsZh }) {
 
                   <div className="pb-2">
                     <div className="rounded-2xl border border-emerald-200 bg-emerald-50 px-4 py-3 shadow-sm">
-                      <p className="text-lg font-black text-emerald-900">Gather on Lansdowne Street</p>
-                      <p className="mt-1.5 leading-7">Please gather on <strong>Lansdowne Street</strong> next to Fenway Park.</p>
+                      <p className="text-lg font-black text-emerald-900">Lansdowne Street | TEAM TAIWAN Gathering</p>
+                      <p className="mt-1.5 leading-7">Please begin gathering on <strong>Lansdowne Street</strong> next to Fenway Park.</p>
+                      <div className="mt-2 rounded-xl border border-emerald-200 bg-white px-3 py-2">
+                        <p className="font-black leading-6 text-emerald-950">
+                          🐻 Special thanks to <strong>Keep Taiwan Free</strong> for bringing their Taiwan black bear to support the 912 event. Please come early and take photos with the bear!
+                        </p>
+                      </div>
                     </div>
                   </div>
                 </div>
                 <div className="grid grid-cols-[110px_24px_1fr] gap-3 md:grid-cols-[140px_28px_1fr] md:gap-4">
                   <div className="pt-2 text-right">
-                    <p className="text-base font-black leading-tight text-slate-950 md:text-lg">3:15</p>
+                    <p className="text-base font-black leading-tight text-slate-950 md:text-lg">2:30</p>
                     <p className="mt-0.5 text-xs font-bold text-slate-500">PM</p>
                   </div>
 
@@ -3995,18 +4006,19 @@ function GuideEn({ isZh, setIsZh }) {
                   <div className="pb-2">
                     <div className="rounded-2xl border border-sky-200 bg-sky-50 px-4 py-3 shadow-sm">
                       <p className="text-lg font-black text-sky-900">Group photo</p>
-                      <p className="mt-1.5 leading-7">Please arrive on time so we can take the 912 Taiwan Fan Night 1300-person group photo together.</p>
-                      <div className="mt-2 rounded-xl border border-rose-200 bg-rose-50 px-3 py-2">
-                      <p className="font-black leading-6 text-rose-900">
-                        🐻 Special thanks to <strong>Keep Taiwan Free</strong> for bringing their Taiwan black bear to join everyone for photos!
-                      </p>
-                    </div>
+                      <p className="mt-1.5 leading-7">Please arrive on time so we can take the 912 Taiwan Fan Night 1,300-person group photo together. We will also have a drone helping capture this special moment.</p>
+                      <div className="mt-2 rounded-xl border border-amber-200 bg-amber-50 px-3 py-2">
+                        <p className="font-black leading-6 text-amber-950">
+                          Reminder: The group photo has been moved earlier from <strong>3:15 PM</strong> to <strong>2:30 PM</strong>. Please arrive early.
+                        </p>
+                      </div>
+
                     </div>
                   </div>
                 </div>
                 <div className="grid grid-cols-[110px_24px_1fr] gap-3 md:grid-cols-[140px_28px_1fr] md:gap-4">
                   <div className="pt-2 text-right">
-                    <p className="text-base font-black leading-tight text-slate-950 md:text-lg">3:20</p>
+                    <p className="text-base font-black leading-tight text-slate-950 md:text-lg">2:45</p>
                     <p className="mt-0.5 text-xs font-bold text-slate-500">PM</p>
                   </div>
 
@@ -4024,7 +4036,7 @@ function GuideEn({ isZh, setIsZh }) {
                 </div>
                 <div className="grid grid-cols-[110px_24px_1fr] gap-3 md:grid-cols-[140px_28px_1fr] md:gap-4">
                   <div className="pt-2 text-right">
-                    <p className="text-base font-black leading-tight text-slate-950 md:text-lg">Pre-game</p>
+                    <p className="text-base font-black leading-tight text-slate-950 md:text-lg">Around 3:20–3:45</p>
                   </div>
 
                   <div className="relative flex justify-center">
@@ -4037,7 +4049,7 @@ function GuideEn({ isZh, setIsZh }) {
                       <p className="text-lg font-black text-violet-950">Leader of the Pack</p>
                       <p className="mt-1.5 leading-7">
                         <strong>Director-General Charles Liao</strong> and <strong>Jing Ruo Kuo</strong> will represent <strong>TEAM TAIWAN</strong>
-                        as our <strong>Leader of the Pack</strong> and receive <strong>recognition from the Boston Red Sox</strong> before the game.
+                        as our <strong>Leader of the Pack</strong> and receive <strong>recognition from the Boston Red Sox</strong> before the game. The possible on-field recognition window is around <strong>3:20–3:45 PM</strong>, subject to the ballpark schedule.
                       </p>
                       <p className="mt-2 rounded-xl border border-violet-200 bg-white px-3 py-2 font-black leading-6 text-violet-950">
                         If you hear “<strong>TEAM TAIWAN</strong>,” please cheer loudly together!
@@ -4058,7 +4070,7 @@ function GuideEn({ isZh, setIsZh }) {
 
                   <div className="pb-2">
                     <div className="rounded-2xl border border-amber-200 bg-amber-50 px-4 py-3 shadow-sm">
-                      <p className="text-lg font-black text-amber-900">Game starts</p>
+                      <p className="text-lg font-black text-amber-900">First Pitch / Game starts</p>
                       <p className="mt-1.5 leading-7">The game begins. We recommend completing entry, security, and Jersey pickup before the game starts.</p>
                     </div>
                   </div>
