@@ -3453,50 +3453,13 @@ function GuideZh({ isZh, setIsZh }) {
                     </div>
                   </li>
                   <li><strong>另外加購的活動衣服</strong>也請依照下方公布的相同發放地點與時間領取喔！</li>
-                  <li>建議大家活動當天先穿著白色活動 T-shirt 到 Fenway。</li>
+                  <li>請大家活動當天先穿著白色活動 T-shirt 到 Fenway。</li>
                 </ul>
               </Card>
 
 
             </div>
 
-            <Card className="border-emerald-200 bg-emerald-50">
-              <p className="text-lg font-black text-emerald-900">912 衣服發放地點與時間速覽</p>
-              <div className="mt-4 grid gap-3 md:grid-cols-2">
-                <div className="rounded-2xl bg-white p-4 ring-1 ring-emerald-200">
-                  <p className="font-black text-slate-950">8/28 Fri｜Newton 僑教中心</p>
-                  <p className="text-sm font-bold text-slate-600">10:30 AM – 4:30 PM｜小教室</p>
-                </div>
-                <div className="rounded-2xl bg-white p-4 ring-1 ring-emerald-200">
-                  <p className="font-black text-slate-950">8/29 Sat｜Formosa Bun & Dumpling Factory</p>
-                  <p className="text-sm font-bold text-slate-600">11:30 AM – 4:30 PM｜Green Line｜鄰近Newton Centre 站</p>
-                </div>
-                <div className="rounded-2xl bg-white p-4 ring-1 ring-emerald-200">
-                  <p className="font-black text-slate-950">8/30 Sun｜Northeastern Crossing</p>
-                  <p className="text-sm font-bold text-slate-600">11:30 AM – 4:30 PM｜Orange Line｜Conference Room</p>
-                </div>
-                <div className="rounded-2xl bg-white p-4 ring-1 ring-emerald-200">
-                  <p className="font-black text-slate-950">9/5 Sat｜Rhode Island Taiwan Day 羅德島台灣日</p>
-                  <p className="text-sm font-bold text-slate-600">10:15 AM – 12:00 PM｜TECO booth｜Festival Pier, Pawtucket, RI</p>
-                </div>
-                <div className="rounded-2xl bg-white p-4 ring-1 ring-emerald-200">
-                  <p className="font-black text-slate-950">9/5 Sat｜Andover 貢茶</p>
-                  <p className="text-sm font-bold text-slate-600">2:00 PM – 6:00 PM｜2 Elm Ct, Andover, MA 01810</p>
-                </div>
-                <div className="rounded-2xl bg-white p-4 ring-1 ring-emerald-200">
-                  <p className="font-black text-slate-950">9/9 Wed｜Tai Chi Acupuncture & Wellness Center – Danvers location</p>
-                  <p className="text-sm font-bold text-slate-600">4:00 PM – 7:00 PM｜Parking lot</p>
-                </div>
-                <div className="rounded-2xl bg-white p-4 ring-1 ring-emerald-200">
-                  <p className="font-black text-slate-950">9/10 Thu｜Cafe Zing</p>
-                  <p className="text-sm font-bold text-slate-600">3:00 PM – 6:00 PM｜Red Line｜Porter Station 附近</p>
-                </div>
-                <div className="rounded-2xl bg-white p-4 ring-1 ring-emerald-200">
-                  <p className="font-black text-slate-950">9/11 Fri｜Newton 僑教中心</p>
-                  <p className="text-sm font-bold text-slate-600">11:30 AM – 4:30 PM｜小教室</p>
-                </div>
-              </div>
-            </Card>
 
             <div className="space-y-4">
               <Card className="border-slate-200 bg-white">
