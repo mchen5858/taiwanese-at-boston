@@ -2994,7 +2994,7 @@ function GuideSeatColorLookup({ isZh }) {
 
 function SeatColorLookupZh() {
   return (
-    <Section id="06" title="排字活動說明＋座位／衣服顏色查詢">
+    <Section id="05" title="排字活動說明＋座位／衣服顏色查詢">
       <div className="px-1">
         <p className="text-xl font-black text-rose-900">輕鬆參與，開心一起玩！</p>
         <p className="mt-3 leading-8 text-slate-700">
@@ -3074,7 +3074,7 @@ function SeatColorLookupZh() {
 
 function SeatColorLookupEn() {
   return (
-    <Section id="06" title="Lettering activity overview + seat / shirt color lookup">
+    <Section id="05" title="Lettering activity overview + seat / shirt color lookup">
       <div className="px-1">
         <p className="text-xl font-black text-rose-900">Relax, join in, and have fun!</p>
         <p className="mt-3 leading-8 text-slate-700">
@@ -3638,7 +3638,9 @@ function GuideZh({ isZh, setIsZh }) {
             </div>
           </Section>
 
-          <Section id="05" title="電子票領取方式">
+                    <SeatColorLookupZh />
+
+<Section id="06" title="電子票領取方式">
             <Card className="border-emerald-200 bg-emerald-50">
               <p className="text-xl font-black text-emerald-900">電子票已全部發送完成</p>
               <p className="mt-3 leading-8">
@@ -3660,16 +3662,16 @@ function GuideZh({ isZh, setIsZh }) {
               <div className="mt-4 rounded-2xl bg-amber-50 p-4 leading-8 text-amber-950 ring-1 ring-amber-200">
                 <p className="text-lg font-black">尚未領取電子票提醒</p>
                 <p className="mt-2">
-                  目前（8/27）還有約 <strong>120 張票</strong> 尚未領取。我們在 <strong>8/22 下午 6:00 左右</strong>，
-                  由 <strong>redsox.com</strong> 寄出電子票，Email 標題應該是：
+                  電子票目前只剩大約 <strong>60 張</strong> 尚未接收！
                 </p>
-                <p className="mt-3 rounded-xl bg-white p-4 font-black leading-7 text-slate-950 ring-1 ring-amber-200">
-                  “You have just been forwarded Red Sox tickets for 2026-09-12”
+                <p className="mt-2">
+                  今天 <strong>8/30</strong> 我們已經將這些尚未接收的票，原本 <strong>8/22 寄出的邀請取消，並重新寄送一次</strong>。
                 </p>
-                <p className="mt-3">
-                  這封領票 Email <strong>不會過期</strong>。如果找不到，請先查看 <strong>Spam / Junk Folder</strong>。
-                  還是找不到的話，可以直接與我們聯絡，我們可以協助；也可以在領衣服的時候，
-                  請現場志工幫忙確認 <strong>MLB Ballpark App</strong> 與電子票。
+                <p className="mt-2">
+                  只要電子票還沒有正式接收到 <strong>MLB Ballpark App</strong>，我們這邊系統就會顯示「尚未接收」。
+                </p>
+                <p className="mt-3 rounded-xl bg-white p-4 font-black leading-7 text-amber-950 ring-1 ring-amber-200">
+                  所以如果你今天再次收到 Red Sox 的電子票邀請，請記得點進去，把票接收到 <strong>Ballpark App</strong> 裡面喔！
                 </p>
               </div>
             </Card>
@@ -3755,8 +3757,7 @@ function GuideZh({ isZh, setIsZh }) {
               </div>
             </Card>
           </Section>
-          <SeatColorLookupZh />
-
+          
           <Section id="07" title="重要提醒">
             <Card className="border-sky-200 bg-sky-50">
               <p className="text-xl font-black text-sky-950">關於國旗、Banner 與 Sign</p>
@@ -4196,7 +4197,9 @@ function GuideEn({ isZh, setIsZh }) {
             </div>
           </Section>
 
-          <Section id="05" title="Digital ticket instructions">
+                    <SeatColorLookupEn />
+
+<Section id="06" title="Digital ticket instructions">
             <Card className="border-emerald-200 bg-emerald-50">
               <p className="text-xl font-black text-emerald-900">Digital tickets have all been sent</p>
               <p className="mt-3 leading-8">
@@ -4216,19 +4219,18 @@ function GuideEn({ isZh, setIsZh }) {
               </div>
 
               <div className="mt-4 rounded-2xl bg-amber-50 p-4 leading-8 text-amber-950 ring-1 ring-amber-200">
-                <p className="text-lg font-black">Reminder for unclaimed digital tickets</p>
+                <p className="text-lg font-black">Reminder for unaccepted digital tickets</p>
                 <p className="mt-2">
-                  As of 8/27, there are currently about <strong>120 tickets</strong> that have not yet been accepted.
-                  Around <strong>6:00 PM on August 22</strong>, digital tickets were sent from <strong>redsox.com</strong>.
-                  The email subject should be:
+                  There are now only about <strong>60 tickets</strong> that have not yet been accepted.
                 </p>
-                <p className="mt-3 rounded-xl bg-white p-4 font-black leading-7 text-slate-950 ring-1 ring-amber-200">
-                  “You have just been forwarded Red Sox tickets for 2026-09-12”
+                <p className="mt-2">
+                  Today, <strong>8/30</strong>, we canceled the original invitations sent on <strong>8/22</strong> for those unaccepted tickets and resent the invitations.
                 </p>
-                <p className="mt-3">
-                  This ticket acceptance email <strong>does not expire</strong>. If you cannot find it, please first check your
-                  <strong> Spam / Junk Folder</strong>. If you still cannot find it, please contact us and we can help.
-                  You can also ask an on-site volunteer for help checking your <strong>MLB Ballpark App</strong> and digital tickets when you pick up your event shirt.
+                <p className="mt-2">
+                  As long as a ticket has not been officially accepted into the <strong>MLB Ballpark App</strong>, our system will still show it as “not accepted.”
+                </p>
+                <p className="mt-3 rounded-xl bg-white p-4 font-black leading-7 text-amber-950 ring-1 ring-amber-200">
+                  If you receive another Red Sox digital ticket invitation today, please open it and accept the ticket into your <strong>Ballpark App</strong>.
                 </p>
               </div>
             </Card>
@@ -4314,8 +4316,7 @@ function GuideEn({ isZh, setIsZh }) {
               </div>
             </Card>
           </Section>
-          <SeatColorLookupEn />
-
+          
           <Section id="07" title="Important reminders">
             <Card className="border-sky-200 bg-sky-50">
               <p className="text-xl font-black text-sky-950">About flags, banners, and signs</p>
