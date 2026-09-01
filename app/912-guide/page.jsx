@@ -3561,7 +3561,7 @@ function GuideZh({ isZh, setIsZh }) {
                     <p className="text-xl font-black text-slate-950">Danvers｜Tai Chi Acupuncture & Wellness Center</p>
                     <p className="mt-2 font-bold text-slate-700">地址：2 Orchard Ln, Danvers, MA 01923</p>
                     <p className="mt-3 rounded-2xl bg-slate-50 p-4 font-bold leading-7 text-slate-800 ring-1 ring-slate-200">
-                      小提醒：此地點為戶外，會在 parking lot 發放。
+                      小提醒：請進到 Building 裡面的 Unit A 領取。
                     </p>
                   </div>
                 </div>
