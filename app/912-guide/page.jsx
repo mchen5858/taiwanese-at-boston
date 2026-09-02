@@ -3263,7 +3263,7 @@ function GuideZh({ isZh, setIsZh }) {
                   <div className="pb-2">
                     <div className="rounded-2xl border border-sky-200 bg-sky-50 px-4 py-3 shadow-sm">
                       <p className="text-lg font-black text-sky-900">大合照</p>
-                      <p className="mt-1.5 leading-7">請大家準時集合，一起完成 912 Taiwan Fan Night 的 1300 人大合照。我們也會派出空拍機來幫大家紀錄喔！</p>
+                      <p className="mt-1.5 leading-7">請大家準時集合，一起完成 912 Taiwan Fan Night 的 1300 人大合照。</p>
                       <div className="mt-2 rounded-xl border border-amber-200 bg-amber-50 px-3 py-2">
                         <p className="font-black leading-6 text-amber-950">
                           小提醒：大合照已從原本的 <strong>3:15 PM</strong> 提早到 <strong>2:30 PM</strong>，請大家務必提早到場。
@@ -3970,7 +3970,7 @@ function GuideEn({ isZh, setIsZh }) {
                   <div className="pb-2">
                     <div className="rounded-2xl border border-sky-200 bg-sky-50 px-4 py-3 shadow-sm">
                       <p className="text-lg font-black text-sky-900">Group photo</p>
-                      <p className="mt-1.5 leading-7">Please arrive on time so we can take the 912 Taiwan Fan Night 1,300-person group photo together. We will also have a drone helping capture this special moment.</p>
+                      <p className="mt-1.5 leading-7">Please arrive on time so we can take the 912 Taiwan Fan Night 1,300-person group photo together.</p>
                       <div className="mt-2 rounded-xl border border-amber-200 bg-amber-50 px-3 py-2">
                         <p className="font-black leading-6 text-amber-950">
                           Reminder: The group photo has been moved earlier from <strong>3:15 PM</strong> to <strong>2:30 PM</strong>. Please arrive early.
