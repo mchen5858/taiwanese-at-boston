@@ -128,21 +128,21 @@ export default function TshirtSizeChangePage() {
           </div>
 
           <p className="mb-4 inline-flex rounded-full bg-amber-300 px-5 py-2 text-sm font-black uppercase tracking-[0.22em] text-emerald-950">
-            {isZh ? "912 T-shirt 尺寸查詢與更改" : "912 T-shirt Size Check & Change"}
+            {isZh ? "912 T-shirt 尺寸查詢與尺寸表" : "912 T-shirt Size Check & Size Chart"}
           </p>
 
           <h1 className="max-w-5xl text-4xl font-black leading-tight md:text-6xl">
-            {isZh ? "查詢目前尺寸，提交更改需求" : "Check Your Current Size and Submit a Change Request"}
+            {isZh ? "查詢目前尺寸，查看尺寸表" : "Check Your Current Size and View the Size Chart"}
           </h1>
 
           <p className="mt-6 max-w-4xl text-lg leading-8 text-white/85 md:text-xl">
             {isZh
-              ? "請輸入報名或購票時使用的 email，查詢目前登記的 T-shirt 尺寸。如果需要更改，請選擇新的尺寸並送出。主辦單位會統一整理所有更改需求。"
-              : "Enter the email used for registration or ticket purchase to check your current T-shirt size. If you need to change it, select the new size and submit your request. The organizer will review and process all change requests."}
+              ? "請輸入報名或購票時使用的 email，查詢目前登記的 T-shirt 尺寸，並查看尺寸表。尺寸更改已結束，系統僅供查詢使用。"
+              : "Enter the email used for registration or ticket purchase to check your current T-shirt size and view the size chart. Size changes are now closed; the system is for lookup only."}
           </p>
 
           <div className="mt-7 inline-flex rounded-2xl bg-white/10 px-5 py-3 text-base font-black text-white ring-1 ring-white/20 backdrop-blur">
-            {isZh ? "目前仍可更改尺寸" : "Size changes are still open"}
+            {isZh ? "尺寸更改已結束｜仍可查詢尺寸" : "Size changes closed | Lookup still available"}
           </div>
           
         </div>
@@ -161,10 +161,15 @@ export default function TshirtSizeChangePage() {
               <h2 className="mt-2 text-xl font-black leading-tight text-slate-950 md:text-2xl">
                 {isZh ? "只需要輸入 email 即可查詢所有衣服" : "Enter your email to view all shirts"}
               </h2>
+              <p className="mt-3 rounded-2xl bg-white px-4 py-3 text-sm font-black leading-7 text-sky-900 ring-1 ring-sky-200 md:text-base">
+                {isZh
+                  ? "目前已不再接受任何尺寸更改；這個頁面保留給大家查詢目前登記尺寸與查看尺寸表。"
+                  : "Size changes are no longer accepted. This page remains available for checking your currently registered size and viewing the size chart."}
+              </p>
               <p className="mt-3 text-sm leading-7 text-slate-600 md:text-base">
                 {isZh
-                  ? "買球票附贈的 912 活動衣服，以及另外加購的衣服，都會一起出現在尺寸查詢與更改系統裡。您只需要輸入購票或加購時使用的 email，即可查看並更改相關尺寸。"
-                  : "The 912 event shirt included with your game ticket and any add-on shirts you purchased will all appear in the size check and change system. Simply enter the email used for your ticket purchase or add-on order to view and update the related sizes."}
+                  ? "買球票附贈的 912 活動衣服，以及另外加購的衣服，都會一起出現在尺寸查詢系統裡。您只需要輸入購票或加購時使用的 email，即可查看目前登記的尺寸。"
+                  : "The 912 event shirt included with your game ticket and any add-on shirts you purchased will all appear in the size lookup system. Simply enter the email used for your ticket purchase or add-on order to view the currently registered sizes."}
               </p>
             </div>
           </div>
@@ -182,12 +187,12 @@ export default function TshirtSizeChangePage() {
                     {isZh ? "系統更新提醒" : "System Update Notice"}
                   </p>
                   <h2 className="mt-2 text-xl font-black leading-tight text-slate-950">
-                    {isZh ? "送出後會直接顯示新的 size" : "Updated size appears after submission"}
+                    {isZh ? "系統僅供查詢目前尺寸" : "Lookup only"}
                   </h2>
                   <p className="mt-3 text-sm leading-7 text-slate-600">
                     {isZh
-                      ? "尺寸更改送出後，系統會直接更新並顯示您最新選擇的 size。"
-                      : "After submitting your size change, the system will update and display your newly selected size directly."}
+                      ? "目前已不再接受尺寸更改。系統仍可用來查詢目前登記的尺寸與查看尺寸表。"
+                      : "Size changes are no longer accepted. The system can still be used to look up your currently registered size and view the size chart."}
                   </p>
                 </div>
               </div>
@@ -278,12 +283,12 @@ export default function TshirtSizeChangePage() {
           <div className="rounded-[1.75rem] border border-rose-200 bg-white p-6 shadow-sm">
             <p className="text-3xl">3️⃣</p>
             <h2 className="mt-3 text-2xl font-black text-slate-950">
-              {isZh ? "提交新的尺寸" : "Submit New Size"}
+              {isZh ? "查看尺寸表" : "View Size Chart"}
             </h2>
             <p className="mt-3 leading-7 text-slate-600">
               {isZh
-                ? "送出後系統會直接更新，並顯示您最新選擇的 size。"
-                : "After submission, the system will update and display your newly selected size directly."}
+                ? "尺寸更改已結束；請使用本頁尺寸表作為參考，並可透過查詢系統確認目前登記尺寸。"
+                : "Size changes are now closed. Please use this size chart for reference and the lookup system to confirm your currently registered size."}
             </p>
           </div>
         </div>
@@ -364,12 +369,12 @@ export default function TshirtSizeChangePage() {
 
         <div className="mt-12 rounded-[2rem] bg-gradient-to-br from-emerald-900 to-sky-900 p-7 text-white shadow-lg md:p-9">
           <h2 className="text-3xl font-black text-white">
-            {isZh ? "準備好更改尺寸了嗎？" : "Ready to Change Your Size?"}
+            {isZh ? "需要查詢目前尺寸嗎？" : "Need to check your current size?"}
           </h2>
           <p className="mt-4 max-w-3xl leading-8 text-white/85">
             {isZh
-              ? "請先確認尺寸表與提醒事項，再前往尺寸查詢與更改系統提交需求。"
-              : "Please review the size chart and notes, then go to the size check and change system to submit your request."}
+              ? "請先確認尺寸表與提醒事項；如需確認目前登記尺寸，可前往尺寸查詢系統。尺寸更改已結束。"
+              : "Please review the size chart and notes. To confirm your currently registered size, go to the size lookup system. Size changes are now closed."}
           </p>
 
           <div className="mt-8">
@@ -379,7 +384,7 @@ export default function TshirtSizeChangePage() {
               rel="noopener noreferrer"
               className="inline-flex justify-center rounded-full bg-amber-300 px-8 py-4 text-base font-black text-emerald-950 shadow-md transition hover:-translate-y-0.5 hover:bg-amber-200"
             >
-              {isZh ? "前往尺寸查詢與更改系統" : "Go to Size Check & Change System"}
+              {isZh ? "前往尺寸查詢系統" : "Go to Size Lookup System"}
             </a>
 
             <div className="mt-5">

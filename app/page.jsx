@@ -1442,8 +1442,8 @@ export default function TaiwanFanNightWebsite() {
                   </h2>
                   <p className="mx-auto mt-5 max-w-3xl text-base leading-8 text-slate-600 md:text-lg">
                     {lang === "zh"
-                      ? "設計比賽資訊、入圍作品、得獎公布、尺寸更改、加購與領取資訊，都整理在這裡。"
-                      : "Contest information, finalist designs, winner announcement, size changes, add-ons, and pickup information are all organized here."}
+                      ? "設計比賽資訊、入圍作品、得獎公布、尺寸資訊、加購與領取資訊，都整理在這裡。"
+                      : "Contest information, finalist designs, winner announcement, size informations, add-ons, and pickup information are all organized here."}
                   </p>
                 </div>
               </div>
@@ -1517,7 +1517,7 @@ export default function TaiwanFanNightWebsite() {
                   </a>
 
                   <a
-                    href="#size-change-closed"
+                    href="/tshirt-size-change"
                     className="group relative flex h-full flex-col overflow-hidden rounded-[2rem] border border-emerald-200 bg-white/95 p-7 shadow-[0_14px_40px_rgba(15,23,42,0.08)] transition duration-300 hover:-translate-y-1.5 hover:shadow-[0_22px_60px_rgba(5,150,105,0.18)]"
                   >
                     <div className="absolute inset-x-0 top-0 h-1.5 bg-gradient-to-r from-emerald-400 via-cyan-300 to-sky-300" />
@@ -1525,15 +1525,15 @@ export default function TaiwanFanNightWebsite() {
                       <div className="flex h-16 w-16 items-center justify-center rounded-[1.35rem] bg-emerald-100 text-3xl shadow-sm ring-1 ring-emerald-200/60">📏</div>
                       <div className="rounded-full bg-amber-300 px-3 py-1 text-xs font-black uppercase tracking-[0.18em] text-emerald-950">{lang === "zh" ? "已關閉" : "Open"}</div>
                     </div>
-                    <p className="mt-6 text-xs font-black uppercase tracking-[0.28em] text-emerald-700">{lang === "zh" ? "Size Change" : "Size Change"}</p>
-                    <h3 className="mt-3 text-3xl font-black leading-tight text-slate-950">{lang === "zh" ? "尺寸查詢與更改" : "Size Check & Change"}</h3>
+                    <p className="mt-6 text-xs font-black uppercase tracking-[0.28em] text-emerald-700">{lang === "zh" ? "Size Chart" : "Size Chart"}</p>
+                    <h3 className="mt-3 text-3xl font-black leading-tight text-slate-950">{lang === "zh" ? "尺寸查詢與尺寸表" : "Size Check & Size Chart"}</h3>
                     <p className="mt-4 flex-1 text-[15px] leading-8 text-slate-600">
                       {lang === "zh"
-                        ? "輸入 email 查詢目前尺寸、查看 size chart，並提交更改需求。"
-                        : "Enter your email to check your current size, review the size chart, and submit a size change request."}
+                        ? "輸入 email 查詢目前尺寸，並查看 size chart。尺寸更改已結束。"
+                        : "Enter your email to check your current size and view the size chart. Size changes are now closed."}
                     </p>
                     <div className="mt-7 inline-flex w-fit items-center gap-2 rounded-full bg-emerald-700 px-5 py-3 text-sm font-black text-white shadow-md transition group-hover:bg-emerald-800">
-                      {lang === "zh" ? "前往改尺寸" : "Size Change Closed"}
+                      {lang === "zh" ? "查看尺寸" : "View Size Chart"}
                       <span className="transition group-hover:translate-x-1">→</span>
                     </div>
                   </a>
