@@ -1646,12 +1646,12 @@ export default function TaiwanFanNightWebsite() {
         <section id="raffle" className="px-4 py-16 md:px-8 md:py-24">
           <div className="mx-auto max-w-7xl">
             <SectionTitle
-              eyebrow={lang === "zh" ? "Raffle & Voting" : "Raffle & Voting"}
-              title={lang === "zh" ? "912 抽獎活動與創意隊名票選" : "912 Raffle & Creative Team Name Voting"}
+              eyebrow={lang === "zh" ? "Results Announced" : "Results Announced"}
+              title={lang === "zh" ? "912 TEAM TAIWAN｜創意隊名票選＋抽獎結果公布！" : "912 TEAM TAIWAN｜Creative Team Name Voting + Raffle Results"}
               description={
                 lang === "zh"
-                  ? "這次活動包含 912 創意隊名票選、台灣集結活動大抽獎，以及 9/8 公布結果與獎品領取方式。"
-                  : "This event includes the 912 Creative Team Name Voting, the TEAM TAIWAN event raffle, and the 9/8 result announcement and prize pickup details."
+                  ? "謝謝大家這段時間一起參與組隊、投票，也一起期待 912！今晚一次公布：912 創意隊名票選前三名，以及 912 台灣集結活動抽獎結果。"
+                  : "Thank you for joining teams, voting, and getting excited for 912! We are announcing the Creative Team Name Voting top three and the 912 TEAM TAIWAN raffle results."
               }
             />
 
@@ -1660,7 +1660,7 @@ export default function TaiwanFanNightWebsite() {
                 {lang === "zh" ? "抽獎結果已公布" : "Raffle Results Announced"}
               </p>
               <h3 className="mt-3 text-3xl font-black text-slate-950 md:text-4xl">
-                {lang === "zh" ? "5/2–5/31｜抽獎結果" : "5/2–5/31｜Official LINE Group Raffle Results"}
+                {lang === "zh" ? "5/2–5/31｜加入 912 台灣集結抽獎結果" : "5/2–5/31｜Official LINE Group Raffle Results"}
               </h3>
               <p className="mt-4 leading-8 text-slate-700">
                 {lang === "zh"
@@ -1702,131 +1702,139 @@ export default function TaiwanFanNightWebsite() {
             </Card>
 
 
-            <div className="grid gap-6 lg:grid-cols-2">
-              <Card className="border-amber-200 bg-gradient-to-br from-amber-50 via-white to-orange-50 p-7 shadow-lg md:p-8">
-                <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-amber-100 text-3xl shadow-sm">🏆</div>
-                <p className="mt-6 text-sm font-black uppercase tracking-[0.28em] text-amber-700">
-                  {lang === "zh" ? "912 創意隊名票選" : "912 Creative Team Name Voting"}
-                </p>
-                <h3 className="mt-3 text-3xl font-black leading-tight text-slate-950">
-                  {lang === "zh" ? "看看哪幾個隊名最有創意！" : "Vote for the most creative team names!"}
-                </h3>
-                <p className="mt-4 leading-8 text-slate-700">
-                  {lang === "zh"
-                    ? "912 剛開始售票時，為了讓大家即使不同時間買票，也有機會和朋友坐在一起，我們特別發起了組隊活動。最後共有超過 90 個隊伍組隊參加 912！"
-                    : "When 912 tickets first went on sale, we created team sign-ups so friends could still sit together even if they purchased at different times. In the end, more than 90 teams joined 912!"}
-                </p>
+            <Card className="mb-8 border-amber-200 bg-gradient-to-br from-amber-50 via-white to-orange-50 p-7 shadow-lg md:p-9">
+              <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-amber-100 text-3xl shadow-sm">🏆</div>
+              <p className="mt-6 text-sm font-black uppercase tracking-[0.28em] text-amber-700">
+                {lang === "zh" ? "912 創意隊名票選｜前三名" : "912 Creative Team Name Voting｜Top 3"}
+              </p>
+              <h3 className="mt-3 text-3xl font-black leading-tight text-slate-950 md:text-4xl">
+                {lang === "zh" ? "前三名正式出爐！" : "The top three teams are here!"}
+              </h3>
+              <p className="mt-4 leading-8 text-slate-700">
+                {lang === "zh"
+                  ? "這次共有超過 90 個隊伍參加組隊，也出現了好多很有創意的隊名！經過大家投票後，前三名正式出爐。"
+                  : "More than 90 teams joined this year, with many creative team names. After community voting, the top three teams are official."}
+              </p>
+              <div className="mt-8 grid gap-5 lg:grid-cols-3">
+                <div className="rounded-[2rem] border border-amber-200 bg-white p-6 text-center shadow-sm">
+                  <p className="text-4xl">🥇</p>
+                  <p className="mt-3 text-sm font-black text-amber-700">{lang === "zh" ? "第一名" : "1st Place"}</p>
+                  <h4 className="mt-2 text-2xl font-black leading-tight text-slate-950">我朋友說想湊50個人的隊</h4>
+                </div>
+                <div className="rounded-[2rem] border border-slate-200 bg-white p-6 text-center shadow-sm">
+                  <p className="text-4xl">🥈</p>
+                  <p className="mt-3 text-sm font-black text-slate-500">{lang === "zh" ? "第二名" : "2nd Place"}</p>
+                  <h4 className="mt-2 text-2xl font-black leading-tight text-slate-950">投我們就(隊)</h4>
+                </div>
+                <div className="rounded-[2rem] border border-orange-200 bg-white p-6 text-center shadow-sm">
+                  <p className="text-4xl">🥉</p>
+                  <p className="mt-3 text-sm font-black text-orange-700">{lang === "zh" ? "第三名" : "3rd Place"}</p>
+                  <h4 className="mt-2 text-2xl font-black leading-tight text-slate-950">要台灣人放棄諧音梗真的TAIWAN了</h4>
+                </div>
+              </div>
+              <div className="mt-7 rounded-2xl bg-white p-5 font-black leading-8 text-amber-900 ring-1 ring-amber-200">
+                {lang === "zh"
+                  ? "恭喜以上三隊！每隊的隊長都可以獲得：⚾ 鄭宗哲親筆簽名球 1 顆！也謝謝所有參與組隊和投票的朋友。"
+                  : "Congratulations to the top three teams! Each team captain will receive one baseball signed by Cheng Tsung-Che. Thank you to everyone who joined a team and voted!"}
+              </div>
+            </Card>
 
-                <div className="mt-6 grid gap-4 md:grid-cols-2">
-                  <div className="rounded-2xl bg-white p-4 font-black leading-7 text-amber-900 ring-1 ring-amber-100">
-                    {lang === "zh" ? "🔥 每個人可以投 2 票！" : "🔥 Each person may vote for 2 teams!"}
-                  </div>
-                  <div className="rounded-2xl bg-white p-4 font-black leading-7 text-rose-900 ring-1 ring-rose-100">
-                    {lang === "zh" ? "⏰ 投票截止：9/8 晚上 7:00 PM" : "⏰ Voting closes: 9/8 at 7:00 PM"}
+            <Card className="mb-8 border-sky-200 bg-gradient-to-br from-sky-50 via-white to-emerald-50 p-7 shadow-lg md:p-9">
+              <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-sky-100 text-3xl shadow-sm">🎁</div>
+              <p className="mt-6 text-sm font-black uppercase tracking-[0.28em] text-sky-700">
+                {lang === "zh" ? "912 台灣集結活動｜抽獎結果" : "912 TEAM TAIWAN Event Raffle Results"}
+              </p>
+              <h3 className="mt-3 text-3xl font-black leading-tight text-slate-950 md:text-4xl">
+                {lang === "zh" ? "恭喜以下幸運得主！" : "Congratulations to the winners!"}
+              </h3>
+
+              <div className="mt-8 grid gap-5">
+                <div className="rounded-[2rem] border border-sky-100 bg-white p-6 shadow-sm">
+                  <p className="text-2xl font-black text-slate-950">⚾ {lang === "zh" ? "鄭宗哲親筆簽名球 × 1" : "Cheng Tsung-Che signed baseball × 1"}</p>
+                  <div className="mt-5 flex flex-wrap gap-3">
+                    {["L41 · Row 40 · Seat 6"].map((seat) => (
+                      <span key={seat} className="rounded-full bg-sky-100 px-5 py-3 text-lg font-black text-sky-900">🎟️ {seat}</span>
+                    ))}
                   </div>
                 </div>
 
-                <div className="mt-6 rounded-2xl border border-amber-200 bg-white p-5">
-                  <p className="font-black text-slate-950">
-                    {lang === "zh"
-                      ? "票選最高的前三名隊伍，每隊的隊長都可以獲得："
-                      : "The captains of the top three teams will each receive:"}
-                  </p>
-                  <p className="mt-3 text-xl font-black text-amber-900">
-                    {lang === "zh" ? "⚾ 鄭宗哲親筆簽名球 1 顆！" : "⚾ One baseball signed by Cheng Tsung-Che!"}
-                  </p>
-                </div>
-
-                <a
-                  href="https://forms.gle/U6rCB5y31oCVVcC98"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="mt-7 inline-flex w-fit items-center gap-2 rounded-full bg-amber-400 px-6 py-3 text-sm font-black text-slate-950 shadow-md transition hover:-translate-y-0.5 hover:bg-amber-300"
-                >
-                  {lang === "zh" ? "前往投票" : "Vote Now"}
-                  <span>→</span>
-                </a>
-              </Card>
-
-              <Card className="border-sky-200 bg-gradient-to-br from-sky-50 via-white to-emerald-50 p-7 shadow-lg md:p-8">
-                <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-sky-100 text-3xl shadow-sm">🎁</div>
-                <p className="mt-6 text-sm font-black uppercase tracking-[0.28em] text-sky-700">
-                  {lang === "zh" ? "台灣集結活動大抽獎" : "TEAM TAIWAN Event Raffle"}
-                </p>
-                <h3 className="mt-3 text-3xl font-black leading-tight text-slate-950">
-                  {lang === "zh" ? "用球票座位號碼直接抽出幸運得主" : "Winners will be drawn by ticket seat number"}
-                </h3>
-                <p className="mt-4 leading-8 text-slate-700">
-                  {lang === "zh"
-                    ? "我們將直接從所有 912 活動參加者的球票座位號碼中抽出幸運得主。不需要填表、不需要另外報名。只要你有 912 球票，就自動具有抽獎資格！"
-                    : "Winners will be drawn directly from the seat numbers of all 912 event ticket holders. No form or extra registration is needed. If you have a 912 ticket, you are automatically eligible!"}
-                </p>
-
-                <div className="mt-6 grid gap-4">
-                  <div className="rounded-2xl bg-white p-4 ring-1 ring-sky-100">
-                    <p className="text-sm font-black text-sky-700">{lang === "zh" ? "1 個座位號碼" : "1 seat number"}</p>
-                    <p className="mt-1 text-lg font-black text-slate-950">{lang === "zh" ? "⚾ 鄭宗哲親筆簽名球 1 顆" : "⚾ One Cheng Tsung-Che signed baseball"}</p>
-                  </div>
-                  <div className="rounded-2xl bg-white p-4 ring-1 ring-emerald-100">
-                    <p className="text-sm font-black text-emerald-700">{lang === "zh" ? "2 個座位號碼" : "2 seat numbers"}</p>
-                    <p className="mt-1 text-lg font-black text-slate-950">{lang === "zh" ? "👕 鄭宗哲親筆簽名 Taiwanese @ Boston 主題 T-shirt" : "👕 Cheng Tsung-Che signed Taiwanese @ Boston themed T-shirts"}</p>
-                  </div>
-                  <div className="rounded-2xl bg-white p-4 ring-1 ring-amber-100">
-                    <p className="text-sm font-black text-amber-700">{lang === "zh" ? "10 個座位號碼" : "10 seat numbers"}</p>
-                    <p className="mt-1 text-lg font-black text-slate-950">{lang === "zh" ? "🐻 912 限量黑熊鑰匙圈 1 個" : "🐻 One 912 Limited Black Bear Keychain"}</p>
+                <div className="rounded-[2rem] border border-emerald-100 bg-white p-6 shadow-sm">
+                  <p className="text-2xl font-black text-slate-950">👕 {lang === "zh" ? "鄭宗哲親筆簽名 Taiwanese @ Boston 主題 T-shirt × 2" : "Cheng Tsung-Che signed Taiwanese @ Boston themed T-shirt × 2"}</p>
+                  <div className="mt-5 flex flex-wrap gap-3">
+                    {["L43 · Row 35 · Seat 8", "L42 · Row 47 · Seat 20"].map((seat) => (
+                      <span key={seat} className="rounded-full bg-emerald-100 px-5 py-3 text-lg font-black text-emerald-900">🎟️ {seat}</span>
+                    ))}
                   </div>
                 </div>
-              </Card>
-            </div>
 
-            <Card className="mt-6 border-rose-200 bg-gradient-to-br from-rose-50 via-white to-amber-50 p-7 shadow-lg md:p-8">
-              <div className="grid gap-6 lg:grid-cols-[0.75fr_1.25fr] lg:items-start">
-                <div>
-                  <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-rose-100 text-3xl shadow-sm">📣</div>
-                  <p className="mt-6 text-sm font-black uppercase tracking-[0.28em] text-rose-700">
-                    {lang === "zh" ? "9/8 公布結果" : "9/8 Result Announcement"}
-                  </p>
-                  <h3 className="mt-3 text-3xl font-black leading-tight text-slate-950">
-                    {lang === "zh" ? "晚上 9:00 PM 一起公布" : "Results announced at 9:00 PM"}
-                  </h3>
-                  <p className="mt-4 leading-8 text-slate-700">
-                    {lang === "zh"
-                      ? "我們將於 9/8 晚上 9:00 PM 一起公布 912 創意隊名票選結果，以及 912 台灣集結活動大抽獎結果。"
-                      : "On 9/8 at 9:00 PM, we will announce both the 912 Creative Team Name Voting results and the TEAM TAIWAN event raffle winners."}
-                  </p>
-                </div>
-
-                <div className="grid gap-4">
-                  <div className="rounded-2xl bg-white p-5 ring-1 ring-rose-100">
-                    <p className="font-black text-slate-950">
-                      {lang === "zh" ? "得獎者與「加入就有朋友隊」朋友可領取獎品／黑熊鑰匙圈：" : "Prize and keychain pickup for winners and “Join and Make Friends Team” members:"}
-                    </p>
-                    <div className="mt-4 grid gap-4 md:grid-cols-2">
-                      <div className="rounded-2xl bg-rose-50 p-4 font-bold leading-7 text-rose-900">
-                        {lang === "zh" ? "① 接下來 3 天的 T-shirt 發放地點" : "① The next 3 T-shirt pickup locations"}
-                      </div>
-                      <div className="rounded-2xl bg-amber-50 p-4 font-bold leading-7 text-amber-900">
-                        {lang === "zh" ? "② 9/12 活動當天｜2:00–2:30 PM｜Lansdowne St." : "② Event day 9/12｜2:00–2:30 PM｜Lansdowne St."}
-                      </div>
-                    </div>
-                  </div>
-
-                  <div className="rounded-2xl bg-white p-5 ring-1 ring-amber-100">
-                    <p className="font-black text-slate-950">
-                      {lang === "zh" ? "「加入就有朋友隊」領取時請提供：" : "For “Join and Make Friends Team” pickup, please provide:"}
-                    </p>
-                    <p className="mt-3 rounded-xl bg-slate-50 px-4 py-3 text-lg font-black text-slate-950 ring-1 ring-slate-100">
-                      {lang === "zh" ? "姓名＋購票 Email" : "Name + ticket purchase email"}
-                    </p>
-                    <p className="mt-3 leading-7 text-slate-700">
-                      {lang === "zh"
-                        ? "大抽獎得獎者的詳細領取位置，也會另外透過 LINE 或 Email 通知。請大家務必在指定時間內前來領取，逾時恕無法保留或補領。"
-                        : "Detailed pickup locations for raffle winners will also be sent separately through LINE or email. Please pick up within the designated time. Late pickup or replacement pickup will not be available."}
-                    </p>
+                <div className="rounded-[2rem] border border-amber-100 bg-white p-6 shadow-sm">
+                  <p className="text-2xl font-black text-slate-950">🐻 {lang === "zh" ? "912 限量黑熊鑰匙圈 × 10" : "912 Limited Black Bear Keychain × 10"}</p>
+                  <div className="mt-5 flex flex-wrap gap-3">
+                    {[
+                      "L39 · Row 45 · Seat 12",
+                      "L39 · Row 33 · Seat 5",
+                      "L41 · Row 40 · Seat 14",
+                      "L41 · Row 42 · Seat 1",
+                      "L41 · Row 41 · Seat 1",
+                      "L42 · Row 25 · Seat 13",
+                      "L41 · Row 41 · Seat 10",
+                      "L42 · Row 27 · Seat 10",
+                      "L41 · Row 40 · Seat 5",
+                      "L39 · Row 39 · Seat 12",
+                    ].map((seat) => (
+                      <span key={seat} className="rounded-full bg-amber-100 px-4 py-2 text-base font-black text-amber-900">🎟️ {seat}</span>
+                    ))}
                   </div>
                 </div>
               </div>
             </Card>
+
+            <Card className="mb-8 border-rose-200 bg-gradient-to-br from-rose-50 via-white to-amber-50 p-7 shadow-lg md:p-9">
+              <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-rose-100 text-3xl shadow-sm">🎊</div>
+              <p className="mt-6 text-sm font-black uppercase tracking-[0.28em] text-rose-700">
+                {lang === "zh" ? "獎品領取方式" : "Prize Pickup"}
+              </p>
+              <h3 className="mt-3 text-3xl font-black leading-tight text-slate-950">
+                {lang === "zh" ? "請確認你的 Section、Row、Seat" : "Please check your Section, Row, and Seat"}
+              </h3>
+              <p className="mt-4 leading-8 text-slate-700">
+                {lang === "zh"
+                  ? "請大家先確認自己 912 球票上的 Section、Row、Seat 是否與以上得獎座位相符。領取的時候，麻煩給我們看一下你的電子票喔。"
+                  : "Please check whether the Section, Row, and Seat on your 912 ticket match any of the winning seats above. Please show your digital ticket when picking up your prize."}
+              </p>
+              <div className="mt-6 grid gap-4 md:grid-cols-2">
+                <div className="rounded-2xl bg-white p-5 ring-1 ring-rose-100">
+                  <p className="font-black text-slate-950">
+                    {lang === "zh" ? "創意隊名前三名隊長與抽獎得獎者可於：" : "Top team captains and raffle winners may pick up prizes at:"}
+                  </p>
+                  <p className="mt-3 leading-8 text-slate-700">
+                    {lang === "zh"
+                      ? "接下來的 T-shirt 發放地點，或 9/12 活動當天現場領取。"
+                      : "Upcoming T-shirt pickup locations, or on event day 9/12."}
+                  </p>
+                </div>
+                <div className="rounded-2xl bg-white p-5 font-black leading-8 text-rose-900 ring-1 ring-rose-100">
+                  {lang === "zh" ? "📅 9/12｜⏰ 2:00–2:30 PM｜📍 Lansdowne St. 現場領取" : "📅 9/12｜⏰ 2:00–2:30 PM｜📍 Lansdowne St."}
+                </div>
+              </div>
+              <p className="mt-5 rounded-2xl bg-white p-5 font-black leading-8 text-slate-950 ring-1 ring-amber-200">
+                {lang === "zh"
+                  ? "詳細領取地點稍後會再通知。請務必在指定時間內領取，逾時恕無法保留或補領。"
+                  : "Detailed pickup location will be announced later. Please pick up within the designated time. Late pickup or replacement pickup will not be available."}
+              </p>
+            </Card>
+
+
+            <div className="mt-8 rounded-[2rem] bg-gradient-to-br from-emerald-900 to-sky-900 p-7 text-center text-white shadow-lg md:p-9">
+              <p className="text-3xl font-black">
+                {lang === "zh" ? "再次恭喜所有得獎者，也謝謝大家一起參與！" : "Congratulations again to all winners, and thank you everyone for joining!"}
+              </p>
+              <p className="mt-4 text-xl font-black text-white/90">
+                {lang === "zh" ? "🇹🇼 9/12 Fenway 見！" : "🇹🇼 See you at Fenway on 9/12!"}
+              </p>
+              <p className="mt-3 text-2xl font-black tracking-wide text-amber-300">TEAM TAIWAN</p>
+              <p className="mt-2 font-black text-white/90">⚾ Light Up Fenway. Let TAIWAN Be Seen.</p>
+            </div>
           </div>
         </section>
 

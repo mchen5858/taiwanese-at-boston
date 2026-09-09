@@ -3371,7 +3371,7 @@ function GuideZh({ isZh, setIsZh }) {
                 </div>
                               <div className="grid grid-cols-[110px_24px_1fr] gap-3 md:grid-cols-[140px_28px_1fr] md:gap-4">
                   <div className="pt-2 text-right">
-                    <p className="text-base font-black leading-tight text-slate-950 md:text-lg">確切局數近日公布</p>
+                    <p className="text-base font-black leading-tight text-slate-950 md:text-lg">第六局結束後</p>
                   </div>
 
                   <div className="relative flex justify-center">
@@ -3381,7 +3381,7 @@ function GuideZh({ isZh, setIsZh }) {
 
                   <div className="pb-2">
                     <div className="rounded-2xl border border-fuchsia-200 bg-fuchsia-50 px-4 py-3 shadow-sm">
-                      <p className="text-lg font-black text-fuchsia-950">Complimentary Scoreboard Message</p>
+                      <p className="text-lg font-black text-fuchsia-950">第六局結束後 Complimentary Scoreboard Message</p>
                       <p className="mt-1.5 leading-7">我們這次的球場大螢幕訊息是：</p>
                       <div className="mt-3 rounded-xl border border-fuchsia-200 bg-white px-4 py-3 text-center font-black leading-8 text-slate-950">
                         <p>TEAM TAIWAN</p>
@@ -3389,7 +3389,7 @@ function GuideZh({ isZh, setIsZh }) {
                         <p>Go TAIWAN! Go SOX!</p>
                       </div>
                       <p className="mt-3 leading-7 text-slate-700">
-                        這個大螢幕訊息會在比賽開始之後出現，目前還不知道會是在第幾局或哪一個時間點。等我們知道後會再補上。看到的時候也希望大家一起大聲歡呼！
+                        這個大螢幕訊息預計會在第六局結束後出現。看到的時候，也希望大家一起大聲歡呼！
                       </p>
                     </div>
                   </div>
@@ -4087,7 +4087,7 @@ function GuideEn({ isZh, setIsZh }) {
 
                   <div className="pb-2">
                     <div className="rounded-2xl border border-fuchsia-200 bg-fuchsia-50 px-4 py-3 shadow-sm">
-                      <p className="text-lg font-black text-fuchsia-950">Complimentary Scoreboard Message</p>
+                      <p className="text-lg font-black text-fuchsia-950">第六局結束後 Complimentary Scoreboard Message</p>
                       <p className="mt-1.5 leading-7">Our scoreboard message for this event is:</p>
                       <div className="mt-3 rounded-xl border border-fuchsia-200 bg-white px-4 py-3 text-center font-black leading-8 text-slate-950">
                         <p>TEAM TAIWAN</p>
