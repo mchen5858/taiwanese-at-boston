@@ -2994,7 +2994,7 @@ function GuideSeatColorLookup({ isZh }) {
 
 function SeatColorLookupZh() {
   return (
-    <Section id="05" title="排字活動說明＋座位／衣服顏色查詢">
+    <Section id="04" title="排字活動說明＋座位／衣服顏色查詢">
       <div className="px-1">
         <p className="text-xl font-black text-rose-900">輕鬆參與，開心一起玩！</p>
         <p className="mt-3 leading-8 text-slate-700">
@@ -3074,7 +3074,7 @@ function SeatColorLookupZh() {
 
 function SeatColorLookupEn() {
   return (
-    <Section id="05" title="Lettering activity overview + seat / shirt color lookup">
+    <Section id="04" title="Lettering activity overview + seat / shirt color lookup">
       <div className="px-1">
         <p className="text-xl font-black text-rose-900">Relax, join in, and have fun!</p>
         <p className="mt-3 leading-8 text-slate-700">
@@ -3287,7 +3287,7 @@ function GuideZh({ isZh, setIsZh }) {
                   <div className="pb-2">
                     <div className="rounded-2xl border border-slate-200 bg-white px-4 py-3 shadow-sm">
                       <p className="text-lg font-black text-slate-950">進場領取黑色 Red Sox × Bruins Jersey</p>
-                      <p className="mt-1.5 leading-7">大合照結束後，請大家陸續進入 Fenway Park。通過安檢後，前往球場指定發放地點，使用<strong>當天的電子票</strong>領取紅襪官方發放的限量 Red Sox × Bruins 聯名棒球 Jersey。</p>
+                      <p className="mt-1.5 leading-7">大合照結束後，請大家陸續進入 Fenway Park。可以從 <strong>Gate A、Gate B、Gate D</strong> 進場領取黑色 Red Sox × Bruins Jersey。詳細領取地點與開放時間，請看下方 Section 03「黑色 Red Sox × Bruins Jersey 領取資訊」。</p>
                     </div>
                   </div>
                 </div>
@@ -3417,7 +3417,67 @@ function GuideZh({ isZh, setIsZh }) {
             </Card>
           </Section>
 
-          <Section id="03" title="活動衣服發放">
+          
+          <Section id="03" title="黑色 Red Sox × Bruins Jersey 領取資訊">
+            <div className="grid gap-5 md:grid-cols-[360px_1fr] md:items-center">
+              <div className="overflow-hidden rounded-[1.5rem] border border-slate-200 bg-slate-50 p-4">
+                <img src="/912-fenway-2026-black-redsox-bruins-jersey.jpg" alt="黑色 Red Sox × Bruins Jersey" className="h-72 w-full object-contain md:h-80" onError={(e) => { e.currentTarget.style.display = "none"; }} />
+              </div>
+              <Card className="border-slate-200 bg-white">
+                <h3 className="text-xl font-black text-slate-950">⚫ 黑色 Red Sox × Bruins Jersey</h3>
+                <p className="mt-3">這件黑色 Jersey 是由 <strong>Boston Red Sox 官方發放</strong>的 <strong>limited-edition Red Sox and Bruins co-branded baseball jersey</strong>。不需要提前領取，請於活動當天進入 Fenway Park 後領取。</p>
+                <ul className="mt-4 list-disc space-y-2 pl-5">
+                  <li>建議大合照結束後，約 <strong>3:20 PM</strong> 開始陸續進場。</li>
+                  <li>通過安檢後，請前往球場<strong>指定發放地點</strong>。</li>
+                  <li>領取時需使用／出示<strong>當天的電子票</strong>。</li>
+                  <li>成人尺寸提供 <strong>S–XL</strong>。</li>
+                  <li>偏好尺寸採 <strong>first-come, first-served</strong> 方式發放，尺寸依現場供應為準，建議提早進場領取。</li>
+                  <li><strong>請不要太晚才去領取：</strong>紅襪球團可能會在比賽開始幾局後結束 Jersey 發放，因此強烈建議大家進場後就先前往指定地點領取。</li>
+                  <li>排字時會依照座位安排，在白色活動 T-shirt 與黑色 Jersey 之間配合切換。</li>
+                </ul>
+              </Card>
+            </div>
+
+            <Card className="border-sky-200 bg-sky-50">
+              <p className="text-lg font-black text-sky-950">Red Sox × Bruins Jersey 領取地點</p>
+              <p className="mt-2 leading-7 text-slate-700">
+                以下三個地點都可以領取黑色 Red Sox × Bruins Jersey。從 <strong>Gate A、Gate B、Gate D</strong> 進場都可以前往領取。請出示 <strong>MLB Ballpark App</strong> 裡的電子票；每一張透過本次 promotion 購買的票，可領取一件 Jersey。
+              </p>
+              <div className="mt-5 grid gap-4 lg:grid-cols-3">
+                <div className="rounded-2xl bg-white p-5 shadow-sm ring-1 ring-sky-100">
+                  <p className="text-base font-black text-sky-900">#1 - Jersey Street Team Store</p>
+                  <ul className="mt-3 list-disc space-y-2 pl-5 text-sm leading-7 text-slate-700">
+                    <li>請從靠近 Gate D 的 Team Store ramp entrance 進入。</li>
+                    <li>請出示 MLB Ballpark App 裡的電子票。</li>
+                    <li>每一張透過本次 promotion 購買的票，可領取一件 Jersey。</li>
+                    <li>此地點開放至 <strong>5:00 PM</strong>。</li>
+                  </ul>
+                </div>
+                <div className="rounded-2xl bg-white p-5 shadow-sm ring-1 ring-sky-100">
+                  <p className="text-base font-black text-sky-900">#2 - Adjacent to Gate B Team Store</p>
+                  <ul className="mt-3 list-disc space-y-2 pl-5 text-sm leading-7 text-slate-700">
+                    <li>Gate B Team Store 位於 Gate B 裡面，靠近 spiral staircase。</li>
+                    <li>請出示 MLB Ballpark App 裡的電子票。</li>
+                    <li>每一張透過本次 promotion 購買的票，可領取一件 Jersey。</li>
+                    <li>此地點開放至 <strong>4:40 PM</strong>。</li>
+                  </ul>
+                </div>
+                <div className="rounded-2xl bg-white p-5 shadow-sm ring-1 ring-sky-100">
+                  <p className="text-base font-black text-sky-900">#3 - Arthur's Way near Gate A on Jersey Street</p>
+                  <ul className="mt-3 list-disc space-y-2 pl-5 text-sm leading-7 text-slate-700">
+                    <li>此地點位於 Jersey Street，靠近 Gate A 入口。</li>
+                    <li>請出示 MLB Ballpark App 裡的電子票。</li>
+                    <li>每一張透過本次 promotion 購買的票，可領取一件 Jersey。</li>
+                    <li>此地點開放至 <strong>4:10 PM</strong>。</li>
+                  </ul>
+                </div>
+              </div>
+            </Card>
+          </Section>
+
+                    <SeatColorLookupZh />
+
+<Section id="05" title="活動衣服發放">
             <div className="grid gap-4">
               <Card className="border-slate-200 bg-white">
                 <div className="mb-4 overflow-hidden rounded-[1.1rem] border border-slate-200 bg-slate-50">
@@ -3616,29 +3676,6 @@ function GuideZh({ isZh, setIsZh }) {
             </div>
 
           </Section>
-
-          <Section id="04" title="黑色 Red Sox × Bruins Jersey 領取資訊">
-            <div className="grid gap-5 md:grid-cols-[360px_1fr] md:items-center">
-              <div className="overflow-hidden rounded-[1.5rem] border border-slate-200 bg-slate-50 p-4">
-                <img src="/912-fenway-2026-black-redsox-bruins-jersey.jpg" alt="黑色 Red Sox × Bruins Jersey" className="h-72 w-full object-contain md:h-80" onError={(e) => { e.currentTarget.style.display = "none"; }} />
-              </div>
-              <Card className="border-slate-200 bg-white">
-                <h3 className="text-xl font-black text-slate-950">⚫ 黑色 Red Sox × Bruins Jersey</h3>
-                <p className="mt-3">這件黑色 Jersey 是由 <strong>Boston Red Sox 官方發放</strong>的 <strong>limited-edition Red Sox and Bruins co-branded baseball jersey</strong>。不需要提前領取，請於活動當天進入 Fenway Park 後領取。</p>
-                <ul className="mt-4 list-disc space-y-2 pl-5">
-                  <li>建議大合照結束後，約 <strong>3:20 PM</strong> 開始陸續進場。</li>
-                  <li>通過安檢後，請前往球場<strong>指定發放地點</strong>。</li>
-                  <li>領取時需使用／出示<strong>當天的電子票</strong>。</li>
-                  <li>成人尺寸提供 <strong>S–XL</strong>。</li>
-                  <li>偏好尺寸採 <strong>first-come, first-served</strong> 方式發放，尺寸依現場供應為準，建議提早進場領取。</li>
-                  <li><strong>請不要太晚才去領取：</strong>紅襪球團可能會在比賽開始幾局後結束 Jersey 發放，因此強烈建議大家進場後就先前往指定地點領取。</li>
-                  <li>排字時會依照座位安排，在白色活動 T-shirt 與黑色 Jersey 之間配合切換。</li>
-                </ul>
-              </Card>
-            </div>
-          </Section>
-
-                    <SeatColorLookupZh />
 
 <Section id="06" title="電子票領取方式">
             <Card className="border-emerald-200 bg-emerald-50">
@@ -4176,7 +4213,7 @@ function GuideEn({ isZh, setIsZh }) {
             </div>
           </Section>
 
-          <Section id="04" title="Black Red Sox × Bruins Jersey pickup">
+          <Section id="03" title="Black Red Sox × Bruins Jersey pickup">
             <div className="grid gap-5 md:grid-cols-[360px_1fr] md:items-center">
               <div className="overflow-hidden rounded-[1.5rem] border border-slate-200 bg-slate-50 p-4">
                 <img src="/912-fenway-2026-black-redsox-bruins-jersey.jpg" alt="Black Red Sox × Bruins Jersey" className="h-72 w-full object-contain md:h-80" onError={(e) => { e.currentTarget.style.display = "none"; }} />
@@ -4195,6 +4232,42 @@ function GuideEn({ isZh, setIsZh }) {
                 </ul>
               </Card>
             </div>
+
+            <Card className="border-sky-200 bg-sky-50">
+              <p className="text-lg font-black text-sky-950">Red Sox × Bruins Jersey Pickup Locations</p>
+              <p className="mt-2 leading-7 text-slate-700">
+                The black Red Sox × Bruins Jersey can be picked up at any of the three locations below. Fans may enter through <strong>Gate A, Gate B, or Gate D</strong> to access the pickup locations. Fans will present their ticket in the <strong>MLB Ballpark app</strong>. One jersey per ticket purchased through the promotion.
+              </p>
+              <div className="mt-5 grid gap-4 lg:grid-cols-3">
+                <div className="rounded-2xl bg-white p-5 shadow-sm ring-1 ring-sky-100">
+                  <p className="text-base font-black text-sky-900">#1 - Jersey Street Team Store</p>
+                  <ul className="mt-3 list-disc space-y-2 pl-5 text-sm leading-7 text-slate-700">
+                    <li>Enter via the ramp entrance of the store close to Gate D.</li>
+                    <li>Fans will present their ticket in the MLB Ballpark app.</li>
+                    <li>One jersey per ticket purchased through the promotion.</li>
+                    <li>This location will be open until <strong>5:00 PM</strong>.</li>
+                  </ul>
+                </div>
+                <div className="rounded-2xl bg-white p-5 shadow-sm ring-1 ring-sky-100">
+                  <p className="text-base font-black text-sky-900">#2 - Adjacent to Gate B Team Store</p>
+                  <ul className="mt-3 list-disc space-y-2 pl-5 text-sm leading-7 text-slate-700">
+                    <li>The Gate B Team Store is located inside Gate B, next to the spiral staircase.</li>
+                    <li>Fans will present their ticket in the MLB Ballpark app.</li>
+                    <li>One jersey per ticket purchased through the promotion.</li>
+                    <li>This location will be open until <strong>4:40 PM</strong>.</li>
+                  </ul>
+                </div>
+                <div className="rounded-2xl bg-white p-5 shadow-sm ring-1 ring-sky-100">
+                  <p className="text-base font-black text-sky-900">#3 - Arthur's Way near Gate A on Jersey Street</p>
+                  <ul className="mt-3 list-disc space-y-2 pl-5 text-sm leading-7 text-slate-700">
+                    <li>This location is on Jersey Street close to the Gate A entrance.</li>
+                    <li>Fans will present their ticket in the MLB Ballpark app.</li>
+                    <li>One jersey per ticket purchased through the promotion.</li>
+                    <li>This location will be open until <strong>4:10 PM</strong>.</li>
+                  </ul>
+                </div>
+              </div>
+            </Card>
           </Section>
 
                     <SeatColorLookupEn />
