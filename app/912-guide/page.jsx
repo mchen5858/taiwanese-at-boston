@@ -3240,7 +3240,7 @@ function GuideZh({ isZh, setIsZh }) {
                   <div className="pb-2">
                     <div className="rounded-2xl border border-emerald-200 bg-emerald-50 px-4 py-3 shadow-sm">
                       <p className="text-lg font-black text-emerald-900">Lansdowne Street｜TEAM TAIWAN 集結</p>
-                      <p className="mt-1.5 leading-7">請大家在芬威球場旁邊的 <strong>Lansdowne Street</strong> 開始集結。</p>
+                      <p className="mt-1.5 leading-7">請大家在芬威球場旁邊的 <strong>Lansdowne Street</strong> 開始集結。強烈建議大家 <strong>2:00 PM 前</strong> 就到集合點，避免錯過集合、合照與進場時間。</p>
                       <div className="mt-2 rounded-xl border border-emerald-200 bg-white px-3 py-2">
                         <p className="font-black leading-6 text-emerald-950">
                           🐻 特別感謝 <strong>Keep Taiwan Free</strong> 將派出他們的台灣大黑熊來支援 912 活動，歡迎大家早一點來與台灣黑熊拍照喔！
@@ -3287,7 +3287,9 @@ function GuideZh({ isZh, setIsZh }) {
                   <div className="pb-2">
                     <div className="rounded-2xl border border-slate-200 bg-white px-4 py-3 shadow-sm">
                       <p className="text-lg font-black text-slate-950">進場領取黑色 Red Sox × Bruins Jersey</p>
-                      <p className="mt-1.5 leading-7">大合照結束後，請大家陸續進入 Fenway Park。可以從 <strong>Gate A、Gate B、Gate D</strong> 進場領取黑色 Red Sox × Bruins Jersey。詳細領取地點與開放時間，請看下方 Section 03「黑色 Red Sox × Bruins Jersey 領取資訊」。</p>
+                      <p className="mt-1.5 leading-7">
+                        大合照結束後，請大家陸續進入 Fenway Park。可以從 <strong>Gate A、Gate B、Gate D</strong> 進場領取黑色 Red Sox × Bruins Jersey。所有透過 912 主辦單位波克萊商會購買的票都可以領取；請出示電子票，成人尺寸提供 <strong>S–XL</strong>。詳細領取地點與開放時間，請看下方 Section 03。
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -3348,6 +3350,9 @@ function GuideZh({ isZh, setIsZh }) {
                     <div className="rounded-2xl border border-rose-200 bg-rose-50 px-4 py-3 shadow-sm">
                       <p className="text-lg font-black text-rose-900">排字活動</p>
                       <p className="mt-1 text-2xl font-black tracking-wide text-slate-950">TAIWAN</p>
+                      <p className="mt-2 rounded-xl bg-white/70 px-3 py-2 text-sm font-bold leading-6 text-rose-900 ring-1 ring-rose-100">
+                        請大家互相提醒，也幫忙查看左右上下旁邊的人是否需要穿上黑色 Jersey。
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -3366,6 +3371,9 @@ function GuideZh({ isZh, setIsZh }) {
                     <div className="rounded-2xl border border-indigo-200 bg-indigo-50 px-4 py-3 shadow-sm">
                       <p className="text-lg font-black text-indigo-900">排字活動</p>
                       <p className="mt-1 text-2xl font-black tracking-wide text-slate-950">TW ❤️ SOX</p>
+                      <p className="mt-2 rounded-xl bg-white/70 px-3 py-2 text-sm font-bold leading-6 text-indigo-900 ring-1 ring-indigo-100">
+                        請大家互相提醒，也幫忙查看左右上下旁邊的人是否需要穿上黑色 Jersey。
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -3400,7 +3408,7 @@ function GuideZh({ isZh, setIsZh }) {
 
             <Card className="mt-4 border-emerald-200 bg-white">
               <p className="text-lg font-black text-emerald-900">Lansdowne St 集合位置圖</p>
-              <p className="mt-2 text-slate-700">請依照下方位置圖前往 Lansdowne Street 集合。</p>
+              <p className="mt-2 text-slate-700">請依照下方位置圖前往 Lansdowne Street 集合。圖中的 <strong>Gathering Point</strong> 為 <strong>2:00 PM 集合點位置</strong>；<strong>2:30 PM</strong> 我們會一起移動到 <strong>Group Photo Location</strong> 拍攝大合照。合照結束後，大家可以從 <strong>Gate A、Gate B、Gate D</strong> 進場領取黑色 Red Sox × Bruins Jersey。</p>
               <div className="mt-4 overflow-hidden rounded-[1rem] border border-emerald-200 bg-white">
                 <img
                   src={lansdowneMapImage}
@@ -3412,8 +3420,70 @@ function GuideZh({ isZh, setIsZh }) {
             </Card>
 
             <Card className="border-rose-200 bg-rose-50">
-              <p className="font-black text-rose-900">活動當天小提醒</p>
-              <p className="mt-2">建議大家提早抵達，預留集合、合照、安檢與領取 Jersey 的時間，避免錯過比賽開始，也別忘了留意兩次排字活動時間。</p>
+              <p className="text-xl font-black text-rose-900">活動當天小提醒</p>
+              <p className="mt-3 leading-8 text-slate-700">
+                建議大家提早抵達，預留集合、合照、安檢與領取 Jersey 的時間，避免錯過比賽開始，也別忘了留意兩次排字活動時間。
+              </p>
+
+              <div className="mt-5 grid gap-5 lg:grid-cols-2">
+                <div className="rounded-2xl border border-emerald-100 bg-white p-5 shadow-sm">
+                  <p className="font-black text-emerald-950">🇹🇼 國旗／Flags</p>
+                  <ul className="mt-3 list-disc space-y-2 pl-5 leading-7 text-slate-700">
+                    <li>歡迎大家帶台灣國旗和美國國旗，一起呈現支持台灣、也支持 Red Sox 的氣氛。</li>
+                    <li>依照 Fenway Park 規定，Flags／國旗可以帶入，但尺寸需小於 <strong>18” × 24”</strong>。</li>
+                    <li>國旗不得固定在任何木頭、金屬、塑膠或其他硬材質的 pole／stick 上。</li>
+                    <li>國旗只能在比賽暫停時舉起，也不能影響其他球迷觀賽。</li>
+                  </ul>
+                </div>
+
+                <div className="rounded-2xl border border-amber-100 bg-white p-5 shadow-sm">
+                  <p className="font-black text-amber-950">🪧 Banner／Sign／標語</p>
+                  <ul className="mt-3 list-disc space-y-2 pl-5 leading-7 text-slate-700">
+                    <li>紅襪規定可攜帶進場的 Signs／標語／看板最大為 <strong>24” × 18”</strong>（約 61 × 46 cm）。</li>
+                    <li>尺寸較大的組織 Banner，在入場安檢時仍有可能被要求不能帶入，最後以現場工作人員判斷為準。</li>
+                  </ul>
+                </div>
+
+                <div className="rounded-2xl border border-sky-100 bg-white p-5 shadow-sm lg:col-span-2">
+                  <p className="font-black text-sky-950">🎒 Fenway Park Bag Policy</p>
+                  <ul className="mt-3 list-disc space-y-2 pl-5 leading-7 text-slate-700">
+                    <li>可攜帶單一夾層、尺寸不超過 <strong>12” × 12” × 6”</strong> 的小型包包。</li>
+                    <li>建議使用透明單層包，可加快安檢速度。</li>
+                    <li><strong>Backpack、duffel bag、backpack-style purse 及多夾層大型包包禁止攜帶。</strong></li>
+                    <li>嬰兒用品袋及必要醫療用品除外。</li>
+                  </ul>
+                </div>
+              </div>
+            </Card>
+
+            <Card className="border-indigo-200 bg-indigo-50">
+              <div className="flex flex-col gap-5 md:flex-row md:items-start md:justify-between">
+                <div>
+                  <p className="text-xl font-black text-indigo-950">📸 912 Photos & Videos Sharing｜一起分享當天的精彩照片與影片！</p>
+                  <p className="mt-3 leading-8 text-slate-700">
+                    912 當天如果大家有拍到照片或影片，不管是集合、大合照、球場內、排字、朋友合照，或任何精彩瞬間，都歡迎上傳到共享 Google Drive。
+                  </p>
+                </div>
+
+                <a
+                  href="https://drive.google.com/drive/folders/1MhxyoBPadchVSGKNG1IYpSDEYWdGUdGW?usp=sharing"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex shrink-0 items-center justify-center gap-2 rounded-full bg-indigo-700 px-5 py-3 text-sm font-black text-white shadow-md transition hover:-translate-y-0.5 hover:bg-indigo-800"
+                >
+                  前往 Google Drive 上傳
+                  <span>→</span>
+                </a>
+              </div>
+
+              <div className="mt-5 rounded-2xl bg-white p-5 leading-8 text-slate-700 ring-1 ring-indigo-100">
+                <p>
+                  <strong>上傳照片或影片即代表你同意主辦單位可使用這些素材</strong>，用於 912 活動紀錄、社群分享，以及製作 912 回顧影片。
+                </p>
+                <p className="mt-2">
+                  小提醒：請不要刪除、移動或修改其他人上傳的照片與影片，讓大家都可以一起保存這次 912 的珍貴回憶。❤️
+                </p>
+              </div>
             </Card>
           </Section>
 
@@ -3796,33 +3866,42 @@ function GuideZh({ isZh, setIsZh }) {
           </Section>
           
           <Section id="07" title="重要提醒">
-            <Card className="border-sky-200 bg-sky-50">
-              <p className="text-xl font-black text-sky-950">關於國旗、Banner 與 Sign</p>
-              <div className="mt-3 space-y-3 leading-8 text-slate-700">
-                <p>
-                  雖然這次 9/12 是由不同團體、不同城市、不同朋友一起組成，但到了 Fenway Park，
-                  我們希望大家都能以同一個名字站在一起——<strong>Team Taiwan</strong>！ 🇹🇼🇺🇸
-                </p>
-                <p>
-                  因此在活動前的全體大合照時，希望大家先不要拿出各自團體的 Banner。不是因為各團體不重要，
-                  而是我們希望這張最重要的大合照，可以呈現出上千人一起代表 <strong>Team Taiwan</strong> 的畫面，看起來更整齊、更有力量！
-                </p>
-                <p>
-                  各組織的 Banner 當然還是歡迎攜帶，也很鼓勵大家在自己團體拍照時使用。
-                </p>
-                <p>
-                  另外，也歡迎大家帶一些台灣國旗和美國國旗，一起呈現我們支持台灣、也支持 Red Sox 的氣氛。
-                  除了小國旗之外，請不要攜帶旗桿。
-                </p>
-                <p className="rounded-2xl bg-white p-4 font-bold leading-8 text-sky-950 ring-1 ring-sky-200">
-                  小提醒：紅襪規定可攜帶進場的 Signs／標語／看板最大為 <strong>24” × 18”</strong>（約 61 × 46 cm）。
-                  國旗如果沒有旗桿，就算超過 size，通常比較不會有問題；但尺寸較大的組織 Banner，
-                  在入場安檢時仍有可能被要求不能帶入，最後還是以現場工作人員的判斷為準。
-                </p>
-                <p className="font-black text-sky-950">
-                  9/12，讓我們一起用 <strong>Team Taiwan</strong> 的身分走進 Fenway！
-                </p>
+            <Card className="border-sky-200 bg-white">
+              <p className="text-xl font-black text-slate-950">關於國旗、Banner、Sign 與 Bag Policy</p>
+
+              <div className="mt-5 grid gap-5 lg:grid-cols-2">
+                <div className="rounded-2xl border border-emerald-100 bg-emerald-50 p-5">
+                  <p className="font-black text-emerald-950">🇹🇼 國旗／Flags</p>
+                  <ul className="mt-3 list-disc space-y-2 pl-5 leading-7 text-slate-700">
+                    <li>歡迎大家帶台灣國旗和美國國旗，一起呈現支持台灣、也支持 Red Sox 的氣氛。</li>
+                    <li>依照 Fenway Park 規定，Flags／國旗可以帶入，但尺寸需小於 <strong>18” × 24”</strong>。</li>
+                    <li>國旗不得固定在任何木頭、金屬、塑膠或其他硬材質的 pole／stick 上。</li>
+                    <li>國旗只能在比賽暫停時舉起，也不能影響其他球迷觀賽。</li>
+                  </ul>
+                </div>
+
+                <div className="rounded-2xl border border-amber-100 bg-amber-50 p-5">
+                  <p className="font-black text-amber-950">🪧 Banner／Sign／標語</p>
+                  <ul className="mt-3 list-disc space-y-2 pl-5 leading-7 text-slate-700">
+                    <li>紅襪規定可攜帶進場的 Signs／標語／看板最大為 <strong>24” × 18”</strong>（約 61 × 46 cm）。</li>
+                    <li>尺寸較大的組織 Banner，在入場安檢時仍有可能被要求不能帶入，最後以現場工作人員判斷為準。</li>
+                  </ul>
+                </div>
+
+                <div className="rounded-2xl border border-rose-100 bg-rose-50 p-5 lg:col-span-2">
+                  <p className="font-black text-rose-950">🎒 Fenway Park Bag Policy</p>
+                  <ul className="mt-3 list-disc space-y-2 pl-5 leading-7 text-slate-700">
+                    <li>可攜帶單一夾層、尺寸不超過 <strong>12” × 12” × 6”</strong> 的小型包包。</li>
+                    <li>建議使用透明單層包，可加快安檢速度。</li>
+                    <li><strong>Backpack、duffel bag、backpack-style purse 及多夾層大型包包禁止攜帶。</strong></li>
+                    <li>嬰兒用品袋及必要醫療用品除外。</li>
+                  </ul>
+                </div>
               </div>
+
+              <p className="mt-5 rounded-2xl bg-sky-50 p-5 font-black leading-8 text-sky-950 ring-1 ring-sky-100">
+                9/12，讓我們一起用 Team Taiwan 的身分走進 Fenway！
+              </p>
             </Card>
             <div className="grid gap-4 md:grid-cols-2">
               <Card className="border-indigo-200 bg-indigo-50">
@@ -3835,16 +3914,7 @@ function GuideZh({ isZh, setIsZh }) {
                 </ul>
               </Card>
 
-              <Card className="border-sky-200 bg-sky-50">
-                <p className="text-lg font-black text-sky-900">🎒 Fenway Park Bag Policy</p>
-                <ul className="mt-3 list-disc space-y-2 pl-5">
-                  <li>可攜帶<strong>單一夾層、尺寸不超過 12&quot; × 12&quot; × 6&quot;</strong> 的小型包包。</li>
-                  <li>建議使用透明單層包，可加快安檢速度。</li>
-                  <li><strong>Backpack、duffel bag、backpack-style purse 及多夾層大型包包</strong>禁止攜帶。</li>
-                  <li>嬰兒用品袋及必要醫療用品除外。</li>
-                </ul>
-              </Card>
-
+  
               <Card className="border-emerald-200 bg-emerald-50">
                 <p className="text-lg font-black text-emerald-900">🚇 交通與抵達時間</p>
                 <p className="mt-3">
