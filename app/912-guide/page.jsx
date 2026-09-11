@@ -3456,8 +3456,8 @@ function GuideZh({ isZh, setIsZh }) {
               </div>
             </Card>
 
-            <Card className="border-indigo-200 bg-indigo-50">
-              <div className="flex flex-col gap-5 md:flex-row md:items-start md:justify-between">
+            <Card className="border-indigo-300 bg-gradient-to-br from-indigo-50 via-white to-sky-50 shadow-lg">
+              <div className="grid gap-6 lg:grid-cols-[1.2fr_0.8fr] lg:items-center">
                 <div>
                   <p className="text-xl font-black text-indigo-950">📸 912 Photos & Videos Sharing｜一起分享當天的精彩照片與影片！</p>
                   <p className="mt-3 leading-8 text-slate-700">
@@ -3465,6 +3465,21 @@ function GuideZh({ isZh, setIsZh }) {
                   </p>
                 </div>
 
+                <div className="rounded-3xl border-2 border-indigo-300 bg-white p-5 text-center shadow-md">
+                  <p className="text-xs font-black uppercase tracking-[0.24em] text-indigo-700">Social Media Tag</p>
+                  <p className="mt-2 text-sm font-black leading-7 text-slate-700">
+                    分享到 social media 時，請記得 tag
+                  </p>
+                  <p className="mt-2 text-3xl font-black tracking-wide text-indigo-950 md:text-4xl">
+                    @taiwaneseinboston
+                  </p>
+                </div>
+              </div>
+
+              <div className="mt-6 flex flex-col gap-4 rounded-2xl bg-white p-5 ring-1 ring-indigo-100 md:flex-row md:items-center md:justify-between">
+                <p className="font-bold leading-7 text-slate-700">
+                  上傳照片或影片到共享資料夾，讓我們從不同角度完整記錄 912。❤️
+                </p>
                 <a
                   href="https://drive.google.com/drive/folders/1MhxyoBPadchVSGKNG1IYpSDEYWdGUdGW?usp=sharing"
                   target="_blank"
@@ -3476,12 +3491,12 @@ function GuideZh({ isZh, setIsZh }) {
                 </a>
               </div>
 
-              <div className="mt-5 rounded-2xl bg-white p-5 leading-8 text-slate-700 ring-1 ring-indigo-100">
+              <div className="mt-4 rounded-2xl bg-indigo-100/70 p-5 leading-8 text-indigo-950 ring-1 ring-indigo-200">
                 <p>
                   <strong>上傳照片或影片即代表你同意主辦單位可使用這些素材</strong>，用於 912 活動紀錄、社群分享，以及製作 912 回顧影片。
                 </p>
                 <p className="mt-2">
-                  小提醒：請不要刪除、移動或修改其他人上傳的照片與影片，讓大家都可以一起保存這次 912 的珍貴回憶。❤️
+                  小提醒：請不要刪除、移動或修改其他人上傳的照片與影片，讓大家都可以一起保存這次 912 的珍貴回憶。
                 </p>
               </div>
             </Card>
@@ -3497,7 +3512,7 @@ function GuideZh({ isZh, setIsZh }) {
                 <h3 className="text-xl font-black text-slate-950">⚫ 黑色 Red Sox × Bruins Jersey</h3>
                 <p className="mt-3">這件黑色 Jersey 是由 <strong>Boston Red Sox 官方發放</strong>的 <strong>limited-edition Red Sox and Bruins co-branded baseball jersey</strong>。不需要提前領取，請於活動當天進入 Fenway Park 後領取。</p>
                 <ul className="mt-4 list-disc space-y-2 pl-5">
-                  <li>建議大合照結束後，約 <strong>3:20 PM</strong> 開始陸續進場。</li>
+                  <li>建議大合照結束後，約 <strong>2:45 PM</strong> 開始陸續進場。</li>
                   <li>通過安檢後，請前往球場<strong>指定發放地點</strong>。</li>
                   <li>領取時需使用／出示<strong>當天的電子票</strong>。</li>
                   <li>成人尺寸提供 <strong>S–XL</strong>。</li>
